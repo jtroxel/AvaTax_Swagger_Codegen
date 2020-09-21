@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CurrencyModel Class Doc Comment
  *
  * @category Class
  * @description Represents an ISO 4217 currency code used for designating the currency of a transaction.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

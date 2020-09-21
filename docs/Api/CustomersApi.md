@@ -1,4 +1,4 @@
-# Swagger\Client\CustomersApi
+# Together\Taxes\CustomersApi
 
 All URIs are relative to *https://localhost*
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **createCustomers**
-> \Swagger\Client\Model\CustomerModel[] createCustomers($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CustomerModel[] createCustomers($company_id, $x_avalara_client, $body)
 
 Create customers for this company
 
@@ -32,14 +32,14 @@ Create one or more customers for this company.                A customer object 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ $apiInstance = new Swagger\Client\Api\CustomersApi(
 );
 $company_id = 56; // int | The unique ID number of the company that recorded this customer
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CustomerModel()); // \Swagger\Client\Model\CustomerModel[] | The list of customer objects to be created
+$body = array(new \Together\Taxes\Model\CustomerModel()); // \Together\Taxes\Model\CustomerModel[] | The list of customer objects to be created
 
 try {
     $result = $apiInstance->createCustomers($company_id, $x_avalara_client, $body);
@@ -64,11 +64,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The unique ID number of the company that recorded this customer |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CustomerModel[]**](../Model/CustomerModel.md)| The list of customer objects to be created | [optional]
+ **body** | [**\Together\Taxes\Model\CustomerModel[]**](../Model/CustomerModel.md)| The list of customer objects to be created | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomerModel[]**](../Model/CustomerModel.md)
+[**\Together\Taxes\Model\CustomerModel[]**](../Model/CustomerModel.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteCustomer**
-> \Swagger\Client\Model\CustomerModel deleteCustomer($company_id, $customer_code, $x_avalara_client)
+> \Together\Taxes\Model\CustomerModel deleteCustomer($company_id, $customer_code, $x_avalara_client)
 
 Delete a customer record
 
@@ -94,14 +94,14 @@ Deletes the customer object referenced by this URL.                A customer ob
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomerModel**](../Model/CustomerModel.md)
+[**\Together\Taxes\Model\CustomerModel**](../Model/CustomerModel.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomer**
-> \Swagger\Client\Model\CustomerModel getCustomer($company_id, $customer_code, $include, $x_avalara_client)
+> \Together\Taxes\Model\CustomerModel getCustomer($company_id, $customer_code, $include, $x_avalara_client)
 
 Retrieve a single customer
 
@@ -156,14 +156,14 @@ Retrieve the customer identified by this URL.                A customer object d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomerModel**](../Model/CustomerModel.md)
+[**\Together\Taxes\Model\CustomerModel**](../Model/CustomerModel.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **linkAttributesToCustomer**
-> \Swagger\Client\Model\FetchResultCustomerAttributeModel linkAttributesToCustomer($company_id, $customer_code, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultCustomerAttributeModel linkAttributesToCustomer($company_id, $customer_code, $x_avalara_client, $body)
 
 Link attributes to a customer
 
@@ -220,14 +220,14 @@ Link one or many attributes to a customer.                A customer may have mu
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ $apiInstance = new Swagger\Client\Api\CustomersApi(
 $company_id = 56; // int | The unique ID number of the company that recorded the provided customer
 $customer_code = "customer_code_example"; // string | The unique code representing the current customer
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CustomerAttributeModel()); // \Swagger\Client\Model\CustomerAttributeModel[] | The list of attributes to link to the customer.
+$body = array(new \Together\Taxes\Model\CustomerAttributeModel()); // \Together\Taxes\Model\CustomerAttributeModel[] | The list of attributes to link to the customer.
 
 try {
     $result = $apiInstance->linkAttributesToCustomer($company_id, $customer_code, $x_avalara_client, $body);
@@ -254,11 +254,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded the provided customer |
  **customer_code** | **string**| The unique code representing the current customer |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CustomerAttributeModel[]**](../Model/CustomerAttributeModel.md)| The list of attributes to link to the customer. | [optional]
+ **body** | [**\Together\Taxes\Model\CustomerAttributeModel[]**](../Model/CustomerAttributeModel.md)| The list of attributes to link to the customer. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCustomerAttributeModel**](../Model/FetchResultCustomerAttributeModel.md)
+[**\Together\Taxes\Model\FetchResultCustomerAttributeModel**](../Model/FetchResultCustomerAttributeModel.md)
 
 ### Authorization
 
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **linkCertificatesToCustomer**
-> \Swagger\Client\Model\FetchResultCertificateModel linkCertificatesToCustomer($company_id, $customer_code, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultCertificateModel linkCertificatesToCustomer($company_id, $customer_code, $x_avalara_client, $body)
 
 Link certificates to a customer
 
@@ -284,14 +284,14 @@ Link one or more certificates to a customer.                A customer object de
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -300,7 +300,7 @@ $apiInstance = new Swagger\Client\Api\CustomersApi(
 $company_id = 56; // int | The unique ID number of the company that recorded this customer
 $customer_code = "customer_code_example"; // string | The unique code representing this customer
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\LinkCertificatesModel(); // \Swagger\Client\Model\LinkCertificatesModel | The list of certificates to link to this customer
+$body = new \Together\Taxes\Model\LinkCertificatesModel(); // \Together\Taxes\Model\LinkCertificatesModel | The list of certificates to link to this customer
 
 try {
     $result = $apiInstance->linkCertificatesToCustomer($company_id, $customer_code, $x_avalara_client, $body);
@@ -318,11 +318,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded this customer |
  **customer_code** | **string**| The unique code representing this customer |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LinkCertificatesModel**](../Model/LinkCertificatesModel.md)| The list of certificates to link to this customer | [optional]
+ **body** | [**\Together\Taxes\Model\LinkCertificatesModel**](../Model/LinkCertificatesModel.md)| The list of certificates to link to this customer | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertificateModel**](../Model/FetchResultCertificateModel.md)
+[**\Together\Taxes\Model\FetchResultCertificateModel**](../Model/FetchResultCertificateModel.md)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **linkShipToCustomersToBillCustomer**
-> \Swagger\Client\Model\CustomerModel linkShipToCustomersToBillCustomer($company_id, $code, $x_avalara_client, $body)
+> \Together\Taxes\Model\CustomerModel linkShipToCustomersToBillCustomer($company_id, $code, $x_avalara_client, $body)
 
 Link two customer records together
 
@@ -348,14 +348,14 @@ Links a Ship-To customer record with a Bill-To customer record.                C
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -364,7 +364,7 @@ $apiInstance = new Swagger\Client\Api\CustomersApi(
 $company_id = 56; // int | The unique ID number of the company defining customers.
 $code = "code_example"; // string | The code of the bill-to customer to link.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\LinkCustomersModel(); // \Swagger\Client\Model\LinkCustomersModel | A list of information about ship-to customers to link to this bill-to customer.
+$body = new \Together\Taxes\Model\LinkCustomersModel(); // \Together\Taxes\Model\LinkCustomersModel | A list of information about ship-to customers to link to this bill-to customer.
 
 try {
     $result = $apiInstance->linkShipToCustomersToBillCustomer($company_id, $code, $x_avalara_client, $body);
@@ -382,11 +382,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company defining customers. |
  **code** | **string**| The code of the bill-to customer to link. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LinkCustomersModel**](../Model/LinkCustomersModel.md)| A list of information about ship-to customers to link to this bill-to customer. | [optional]
+ **body** | [**\Together\Taxes\Model\LinkCustomersModel**](../Model/LinkCustomersModel.md)| A list of information about ship-to customers to link to this bill-to customer. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomerModel**](../Model/CustomerModel.md)
+[**\Together\Taxes\Model\CustomerModel**](../Model/CustomerModel.md)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listAttributesForCustomer**
-> \Swagger\Client\Model\FetchResultCustomerAttributeModel listAttributesForCustomer($company_id, $customer_code, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCustomerAttributeModel listAttributesForCustomer($company_id, $customer_code, $x_avalara_client)
 
 Retrieve a customer's attributes
 
@@ -412,14 +412,14 @@ Retrieve the attributes linked to the customer identified by this URL.          
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCustomerAttributeModel**](../Model/FetchResultCustomerAttributeModel.md)
+[**\Together\Taxes\Model\FetchResultCustomerAttributeModel**](../Model/FetchResultCustomerAttributeModel.md)
 
 ### Authorization
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCertificatesForCustomer**
-> \Swagger\Client\Model\FetchResultCertificateModel listCertificatesForCustomer($company_id, $customer_code, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCertificateModel listCertificatesForCustomer($company_id, $customer_code, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 List certificates linked to a customer
 
@@ -474,14 +474,14 @@ List all certificates linked to a customer.                A customer object def
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertificateModel**](../Model/FetchResultCertificateModel.md)
+[**\Together\Taxes\Model\FetchResultCertificateModel**](../Model/FetchResultCertificateModel.md)
 
 ### Authorization
 
@@ -534,7 +534,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listValidCertificatesForCustomer**
-> \Swagger\Client\Model\ExemptionStatusModel listValidCertificatesForCustomer($company_id, $customer_code, $country, $region, $x_avalara_client)
+> \Together\Taxes\Model\ExemptionStatusModel listValidCertificatesForCustomer($company_id, $customer_code, $country, $region, $x_avalara_client)
 
 List valid certificates for a location
 
@@ -546,14 +546,14 @@ List valid certificates linked to a customer in a particular country and region.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -586,7 +586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ExemptionStatusModel**](../Model/ExemptionStatusModel.md)
+[**\Together\Taxes\Model\ExemptionStatusModel**](../Model/ExemptionStatusModel.md)
 
 ### Authorization
 
@@ -600,7 +600,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryCustomers**
-> \Swagger\Client\Model\FetchResultCustomerModel queryCustomers($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCustomerModel queryCustomers($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all customers for this company
 
@@ -612,14 +612,14 @@ List all customers recorded by this company matching the specified criteria.    
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCustomerModel**](../Model/FetchResultCustomerModel.md)
+[**\Together\Taxes\Model\FetchResultCustomerModel**](../Model/FetchResultCustomerModel.md)
 
 ### Authorization
 
@@ -670,7 +670,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **unlinkAttributesFromCustomer**
-> \Swagger\Client\Model\FetchResultCustomerAttributeModel unlinkAttributesFromCustomer($company_id, $customer_code, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultCustomerAttributeModel unlinkAttributesFromCustomer($company_id, $customer_code, $x_avalara_client, $body)
 
 Unlink attributes from a customer
 
@@ -682,14 +682,14 @@ Unlink one or many attributes from a customer.                A customer may hav
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -698,7 +698,7 @@ $apiInstance = new Swagger\Client\Api\CustomersApi(
 $company_id = 56; // int | The unique ID number of the company that recorded the customer
 $customer_code = "customer_code_example"; // string | The unique code representing the current customer
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CustomerAttributeModel()); // \Swagger\Client\Model\CustomerAttributeModel[] | The list of attributes to unlink from the customer.
+$body = array(new \Together\Taxes\Model\CustomerAttributeModel()); // \Together\Taxes\Model\CustomerAttributeModel[] | The list of attributes to unlink from the customer.
 
 try {
     $result = $apiInstance->unlinkAttributesFromCustomer($company_id, $customer_code, $x_avalara_client, $body);
@@ -716,11 +716,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded the customer |
  **customer_code** | **string**| The unique code representing the current customer |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CustomerAttributeModel[]**](../Model/CustomerAttributeModel.md)| The list of attributes to unlink from the customer. | [optional]
+ **body** | [**\Together\Taxes\Model\CustomerAttributeModel[]**](../Model/CustomerAttributeModel.md)| The list of attributes to unlink from the customer. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCustomerAttributeModel**](../Model/FetchResultCustomerAttributeModel.md)
+[**\Together\Taxes\Model\FetchResultCustomerAttributeModel**](../Model/FetchResultCustomerAttributeModel.md)
 
 ### Authorization
 
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **unlinkCertificatesFromCustomer**
-> \Swagger\Client\Model\FetchResultCertificateModel unlinkCertificatesFromCustomer($company_id, $customer_code, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultCertificateModel unlinkCertificatesFromCustomer($company_id, $customer_code, $x_avalara_client, $body)
 
 Unlink certificates from a customer
 
@@ -746,14 +746,14 @@ Remove one or more certificates to a customer.                A customer object 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -762,7 +762,7 @@ $apiInstance = new Swagger\Client\Api\CustomersApi(
 $company_id = 56; // int | The unique ID number of the company that recorded this customer
 $customer_code = "customer_code_example"; // string | The unique code representing this customer
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\LinkCertificatesModel(); // \Swagger\Client\Model\LinkCertificatesModel | The list of certificates to link to this customer
+$body = new \Together\Taxes\Model\LinkCertificatesModel(); // \Together\Taxes\Model\LinkCertificatesModel | The list of certificates to link to this customer
 
 try {
     $result = $apiInstance->unlinkCertificatesFromCustomer($company_id, $customer_code, $x_avalara_client, $body);
@@ -780,11 +780,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded this customer |
  **customer_code** | **string**| The unique code representing this customer |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LinkCertificatesModel**](../Model/LinkCertificatesModel.md)| The list of certificates to link to this customer | [optional]
+ **body** | [**\Together\Taxes\Model\LinkCertificatesModel**](../Model/LinkCertificatesModel.md)| The list of certificates to link to this customer | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertificateModel**](../Model/FetchResultCertificateModel.md)
+[**\Together\Taxes\Model\FetchResultCertificateModel**](../Model/FetchResultCertificateModel.md)
 
 ### Authorization
 
@@ -798,7 +798,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCustomer**
-> \Swagger\Client\Model\CustomerModel updateCustomer($company_id, $customer_code, $x_avalara_client, $body)
+> \Together\Taxes\Model\CustomerModel updateCustomer($company_id, $customer_code, $x_avalara_client, $body)
 
 Update a single customer
 
@@ -810,14 +810,14 @@ Replace the customer object at this URL with a new record.                A cust
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CustomersApi(
+$apiInstance = new Together\Taxes\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -826,7 +826,7 @@ $apiInstance = new Swagger\Client\Api\CustomersApi(
 $company_id = 56; // int | The unique ID number of the company that recorded this customer
 $customer_code = "customer_code_example"; // string | The unique code representing this customer
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CustomerModel(); // \Swagger\Client\Model\CustomerModel | The new customer model that will replace the existing record at this URL
+$body = new \Together\Taxes\Model\CustomerModel(); // \Together\Taxes\Model\CustomerModel | The new customer model that will replace the existing record at this URL
 
 try {
     $result = $apiInstance->updateCustomer($company_id, $customer_code, $x_avalara_client, $body);
@@ -844,11 +844,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded this customer |
  **customer_code** | **string**| The unique code representing this customer |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CustomerModel**](../Model/CustomerModel.md)| The new customer model that will replace the existing record at this URL | [optional]
+ **body** | [**\Together\Taxes\Model\CustomerModel**](../Model/CustomerModel.md)| The new customer model that will replace the existing record at this URL | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomerModel**](../Model/CustomerModel.md)
+[**\Together\Taxes\Model\CustomerModel**](../Model/CustomerModel.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * LocationValidationModel Class Doc Comment
  *
  * @category Class
  * @description Tells you whether this location object has been correctly set up to the local jurisdiction&#39;s standards
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class LocationValidationModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'settings_validated' => 'bool',
-        'required_settings' => '\Swagger\Client\Model\LocationQuestionModel[]'
+        'required_settings' => '\Together\Taxes\Model\LocationQuestionModel[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class LocationValidationModel implements ModelInterface, ArrayAccess
     /**
      * Gets required_settings
      *
-     * @return \Swagger\Client\Model\LocationQuestionModel[]
+     * @return \Together\Taxes\Model\LocationQuestionModel[]
      */
     public function getRequiredSettings()
     {
@@ -248,7 +248,7 @@ class LocationValidationModel implements ModelInterface, ArrayAccess
     /**
      * Sets required_settings
      *
-     * @param \Swagger\Client\Model\LocationQuestionModel[] $required_settings A list of settings that must be defined for this location
+     * @param \Together\Taxes\Model\LocationQuestionModel[] $required_settings A list of settings that must be defined for this location
      *
      * @return $this
      */

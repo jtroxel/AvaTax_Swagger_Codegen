@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * TransactionBatchItemModel Class Doc Comment
  *
  * @category Class
  * @description Represents a transaction batch item.  Only one child transaction model should contain data.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,9 +58,9 @@ class TransactionBatchItemModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'create_transaction_model' => '\Swagger\Client\Model\CreateTransactionModel',
-        'adjust_transaction_model' => '\Swagger\Client\Model\BatchAdjustTransactionModel',
-        'void_transaction_model' => '\Swagger\Client\Model\BatchVoidTransactionModel'
+        'create_transaction_model' => '\Together\Taxes\Model\CreateTransactionModel',
+        'adjust_transaction_model' => '\Together\Taxes\Model\BatchAdjustTransactionModel',
+        'void_transaction_model' => '\Together\Taxes\Model\BatchVoidTransactionModel'
     ];
 
     /**
@@ -220,7 +220,7 @@ class TransactionBatchItemModel implements ModelInterface, ArrayAccess
     /**
      * Gets create_transaction_model
      *
-     * @return \Swagger\Client\Model\CreateTransactionModel
+     * @return \Together\Taxes\Model\CreateTransactionModel
      */
     public function getCreateTransactionModel()
     {
@@ -230,7 +230,7 @@ class TransactionBatchItemModel implements ModelInterface, ArrayAccess
     /**
      * Sets create_transaction_model
      *
-     * @param \Swagger\Client\Model\CreateTransactionModel $create_transaction_model Represents a transaction to be created.
+     * @param \Together\Taxes\Model\CreateTransactionModel $create_transaction_model Represents a transaction to be created.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class TransactionBatchItemModel implements ModelInterface, ArrayAccess
     /**
      * Gets adjust_transaction_model
      *
-     * @return \Swagger\Client\Model\BatchAdjustTransactionModel
+     * @return \Together\Taxes\Model\BatchAdjustTransactionModel
      */
     public function getAdjustTransactionModel()
     {
@@ -254,7 +254,7 @@ class TransactionBatchItemModel implements ModelInterface, ArrayAccess
     /**
      * Sets adjust_transaction_model
      *
-     * @param \Swagger\Client\Model\BatchAdjustTransactionModel $adjust_transaction_model Represents an existing transaction to be adjusted.
+     * @param \Together\Taxes\Model\BatchAdjustTransactionModel $adjust_transaction_model Represents an existing transaction to be adjusted.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class TransactionBatchItemModel implements ModelInterface, ArrayAccess
     /**
      * Gets void_transaction_model
      *
-     * @return \Swagger\Client\Model\BatchVoidTransactionModel
+     * @return \Together\Taxes\Model\BatchVoidTransactionModel
      */
     public function getVoidTransactionModel()
     {
@@ -278,7 +278,7 @@ class TransactionBatchItemModel implements ModelInterface, ArrayAccess
     /**
      * Sets void_transaction_model
      *
-     * @param \Swagger\Client\Model\BatchVoidTransactionModel $void_transaction_model Represents an existing transaction to be voided.
+     * @param \Together\Taxes\Model\BatchVoidTransactionModel $void_transaction_model Represents an existing transaction to be voided.
      *
      * @return $this
      */

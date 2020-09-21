@@ -29,8 +29,8 @@ Name | Type | Description | Notes
 **created_user_id** | **int** | The User ID of the user who created this record. | [optional] 
 **modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 
 **modified_user_id** | **int** | The user ID of the user who last modified this record. | [optional] 
-**settings** | [**\Swagger\Client\Model\LocationSettingModel[]**](LocationSettingModel.md) | Extra information required by certain jurisdictions for filing.  For a list of settings recognized by Avalara, query the endpoint \&quot;/api/v2/definitions/locationquestions\&quot;.  To determine the list of settings required for this location, query the endpoint \&quot;/api/v2/companies/(id)/locations/(id)/validate\&quot;. | [optional] 
-**parameters** | [**\Swagger\Client\Model\LocationParameterModel[]**](LocationParameterModel.md) | List of location parameters. | [optional] 
+**settings** | [**\Together\Taxes\Model\LocationSettingModel[]**](LocationSettingModel.md) | Extra information required by certain jurisdictions for filing.  For a list of settings recognized by Avalara, query the endpoint \&quot;/api/v2/definitions/locationquestions\&quot;.  To determine the list of settings required for this location, query the endpoint \&quot;/api/v2/companies/(id)/locations/(id)/validate\&quot;. | [optional] 
+**parameters** | [**\Together\Taxes\Model\LocationParameterModel[]**](LocationParameterModel.md) | List of location parameters. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

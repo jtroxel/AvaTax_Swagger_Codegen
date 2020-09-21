@@ -1,4 +1,4 @@
-# Swagger\Client\FilingCalendarsApi
+# Together\Taxes\FilingCalendarsApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **deleteCompanyReturnSettings**
-> \Swagger\Client\Model\CompanyReturnSettingModel[] deleteCompanyReturnSettings($company_id, $filing_calendar_id, $company_return_setting_id, $x_avalara_client)
+> \Together\Taxes\Model\CompanyReturnSettingModel[] deleteCompanyReturnSettings($company_id, $filing_calendar_id, $company_return_setting_id, $x_avalara_client)
 
 Delete a company return setting
 
@@ -20,14 +20,14 @@ This API is available by invitation only and only available for users with Compl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\FilingCalendarsApi(
+$apiInstance = new Together\Taxes\Api\FilingCalendarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyReturnSettingModel[]**](../Model/CompanyReturnSettingModel.md)
+[**\Together\Taxes\Model\CompanyReturnSettingModel[]**](../Model/CompanyReturnSettingModel.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recordset_count** | **int** |  | [optional] 
-**value** | [**\Swagger\Client\Model\ItemParameterModel[]**](ItemParameterModel.md) |  | [optional] 
+**value** | [**\Together\Taxes\Model\ItemParameterModel[]**](ItemParameterModel.md) |  | [optional] 
 **next_link** | **string** |  | [optional] 
 **page_key** | **string** |  | [optional] 
 

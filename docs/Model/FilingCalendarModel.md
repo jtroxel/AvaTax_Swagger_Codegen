@@ -64,7 +64,7 @@ Name | Type | Description | Notes
 **bulk_account_id** | **string** | User name of bulk account. | [optional] 
 **site_code** | **string** | The bulk account site code. | [optional] 
 **bulk_account_validation_status** | **string** | The status of the bulk account&#39;s validation. | [optional] 
-**settings** | [**\Swagger\Client\Model\CompanyReturnSettingModel[]**](CompanyReturnSettingModel.md) | CompanyReturn settings for complext filing calendar | [optional] 
+**settings** | [**\Together\Taxes\Model\CompanyReturnSettingModel[]**](CompanyReturnSettingModel.md) | CompanyReturn settings for complext filing calendar | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

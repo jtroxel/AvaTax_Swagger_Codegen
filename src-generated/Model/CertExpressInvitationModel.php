@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CertExpressInvitationModel Class Doc Comment
  *
  * @category Class
  * @description Represents an invitation for a customer to use CertExpress to self-report their own certificates.  This invitation is delivered by your choice of method, or you can present a hyperlink to the user  directly in your connector.  Your customer will be redirected to https://app.certexpress.com/ where  they can follow a step-by-step guide to enter information about their exemption certificates.  The  certificates entered will be recorded and automatically linked to their customer record.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,8 +62,8 @@ class CertExpressInvitationModel implements ModelInterface, ArrayAccess
         'company_id' => 'int',
         'recipient' => 'string',
         'customer_code' => 'string',
-        'customer' => '\Swagger\Client\Model\CustomerModel',
-        'cover_letter' => '\Swagger\Client\Model\CoverLetterModel',
+        'customer' => '\Together\Taxes\Model\CustomerModel',
+        'cover_letter' => '\Together\Taxes\Model\CoverLetterModel',
         'email_status' => 'string',
         'cover_letters_only' => 'bool',
         'exposure_zones' => 'int[]',
@@ -407,7 +407,7 @@ class CertExpressInvitationModel implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \Swagger\Client\Model\CustomerModel
+     * @return \Together\Taxes\Model\CustomerModel
      */
     public function getCustomer()
     {
@@ -417,7 +417,7 @@ class CertExpressInvitationModel implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \Swagger\Client\Model\CustomerModel $customer The customer who received this invitation.
+     * @param \Together\Taxes\Model\CustomerModel $customer The customer who received this invitation.
      *
      * @return $this
      */
@@ -431,7 +431,7 @@ class CertExpressInvitationModel implements ModelInterface, ArrayAccess
     /**
      * Gets cover_letter
      *
-     * @return \Swagger\Client\Model\CoverLetterModel
+     * @return \Together\Taxes\Model\CoverLetterModel
      */
     public function getCoverLetter()
     {
@@ -441,7 +441,7 @@ class CertExpressInvitationModel implements ModelInterface, ArrayAccess
     /**
      * Sets cover_letter
      *
-     * @param \Swagger\Client\Model\CoverLetterModel $cover_letter The attached cover letter object to this request.
+     * @param \Together\Taxes\Model\CoverLetterModel $cover_letter The attached cover letter object to this request.
      *
      * @return $this
      */

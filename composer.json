@@ -1,5 +1,6 @@
 {
-    "name": "/",
+    "name": "SmugMug/avatax-client-swagger-codegen",
+    "version": "0.1",
     "description": "",
     "keywords": [
         "swagger",
@@ -28,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "Swagger\\Client\\" : "lib/" }
+        "psr-4": { "Together\\Taxes\\" : "src-generated/" }
     },
     "autoload-dev": {
-        "psr-4": { "Swagger\\Client\\" : "test/" }
+        "psr-4": { "Together\\Taxes\\" : "test/" }
     }
 }

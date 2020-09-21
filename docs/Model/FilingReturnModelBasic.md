@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 **excluded_non_taxable_amount** | **double** | The amount of non-taxable sales excluded from the liability calculation | [optional] 
 **excluded_tax_amount** | **double** | The amount of tax excluded from the liability calculation | [optional] 
 **accrual_type** | **string** | Accrual type of the return | [optional] 
-**attachments** | [**\Swagger\Client\Model\FilingAttachmentModel[]**](FilingAttachmentModel.md) | The attachments for this return. | [optional] 
+**attachments** | [**\Together\Taxes\Model\FilingAttachmentModel[]**](FilingAttachmentModel.md) | The attachments for this return. | [optional] 
 **created_date** | [**\DateTime**](\DateTime.md) | The date when this record was created. | [optional] 
 **created_user_id** | **int** | The User ID of the user who created this record. | [optional] 
 **modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 

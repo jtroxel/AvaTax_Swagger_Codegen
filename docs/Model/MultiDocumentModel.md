@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **created_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was created. | [optional] 
 **modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 
 **modified_user_id** | **int** | The user ID of the user who last modified this record. | [optional] 
-**documents** | [**\Swagger\Client\Model\TransactionModel[]**](TransactionModel.md) | A separate document will exist for each unique combination of buyer and seller in this MultiDocument transaction. | [optional] 
+**documents** | [**\Together\Taxes\Model\TransactionModel[]**](TransactionModel.md) | A separate document will exist for each unique combination of buyer and seller in this MultiDocument transaction. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

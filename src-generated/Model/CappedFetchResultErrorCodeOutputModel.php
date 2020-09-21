@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CappedFetchResultErrorCodeOutputModel Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class CappedFetchResultErrorCodeOutputModel implements ModelInterface, ArrayAcce
     protected static $swaggerTypes = [
         'is_recordset_count_capped' => 'bool',
         'recordset_count' => 'int',
-        'value' => '\Swagger\Client\Model\ErrorCodeOutputModel[]',
+        'value' => '\Together\Taxes\Model\ErrorCodeOutputModel[]',
         'next_link' => 'string',
         'page_key' => 'string'
     ];
@@ -279,7 +279,7 @@ class CappedFetchResultErrorCodeOutputModel implements ModelInterface, ArrayAcce
     /**
      * Gets value
      *
-     * @return \Swagger\Client\Model\ErrorCodeOutputModel[]
+     * @return \Together\Taxes\Model\ErrorCodeOutputModel[]
      */
     public function getValue()
     {
@@ -289,7 +289,7 @@ class CappedFetchResultErrorCodeOutputModel implements ModelInterface, ArrayAcce
     /**
      * Sets value
      *
-     * @param \Swagger\Client\Model\ErrorCodeOutputModel[] $value value
+     * @param \Together\Taxes\Model\ErrorCodeOutputModel[] $value value
      *
      * @return $this
      */

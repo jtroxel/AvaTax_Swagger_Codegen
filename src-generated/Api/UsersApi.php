@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class UsersApi
      * Change Password
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
+     * @param  \Together\Taxes\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -111,9 +111,9 @@ class UsersApi
      * Change Password
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
+     * @param  \Together\Taxes\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -187,7 +187,7 @@ class UsersApi
      * Change Password
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
+     * @param  \Together\Taxes\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,7 +208,7 @@ class UsersApi
      * Change Password
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
+     * @param  \Together\Taxes\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -259,7 +259,7 @@ class UsersApi
      * Create request for operation 'changePassword'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
+     * @param  \Together\Taxes\Model\PasswordChangeModel $body An object containing your current password and the new password. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -369,11 +369,11 @@ class UsersApi
      *
      * @param  int $account_id The unique ID number of the account where these users will be created. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel[] $body The user or array of users you wish to create. (optional)
+     * @param  \Together\Taxes\Model\UserModel[] $body The user or array of users you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserModel[]
+     * @return \Together\Taxes\Model\UserModel[]
      */
     public function createUsers($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -388,15 +388,15 @@ class UsersApi
      *
      * @param  int $account_id The unique ID number of the account where these users will be created. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel[] $body The user or array of users you wish to create. (optional)
+     * @param  \Together\Taxes\Model\UserModel[] $body The user or array of users you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\UserModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createUsersWithHttpInfo($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\UserModel[]';
+        $returnType = '\Together\Taxes\Model\UserModel[]';
         $request = $this->createUsersRequest($account_id, $x_avalara_client, $body);
 
         try {
@@ -448,7 +448,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserModel[]',
+                        '\Together\Taxes\Model\UserModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -465,7 +465,7 @@ class UsersApi
      *
      * @param  int $account_id The unique ID number of the account where these users will be created. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel[] $body The user or array of users you wish to create. (optional)
+     * @param  \Together\Taxes\Model\UserModel[] $body The user or array of users you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -487,14 +487,14 @@ class UsersApi
      *
      * @param  int $account_id The unique ID number of the account where these users will be created. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel[] $body The user or array of users you wish to create. (optional)
+     * @param  \Together\Taxes\Model\UserModel[] $body The user or array of users you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createUsersAsyncWithHttpInfo($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\UserModel[]';
+        $returnType = '\Together\Taxes\Model\UserModel[]';
         $request = $this->createUsersRequest($account_id, $x_avalara_client, $body);
 
         return $this->client
@@ -539,7 +539,7 @@ class UsersApi
      *
      * @param  int $account_id The unique ID number of the account where these users will be created. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel[] $body The user or array of users you wish to create. (optional)
+     * @param  \Together\Taxes\Model\UserModel[] $body The user or array of users you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -665,9 +665,9 @@ class UsersApi
      * @param  int $account_id The accountID of the user you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteUser($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -684,13 +684,13 @@ class UsersApi
      * @param  int $account_id The accountID of the user you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteUserWithHttpInfo($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteUserRequest($id, $account_id, $x_avalara_client);
 
         try {
@@ -742,7 +742,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -788,7 +788,7 @@ class UsersApi
      */
     public function deleteUserAsyncWithHttpInfo($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteUserRequest($id, $account_id, $x_avalara_client);
 
         return $this->client
@@ -971,9 +971,9 @@ class UsersApi
      * @param  string $include Optional fetch commands. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserModel
+     * @return \Together\Taxes\Model\UserModel
      */
     public function getUser($id, $account_id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -991,13 +991,13 @@ class UsersApi
      * @param  string $include Optional fetch commands. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\UserModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserWithHttpInfo($id, $account_id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\UserModel';
+        $returnType = '\Together\Taxes\Model\UserModel';
         $request = $this->getUserRequest($id, $account_id, $include, $x_avalara_client);
 
         try {
@@ -1049,7 +1049,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserModel',
+                        '\Together\Taxes\Model\UserModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1097,7 +1097,7 @@ class UsersApi
      */
     public function getUserAsyncWithHttpInfo($id, $account_id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\UserModel';
+        $returnType = '\Together\Taxes\Model\UserModel';
         $request = $this->getUserRequest($id, $account_id, $include, $x_avalara_client);
 
         return $this->client
@@ -1284,9 +1284,9 @@ class UsersApi
      * @param  int $account_id The accountID of the user you wish to get. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserEntitlementModel
+     * @return \Together\Taxes\Model\UserEntitlementModel
      */
     public function getUserEntitlements($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1303,13 +1303,13 @@ class UsersApi
      * @param  int $account_id The accountID of the user you wish to get. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserEntitlementModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\UserEntitlementModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserEntitlementsWithHttpInfo($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\UserEntitlementModel';
+        $returnType = '\Together\Taxes\Model\UserEntitlementModel';
         $request = $this->getUserEntitlementsRequest($id, $account_id, $x_avalara_client);
 
         try {
@@ -1361,7 +1361,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserEntitlementModel',
+                        '\Together\Taxes\Model\UserEntitlementModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1407,7 +1407,7 @@ class UsersApi
      */
     public function getUserEntitlementsAsyncWithHttpInfo($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\UserEntitlementModel';
+        $returnType = '\Together\Taxes\Model\UserEntitlementModel';
         $request = $this->getUserEntitlementsRequest($id, $account_id, $x_avalara_client);
 
         return $this->client
@@ -1593,9 +1593,9 @@ class UsersApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultUserModel
+     * @return \Together\Taxes\Model\FetchResultUserModel
      */
     public function listUsersByAccount($account_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1616,13 +1616,13 @@ class UsersApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultUserModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultUserModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listUsersByAccountWithHttpInfo($account_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultUserModel';
+        $returnType = '\Together\Taxes\Model\FetchResultUserModel';
         $request = $this->listUsersByAccountRequest($account_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1674,7 +1674,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultUserModel',
+                        '\Together\Taxes\Model\FetchResultUserModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1728,7 +1728,7 @@ class UsersApi
      */
     public function listUsersByAccountAsyncWithHttpInfo($account_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultUserModel';
+        $returnType = '\Together\Taxes\Model\FetchResultUserModel';
         $request = $this->listUsersByAccountRequest($account_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1923,9 +1923,9 @@ class UsersApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultUserModel
+     * @return \Together\Taxes\Model\FetchResultUserModel
      */
     public function queryUsers($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1945,13 +1945,13 @@ class UsersApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultUserModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultUserModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryUsersWithHttpInfo($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultUserModel';
+        $returnType = '\Together\Taxes\Model\FetchResultUserModel';
         $request = $this->queryUsersRequest($include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2003,7 +2003,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultUserModel',
+                        '\Together\Taxes\Model\FetchResultUserModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2055,7 +2055,7 @@ class UsersApi
      */
     public function queryUsersAsyncWithHttpInfo($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultUserModel';
+        $returnType = '\Together\Taxes\Model\FetchResultUserModel';
         $request = $this->queryUsersRequest($include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2231,11 +2231,11 @@ class UsersApi
      * @param  int $id The ID of the user you wish to update. (required)
      * @param  int $account_id The accountID of the user you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel $body The user object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\UserModel $body The user object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserModel
+     * @return \Together\Taxes\Model\UserModel
      */
     public function updateUser($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2251,15 +2251,15 @@ class UsersApi
      * @param  int $id The ID of the user you wish to update. (required)
      * @param  int $account_id The accountID of the user you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel $body The user object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\UserModel $body The user object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\UserModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateUserWithHttpInfo($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\UserModel';
+        $returnType = '\Together\Taxes\Model\UserModel';
         $request = $this->updateUserRequest($id, $account_id, $x_avalara_client, $body);
 
         try {
@@ -2311,7 +2311,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserModel',
+                        '\Together\Taxes\Model\UserModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2329,7 +2329,7 @@ class UsersApi
      * @param  int $id The ID of the user you wish to update. (required)
      * @param  int $account_id The accountID of the user you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel $body The user object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\UserModel $body The user object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2352,14 +2352,14 @@ class UsersApi
      * @param  int $id The ID of the user you wish to update. (required)
      * @param  int $account_id The accountID of the user you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel $body The user object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\UserModel $body The user object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateUserAsyncWithHttpInfo($id, $account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\UserModel';
+        $returnType = '\Together\Taxes\Model\UserModel';
         $request = $this->updateUserRequest($id, $account_id, $x_avalara_client, $body);
 
         return $this->client
@@ -2405,7 +2405,7 @@ class UsersApi
      * @param  int $id The ID of the user you wish to update. (required)
      * @param  int $account_id The accountID of the user you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\UserModel $body The user object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\UserModel $body The user object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

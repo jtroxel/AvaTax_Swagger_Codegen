@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * NexusSummaryModel Class Doc Comment
  *
  * @category Class
  * @description Nexus summary model
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class NexusSummaryModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'company_id' => 'int',
-        'nexus_summary' => '\Swagger\Client\Model\NexusTaxTypeGroupCountModel[]'
+        'nexus_summary' => '\Together\Taxes\Model\NexusTaxTypeGroupCountModel[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class NexusSummaryModel implements ModelInterface, ArrayAccess
     /**
      * Gets nexus_summary
      *
-     * @return \Swagger\Client\Model\NexusTaxTypeGroupCountModel[]
+     * @return \Together\Taxes\Model\NexusTaxTypeGroupCountModel[]
      */
     public function getNexusSummary()
     {
@@ -248,7 +248,7 @@ class NexusSummaryModel implements ModelInterface, ArrayAccess
     /**
      * Sets nexus_summary
      *
-     * @param \Swagger\Client\Model\NexusTaxTypeGroupCountModel[] $nexus_summary Nexus summary for this company
+     * @param \Together\Taxes\Model\NexusTaxTypeGroupCountModel[] $nexus_summary Nexus summary for this company
      *
      * @return $this
      */

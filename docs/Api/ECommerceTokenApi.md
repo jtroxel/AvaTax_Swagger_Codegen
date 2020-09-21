@@ -1,4 +1,4 @@
-# Swagger\Client\ECommerceTokenApi
+# Together\Taxes\ECommerceTokenApi
 
 All URIs are relative to *https://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **createECommerceToken**
-> \Swagger\Client\Model\FetchResultECommerceTokenOutputModel createECommerceToken($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultECommerceTokenOutputModel createECommerceToken($company_id, $x_avalara_client, $body)
 
 Create a new eCommerce token.
 
@@ -21,14 +21,14 @@ Creates a new eCommerce token.                This API is used to create a new e
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ECommerceTokenApi(
+$apiInstance = new Together\Taxes\Api\ECommerceTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -36,7 +36,7 @@ $apiInstance = new Swagger\Client\Api\ECommerceTokenApi(
 );
 $company_id = 56; // int | The company ID that will be issued this certificate.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CreateECommerceTokenInputModel(); // \Swagger\Client\Model\CreateECommerceTokenInputModel | 
+$body = new \Together\Taxes\Model\CreateECommerceTokenInputModel(); // \Together\Taxes\Model\CreateECommerceTokenInputModel | 
 
 try {
     $result = $apiInstance->createECommerceToken($company_id, $x_avalara_client, $body);
@@ -53,11 +53,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The company ID that will be issued this certificate. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CreateECommerceTokenInputModel**](../Model/CreateECommerceTokenInputModel.md)|  | [optional]
+ **body** | [**\Together\Taxes\Model\CreateECommerceTokenInputModel**](../Model/CreateECommerceTokenInputModel.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultECommerceTokenOutputModel**](../Model/FetchResultECommerceTokenOutputModel.md)
+[**\Together\Taxes\Model\FetchResultECommerceTokenOutputModel**](../Model/FetchResultECommerceTokenOutputModel.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refreshECommerceToken**
-> \Swagger\Client\Model\FetchResultECommerceTokenOutputModel refreshECommerceToken($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultECommerceTokenOutputModel refreshECommerceToken($company_id, $x_avalara_client, $body)
 
 Refresh an eCommerce token.
 
@@ -83,14 +83,14 @@ Refresh an eCommerce token.                CertCapture eCommerce tokens expire a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ECommerceTokenApi(
+$apiInstance = new Together\Taxes\Api\ECommerceTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -98,7 +98,7 @@ $apiInstance = new Swagger\Client\Api\ECommerceTokenApi(
 );
 $company_id = 56; // int | The company ID that the refreshed certificate belongs to.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\RefreshECommerceTokenInputModel(); // \Swagger\Client\Model\RefreshECommerceTokenInputModel | 
+$body = new \Together\Taxes\Model\RefreshECommerceTokenInputModel(); // \Together\Taxes\Model\RefreshECommerceTokenInputModel | 
 
 try {
     $result = $apiInstance->refreshECommerceToken($company_id, $x_avalara_client, $body);
@@ -115,11 +115,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The company ID that the refreshed certificate belongs to. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\RefreshECommerceTokenInputModel**](../Model/RefreshECommerceTokenInputModel.md)|  | [optional]
+ **body** | [**\Together\Taxes\Model\RefreshECommerceTokenInputModel**](../Model/RefreshECommerceTokenInputModel.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultECommerceTokenOutputModel**](../Model/FetchResultECommerceTokenOutputModel.md)
+[**\Together\Taxes\Model\FetchResultECommerceTokenOutputModel**](../Model/FetchResultECommerceTokenOutputModel.md)
 
 ### Authorization
 

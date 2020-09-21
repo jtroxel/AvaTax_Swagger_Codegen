@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **is_recordset_count_capped** | **bool** |  | [optional] 
 **recordset_count** | **int** |  | [optional] 
-**value** | [**\Swagger\Client\Model\ErrorTransactionOutputModel[]**](ErrorTransactionOutputModel.md) |  | [optional] 
+**value** | [**\Together\Taxes\Model\ErrorTransactionOutputModel[]**](ErrorTransactionOutputModel.md) |  | [optional] 
 **next_link** | **string** |  | [optional] 
 **page_key** | **string** |  | [optional] 
 

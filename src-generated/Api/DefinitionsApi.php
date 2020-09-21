@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * DefinitionsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,9 +96,9 @@ class DefinitionsApi
      * @param  string $hs_code The partial or full HS Code for which you would like to view all of the parents. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultHsCodeModel
+     * @return \Together\Taxes\Model\FetchResultHsCodeModel
      */
     public function getCrossBorderCode($country, $hs_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -115,13 +115,13 @@ class DefinitionsApi
      * @param  string $hs_code The partial or full HS Code for which you would like to view all of the parents. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultHsCodeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultHsCodeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCrossBorderCodeWithHttpInfo($country, $hs_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultHsCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultHsCodeModel';
         $request = $this->getCrossBorderCodeRequest($country, $hs_code, $x_avalara_client);
 
         try {
@@ -173,7 +173,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultHsCodeModel',
+                        '\Together\Taxes\Model\FetchResultHsCodeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,7 +219,7 @@ class DefinitionsApi
      */
     public function getCrossBorderCodeAsyncWithHttpInfo($country, $hs_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultHsCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultHsCodeModel';
         $request = $this->getCrossBorderCodeRequest($country, $hs_code, $x_avalara_client);
 
         return $this->client
@@ -404,9 +404,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultSkyscraperStatusModel
+     * @return \Together\Taxes\Model\FetchResultSkyscraperStatusModel
      */
     public function getLoginVerifierByForm($form, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -426,13 +426,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultSkyscraperStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultSkyscraperStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLoginVerifierByFormWithHttpInfo($form, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSkyscraperStatusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSkyscraperStatusModel';
         $request = $this->getLoginVerifierByFormRequest($form, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -484,7 +484,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultSkyscraperStatusModel',
+                        '\Together\Taxes\Model\FetchResultSkyscraperStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -536,7 +536,7 @@ class DefinitionsApi
      */
     public function getLoginVerifierByFormAsyncWithHttpInfo($form, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSkyscraperStatusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSkyscraperStatusModel';
         $request = $this->getLoginVerifierByFormRequest($form, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -725,9 +725,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultAvaFileFormModel
+     * @return \Together\Taxes\Model\FetchResultAvaFileFormModel
      */
     public function listAvaFileForms($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -746,13 +746,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultAvaFileFormModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultAvaFileFormModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAvaFileFormsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAvaFileFormModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAvaFileFormModel';
         $request = $this->listAvaFileFormsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -804,7 +804,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultAvaFileFormModel',
+                        '\Together\Taxes\Model\FetchResultAvaFileFormModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class DefinitionsApi
      */
     public function listAvaFileFormsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAvaFileFormModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAvaFileFormModel';
         $request = $this->listAvaFileFormsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1029,9 +1029,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertificateAttributeModel
+     * @return \Together\Taxes\Model\FetchResultCertificateAttributeModel
      */
     public function listCertificateAttributes($companyid = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1051,13 +1051,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertificateAttributeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertificateAttributeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCertificateAttributesWithHttpInfo($companyid = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateAttributeModel';
         $request = $this->listCertificateAttributesRequest($companyid, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1109,7 +1109,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertificateAttributeModel',
+                        '\Together\Taxes\Model\FetchResultCertificateAttributeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1161,7 +1161,7 @@ class DefinitionsApi
      */
     public function listCertificateAttributesAsyncWithHttpInfo($companyid = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateAttributeModel';
         $request = $this->listCertificateAttributesRequest($companyid, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1340,9 +1340,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultExemptionReasonModel
+     * @return \Together\Taxes\Model\FetchResultExemptionReasonModel
      */
     public function listCertificateExemptReasons($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1361,13 +1361,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultExemptionReasonModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultExemptionReasonModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCertificateExemptReasonsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultExemptionReasonModel';
+        $returnType = '\Together\Taxes\Model\FetchResultExemptionReasonModel';
         $request = $this->listCertificateExemptReasonsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1419,7 +1419,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultExemptionReasonModel',
+                        '\Together\Taxes\Model\FetchResultExemptionReasonModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1469,7 +1469,7 @@ class DefinitionsApi
      */
     public function listCertificateExemptReasonsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultExemptionReasonModel';
+        $returnType = '\Together\Taxes\Model\FetchResultExemptionReasonModel';
         $request = $this->listCertificateExemptReasonsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1643,9 +1643,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultExposureZoneModel
+     * @return \Together\Taxes\Model\FetchResultExposureZoneModel
      */
     public function listCertificateExposureZones($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1664,13 +1664,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultExposureZoneModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultExposureZoneModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCertificateExposureZonesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultExposureZoneModel';
+        $returnType = '\Together\Taxes\Model\FetchResultExposureZoneModel';
         $request = $this->listCertificateExposureZonesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1722,7 +1722,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultExposureZoneModel',
+                        '\Together\Taxes\Model\FetchResultExposureZoneModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1772,7 +1772,7 @@ class DefinitionsApi
      */
     public function listCertificateExposureZonesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultExposureZoneModel';
+        $returnType = '\Together\Taxes\Model\FetchResultExposureZoneModel';
         $request = $this->listCertificateExposureZonesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1947,9 +1947,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCommunicationsTSPairModel
+     * @return \Together\Taxes\Model\FetchResultCommunicationsTSPairModel
      */
     public function listCommunicationsServiceTypes($id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1969,13 +1969,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCommunicationsTSPairModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCommunicationsTSPairModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCommunicationsServiceTypesWithHttpInfo($id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCommunicationsTSPairModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCommunicationsTSPairModel';
         $request = $this->listCommunicationsServiceTypesRequest($id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2027,7 +2027,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCommunicationsTSPairModel',
+                        '\Together\Taxes\Model\FetchResultCommunicationsTSPairModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2079,7 +2079,7 @@ class DefinitionsApi
      */
     public function listCommunicationsServiceTypesAsyncWithHttpInfo($id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCommunicationsTSPairModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCommunicationsTSPairModel';
         $request = $this->listCommunicationsServiceTypesRequest($id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2268,9 +2268,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCommunicationsTSPairModel
+     * @return \Together\Taxes\Model\FetchResultCommunicationsTSPairModel
      */
     public function listCommunicationsTSPairs($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2289,13 +2289,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCommunicationsTSPairModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCommunicationsTSPairModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCommunicationsTSPairsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCommunicationsTSPairModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCommunicationsTSPairModel';
         $request = $this->listCommunicationsTSPairsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2347,7 +2347,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCommunicationsTSPairModel',
+                        '\Together\Taxes\Model\FetchResultCommunicationsTSPairModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2397,7 +2397,7 @@ class DefinitionsApi
      */
     public function listCommunicationsTSPairsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCommunicationsTSPairModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCommunicationsTSPairModel';
         $request = $this->listCommunicationsTSPairsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2571,9 +2571,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCommunicationsTransactionTypeModel
+     * @return \Together\Taxes\Model\FetchResultCommunicationsTransactionTypeModel
      */
     public function listCommunicationsTransactionTypes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2592,13 +2592,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCommunicationsTransactionTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCommunicationsTransactionTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCommunicationsTransactionTypesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCommunicationsTransactionTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCommunicationsTransactionTypeModel';
         $request = $this->listCommunicationsTransactionTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2650,7 +2650,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCommunicationsTransactionTypeModel',
+                        '\Together\Taxes\Model\FetchResultCommunicationsTransactionTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2700,7 +2700,7 @@ class DefinitionsApi
      */
     public function listCommunicationsTransactionTypesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCommunicationsTransactionTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCommunicationsTransactionTypeModel';
         $request = $this->listCommunicationsTransactionTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2874,9 +2874,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultIsoCountryModel
+     * @return \Together\Taxes\Model\FetchResultIsoCountryModel
      */
     public function listCountries($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2895,13 +2895,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultIsoCountryModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultIsoCountryModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCountriesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultIsoCountryModel';
+        $returnType = '\Together\Taxes\Model\FetchResultIsoCountryModel';
         $request = $this->listCountriesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2953,7 +2953,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultIsoCountryModel',
+                        '\Together\Taxes\Model\FetchResultIsoCountryModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3003,7 +3003,7 @@ class DefinitionsApi
      */
     public function listCountriesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultIsoCountryModel';
+        $returnType = '\Together\Taxes\Model\FetchResultIsoCountryModel';
         $request = $this->listCountriesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3177,9 +3177,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCoverLetterModel
+     * @return \Together\Taxes\Model\FetchResultCoverLetterModel
      */
     public function listCoverLetters($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3198,13 +3198,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCoverLetterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCoverLetterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCoverLettersWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCoverLetterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCoverLetterModel';
         $request = $this->listCoverLettersRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -3256,7 +3256,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCoverLetterModel',
+                        '\Together\Taxes\Model\FetchResultCoverLetterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3306,7 +3306,7 @@ class DefinitionsApi
      */
     public function listCoverLettersAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCoverLetterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCoverLetterModel';
         $request = $this->listCoverLettersRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3482,9 +3482,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultHsCodeModel
+     * @return \Together\Taxes\Model\FetchResultHsCodeModel
      */
     public function listCrossBorderCodes($country, $hs_code, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3505,13 +3505,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultHsCodeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultHsCodeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCrossBorderCodesWithHttpInfo($country, $hs_code, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultHsCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultHsCodeModel';
         $request = $this->listCrossBorderCodesRequest($country, $hs_code, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -3563,7 +3563,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultHsCodeModel',
+                        '\Together\Taxes\Model\FetchResultHsCodeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3617,7 +3617,7 @@ class DefinitionsApi
      */
     public function listCrossBorderCodesAsyncWithHttpInfo($country, $hs_code, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultHsCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultHsCodeModel';
         $request = $this->listCrossBorderCodesRequest($country, $hs_code, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3817,9 +3817,9 @@ class DefinitionsApi
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultHsCodeModel
+     * @return \Together\Taxes\Model\FetchResultHsCodeModel
      */
     public function listCrossBorderSections($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3834,13 +3834,13 @@ class DefinitionsApi
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultHsCodeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultHsCodeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCrossBorderSectionsWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultHsCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultHsCodeModel';
         $request = $this->listCrossBorderSectionsRequest($x_avalara_client);
 
         try {
@@ -3892,7 +3892,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultHsCodeModel',
+                        '\Together\Taxes\Model\FetchResultHsCodeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3934,7 +3934,7 @@ class DefinitionsApi
      */
     public function listCrossBorderSectionsAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultHsCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultHsCodeModel';
         $request = $this->listCrossBorderSectionsRequest($x_avalara_client);
 
         return $this->client
@@ -4088,9 +4088,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCurrencyModel
+     * @return \Together\Taxes\Model\FetchResultCurrencyModel
      */
     public function listCurrencies($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4109,13 +4109,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCurrencyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCurrencyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCurrenciesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCurrencyModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCurrencyModel';
         $request = $this->listCurrenciesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -4167,7 +4167,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCurrencyModel',
+                        '\Together\Taxes\Model\FetchResultCurrencyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4217,7 +4217,7 @@ class DefinitionsApi
      */
     public function listCurrenciesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCurrencyModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCurrencyModel';
         $request = $this->listCurrenciesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -4391,9 +4391,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultEntityUseCodeModel
+     * @return \Together\Taxes\Model\FetchResultEntityUseCodeModel
      */
     public function listEntityUseCodes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4412,13 +4412,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultEntityUseCodeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultEntityUseCodeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEntityUseCodesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultEntityUseCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultEntityUseCodeModel';
         $request = $this->listEntityUseCodesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -4470,7 +4470,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultEntityUseCodeModel',
+                        '\Together\Taxes\Model\FetchResultEntityUseCodeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4520,7 +4520,7 @@ class DefinitionsApi
      */
     public function listEntityUseCodesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultEntityUseCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultEntityUseCodeModel';
         $request = $this->listEntityUseCodesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -4694,9 +4694,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultFilingFrequencyModel
+     * @return \Together\Taxes\Model\FetchResultFilingFrequencyModel
      */
     public function listFilingFrequencies($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4715,13 +4715,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultFilingFrequencyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultFilingFrequencyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listFilingFrequenciesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultFilingFrequencyModel';
+        $returnType = '\Together\Taxes\Model\FetchResultFilingFrequencyModel';
         $request = $this->listFilingFrequenciesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -4773,7 +4773,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultFilingFrequencyModel',
+                        '\Together\Taxes\Model\FetchResultFilingFrequencyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4823,7 +4823,7 @@ class DefinitionsApi
      */
     public function listFilingFrequenciesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultFilingFrequencyModel';
+        $returnType = '\Together\Taxes\Model\FetchResultFilingFrequencyModel';
         $request = $this->listFilingFrequenciesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -4997,9 +4997,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultJurisdictionModel
+     * @return \Together\Taxes\Model\FetchResultJurisdictionModel
      */
     public function listJurisdictions($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -5018,13 +5018,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultJurisdictionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultJurisdictionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listJurisdictionsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultJurisdictionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultJurisdictionModel';
         $request = $this->listJurisdictionsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -5076,7 +5076,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultJurisdictionModel',
+                        '\Together\Taxes\Model\FetchResultJurisdictionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5126,7 +5126,7 @@ class DefinitionsApi
      */
     public function listJurisdictionsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultJurisdictionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultJurisdictionModel';
         $request = $this->listJurisdictionsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -5307,9 +5307,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultJurisdictionOverrideModel
+     * @return \Together\Taxes\Model\FetchResultJurisdictionOverrideModel
      */
     public function listJurisdictionsByAddress($country, $line1 = null, $line2 = null, $line3 = null, $city = null, $region = null, $postal_code = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -5335,13 +5335,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultJurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultJurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listJurisdictionsByAddressWithHttpInfo($country, $line1 = null, $line2 = null, $line3 = null, $city = null, $region = null, $postal_code = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel';
         $request = $this->listJurisdictionsByAddressRequest($country, $line1, $line2, $line3, $city, $region, $postal_code, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -5393,7 +5393,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel',
+                        '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5457,7 +5457,7 @@ class DefinitionsApi
      */
     public function listJurisdictionsByAddressAsyncWithHttpInfo($country, $line1 = null, $line2 = null, $line3 = null, $city = null, $region = null, $postal_code = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel';
         $request = $this->listJurisdictionsByAddressRequest($country, $line1, $line2, $line3, $city, $region, $postal_code, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -5695,9 +5695,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultLocationQuestionModel
+     * @return \Together\Taxes\Model\FetchResultLocationQuestionModel
      */
     public function listLocationQuestionsByAddress($line1 = null, $line2 = null, $line3 = null, $city = null, $region = null, $postal_code = null, $country = null, $latitude = null, $longitude = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -5725,13 +5725,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultLocationQuestionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultLocationQuestionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listLocationQuestionsByAddressWithHttpInfo($line1 = null, $line2 = null, $line3 = null, $city = null, $region = null, $postal_code = null, $country = null, $latitude = null, $longitude = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultLocationQuestionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultLocationQuestionModel';
         $request = $this->listLocationQuestionsByAddressRequest($line1, $line2, $line3, $city, $region, $postal_code, $country, $latitude, $longitude, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -5783,7 +5783,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultLocationQuestionModel',
+                        '\Together\Taxes\Model\FetchResultLocationQuestionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5851,7 +5851,7 @@ class DefinitionsApi
      */
     public function listLocationQuestionsByAddressAsyncWithHttpInfo($line1 = null, $line2 = null, $line3 = null, $city = null, $region = null, $postal_code = null, $country = null, $latitude = null, $longitude = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultLocationQuestionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultLocationQuestionModel';
         $request = $this->listLocationQuestionsByAddressRequest($line1, $line2, $line3, $city, $region, $postal_code, $country, $latitude, $longitude, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -6070,9 +6070,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultSkyscraperStatusModel
+     * @return \Together\Taxes\Model\FetchResultSkyscraperStatusModel
      */
     public function listLoginVerifiers($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -6091,13 +6091,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultSkyscraperStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultSkyscraperStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listLoginVerifiersWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSkyscraperStatusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSkyscraperStatusModel';
         $request = $this->listLoginVerifiersRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -6149,7 +6149,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultSkyscraperStatusModel',
+                        '\Together\Taxes\Model\FetchResultSkyscraperStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6199,7 +6199,7 @@ class DefinitionsApi
      */
     public function listLoginVerifiersAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSkyscraperStatusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSkyscraperStatusModel';
         $request = $this->listLoginVerifiersRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -6373,9 +6373,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultMarketplaceLocationModel
+     * @return \Together\Taxes\Model\FetchResultMarketplaceLocationModel
      */
     public function listMarketplaceLocations($marketplace_id, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -6394,13 +6394,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultMarketplaceLocationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultMarketplaceLocationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listMarketplaceLocationsWithHttpInfo($marketplace_id, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultMarketplaceLocationModel';
+        $returnType = '\Together\Taxes\Model\FetchResultMarketplaceLocationModel';
         $request = $this->listMarketplaceLocationsRequest($marketplace_id, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -6452,7 +6452,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultMarketplaceLocationModel',
+                        '\Together\Taxes\Model\FetchResultMarketplaceLocationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6502,7 +6502,7 @@ class DefinitionsApi
      */
     public function listMarketplaceLocationsAsyncWithHttpInfo($marketplace_id, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultMarketplaceLocationModel';
+        $returnType = '\Together\Taxes\Model\FetchResultMarketplaceLocationModel';
         $request = $this->listMarketplaceLocationsRequest($marketplace_id, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -6682,9 +6682,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNexusModel
+     * @return \Together\Taxes\Model\FetchResultNexusModel
      */
     public function listNexus($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -6703,13 +6703,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNexusWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -6761,7 +6761,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNexusModel',
+                        '\Together\Taxes\Model\FetchResultNexusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6811,7 +6811,7 @@ class DefinitionsApi
      */
     public function listNexusAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -6992,9 +6992,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNexusModel
+     * @return \Together\Taxes\Model\FetchResultNexusModel
      */
     public function listNexusByAddress($region, $country, $line1 = null, $line2 = null, $line3 = null, $city = null, $postal_code = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -7020,13 +7020,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNexusByAddressWithHttpInfo($region, $country, $line1 = null, $line2 = null, $line3 = null, $city = null, $postal_code = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusByAddressRequest($region, $country, $line1, $line2, $line3, $city, $postal_code, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -7078,7 +7078,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNexusModel',
+                        '\Together\Taxes\Model\FetchResultNexusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7142,7 +7142,7 @@ class DefinitionsApi
      */
     public function listNexusByAddressAsyncWithHttpInfo($region, $country, $line1 = null, $line2 = null, $line3 = null, $city = null, $postal_code = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusByAddressRequest($region, $country, $line1, $line2, $line3, $city, $postal_code, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -7364,9 +7364,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNexusModel
+     * @return \Together\Taxes\Model\FetchResultNexusModel
      */
     public function listNexusByCountry($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -7386,13 +7386,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNexusByCountryWithHttpInfo($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusByCountryRequest($country, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -7444,7 +7444,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNexusModel',
+                        '\Together\Taxes\Model\FetchResultNexusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7496,7 +7496,7 @@ class DefinitionsApi
      */
     public function listNexusByCountryAsyncWithHttpInfo($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusByCountryRequest($country, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -7687,9 +7687,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNexusModel
+     * @return \Together\Taxes\Model\FetchResultNexusModel
      */
     public function listNexusByCountryAndRegion($country, $region, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -7710,13 +7710,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNexusByCountryAndRegionWithHttpInfo($country, $region, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusByCountryAndRegionRequest($country, $region, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -7768,7 +7768,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNexusModel',
+                        '\Together\Taxes\Model\FetchResultNexusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7822,7 +7822,7 @@ class DefinitionsApi
      */
     public function listNexusByCountryAndRegionAsyncWithHttpInfo($country, $region, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusByCountryAndRegionRequest($country, $region, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -8023,9 +8023,9 @@ class DefinitionsApi
      * @param  string $form_code The form code that we are looking up the nexus for (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusByTaxFormModel
+     * @return \Together\Taxes\Model\NexusByTaxFormModel
      */
     public function listNexusByFormCode($form_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -8041,13 +8041,13 @@ class DefinitionsApi
      * @param  string $form_code The form code that we are looking up the nexus for (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusByTaxFormModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusByTaxFormModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNexusByFormCodeWithHttpInfo($form_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\NexusByTaxFormModel';
+        $returnType = '\Together\Taxes\Model\NexusByTaxFormModel';
         $request = $this->listNexusByFormCodeRequest($form_code, $x_avalara_client);
 
         try {
@@ -8099,7 +8099,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusByTaxFormModel',
+                        '\Together\Taxes\Model\NexusByTaxFormModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8143,7 +8143,7 @@ class DefinitionsApi
      */
     public function listNexusByFormCodeAsyncWithHttpInfo($form_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\NexusByTaxFormModel';
+        $returnType = '\Together\Taxes\Model\NexusByTaxFormModel';
         $request = $this->listNexusByFormCodeRequest($form_code, $x_avalara_client);
 
         return $this->client
@@ -8312,9 +8312,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNexusTaxTypeGroupModel
+     * @return \Together\Taxes\Model\FetchResultNexusTaxTypeGroupModel
      */
     public function listNexusTaxTypeGroups($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -8333,13 +8333,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNexusTaxTypeGroupModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNexusTaxTypeGroupModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNexusTaxTypeGroupsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusTaxTypeGroupModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusTaxTypeGroupModel';
         $request = $this->listNexusTaxTypeGroupsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -8391,7 +8391,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNexusTaxTypeGroupModel',
+                        '\Together\Taxes\Model\FetchResultNexusTaxTypeGroupModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8441,7 +8441,7 @@ class DefinitionsApi
      */
     public function listNexusTaxTypeGroupsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusTaxTypeGroupModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusTaxTypeGroupModel';
         $request = $this->listNexusTaxTypeGroupsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -8615,9 +8615,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticeCustomerFundingOptionModel
+     * @return \Together\Taxes\Model\FetchResultNoticeCustomerFundingOptionModel
      */
     public function listNoticeCustomerFundingOptions($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -8636,13 +8636,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticeCustomerFundingOptionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticeCustomerFundingOptionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticeCustomerFundingOptionsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeCustomerFundingOptionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeCustomerFundingOptionModel';
         $request = $this->listNoticeCustomerFundingOptionsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -8694,7 +8694,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticeCustomerFundingOptionModel',
+                        '\Together\Taxes\Model\FetchResultNoticeCustomerFundingOptionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8744,7 +8744,7 @@ class DefinitionsApi
      */
     public function listNoticeCustomerFundingOptionsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeCustomerFundingOptionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeCustomerFundingOptionModel';
         $request = $this->listNoticeCustomerFundingOptionsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -8918,9 +8918,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticeCustomerTypeModel
+     * @return \Together\Taxes\Model\FetchResultNoticeCustomerTypeModel
      */
     public function listNoticeCustomerTypes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -8939,13 +8939,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticeCustomerTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticeCustomerTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticeCustomerTypesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeCustomerTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeCustomerTypeModel';
         $request = $this->listNoticeCustomerTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -8997,7 +8997,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticeCustomerTypeModel',
+                        '\Together\Taxes\Model\FetchResultNoticeCustomerTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9047,7 +9047,7 @@ class DefinitionsApi
      */
     public function listNoticeCustomerTypesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeCustomerTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeCustomerTypeModel';
         $request = $this->listNoticeCustomerTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -9221,9 +9221,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticeFilingTypeModel
+     * @return \Together\Taxes\Model\FetchResultNoticeFilingTypeModel
      */
     public function listNoticeFilingtypes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -9242,13 +9242,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticeFilingTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticeFilingTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticeFilingtypesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeFilingTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeFilingTypeModel';
         $request = $this->listNoticeFilingtypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -9300,7 +9300,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticeFilingTypeModel',
+                        '\Together\Taxes\Model\FetchResultNoticeFilingTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9350,7 +9350,7 @@ class DefinitionsApi
      */
     public function listNoticeFilingtypesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeFilingTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeFilingTypeModel';
         $request = $this->listNoticeFilingtypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -9524,9 +9524,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticePriorityModel
+     * @return \Together\Taxes\Model\FetchResultNoticePriorityModel
      */
     public function listNoticePriorities($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -9545,13 +9545,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticePriorityModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticePriorityModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticePrioritiesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticePriorityModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticePriorityModel';
         $request = $this->listNoticePrioritiesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -9603,7 +9603,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticePriorityModel',
+                        '\Together\Taxes\Model\FetchResultNoticePriorityModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9653,7 +9653,7 @@ class DefinitionsApi
      */
     public function listNoticePrioritiesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticePriorityModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticePriorityModel';
         $request = $this->listNoticePrioritiesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -9827,9 +9827,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticeReasonModel
+     * @return \Together\Taxes\Model\FetchResultNoticeReasonModel
      */
     public function listNoticeReasons($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -9848,13 +9848,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticeReasonModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticeReasonModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticeReasonsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeReasonModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeReasonModel';
         $request = $this->listNoticeReasonsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -9906,7 +9906,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticeReasonModel',
+                        '\Together\Taxes\Model\FetchResultNoticeReasonModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9956,7 +9956,7 @@ class DefinitionsApi
      */
     public function listNoticeReasonsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeReasonModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeReasonModel';
         $request = $this->listNoticeReasonsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -10130,9 +10130,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticeResponsibilityModel
+     * @return \Together\Taxes\Model\FetchResultNoticeResponsibilityModel
      */
     public function listNoticeResponsibilities($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -10151,13 +10151,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticeResponsibilityModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticeResponsibilityModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticeResponsibilitiesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeResponsibilityModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeResponsibilityModel';
         $request = $this->listNoticeResponsibilitiesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -10209,7 +10209,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticeResponsibilityModel',
+                        '\Together\Taxes\Model\FetchResultNoticeResponsibilityModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10259,7 +10259,7 @@ class DefinitionsApi
      */
     public function listNoticeResponsibilitiesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeResponsibilityModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeResponsibilityModel';
         $request = $this->listNoticeResponsibilitiesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -10433,9 +10433,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticeRootCauseModel
+     * @return \Together\Taxes\Model\FetchResultNoticeRootCauseModel
      */
     public function listNoticeRootCauses($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -10454,13 +10454,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticeRootCauseModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticeRootCauseModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticeRootCausesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeRootCauseModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeRootCauseModel';
         $request = $this->listNoticeRootCausesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -10512,7 +10512,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticeRootCauseModel',
+                        '\Together\Taxes\Model\FetchResultNoticeRootCauseModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10562,7 +10562,7 @@ class DefinitionsApi
      */
     public function listNoticeRootCausesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeRootCauseModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeRootCauseModel';
         $request = $this->listNoticeRootCausesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -10736,9 +10736,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticeStatusModel
+     * @return \Together\Taxes\Model\FetchResultNoticeStatusModel
      */
     public function listNoticeStatuses($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -10757,13 +10757,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticeStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticeStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticeStatusesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeStatusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeStatusModel';
         $request = $this->listNoticeStatusesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -10815,7 +10815,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticeStatusModel',
+                        '\Together\Taxes\Model\FetchResultNoticeStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10865,7 +10865,7 @@ class DefinitionsApi
      */
     public function listNoticeStatusesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeStatusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeStatusModel';
         $request = $this->listNoticeStatusesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -11039,9 +11039,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNoticeTypeModel
+     * @return \Together\Taxes\Model\FetchResultNoticeTypeModel
      */
     public function listNoticeTypes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -11060,13 +11060,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNoticeTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNoticeTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNoticeTypesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeTypeModel';
         $request = $this->listNoticeTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -11118,7 +11118,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNoticeTypeModel',
+                        '\Together\Taxes\Model\FetchResultNoticeTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11168,7 +11168,7 @@ class DefinitionsApi
      */
     public function listNoticeTypesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNoticeTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNoticeTypeModel';
         $request = $this->listNoticeTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -11342,9 +11342,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultParameterModel
+     * @return \Together\Taxes\Model\FetchResultParameterModel
      */
     public function listParameters($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -11363,13 +11363,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultParameterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultParameterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listParametersWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultParameterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultParameterModel';
         $request = $this->listParametersRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -11421,7 +11421,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultParameterModel',
+                        '\Together\Taxes\Model\FetchResultParameterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11471,7 +11471,7 @@ class DefinitionsApi
      */
     public function listParametersAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultParameterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultParameterModel';
         $request = $this->listParametersRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -11647,9 +11647,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultParameterModel
+     * @return \Together\Taxes\Model\FetchResultParameterModel
      */
     public function listParametersByItem($company_code, $item_code, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -11670,13 +11670,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultParameterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultParameterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listParametersByItemWithHttpInfo($company_code, $item_code, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultParameterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultParameterModel';
         $request = $this->listParametersByItemRequest($company_code, $item_code, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -11728,7 +11728,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultParameterModel',
+                        '\Together\Taxes\Model\FetchResultParameterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11782,7 +11782,7 @@ class DefinitionsApi
      */
     public function listParametersByItemAsyncWithHttpInfo($company_code, $item_code, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultParameterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultParameterModel';
         $request = $this->listParametersByItemRequest($company_code, $item_code, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -11986,9 +11986,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultParameterUsageModel
+     * @return \Together\Taxes\Model\FetchResultParameterUsageModel
      */
     public function listParametersUsage($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -12007,13 +12007,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultParameterUsageModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultParameterUsageModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listParametersUsageWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultParameterUsageModel';
+        $returnType = '\Together\Taxes\Model\FetchResultParameterUsageModel';
         $request = $this->listParametersUsageRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -12065,7 +12065,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultParameterUsageModel',
+                        '\Together\Taxes\Model\FetchResultParameterUsageModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12115,7 +12115,7 @@ class DefinitionsApi
      */
     public function listParametersUsageAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultParameterUsageModel';
+        $returnType = '\Together\Taxes\Model\FetchResultParameterUsageModel';
         $request = $this->listParametersUsageRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -12287,9 +12287,9 @@ class DefinitionsApi
      * @param  int $skip If nonzero, skip this number of results before returning data.  Used with &#x60;$top&#x60; to provide pagination for large datasets. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultString
+     * @return \Together\Taxes\Model\FetchResultString
      */
     public function listPermissions($top = null, $skip = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -12306,13 +12306,13 @@ class DefinitionsApi
      * @param  int $skip If nonzero, skip this number of results before returning data.  Used with &#x60;$top&#x60; to provide pagination for large datasets. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultString, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultString, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPermissionsWithHttpInfo($top = null, $skip = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultString';
+        $returnType = '\Together\Taxes\Model\FetchResultString';
         $request = $this->listPermissionsRequest($top, $skip, $x_avalara_client);
 
         try {
@@ -12364,7 +12364,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultString',
+                        '\Together\Taxes\Model\FetchResultString',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12410,7 +12410,7 @@ class DefinitionsApi
      */
     public function listPermissionsAsyncWithHttpInfo($top = null, $skip = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultString';
+        $returnType = '\Together\Taxes\Model\FetchResultString';
         $request = $this->listPermissionsRequest($top, $skip, $x_avalara_client);
 
         return $this->client
@@ -12574,9 +12574,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultPostalCodeModel
+     * @return \Together\Taxes\Model\FetchResultPostalCodeModel
      */
     public function listPostalCodes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -12595,13 +12595,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultPostalCodeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultPostalCodeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPostalCodesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultPostalCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultPostalCodeModel';
         $request = $this->listPostalCodesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -12653,7 +12653,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultPostalCodeModel',
+                        '\Together\Taxes\Model\FetchResultPostalCodeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12703,7 +12703,7 @@ class DefinitionsApi
      */
     public function listPostalCodesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultPostalCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultPostalCodeModel';
         $request = $this->listPostalCodesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -12877,9 +12877,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultPreferredProgramModel
+     * @return \Together\Taxes\Model\FetchResultPreferredProgramModel
      */
     public function listPreferredPrograms($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -12898,13 +12898,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultPreferredProgramModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultPreferredProgramModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPreferredProgramsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultPreferredProgramModel';
+        $returnType = '\Together\Taxes\Model\FetchResultPreferredProgramModel';
         $request = $this->listPreferredProgramsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -12956,7 +12956,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultPreferredProgramModel',
+                        '\Together\Taxes\Model\FetchResultPreferredProgramModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13006,7 +13006,7 @@ class DefinitionsApi
      */
     public function listPreferredProgramsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultPreferredProgramModel';
+        $returnType = '\Together\Taxes\Model\FetchResultPreferredProgramModel';
         $request = $this->listPreferredProgramsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -13181,9 +13181,9 @@ class DefinitionsApi
      * @param  string $country_code If not null, return all records with this code. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultProductClassificationSystemModel
+     * @return \Together\Taxes\Model\FetchResultProductClassificationSystemModel
      */
     public function listProductClassificationSystems($filter = null, $top = null, $skip = null, $order_by = null, $country_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -13203,13 +13203,13 @@ class DefinitionsApi
      * @param  string $country_code If not null, return all records with this code. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultProductClassificationSystemModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultProductClassificationSystemModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listProductClassificationSystemsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $country_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultProductClassificationSystemModel';
+        $returnType = '\Together\Taxes\Model\FetchResultProductClassificationSystemModel';
         $request = $this->listProductClassificationSystemsRequest($filter, $top, $skip, $order_by, $country_code, $x_avalara_client);
 
         try {
@@ -13261,7 +13261,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultProductClassificationSystemModel',
+                        '\Together\Taxes\Model\FetchResultProductClassificationSystemModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13313,7 +13313,7 @@ class DefinitionsApi
      */
     public function listProductClassificationSystemsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $country_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultProductClassificationSystemModel';
+        $returnType = '\Together\Taxes\Model\FetchResultProductClassificationSystemModel';
         $request = $this->listProductClassificationSystemsRequest($filter, $top, $skip, $order_by, $country_code, $x_avalara_client);
 
         return $this->client
@@ -13494,9 +13494,9 @@ class DefinitionsApi
      * @param  string $country_code If not null, return all records with this code. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultProductClassificationSystemModel
+     * @return \Together\Taxes\Model\FetchResultProductClassificationSystemModel
      */
     public function listProductClassificationSystemsByCompany($company_code, $filter = null, $top = null, $skip = null, $order_by = null, $country_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -13517,13 +13517,13 @@ class DefinitionsApi
      * @param  string $country_code If not null, return all records with this code. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultProductClassificationSystemModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultProductClassificationSystemModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listProductClassificationSystemsByCompanyWithHttpInfo($company_code, $filter = null, $top = null, $skip = null, $order_by = null, $country_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultProductClassificationSystemModel';
+        $returnType = '\Together\Taxes\Model\FetchResultProductClassificationSystemModel';
         $request = $this->listProductClassificationSystemsByCompanyRequest($company_code, $filter, $top, $skip, $order_by, $country_code, $x_avalara_client);
 
         try {
@@ -13575,7 +13575,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultProductClassificationSystemModel',
+                        '\Together\Taxes\Model\FetchResultProductClassificationSystemModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13629,7 +13629,7 @@ class DefinitionsApi
      */
     public function listProductClassificationSystemsByCompanyAsyncWithHttpInfo($company_code, $filter = null, $top = null, $skip = null, $order_by = null, $country_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultProductClassificationSystemModel';
+        $returnType = '\Together\Taxes\Model\FetchResultProductClassificationSystemModel';
         $request = $this->listProductClassificationSystemsByCompanyRequest($company_code, $filter, $top, $skip, $order_by, $country_code, $x_avalara_client);
 
         return $this->client
@@ -13824,9 +13824,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultRateTypeModel
+     * @return \Together\Taxes\Model\FetchResultRateTypeModel
      */
     public function listRateTypesByCountry($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -13846,13 +13846,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultRateTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultRateTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listRateTypesByCountryWithHttpInfo($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultRateTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultRateTypeModel';
         $request = $this->listRateTypesByCountryRequest($country, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -13904,7 +13904,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultRateTypeModel',
+                        '\Together\Taxes\Model\FetchResultRateTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13956,7 +13956,7 @@ class DefinitionsApi
      */
     public function listRateTypesByCountryAsyncWithHttpInfo($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultRateTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultRateTypeModel';
         $request = $this->listRateTypesByCountryRequest($country, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -14145,9 +14145,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultIsoRegionModel
+     * @return \Together\Taxes\Model\FetchResultIsoRegionModel
      */
     public function listRegions($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -14166,13 +14166,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultIsoRegionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultIsoRegionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listRegionsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultIsoRegionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultIsoRegionModel';
         $request = $this->listRegionsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -14224,7 +14224,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultIsoRegionModel',
+                        '\Together\Taxes\Model\FetchResultIsoRegionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14274,7 +14274,7 @@ class DefinitionsApi
      */
     public function listRegionsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultIsoRegionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultIsoRegionModel';
         $request = $this->listRegionsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -14449,9 +14449,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultIsoRegionModel
+     * @return \Together\Taxes\Model\FetchResultIsoRegionModel
      */
     public function listRegionsByCountry($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -14471,13 +14471,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultIsoRegionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultIsoRegionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listRegionsByCountryWithHttpInfo($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultIsoRegionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultIsoRegionModel';
         $request = $this->listRegionsByCountryRequest($country, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -14529,7 +14529,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultIsoRegionModel',
+                        '\Together\Taxes\Model\FetchResultIsoRegionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14581,7 +14581,7 @@ class DefinitionsApi
      */
     public function listRegionsByCountryAsyncWithHttpInfo($country, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultIsoRegionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultIsoRegionModel';
         $request = $this->listRegionsByCountryRequest($country, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -14770,9 +14770,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultResourceFileTypeModel
+     * @return \Together\Taxes\Model\FetchResultResourceFileTypeModel
      */
     public function listResourceFileTypes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -14791,13 +14791,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultResourceFileTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultResourceFileTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listResourceFileTypesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultResourceFileTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultResourceFileTypeModel';
         $request = $this->listResourceFileTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -14849,7 +14849,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultResourceFileTypeModel',
+                        '\Together\Taxes\Model\FetchResultResourceFileTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14899,7 +14899,7 @@ class DefinitionsApi
      */
     public function listResourceFileTypesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultResourceFileTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultResourceFileTypeModel';
         $request = $this->listResourceFileTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -15073,9 +15073,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultSecurityRoleModel
+     * @return \Together\Taxes\Model\FetchResultSecurityRoleModel
      */
     public function listSecurityRoles($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -15094,13 +15094,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultSecurityRoleModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultSecurityRoleModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSecurityRolesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSecurityRoleModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSecurityRoleModel';
         $request = $this->listSecurityRolesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -15152,7 +15152,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultSecurityRoleModel',
+                        '\Together\Taxes\Model\FetchResultSecurityRoleModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15202,7 +15202,7 @@ class DefinitionsApi
      */
     public function listSecurityRolesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSecurityRoleModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSecurityRoleModel';
         $request = $this->listSecurityRolesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -15376,9 +15376,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultSubscriptionTypeModel
+     * @return \Together\Taxes\Model\FetchResultSubscriptionTypeModel
      */
     public function listSubscriptionTypes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -15397,13 +15397,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultSubscriptionTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultSubscriptionTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSubscriptionTypesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSubscriptionTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSubscriptionTypeModel';
         $request = $this->listSubscriptionTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -15455,7 +15455,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultSubscriptionTypeModel',
+                        '\Together\Taxes\Model\FetchResultSubscriptionTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15505,7 +15505,7 @@ class DefinitionsApi
      */
     public function listSubscriptionTypesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSubscriptionTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSubscriptionTypeModel';
         $request = $this->listSubscriptionTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -15679,9 +15679,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTaxAuthorityModel
+     * @return \Together\Taxes\Model\FetchResultTaxAuthorityModel
      */
     public function listTaxAuthorities($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -15700,13 +15700,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTaxAuthorityModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTaxAuthorityModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxAuthoritiesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxAuthorityModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxAuthorityModel';
         $request = $this->listTaxAuthoritiesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -15758,7 +15758,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTaxAuthorityModel',
+                        '\Together\Taxes\Model\FetchResultTaxAuthorityModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15808,7 +15808,7 @@ class DefinitionsApi
      */
     public function listTaxAuthoritiesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxAuthorityModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxAuthorityModel';
         $request = $this->listTaxAuthoritiesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -15982,9 +15982,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTaxAuthorityFormModel
+     * @return \Together\Taxes\Model\FetchResultTaxAuthorityFormModel
      */
     public function listTaxAuthorityForms($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -16003,13 +16003,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTaxAuthorityFormModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTaxAuthorityFormModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxAuthorityFormsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxAuthorityFormModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxAuthorityFormModel';
         $request = $this->listTaxAuthorityFormsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -16061,7 +16061,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTaxAuthorityFormModel',
+                        '\Together\Taxes\Model\FetchResultTaxAuthorityFormModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16111,7 +16111,7 @@ class DefinitionsApi
      */
     public function listTaxAuthorityFormsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxAuthorityFormModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxAuthorityFormModel';
         $request = $this->listTaxAuthorityFormsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -16285,9 +16285,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTaxAuthorityTypeModel
+     * @return \Together\Taxes\Model\FetchResultTaxAuthorityTypeModel
      */
     public function listTaxAuthorityTypes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -16306,13 +16306,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTaxAuthorityTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTaxAuthorityTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxAuthorityTypesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxAuthorityTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxAuthorityTypeModel';
         $request = $this->listTaxAuthorityTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -16364,7 +16364,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTaxAuthorityTypeModel',
+                        '\Together\Taxes\Model\FetchResultTaxAuthorityTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16414,7 +16414,7 @@ class DefinitionsApi
      */
     public function listTaxAuthorityTypesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxAuthorityTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxAuthorityTypeModel';
         $request = $this->listTaxAuthorityTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -16586,9 +16586,9 @@ class DefinitionsApi
      * @param  int $skip If nonzero, skip this number of results before returning data.  Used with &#x60;$top&#x60; to provide pagination for large datasets. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TaxCodeTypesModel
+     * @return \Together\Taxes\Model\TaxCodeTypesModel
      */
     public function listTaxCodeTypes($top = null, $skip = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -16605,13 +16605,13 @@ class DefinitionsApi
      * @param  int $skip If nonzero, skip this number of results before returning data.  Used with &#x60;$top&#x60; to provide pagination for large datasets. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TaxCodeTypesModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TaxCodeTypesModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxCodeTypesWithHttpInfo($top = null, $skip = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TaxCodeTypesModel';
+        $returnType = '\Together\Taxes\Model\TaxCodeTypesModel';
         $request = $this->listTaxCodeTypesRequest($top, $skip, $x_avalara_client);
 
         try {
@@ -16663,7 +16663,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TaxCodeTypesModel',
+                        '\Together\Taxes\Model\TaxCodeTypesModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16709,7 +16709,7 @@ class DefinitionsApi
      */
     public function listTaxCodeTypesAsyncWithHttpInfo($top = null, $skip = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TaxCodeTypesModel';
+        $returnType = '\Together\Taxes\Model\TaxCodeTypesModel';
         $request = $this->listTaxCodeTypesRequest($top, $skip, $x_avalara_client);
 
         return $this->client
@@ -16873,9 +16873,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTaxCodeModel
+     * @return \Together\Taxes\Model\FetchResultTaxCodeModel
      */
     public function listTaxCodes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -16894,13 +16894,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTaxCodeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTaxCodeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxCodesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxCodeModel';
         $request = $this->listTaxCodesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -16952,7 +16952,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTaxCodeModel',
+                        '\Together\Taxes\Model\FetchResultTaxCodeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17002,7 +17002,7 @@ class DefinitionsApi
      */
     public function listTaxCodesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxCodeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxCodeModel';
         $request = $this->listTaxCodesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -17176,9 +17176,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultFormMasterModel
+     * @return \Together\Taxes\Model\FetchResultFormMasterModel
      */
     public function listTaxForms($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -17197,13 +17197,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultFormMasterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultFormMasterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxFormsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultFormMasterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultFormMasterModel';
         $request = $this->listTaxFormsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -17255,7 +17255,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultFormMasterModel',
+                        '\Together\Taxes\Model\FetchResultFormMasterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17305,7 +17305,7 @@ class DefinitionsApi
      */
     public function listTaxFormsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultFormMasterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultFormMasterModel';
         $request = $this->listTaxFormsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -17479,9 +17479,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTaxSubTypeModel
+     * @return \Together\Taxes\Model\FetchResultTaxSubTypeModel
      */
     public function listTaxSubTypes($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -17500,13 +17500,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTaxSubTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTaxSubTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxSubTypesWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxSubTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxSubTypeModel';
         $request = $this->listTaxSubTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -17558,7 +17558,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTaxSubTypeModel',
+                        '\Together\Taxes\Model\FetchResultTaxSubTypeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17608,7 +17608,7 @@ class DefinitionsApi
      */
     public function listTaxSubTypesAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxSubTypeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxSubTypeModel';
         $request = $this->listTaxSubTypesRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -17782,9 +17782,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTaxTypeGroupModel
+     * @return \Together\Taxes\Model\FetchResultTaxTypeGroupModel
      */
     public function listTaxTypeGroups($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -17803,13 +17803,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTaxTypeGroupModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTaxTypeGroupModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxTypeGroupsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxTypeGroupModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxTypeGroupModel';
         $request = $this->listTaxTypeGroupsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -17861,7 +17861,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTaxTypeGroupModel',
+                        '\Together\Taxes\Model\FetchResultTaxTypeGroupModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17911,7 +17911,7 @@ class DefinitionsApi
      */
     public function listTaxTypeGroupsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxTypeGroupModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxTypeGroupModel';
         $request = $this->listTaxTypeGroupsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -18085,9 +18085,9 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultUomModel
+     * @return \Together\Taxes\Model\FetchResultUomModel
      */
     public function listUnitOfMeasurement($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -18106,13 +18106,13 @@ class DefinitionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultUomModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultUomModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listUnitOfMeasurementWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultUomModel';
+        $returnType = '\Together\Taxes\Model\FetchResultUomModel';
         $request = $this->listUnitOfMeasurementRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -18164,7 +18164,7 @@ class DefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultUomModel',
+                        '\Together\Taxes\Model\FetchResultUomModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18214,7 +18214,7 @@ class DefinitionsApi
      */
     public function listUnitOfMeasurementAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultUomModel';
+        $returnType = '\Together\Taxes\Model\FetchResultUomModel';
         $request = $this->listUnitOfMeasurementRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client

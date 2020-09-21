@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * TaxDetailsByTaxType Class Doc Comment
  *
  * @category Class
  * @description Tax Details by Tax Type
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class TaxDetailsByTaxType implements ModelInterface, ArrayAccess
         'total_exempt' => 'double',
         'total_non_taxable' => 'double',
         'total_tax' => 'double',
-        'tax_sub_type_details' => '\Swagger\Client\Model\TaxDetailsByTaxSubType[]'
+        'tax_sub_type_details' => '\Together\Taxes\Model\TaxDetailsByTaxSubType[]'
     ];
 
     /**
@@ -358,7 +358,7 @@ class TaxDetailsByTaxType implements ModelInterface, ArrayAccess
     /**
      * Gets tax_sub_type_details
      *
-     * @return \Swagger\Client\Model\TaxDetailsByTaxSubType[]
+     * @return \Together\Taxes\Model\TaxDetailsByTaxSubType[]
      */
     public function getTaxSubTypeDetails()
     {
@@ -368,7 +368,7 @@ class TaxDetailsByTaxType implements ModelInterface, ArrayAccess
     /**
      * Sets tax_sub_type_details
      *
-     * @param \Swagger\Client\Model\TaxDetailsByTaxSubType[] $tax_sub_type_details Tax subtype details
+     * @param \Together\Taxes\Model\TaxDetailsByTaxSubType[] $tax_sub_type_details Tax subtype details
      *
      * @return $this
      */

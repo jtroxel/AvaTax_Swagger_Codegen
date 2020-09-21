@@ -1,4 +1,4 @@
-# Swagger\Client\TaxCodesApi
+# Together\Taxes\TaxCodesApi
 
 All URIs are relative to *https://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createTaxCodes**
-> \Swagger\Client\Model\TaxCodeModel[] createTaxCodes($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\TaxCodeModel[] createTaxCodes($company_id, $x_avalara_client, $body)
 
 Create a new tax code
 
@@ -25,14 +25,14 @@ Create one or more new taxcode objects attached to this company.  A 'TaxCode' re
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxCodesApi(
+$apiInstance = new Together\Taxes\Api\TaxCodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Swagger\Client\Api\TaxCodesApi(
 );
 $company_id = 56; // int | The ID of the company that owns this tax code.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\TaxCodeModel()); // \Swagger\Client\Model\TaxCodeModel[] | The tax code you wish to create.
+$body = array(new \Together\Taxes\Model\TaxCodeModel()); // \Together\Taxes\Model\TaxCodeModel[] | The tax code you wish to create.
 
 try {
     $result = $apiInstance->createTaxCodes($company_id, $x_avalara_client, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this tax code. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\TaxCodeModel[]**](../Model/TaxCodeModel.md)| The tax code you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\TaxCodeModel[]**](../Model/TaxCodeModel.md)| The tax code you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxCodeModel[]**](../Model/TaxCodeModel.md)
+[**\Together\Taxes\Model\TaxCodeModel[]**](../Model/TaxCodeModel.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTaxCode**
-> \Swagger\Client\Model\ErrorDetail[] deleteTaxCode($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteTaxCode($company_id, $id, $x_avalara_client)
 
 Delete a single tax code
 
@@ -87,14 +87,14 @@ Marks the existing TaxCode object at this URL as deleted.  ### Security Policies
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxCodesApi(
+$apiInstance = new Together\Taxes\Api\TaxCodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaxCode**
-> \Swagger\Client\Model\TaxCodeModel getTaxCode($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\TaxCodeModel getTaxCode($company_id, $id, $x_avalara_client)
 
 Retrieve a single tax code
 
@@ -149,14 +149,14 @@ Get the taxcode object identified by this URL.  A 'TaxCode' represents a uniquel
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxCodesApi(
+$apiInstance = new Together\Taxes\Api\TaxCodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxCodeModel**](../Model/TaxCodeModel.md)
+[**\Together\Taxes\Model\TaxCodeModel**](../Model/TaxCodeModel.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxCodesByCompany**
-> \Swagger\Client\Model\FetchResultTaxCodeModel listTaxCodesByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxCodeModel listTaxCodesByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve tax codes for this company
 
@@ -211,14 +211,14 @@ List all taxcode objects attached to this company.  A 'TaxCode' represents a uni
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxCodesApi(
+$apiInstance = new Together\Taxes\Api\TaxCodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxCodeModel**](../Model/FetchResultTaxCodeModel.md)
+[**\Together\Taxes\Model\FetchResultTaxCodeModel**](../Model/FetchResultTaxCodeModel.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryTaxCodes**
-> \Swagger\Client\Model\FetchResultTaxCodeModel queryTaxCodes($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxCodeModel queryTaxCodes($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all tax codes
 
@@ -281,14 +281,14 @@ Get multiple taxcode objects across all companies.  A 'TaxCode' represents a uni
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxCodesApi(
+$apiInstance = new Together\Taxes\Api\TaxCodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxCodeModel**](../Model/FetchResultTaxCodeModel.md)
+[**\Together\Taxes\Model\FetchResultTaxCodeModel**](../Model/FetchResultTaxCodeModel.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTaxCode**
-> \Swagger\Client\Model\TaxCodeModel updateTaxCode($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\TaxCodeModel updateTaxCode($company_id, $id, $x_avalara_client, $body)
 
 Update a single tax code
 
@@ -349,14 +349,14 @@ Replace the existing taxcode object at this URL with an updated object.  A 'TaxC
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxCodesApi(
+$apiInstance = new Together\Taxes\Api\TaxCodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -365,7 +365,7 @@ $apiInstance = new Swagger\Client\Api\TaxCodesApi(
 $company_id = 56; // int | The ID of the company that this tax code belongs to.
 $id = 56; // int | The ID of the tax code you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\TaxCodeModel(); // \Swagger\Client\Model\TaxCodeModel | The tax code you wish to update.
+$body = new \Together\Taxes\Model\TaxCodeModel(); // \Together\Taxes\Model\TaxCodeModel | The tax code you wish to update.
 
 try {
     $result = $apiInstance->updateTaxCode($company_id, $id, $x_avalara_client, $body);
@@ -383,11 +383,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that this tax code belongs to. |
  **id** | **int**| The ID of the tax code you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\TaxCodeModel**](../Model/TaxCodeModel.md)| The tax code you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\TaxCodeModel**](../Model/TaxCodeModel.md)| The tax code you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxCodeModel**](../Model/TaxCodeModel.md)
+[**\Together\Taxes\Model\TaxCodeModel**](../Model/TaxCodeModel.md)
 
 ### Authorization
 

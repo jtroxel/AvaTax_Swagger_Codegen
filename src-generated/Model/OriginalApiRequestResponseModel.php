@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * OriginalApiRequestResponseModel Class Doc Comment
  *
  * @category Class
  * @description Represents the exact API request and response from the original transaction API call, if available
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class OriginalApiRequestResponseModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'request' => '\Swagger\Client\Model\CreateTransactionModel',
-        'response' => '\Swagger\Client\Model\TransactionModel'
+        'request' => '\Together\Taxes\Model\CreateTransactionModel',
+        'response' => '\Together\Taxes\Model\TransactionModel'
     ];
 
     /**
@@ -214,7 +214,7 @@ class OriginalApiRequestResponseModel implements ModelInterface, ArrayAccess
     /**
      * Gets request
      *
-     * @return \Swagger\Client\Model\CreateTransactionModel
+     * @return \Together\Taxes\Model\CreateTransactionModel
      */
     public function getRequest()
     {
@@ -224,7 +224,7 @@ class OriginalApiRequestResponseModel implements ModelInterface, ArrayAccess
     /**
      * Sets request
      *
-     * @param \Swagger\Client\Model\CreateTransactionModel $request API request
+     * @param \Together\Taxes\Model\CreateTransactionModel $request API request
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class OriginalApiRequestResponseModel implements ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function getResponse()
     {
@@ -248,7 +248,7 @@ class OriginalApiRequestResponseModel implements ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Swagger\Client\Model\TransactionModel $response API response
+     * @param \Together\Taxes\Model\TransactionModel $response API response
      *
      * @return $this
      */

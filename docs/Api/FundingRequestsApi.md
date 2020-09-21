@@ -1,4 +1,4 @@
-# Swagger\Client\FundingRequestsApi
+# Together\Taxes\FundingRequestsApi
 
 All URIs are relative to *https://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **activateFundingRequest**
-> \Swagger\Client\Model\FundingStatusModel activateFundingRequest($id, $x_avalara_client)
+> \Together\Taxes\Model\FundingStatusModel activateFundingRequest($id, $x_avalara_client)
 
 Request the javascript for a funding setup widget
 
@@ -21,14 +21,14 @@ This API is available by invitation only.  Companies that use the Avalara Manage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\FundingRequestsApi(
+$apiInstance = new Together\Taxes\Api\FundingRequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FundingStatusModel**](../Model/FundingStatusModel.md)
+[**\Together\Taxes\Model\FundingStatusModel**](../Model/FundingStatusModel.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fundingRequestStatus**
-> \Swagger\Client\Model\FundingStatusModel fundingRequestStatus($id, $x_avalara_client)
+> \Together\Taxes\Model\FundingStatusModel fundingRequestStatus($id, $x_avalara_client)
 
 Retrieve status about a funding setup request
 
@@ -81,14 +81,14 @@ This API is available by invitation only.  Companies that use the Avalara Manage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\FundingRequestsApi(
+$apiInstance = new Together\Taxes\Api\FundingRequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FundingStatusModel**](../Model/FundingStatusModel.md)
+[**\Together\Taxes\Model\FundingStatusModel**](../Model/FundingStatusModel.md)
 
 ### Authorization
 

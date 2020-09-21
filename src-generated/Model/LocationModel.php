@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * LocationModel Class Doc Comment
  *
  * @category Class
  * @description A location where this company does business.  Some jurisdictions may require you to list all locations where your company does business.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -84,8 +84,8 @@ class LocationModel implements ModelInterface, ArrayAccess
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'settings' => '\Swagger\Client\Model\LocationSettingModel[]',
-        'parameters' => '\Swagger\Client\Model\LocationParameterModel[]'
+        'settings' => '\Together\Taxes\Model\LocationSettingModel[]',
+        'parameters' => '\Together\Taxes\Model\LocationParameterModel[]'
     ];
 
     /**
@@ -1243,7 +1243,7 @@ class LocationModel implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\LocationSettingModel[]
+     * @return \Together\Taxes\Model\LocationSettingModel[]
      */
     public function getSettings()
     {
@@ -1253,7 +1253,7 @@ class LocationModel implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\LocationSettingModel[] $settings Extra information required by certain jurisdictions for filing.  For a list of settings recognized by Avalara, query the endpoint \"/api/v2/definitions/locationquestions\".  To determine the list of settings required for this location, query the endpoint \"/api/v2/companies/(id)/locations/(id)/validate\".
+     * @param \Together\Taxes\Model\LocationSettingModel[] $settings Extra information required by certain jurisdictions for filing.  For a list of settings recognized by Avalara, query the endpoint \"/api/v2/definitions/locationquestions\".  To determine the list of settings required for this location, query the endpoint \"/api/v2/companies/(id)/locations/(id)/validate\".
      *
      * @return $this
      */
@@ -1267,7 +1267,7 @@ class LocationModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\LocationParameterModel[]
+     * @return \Together\Taxes\Model\LocationParameterModel[]
      */
     public function getParameters()
     {
@@ -1277,7 +1277,7 @@ class LocationModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\LocationParameterModel[] $parameters List of location parameters.
+     * @param \Together\Taxes\Model\LocationParameterModel[] $parameters List of location parameters.
      *
      * @return $this
      */

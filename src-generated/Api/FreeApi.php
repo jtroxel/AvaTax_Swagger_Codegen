@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * FreeApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class FreeApi
      *
      * FREE API - Request a free trial of AvaTax
      *
-     * @param  \Swagger\Client\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
+     * @param  \Together\Taxes\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NewAccountModel
+     * @return \Together\Taxes\Model\NewAccountModel
      */
     public function requestFreeTrial($body = null)
     {
@@ -109,15 +109,15 @@ class FreeApi
      *
      * FREE API - Request a free trial of AvaTax
      *
-     * @param  \Swagger\Client\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
+     * @param  \Together\Taxes\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NewAccountModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NewAccountModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestFreeTrialWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\NewAccountModel';
+        $returnType = '\Together\Taxes\Model\NewAccountModel';
         $request = $this->requestFreeTrialRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class FreeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NewAccountModel',
+                        '\Together\Taxes\Model\NewAccountModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class FreeApi
      *
      * FREE API - Request a free trial of AvaTax
      *
-     * @param  \Swagger\Client\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
+     * @param  \Together\Taxes\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class FreeApi
      *
      * FREE API - Request a free trial of AvaTax
      *
-     * @param  \Swagger\Client\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
+     * @param  \Together\Taxes\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function requestFreeTrialAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\NewAccountModel';
+        $returnType = '\Together\Taxes\Model\NewAccountModel';
         $request = $this->requestFreeTrialRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class FreeApi
     /**
      * Create request for operation 'requestFreeTrial'
      *
-     * @param  \Swagger\Client\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
+     * @param  \Together\Taxes\Model\FreeTrialRequestModel $body Required information to provision a free trial account. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -359,9 +359,9 @@ class FreeApi
      * @param  string $city The city name of the location. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TaxRateModel
+     * @return \Together\Taxes\Model\TaxRateModel
      */
     public function taxRatesByAddress($line1, $region, $postal_code, $country, $line2 = null, $line3 = null, $city = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -383,13 +383,13 @@ class FreeApi
      * @param  string $city The city name of the location. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TaxRateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TaxRateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxRatesByAddressWithHttpInfo($line1, $region, $postal_code, $country, $line2 = null, $line3 = null, $city = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TaxRateModel';
+        $returnType = '\Together\Taxes\Model\TaxRateModel';
         $request = $this->taxRatesByAddressRequest($line1, $region, $postal_code, $country, $line2, $line3, $city, $x_avalara_client);
 
         try {
@@ -441,7 +441,7 @@ class FreeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TaxRateModel',
+                        '\Together\Taxes\Model\TaxRateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -497,7 +497,7 @@ class FreeApi
      */
     public function taxRatesByAddressAsyncWithHttpInfo($line1, $region, $postal_code, $country, $line2 = null, $line3 = null, $city = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TaxRateModel';
+        $returnType = '\Together\Taxes\Model\TaxRateModel';
         $request = $this->taxRatesByAddressRequest($line1, $region, $postal_code, $country, $line2, $line3, $city, $x_avalara_client);
 
         return $this->client
@@ -708,9 +708,9 @@ class FreeApi
      * @param  string $postal_code The postal code of the location. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TaxRateModel
+     * @return \Together\Taxes\Model\TaxRateModel
      */
     public function taxRatesByPostalCode($country, $postal_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -727,13 +727,13 @@ class FreeApi
      * @param  string $postal_code The postal code of the location. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TaxRateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TaxRateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxRatesByPostalCodeWithHttpInfo($country, $postal_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TaxRateModel';
+        $returnType = '\Together\Taxes\Model\TaxRateModel';
         $request = $this->taxRatesByPostalCodeRequest($country, $postal_code, $x_avalara_client);
 
         try {
@@ -785,7 +785,7 @@ class FreeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TaxRateModel',
+                        '\Together\Taxes\Model\TaxRateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class FreeApi
      */
     public function taxRatesByPostalCodeAsyncWithHttpInfo($country, $postal_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TaxRateModel';
+        $returnType = '\Together\Taxes\Model\TaxRateModel';
         $request = $this->taxRatesByPostalCodeRequest($country, $postal_code, $x_avalara_client);
 
         return $this->client

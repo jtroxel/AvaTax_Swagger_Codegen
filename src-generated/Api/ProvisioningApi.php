@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * ProvisioningApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class ProvisioningApi
      * Request a new Avalara account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
+     * @param  \Together\Taxes\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NewAccountModel
+     * @return \Together\Taxes\Model\NewAccountModel
      */
     public function requestNewAccount($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -111,15 +111,15 @@ class ProvisioningApi
      * Request a new Avalara account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
+     * @param  \Together\Taxes\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NewAccountModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NewAccountModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestNewAccountWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NewAccountModel';
+        $returnType = '\Together\Taxes\Model\NewAccountModel';
         $request = $this->requestNewAccountRequest($x_avalara_client, $body);
 
         try {
@@ -171,7 +171,7 @@ class ProvisioningApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NewAccountModel',
+                        '\Together\Taxes\Model\NewAccountModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class ProvisioningApi
      * Request a new Avalara account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
+     * @param  \Together\Taxes\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class ProvisioningApi
      * Request a new Avalara account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
+     * @param  \Together\Taxes\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function requestNewAccountAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NewAccountModel';
+        $returnType = '\Together\Taxes\Model\NewAccountModel';
         $request = $this->requestNewAccountRequest($x_avalara_client, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class ProvisioningApi
      * Create request for operation 'requestNewAccount'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
+     * @param  \Together\Taxes\Model\NewAccountRequestModel $body Information about the account you wish to create and the selected product offerings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -371,9 +371,9 @@ class ProvisioningApi
      * @param  string $offer The offer to be added to an already existing customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\OfferModel
+     * @return \Together\Taxes\Model\OfferModel
      */
     public function requestNewEntitlement($id, $offer, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -390,13 +390,13 @@ class ProvisioningApi
      * @param  string $offer The offer to be added to an already existing customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\OfferModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\OfferModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestNewEntitlementWithHttpInfo($id, $offer, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\OfferModel';
+        $returnType = '\Together\Taxes\Model\OfferModel';
         $request = $this->requestNewEntitlementRequest($id, $offer, $x_avalara_client);
 
         try {
@@ -448,7 +448,7 @@ class ProvisioningApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\OfferModel',
+                        '\Together\Taxes\Model\OfferModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -494,7 +494,7 @@ class ProvisioningApi
      */
     public function requestNewEntitlementAsyncWithHttpInfo($id, $offer, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\OfferModel';
+        $returnType = '\Together\Taxes\Model\OfferModel';
         $request = $this->requestNewEntitlementRequest($id, $offer, $x_avalara_client);
 
         return $this->client

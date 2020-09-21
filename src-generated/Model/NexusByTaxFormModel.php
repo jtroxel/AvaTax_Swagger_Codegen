@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * NexusByTaxFormModel Class Doc Comment
  *
  * @category Class
  * @description Identifies all nexus that match a particular tax form
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,8 +60,8 @@ class NexusByTaxFormModel implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'form_code' => 'string',
         'company_id' => 'int',
-        'nexus_definitions' => '\Swagger\Client\Model\NexusModel[]',
-        'company_nexus' => '\Swagger\Client\Model\NexusModel[]'
+        'nexus_definitions' => '\Together\Taxes\Model\NexusModel[]',
+        'company_nexus' => '\Together\Taxes\Model\NexusModel[]'
     ];
 
     /**
@@ -274,7 +274,7 @@ class NexusByTaxFormModel implements ModelInterface, ArrayAccess
     /**
      * Gets nexus_definitions
      *
-     * @return \Swagger\Client\Model\NexusModel[]
+     * @return \Together\Taxes\Model\NexusModel[]
      */
     public function getNexusDefinitions()
     {
@@ -284,7 +284,7 @@ class NexusByTaxFormModel implements ModelInterface, ArrayAccess
     /**
      * Sets nexus_definitions
      *
-     * @param \Swagger\Client\Model\NexusModel[] $nexus_definitions A list of all Avalara-defined nexus that are relevant to this tax form
+     * @param \Together\Taxes\Model\NexusModel[] $nexus_definitions A list of all Avalara-defined nexus that are relevant to this tax form
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class NexusByTaxFormModel implements ModelInterface, ArrayAccess
     /**
      * Gets company_nexus
      *
-     * @return \Swagger\Client\Model\NexusModel[]
+     * @return \Together\Taxes\Model\NexusModel[]
      */
     public function getCompanyNexus()
     {
@@ -308,7 +308,7 @@ class NexusByTaxFormModel implements ModelInterface, ArrayAccess
     /**
      * Sets company_nexus
      *
-     * @param \Swagger\Client\Model\NexusModel[] $company_nexus A list of all currently-defined company nexus that are related to this tax form
+     * @param \Together\Taxes\Model\NexusModel[] $company_nexus A list of all currently-defined company nexus that are related to this tax form
      *
      * @return $this
      */

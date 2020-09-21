@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CreateTransactionBatchResponseModel Class Doc Comment
  *
  * @category Class
  * @description Represents a create transaction batch response model.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -71,7 +71,7 @@ class CreateTransactionBatchResponseModel implements ModelInterface, ArrayAccess
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'files' => '\Swagger\Client\Model\BatchFileModel[]'
+        'files' => '\Together\Taxes\Model\BatchFileModel[]'
     ];
 
     /**
@@ -662,7 +662,7 @@ class CreateTransactionBatchResponseModel implements ModelInterface, ArrayAccess
     /**
      * Gets files
      *
-     * @return \Swagger\Client\Model\BatchFileModel[]
+     * @return \Together\Taxes\Model\BatchFileModel[]
      */
     public function getFiles()
     {
@@ -672,7 +672,7 @@ class CreateTransactionBatchResponseModel implements ModelInterface, ArrayAccess
     /**
      * Sets files
      *
-     * @param \Swagger\Client\Model\BatchFileModel[] $files The list of files contained in this batch.
+     * @param \Together\Taxes\Model\BatchFileModel[] $files The list of files contained in this batch.
      *
      * @return $this
      */

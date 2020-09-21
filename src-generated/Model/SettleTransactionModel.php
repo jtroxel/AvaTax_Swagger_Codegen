@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * SettleTransactionModel Class Doc Comment
  *
  * @category Class
  * @description Settle this transaction with your ledger by executing one or many actions against that transaction.                You may use this endpoint to verify the transaction, change the transaction&#39;s code, and commit the transaction for reporting purposes.  This endpoint may be used to execute any or all of these actions at once.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,9 +58,9 @@ class SettleTransactionModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'verify' => '\Swagger\Client\Model\VerifyTransactionModel',
-        'change_code' => '\Swagger\Client\Model\ChangeTransactionCodeModel',
-        'commit' => '\Swagger\Client\Model\CommitTransactionModel'
+        'verify' => '\Together\Taxes\Model\VerifyTransactionModel',
+        'change_code' => '\Together\Taxes\Model\ChangeTransactionCodeModel',
+        'commit' => '\Together\Taxes\Model\CommitTransactionModel'
     ];
 
     /**
@@ -220,7 +220,7 @@ class SettleTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets verify
      *
-     * @return \Swagger\Client\Model\VerifyTransactionModel
+     * @return \Together\Taxes\Model\VerifyTransactionModel
      */
     public function getVerify()
     {
@@ -230,7 +230,7 @@ class SettleTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets verify
      *
-     * @param \Swagger\Client\Model\VerifyTransactionModel $verify To verify this transaction, you may provide information in this field.                If you leave this field null, the transaction will not be verified.
+     * @param \Together\Taxes\Model\VerifyTransactionModel $verify To verify this transaction, you may provide information in this field.                If you leave this field null, the transaction will not be verified.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class SettleTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets change_code
      *
-     * @return \Swagger\Client\Model\ChangeTransactionCodeModel
+     * @return \Together\Taxes\Model\ChangeTransactionCodeModel
      */
     public function getChangeCode()
     {
@@ -254,7 +254,7 @@ class SettleTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets change_code
      *
-     * @param \Swagger\Client\Model\ChangeTransactionCodeModel $change_code To change the code for this transaction, you may provide information in this field.                If you leave this field null, the transaction's code will not be changed.
+     * @param \Together\Taxes\Model\ChangeTransactionCodeModel $change_code To change the code for this transaction, you may provide information in this field.                If you leave this field null, the transaction's code will not be changed.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class SettleTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets commit
      *
-     * @return \Swagger\Client\Model\CommitTransactionModel
+     * @return \Together\Taxes\Model\CommitTransactionModel
      */
     public function getCommit()
     {
@@ -278,7 +278,7 @@ class SettleTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets commit
      *
-     * @param \Swagger\Client\Model\CommitTransactionModel $commit To commit this transaction so that it can be reported on a tax filing, you may provide information in this field.                If you leave this field null, the transaction's commit status will not be changed.                If you use Avalara's Managed Returns Service, committing a transaction will allow that transaction to be filed.
+     * @param \Together\Taxes\Model\CommitTransactionModel $commit To commit this transaction so that it can be reported on a tax filing, you may provide information in this field.                If you leave this field null, the transaction's commit status will not be changed.                If you use Avalara's Managed Returns Service, committing a transaction will allow that transaction to be filed.
      *
      * @return $this
      */

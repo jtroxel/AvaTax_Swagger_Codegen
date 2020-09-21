@@ -1,4 +1,4 @@
-# Swagger\Client\TaxContentApi
+# Together\Taxes\TaxContentApi
 
 All URIs are relative to *https://localhost*
 
@@ -22,21 +22,21 @@ Builds a tax content file containing information useful for a retail point-of-sa
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxContentApi(
+$apiInstance = new Together\Taxes\Api\TaxContentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\PointOfSaleDataRequestModel(); // \Swagger\Client\Model\PointOfSaleDataRequestModel | Parameters about the desired file format and report format, specifying which company, locations and TaxCodes to include.
+$body = new \Together\Taxes\Model\PointOfSaleDataRequestModel(); // \Together\Taxes\Model\PointOfSaleDataRequestModel | Parameters about the desired file format and report format, specifying which company, locations and TaxCodes to include.
 
 try {
     $result = $apiInstance->buildTaxContentFile($x_avalara_client, $body);
@@ -52,7 +52,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\PointOfSaleDataRequestModel**](../Model/PointOfSaleDataRequestModel.md)| Parameters about the desired file format and report format, specifying which company, locations and TaxCodes to include. | [optional]
+ **body** | [**\Together\Taxes\Model\PointOfSaleDataRequestModel**](../Model/PointOfSaleDataRequestModel.md)| Parameters about the desired file format and report format, specifying which company, locations and TaxCodes to include. | [optional]
 
 ### Return type
 
@@ -82,14 +82,14 @@ Builds a tax content file containing information useful for a retail point-of-sa
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxContentApi(
+$apiInstance = new Together\Taxes\Api\TaxContentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -152,14 +152,14 @@ Download a CSV file containing all five digit postal codes in the United States 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxContentApi(
+$apiInstance = new Together\Taxes\Api\TaxContentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

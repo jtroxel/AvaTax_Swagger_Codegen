@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * CertificatesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,11 +95,11 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company recording this certificate (required)
      * @param  bool $pre_validated_exemption_reason If set to true, the certificate will bypass the human verification process. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel[] $body Certificates to be created (optional)
+     * @param  \Together\Taxes\Model\CertificateModel[] $body Certificates to be created (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CertificateModel[]
+     * @return \Together\Taxes\Model\CertificateModel[]
      */
     public function createCertificates($company_id, $pre_validated_exemption_reason = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -115,15 +115,15 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company recording this certificate (required)
      * @param  bool $pre_validated_exemption_reason If set to true, the certificate will bypass the human verification process. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel[] $body Certificates to be created (optional)
+     * @param  \Together\Taxes\Model\CertificateModel[] $body Certificates to be created (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CertificateModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CertificateModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createCertificatesWithHttpInfo($company_id, $pre_validated_exemption_reason = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CertificateModel[]';
+        $returnType = '\Together\Taxes\Model\CertificateModel[]';
         $request = $this->createCertificatesRequest($company_id, $pre_validated_exemption_reason, $x_avalara_client, $body);
 
         try {
@@ -175,7 +175,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CertificateModel[]',
+                        '\Together\Taxes\Model\CertificateModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -193,7 +193,7 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company recording this certificate (required)
      * @param  bool $pre_validated_exemption_reason If set to true, the certificate will bypass the human verification process. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel[] $body Certificates to be created (optional)
+     * @param  \Together\Taxes\Model\CertificateModel[] $body Certificates to be created (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -216,14 +216,14 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company recording this certificate (required)
      * @param  bool $pre_validated_exemption_reason If set to true, the certificate will bypass the human verification process. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel[] $body Certificates to be created (optional)
+     * @param  \Together\Taxes\Model\CertificateModel[] $body Certificates to be created (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCertificatesAsyncWithHttpInfo($company_id, $pre_validated_exemption_reason = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CertificateModel[]';
+        $returnType = '\Together\Taxes\Model\CertificateModel[]';
         $request = $this->createCertificatesRequest($company_id, $pre_validated_exemption_reason, $x_avalara_client, $body);
 
         return $this->client
@@ -269,7 +269,7 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company recording this certificate (required)
      * @param  bool $pre_validated_exemption_reason If set to true, the certificate will bypass the human verification process. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel[] $body Certificates to be created (optional)
+     * @param  \Together\Taxes\Model\CertificateModel[] $body Certificates to be created (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -399,9 +399,9 @@ class CertificatesApi
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteCertificate($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -418,13 +418,13 @@ class CertificatesApi
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCertificateWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteCertificateRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -476,7 +476,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,7 +522,7 @@ class CertificatesApi
      */
     public function deleteCertificateAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteCertificateRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -706,7 +706,7 @@ class CertificatesApi
      * @param  string $type The data format in which to retrieve the certificate image (optional, default to Pdf)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
@@ -727,7 +727,7 @@ class CertificatesApi
      * @param  string $type The data format in which to retrieve the certificate image (optional, default to Pdf)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1028,9 +1028,9 @@ class CertificatesApi
      * @param  string $include OPTIONAL: A comma separated list of special fetch options.  You can specify one or more of the following:                             * customers - Retrieves the list of customers linked to the certificate.               * po_numbers - Retrieves all PO numbers tied to the certificate.               * attributes - Retrieves all attributes applied to the certificate. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CertificateModel
+     * @return \Together\Taxes\Model\CertificateModel
      */
     public function getCertificate($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1048,13 +1048,13 @@ class CertificatesApi
      * @param  string $include OPTIONAL: A comma separated list of special fetch options.  You can specify one or more of the following:                             * customers - Retrieves the list of customers linked to the certificate.               * po_numbers - Retrieves all PO numbers tied to the certificate.               * attributes - Retrieves all attributes applied to the certificate. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CertificateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CertificateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCertificateWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CertificateModel';
+        $returnType = '\Together\Taxes\Model\CertificateModel';
         $request = $this->getCertificateRequest($company_id, $id, $include, $x_avalara_client);
 
         try {
@@ -1106,7 +1106,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CertificateModel',
+                        '\Together\Taxes\Model\CertificateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1154,7 +1154,7 @@ class CertificatesApi
      */
     public function getCertificateAsyncWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CertificateModel';
+        $returnType = '\Together\Taxes\Model\CertificateModel';
         $request = $this->getCertificateRequest($company_id, $id, $include, $x_avalara_client);
 
         return $this->client
@@ -1340,9 +1340,9 @@ class CertificatesApi
      * @param  int $company_id The company ID to check (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ProvisionStatusModel
+     * @return \Together\Taxes\Model\ProvisionStatusModel
      */
     public function getCertificateSetup($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1358,13 +1358,13 @@ class CertificatesApi
      * @param  int $company_id The company ID to check (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ProvisionStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ProvisionStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCertificateSetupWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ProvisionStatusModel';
+        $returnType = '\Together\Taxes\Model\ProvisionStatusModel';
         $request = $this->getCertificateSetupRequest($company_id, $x_avalara_client);
 
         try {
@@ -1416,7 +1416,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ProvisionStatusModel',
+                        '\Together\Taxes\Model\ProvisionStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1460,7 +1460,7 @@ class CertificatesApi
      */
     public function getCertificateSetupAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ProvisionStatusModel';
+        $returnType = '\Together\Taxes\Model\ProvisionStatusModel';
         $request = $this->getCertificateSetupRequest($company_id, $x_avalara_client);
 
         return $this->client
@@ -1626,11 +1626,11 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertificateAttributeModel
+     * @return \Together\Taxes\Model\FetchResultCertificateAttributeModel
      */
     public function linkAttributesToCertificate($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1646,15 +1646,15 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertificateAttributeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertificateAttributeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function linkAttributesToCertificateWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateAttributeModel';
         $request = $this->linkAttributesToCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -1706,7 +1706,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertificateAttributeModel',
+                        '\Together\Taxes\Model\FetchResultCertificateAttributeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1724,7 +1724,7 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1747,14 +1747,14 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function linkAttributesToCertificateAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateAttributeModel';
         $request = $this->linkAttributesToCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -1800,7 +1800,7 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to link to this certificate. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1939,11 +1939,11 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCustomerModel
+     * @return \Together\Taxes\Model\FetchResultCustomerModel
      */
     public function linkCustomersToCertificate($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1959,15 +1959,15 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCustomerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCustomerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function linkCustomersToCertificateWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerModel';
         $request = $this->linkCustomersToCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -2019,7 +2019,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCustomerModel',
+                        '\Together\Taxes\Model\FetchResultCustomerModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2037,7 +2037,7 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2060,14 +2060,14 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function linkCustomersToCertificateAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerModel';
         $request = $this->linkCustomersToCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -2113,7 +2113,7 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers needed be added to the Certificate for exemption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2253,9 +2253,9 @@ class CertificatesApi
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertificateAttributeModel
+     * @return \Together\Taxes\Model\FetchResultCertificateAttributeModel
      */
     public function listAttributesForCertificate($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2272,13 +2272,13 @@ class CertificatesApi
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertificateAttributeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertificateAttributeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAttributesForCertificateWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateAttributeModel';
         $request = $this->listAttributesForCertificateRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -2330,7 +2330,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertificateAttributeModel',
+                        '\Together\Taxes\Model\FetchResultCertificateAttributeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2376,7 +2376,7 @@ class CertificatesApi
      */
     public function listAttributesForCertificateAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateAttributeModel';
         $request = $this->listAttributesForCertificateRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -2559,9 +2559,9 @@ class CertificatesApi
      * @param  string $include OPTIONAL: A comma separated list of special fetch options.               No options are currently available when fetching customers. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCustomerModel
+     * @return \Together\Taxes\Model\FetchResultCustomerModel
      */
     public function listCustomersForCertificate($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2579,13 +2579,13 @@ class CertificatesApi
      * @param  string $include OPTIONAL: A comma separated list of special fetch options.               No options are currently available when fetching customers. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCustomerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCustomerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCustomersForCertificateWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerModel';
         $request = $this->listCustomersForCertificateRequest($company_id, $id, $include, $x_avalara_client);
 
         try {
@@ -2637,7 +2637,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCustomerModel',
+                        '\Together\Taxes\Model\FetchResultCustomerModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2685,7 +2685,7 @@ class CertificatesApi
      */
     public function listCustomersForCertificateAsyncWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerModel';
         $request = $this->listCustomersForCertificateRequest($company_id, $id, $include, $x_avalara_client);
 
         return $this->client
@@ -2876,9 +2876,9 @@ class CertificatesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertificateModel
+     * @return \Together\Taxes\Model\FetchResultCertificateModel
      */
     public function queryCertificates($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2899,13 +2899,13 @@ class CertificatesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertificateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertificateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryCertificatesWithHttpInfo($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateModel';
         $request = $this->queryCertificatesRequest($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2957,7 +2957,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertificateModel',
+                        '\Together\Taxes\Model\FetchResultCertificateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3011,7 +3011,7 @@ class CertificatesApi
      */
     public function queryCertificatesAsyncWithHttpInfo($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateModel';
         $request = $this->queryCertificatesRequest($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3202,9 +3202,9 @@ class CertificatesApi
      * @param  int $company_id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ProvisionStatusModel
+     * @return \Together\Taxes\Model\ProvisionStatusModel
      */
     public function requestCertificateSetup($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3220,13 +3220,13 @@ class CertificatesApi
      * @param  int $company_id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ProvisionStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ProvisionStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestCertificateSetupWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ProvisionStatusModel';
+        $returnType = '\Together\Taxes\Model\ProvisionStatusModel';
         $request = $this->requestCertificateSetupRequest($company_id, $x_avalara_client);
 
         try {
@@ -3278,7 +3278,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ProvisionStatusModel',
+                        '\Together\Taxes\Model\ProvisionStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3322,7 +3322,7 @@ class CertificatesApi
      */
     public function requestCertificateSetupAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ProvisionStatusModel';
+        $returnType = '\Together\Taxes\Model\ProvisionStatusModel';
         $request = $this->requestCertificateSetupRequest($company_id, $x_avalara_client);
 
         return $this->client
@@ -3488,11 +3488,11 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertificateAttributeModel
+     * @return \Together\Taxes\Model\FetchResultCertificateAttributeModel
      */
     public function unlinkAttributesFromCertificate($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -3508,15 +3508,15 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertificateAttributeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertificateAttributeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function unlinkAttributesFromCertificateWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateAttributeModel';
         $request = $this->unlinkAttributesFromCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -3568,7 +3568,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertificateAttributeModel',
+                        '\Together\Taxes\Model\FetchResultCertificateAttributeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3586,7 +3586,7 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3609,14 +3609,14 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function unlinkAttributesFromCertificateAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateAttributeModel';
         $request = $this->unlinkAttributesFromCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -3662,7 +3662,7 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
+     * @param  \Together\Taxes\Model\CertificateAttributeModel[] $body The list of attributes to unlink from this certificate. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3801,11 +3801,11 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCustomerModel
+     * @return \Together\Taxes\Model\FetchResultCustomerModel
      */
     public function unlinkCustomersFromCertificate($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -3821,15 +3821,15 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCustomerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCustomerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function unlinkCustomersFromCertificateWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerModel';
         $request = $this->unlinkCustomersFromCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -3881,7 +3881,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCustomerModel',
+                        '\Together\Taxes\Model\FetchResultCustomerModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3899,7 +3899,7 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3922,14 +3922,14 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function unlinkCustomersFromCertificateAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerModel';
         $request = $this->unlinkCustomersFromCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -3975,7 +3975,7 @@ class CertificatesApi
      * @param  int $company_id The unique ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body The list of customers to unlink from this certificate (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4114,11 +4114,11 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
+     * @param  \Together\Taxes\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CertificateModel
+     * @return \Together\Taxes\Model\CertificateModel
      */
     public function updateCertificate($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -4134,15 +4134,15 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
+     * @param  \Together\Taxes\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CertificateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CertificateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCertificateWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CertificateModel';
+        $returnType = '\Together\Taxes\Model\CertificateModel';
         $request = $this->updateCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -4194,7 +4194,7 @@ class CertificatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CertificateModel',
+                        '\Together\Taxes\Model\CertificateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4212,7 +4212,7 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
+     * @param  \Together\Taxes\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4235,14 +4235,14 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
+     * @param  \Together\Taxes\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateCertificateAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CertificateModel';
+        $returnType = '\Together\Taxes\Model\CertificateModel';
         $request = $this->updateCertificateRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -4288,7 +4288,7 @@ class CertificatesApi
      * @param  int $company_id The ID number of the company that recorded this certificate (required)
      * @param  int $id The unique ID number of this certificate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
+     * @param  \Together\Taxes\Model\CertificateModel $body The new certificate object that will replace the existing one (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4429,7 +4429,7 @@ class CertificatesApi
      * @param  \SplFileObject $file The exemption certificate file you wanted to upload. Accepted formats are: PDF, JPEG, TIFF, PNG. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -4449,7 +4449,7 @@ class CertificatesApi
      * @param  \SplFileObject $file The exemption certificate file you wanted to upload. Accepted formats are: PDF, JPEG, TIFF, PNG. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */

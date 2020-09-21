@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FreeTrialRequestModel Class Doc Comment
  *
  * @category Class
  * @description Represents a request for a free trial account for AvaTax.  Free trial accounts are only available on the Sandbox environment.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,7 +64,7 @@ class FreeTrialRequestModel implements ModelInterface, ArrayAccess
         'company' => 'string',
         'phone' => 'string',
         'campaign' => 'string',
-        'company_address' => '\Swagger\Client\Model\CompanyAddress',
+        'company_address' => '\Together\Taxes\Model\CompanyAddress',
         'website' => 'string',
         'have_read_avalara_terms_and_conditions' => 'bool',
         'accept_avalara_terms_and_conditions' => 'bool'
@@ -483,7 +483,7 @@ class FreeTrialRequestModel implements ModelInterface, ArrayAccess
     /**
      * Gets company_address
      *
-     * @return \Swagger\Client\Model\CompanyAddress
+     * @return \Together\Taxes\Model\CompanyAddress
      */
     public function getCompanyAddress()
     {
@@ -493,7 +493,7 @@ class FreeTrialRequestModel implements ModelInterface, ArrayAccess
     /**
      * Sets company_address
      *
-     * @param \Swagger\Client\Model\CompanyAddress $company_address The Address information of the account
+     * @param \Together\Taxes\Model\CompanyAddress $company_address The Address information of the account
      *
      * @return $this
      */

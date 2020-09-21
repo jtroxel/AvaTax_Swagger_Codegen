@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * TaxRegionModel Class Doc Comment
  *
  * @category Class
  * @description The tax region model.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -71,7 +71,7 @@ class TaxRegionModel implements ModelInterface, ArrayAccess
         'end_date' => '\DateTime',
         'is_acm' => 'bool',
         'is_sst' => 'bool',
-        'jurisdictions' => '\Swagger\Client\Model\DenormalizedJurisModel[]'
+        'jurisdictions' => '\Together\Taxes\Model\DenormalizedJurisModel[]'
     ];
 
     /**
@@ -598,7 +598,7 @@ class TaxRegionModel implements ModelInterface, ArrayAccess
     /**
      * Gets jurisdictions
      *
-     * @return \Swagger\Client\Model\DenormalizedJurisModel[]
+     * @return \Together\Taxes\Model\DenormalizedJurisModel[]
      */
     public function getJurisdictions()
     {
@@ -608,7 +608,7 @@ class TaxRegionModel implements ModelInterface, ArrayAccess
     /**
      * Sets jurisdictions
      *
-     * @param \Swagger\Client\Model\DenormalizedJurisModel[] $jurisdictions List of jurisdictions associated with this tax region.
+     * @param \Together\Taxes\Model\DenormalizedJurisModel[] $jurisdictions List of jurisdictions associated with this tax region.
      *
      * @return $this
      */

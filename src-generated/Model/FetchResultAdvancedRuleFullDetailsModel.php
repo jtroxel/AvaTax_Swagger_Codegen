@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FetchResultAdvancedRuleFullDetailsModel Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class FetchResultAdvancedRuleFullDetailsModel implements ModelInterface, ArrayAc
       */
     protected static $swaggerTypes = [
         'recordset_count' => 'int',
-        'value' => '\Swagger\Client\Model\AdvancedRuleFullDetailsModel[]',
+        'value' => '\Together\Taxes\Model\AdvancedRuleFullDetailsModel[]',
         'next_link' => 'string',
         'page_key' => 'string'
     ];
@@ -249,7 +249,7 @@ class FetchResultAdvancedRuleFullDetailsModel implements ModelInterface, ArrayAc
     /**
      * Gets value
      *
-     * @return \Swagger\Client\Model\AdvancedRuleFullDetailsModel[]
+     * @return \Together\Taxes\Model\AdvancedRuleFullDetailsModel[]
      */
     public function getValue()
     {
@@ -259,7 +259,7 @@ class FetchResultAdvancedRuleFullDetailsModel implements ModelInterface, ArrayAc
     /**
      * Sets value
      *
-     * @param \Swagger\Client\Model\AdvancedRuleFullDetailsModel[] $value value
+     * @param \Together\Taxes\Model\AdvancedRuleFullDetailsModel[] $value value
      *
      * @return $this
      */

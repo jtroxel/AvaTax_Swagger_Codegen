@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * ComplianceApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class ComplianceApi
      *
      * @param  int $company_id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TransactionReferenceFieldModel[] $body  (optional)
+     * @param  \Together\Taxes\Model\TransactionReferenceFieldModel[] $body  (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTransactionModel
+     * @return \Together\Taxes\Model\FetchResultTransactionModel
      */
     public function tagTransaction($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class ComplianceApi
      *
      * @param  int $company_id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TransactionReferenceFieldModel[] $body  (optional)
+     * @param  \Together\Taxes\Model\TransactionReferenceFieldModel[] $body  (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function tagTransactionWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTransactionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTransactionModel';
         $request = $this->tagTransactionRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class ComplianceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTransactionModel',
+                        '\Together\Taxes\Model\FetchResultTransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class ComplianceApi
      *
      * @param  int $company_id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TransactionReferenceFieldModel[] $body  (optional)
+     * @param  \Together\Taxes\Model\TransactionReferenceFieldModel[] $body  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class ComplianceApi
      *
      * @param  int $company_id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TransactionReferenceFieldModel[] $body  (optional)
+     * @param  \Together\Taxes\Model\TransactionReferenceFieldModel[] $body  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function tagTransactionAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTransactionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTransactionModel';
         $request = $this->tagTransactionRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class ComplianceApi
      *
      * @param  int $company_id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TransactionReferenceFieldModel[] $body  (optional)
+     * @param  \Together\Taxes\Model\TransactionReferenceFieldModel[] $body  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

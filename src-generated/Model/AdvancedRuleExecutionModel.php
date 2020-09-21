@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AdvancedRuleExecutionModel Class Doc Comment
  *
  * @category Class
  * @description Model representing an execution of an advanced rule for a company
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class AdvancedRuleExecutionModel implements ModelInterface, ArrayAccess
         'enabled' => 'bool',
         'continue_on_error' => 'bool',
         'rule_id' => 'string',
-        'rule' => '\Swagger\Client\Model\AdvancedRuleModel',
+        'rule' => '\Together\Taxes\Model\AdvancedRuleModel',
         'customer_data' => 'string',
         'customer_data_id' => 'string'
     ];
@@ -436,7 +436,7 @@ class AdvancedRuleExecutionModel implements ModelInterface, ArrayAccess
     /**
      * Gets rule
      *
-     * @return \Swagger\Client\Model\AdvancedRuleModel
+     * @return \Together\Taxes\Model\AdvancedRuleModel
      */
     public function getRule()
     {
@@ -446,7 +446,7 @@ class AdvancedRuleExecutionModel implements ModelInterface, ArrayAccess
     /**
      * Sets rule
      *
-     * @param \Swagger\Client\Model\AdvancedRuleModel $rule Advanced rule to execute
+     * @param \Together\Taxes\Model\AdvancedRuleModel $rule Advanced rule to execute
      *
      * @return $this
      */

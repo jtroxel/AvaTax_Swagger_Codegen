@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **created_user_id** | **int** | The User ID of the user who created this record. | [optional] 
 **modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 
 **modified_user_id** | **int** | The user ID of the user who last modified this record. | [optional] 
-**classifications** | [**\Swagger\Client\Model\ClassificationModel[]**](ClassificationModel.md) | List of classifications that belong to this item.  A single classification consits of a productCode and a systemCode for a particular item. | [optional] 
-**parameters** | [**\Swagger\Client\Model\ItemParameterModel[]**](ItemParameterModel.md) | List of item parameters. | [optional] 
+**classifications** | [**\Together\Taxes\Model\ClassificationModel[]**](ClassificationModel.md) | List of classifications that belong to this item.  A single classification consits of a productCode and a systemCode for a particular item. | [optional] 
+**parameters** | [**\Together\Taxes\Model\ItemParameterModel[]**](ItemParameterModel.md) | List of item parameters. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

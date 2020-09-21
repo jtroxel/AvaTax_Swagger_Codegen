@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingModel Class Doc Comment
  *
  * @category Class
  * @description Represents a listing of all tax calculation data for filings and for accruing to future filings.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,7 +67,7 @@ class FilingModel implements ModelInterface, ArrayAccess
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'filing_regions' => '\Swagger\Client\Model\FilingRegionModel[]'
+        'filing_regions' => '\Together\Taxes\Model\FilingRegionModel[]'
     ];
 
     /**
@@ -512,7 +512,7 @@ class FilingModel implements ModelInterface, ArrayAccess
     /**
      * Gets filing_regions
      *
-     * @return \Swagger\Client\Model\FilingRegionModel[]
+     * @return \Together\Taxes\Model\FilingRegionModel[]
      */
     public function getFilingRegions()
     {
@@ -522,7 +522,7 @@ class FilingModel implements ModelInterface, ArrayAccess
     /**
      * Sets filing_regions
      *
-     * @param \Swagger\Client\Model\FilingRegionModel[] $filing_regions A listing of regional tax filings within this time period.
+     * @param \Together\Taxes\Model\FilingRegionModel[] $filing_regions A listing of regional tax filings within this time period.
      *
      * @return $this
      */

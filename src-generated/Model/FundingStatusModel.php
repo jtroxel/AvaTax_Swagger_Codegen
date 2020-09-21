@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FundingStatusModel Class Doc Comment
  *
  * @category Class
  * @description Status of an Avalara Managed Returns funding configuration for a company
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,7 +67,7 @@ class FundingStatusModel implements ModelInterface, ArrayAccess
         'document_key' => 'string',
         'document_type' => 'string',
         'document_name' => 'string',
-        'method_return' => '\Swagger\Client\Model\FundingESignMethodReturn',
+        'method_return' => '\Together\Taxes\Model\FundingESignMethodReturn',
         'status' => 'string',
         'error_message' => 'string',
         'last_polled' => '\DateTime',
@@ -514,7 +514,7 @@ class FundingStatusModel implements ModelInterface, ArrayAccess
     /**
      * Gets method_return
      *
-     * @return \Swagger\Client\Model\FundingESignMethodReturn
+     * @return \Together\Taxes\Model\FundingESignMethodReturn
      */
     public function getMethodReturn()
     {
@@ -524,7 +524,7 @@ class FundingStatusModel implements ModelInterface, ArrayAccess
     /**
      * Sets method_return
      *
-     * @param \Swagger\Client\Model\FundingESignMethodReturn $method_return MethodReturn
+     * @param \Together\Taxes\Model\FundingESignMethodReturn $method_return MethodReturn
      *
      * @return $this
      */

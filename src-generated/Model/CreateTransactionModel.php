@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CreateTransactionModel Class Doc Comment
  *
  * @category Class
  * @description Create a transaction
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'code' => 'string',
-        'lines' => '\Swagger\Client\Model\LineItemModel[]',
+        'lines' => '\Together\Taxes\Model\LineItemModel[]',
         'type' => 'string',
         'company_code' => 'string',
         'date' => '\DateTime',
@@ -70,13 +70,13 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
         'discount' => 'double',
         'purchase_order_no' => 'string',
         'exemption_no' => 'string',
-        'addresses' => '\Swagger\Client\Model\AddressesModel',
-        'parameters' => '\Swagger\Client\Model\TransactionParameterModel[]',
+        'addresses' => '\Together\Taxes\Model\AddressesModel',
+        'parameters' => '\Together\Taxes\Model\TransactionParameterModel[]',
         'reference_code' => 'string',
         'reporting_location_code' => 'string',
         'commit' => 'bool',
         'batch_code' => 'string',
-        'tax_override' => '\Swagger\Client\Model\TaxOverrideModel',
+        'tax_override' => '\Together\Taxes\Model\TaxOverrideModel',
         'currency_code' => 'string',
         'service_mode' => 'string',
         'exchange_rate' => 'double',
@@ -637,7 +637,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets lines
      *
-     * @return \Swagger\Client\Model\LineItemModel[]
+     * @return \Together\Taxes\Model\LineItemModel[]
      */
     public function getLines()
     {
@@ -647,7 +647,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets lines
      *
-     * @param \Swagger\Client\Model\LineItemModel[] $lines A list of line items that will appear on this transaction.
+     * @param \Together\Taxes\Model\LineItemModel[] $lines A list of line items that will appear on this transaction.
      *
      * @return $this
      */
@@ -959,7 +959,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \Swagger\Client\Model\AddressesModel
+     * @return \Together\Taxes\Model\AddressesModel
      */
     public function getAddresses()
     {
@@ -969,7 +969,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \Swagger\Client\Model\AddressesModel $addresses Default addresses for all lines in this document.                These addresses are the default values that will be used for any lines that do not have their own  address information.  If you specify addresses for a line, then no default addresses will be loaded  for that line.
+     * @param \Together\Taxes\Model\AddressesModel $addresses Default addresses for all lines in this document.                These addresses are the default values that will be used for any lines that do not have their own  address information.  If you specify addresses for a line, then no default addresses will be loaded  for that line.
      *
      * @return $this
      */
@@ -983,7 +983,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\TransactionParameterModel[]
+     * @return \Together\Taxes\Model\TransactionParameterModel[]
      */
     public function getParameters()
     {
@@ -993,7 +993,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\TransactionParameterModel[] $parameters Special parameters for this transaction.                To get a full list of available parameters, please use the [ListParameters](https://developer.avalara.com/api-reference/avatax/rest/v2/methods/Definitions/ListParameters/) endpoint.
+     * @param \Together\Taxes\Model\TransactionParameterModel[] $parameters Special parameters for this transaction.                To get a full list of available parameters, please use the [ListParameters](https://developer.avalara.com/api-reference/avatax/rest/v2/methods/Definitions/ListParameters/) endpoint.
      *
      * @return $this
      */
@@ -1124,7 +1124,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_override
      *
-     * @return \Swagger\Client\Model\TaxOverrideModel
+     * @return \Together\Taxes\Model\TaxOverrideModel
      */
     public function getTaxOverride()
     {
@@ -1134,7 +1134,7 @@ class CreateTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_override
      *
-     * @param \Swagger\Client\Model\TaxOverrideModel $tax_override Specifies a tax override for the entire document
+     * @param \Together\Taxes\Model\TaxOverrideModel $tax_override Specifies a tax override for the entire document
      *
      * @return $this
      */

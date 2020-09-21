@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CertificateModel Class Doc Comment
  *
  * @category Class
  * @description A certificate is a document stored in either AvaTax Exemptions or CertCapture.  The certificate document  can contain information about a customer&#39;s eligibility for exemption from sales or use taxes based on  criteria you specify when you store the certificate.  To view or manage your certificates directly, please  log onto the administrative website for the product you purchased.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -69,16 +69,16 @@ class CertificateModel implements ModelInterface, ArrayAccess
         'exempt_percentage' => 'double',
         'is_single_certificate' => 'bool',
         'exemption_number' => 'string',
-        'validated_exemption_reason' => '\Swagger\Client\Model\ExemptionReasonModel',
-        'exemption_reason' => '\Swagger\Client\Model\ExemptionReasonModel',
+        'validated_exemption_reason' => '\Together\Taxes\Model\ExemptionReasonModel',
+        'exemption_reason' => '\Together\Taxes\Model\ExemptionReasonModel',
         'status' => 'string',
         'created_date' => '\DateTime',
         'modified_date' => '\DateTime',
         'page_count' => 'int',
-        'customers' => '\Swagger\Client\Model\CustomerModel[]',
-        'po_numbers' => '\Swagger\Client\Model\PoNumberModel[]',
-        'exposure_zone' => '\Swagger\Client\Model\ExposureZoneModel',
-        'attributes' => '\Swagger\Client\Model\CertificateAttributeModel[]',
+        'customers' => '\Together\Taxes\Model\CustomerModel[]',
+        'po_numbers' => '\Together\Taxes\Model\PoNumberModel[]',
+        'exposure_zone' => '\Together\Taxes\Model\ExposureZoneModel',
+        'attributes' => '\Together\Taxes\Model\CertificateAttributeModel[]',
         'ecms_id' => 'int',
         'ecms_status' => 'string',
         'pdf' => 'string',
@@ -628,7 +628,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Gets validated_exemption_reason
      *
-     * @return \Swagger\Client\Model\ExemptionReasonModel
+     * @return \Together\Taxes\Model\ExemptionReasonModel
      */
     public function getValidatedExemptionReason()
     {
@@ -638,7 +638,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Sets validated_exemption_reason
      *
-     * @param \Swagger\Client\Model\ExemptionReasonModel $validated_exemption_reason The exemption reason that CertCapture audit/internal logic identifies for created certificate.
+     * @param \Together\Taxes\Model\ExemptionReasonModel $validated_exemption_reason The exemption reason that CertCapture audit/internal logic identifies for created certificate.
      *
      * @return $this
      */
@@ -652,7 +652,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Gets exemption_reason
      *
-     * @return \Swagger\Client\Model\ExemptionReasonModel
+     * @return \Together\Taxes\Model\ExemptionReasonModel
      */
     public function getExemptionReason()
     {
@@ -662,7 +662,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Sets exemption_reason
      *
-     * @param \Swagger\Client\Model\ExemptionReasonModel $exemption_reason The exemption reason associated with this certificate.  For example, the reason code for exemption  for purposes of resale is `RESALE`.                For a list of exemption reasons, call `ListCertificateExemptReasons`.
+     * @param \Together\Taxes\Model\ExemptionReasonModel $exemption_reason The exemption reason associated with this certificate.  For example, the reason code for exemption  for purposes of resale is `RESALE`.                For a list of exemption reasons, call `ListCertificateExemptReasons`.
      *
      * @return $this
      */
@@ -772,7 +772,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Gets customers
      *
-     * @return \Swagger\Client\Model\CustomerModel[]
+     * @return \Together\Taxes\Model\CustomerModel[]
      */
     public function getCustomers()
     {
@@ -782,7 +782,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Sets customers
      *
-     * @param \Swagger\Client\Model\CustomerModel[] $customers A list of customers to which this certificate applies.  You can fetch this data by specifying  `$include=customers` when calling a certificate fetch API.
+     * @param \Together\Taxes\Model\CustomerModel[] $customers A list of customers to which this certificate applies.  You can fetch this data by specifying  `$include=customers` when calling a certificate fetch API.
      *
      * @return $this
      */
@@ -796,7 +796,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Gets po_numbers
      *
-     * @return \Swagger\Client\Model\PoNumberModel[]
+     * @return \Together\Taxes\Model\PoNumberModel[]
      */
     public function getPoNumbers()
     {
@@ -806,7 +806,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Sets po_numbers
      *
-     * @param \Swagger\Client\Model\PoNumberModel[] $po_numbers A list of purchase order numbers that are valid for use with this certificate.                If this certificate is applicable for all purchase order numbers, this field will be empty.                You can fetch this data by specifying `$include=po_numbers` when calling a certificate fetch API.
+     * @param \Together\Taxes\Model\PoNumberModel[] $po_numbers A list of purchase order numbers that are valid for use with this certificate.                If this certificate is applicable for all purchase order numbers, this field will be empty.                You can fetch this data by specifying `$include=po_numbers` when calling a certificate fetch API.
      *
      * @return $this
      */
@@ -820,7 +820,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Gets exposure_zone
      *
-     * @return \Swagger\Client\Model\ExposureZoneModel
+     * @return \Together\Taxes\Model\ExposureZoneModel
      */
     public function getExposureZone()
     {
@@ -830,7 +830,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Sets exposure_zone
      *
-     * @param \Swagger\Client\Model\ExposureZoneModel $exposure_zone The exposure zone where this certificate is valid.
+     * @param \Together\Taxes\Model\ExposureZoneModel $exposure_zone The exposure zone where this certificate is valid.
      *
      * @return $this
      */
@@ -844,7 +844,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return \Swagger\Client\Model\CertificateAttributeModel[]
+     * @return \Together\Taxes\Model\CertificateAttributeModel[]
      */
     public function getAttributes()
     {
@@ -854,7 +854,7 @@ class CertificateModel implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param \Swagger\Client\Model\CertificateAttributeModel[] $attributes A list of certificate attributes that apply to this certificate.                You can fetch this data by specifying `$include=attributes` when calling a certificate fetch API.
+     * @param \Together\Taxes\Model\CertificateAttributeModel[] $attributes A list of certificate attributes that apply to this certificate.                You can fetch this data by specifying `$include=attributes` when calling a certificate fetch API.
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FetchResultParameterUsageModel Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class FetchResultParameterUsageModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'recordset_count' => 'int',
-        'value' => '\Swagger\Client\Model\ParameterUsageModel[]',
+        'value' => '\Together\Taxes\Model\ParameterUsageModel[]',
         'next_link' => 'string',
         'page_key' => 'string'
     ];
@@ -249,7 +249,7 @@ class FetchResultParameterUsageModel implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return \Swagger\Client\Model\ParameterUsageModel[]
+     * @return \Together\Taxes\Model\ParameterUsageModel[]
      */
     public function getValue()
     {
@@ -259,7 +259,7 @@ class FetchResultParameterUsageModel implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param \Swagger\Client\Model\ParameterUsageModel[] $value value
+     * @param \Together\Taxes\Model\ParameterUsageModel[] $value value
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * SettingModel Class Doc Comment
  *
  * @category Class
  * @description This object is used to keep track of custom information about a company.                The company settings system is a metadata system that you can use to store extra information  about a company.  Your integration or connector could use this data storage to keep track of  preference information, reminders, or any other storage that would need to persist even if  the customer uninstalls your application.                A setting can refer to any type of data you need to remember about this company object.  When creating this object, you may define your own &#x60;set&#x60;, &#x60;name&#x60;, and &#x60;value&#x60; parameters.  To define your own values, please choose a &#x60;set&#x60; name that begins with &#x60;X-&#x60; to indicate an extension.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

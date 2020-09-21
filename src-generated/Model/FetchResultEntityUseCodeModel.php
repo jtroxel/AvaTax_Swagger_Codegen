@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FetchResultEntityUseCodeModel Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class FetchResultEntityUseCodeModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'recordset_count' => 'int',
-        'value' => '\Swagger\Client\Model\EntityUseCodeModel[]',
+        'value' => '\Together\Taxes\Model\EntityUseCodeModel[]',
         'next_link' => 'string',
         'page_key' => 'string'
     ];
@@ -249,7 +249,7 @@ class FetchResultEntityUseCodeModel implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return \Swagger\Client\Model\EntityUseCodeModel[]
+     * @return \Together\Taxes\Model\EntityUseCodeModel[]
      */
     public function getValue()
     {
@@ -259,7 +259,7 @@ class FetchResultEntityUseCodeModel implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param \Swagger\Client\Model\EntityUseCodeModel[] $value value
+     * @param \Together\Taxes\Model\EntityUseCodeModel[] $value value
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingsCheckupModel Class Doc Comment
  *
  * @category Class
  * @description Results of the Worksheet Checkup report
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class FilingsCheckupModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'authorities' => '\Swagger\Client\Model\FilingsCheckupAuthorityModel[]'
+        'authorities' => '\Together\Taxes\Model\FilingsCheckupAuthorityModel[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class FilingsCheckupModel implements ModelInterface, ArrayAccess
     /**
      * Gets authorities
      *
-     * @return \Swagger\Client\Model\FilingsCheckupAuthorityModel[]
+     * @return \Together\Taxes\Model\FilingsCheckupAuthorityModel[]
      */
     public function getAuthorities()
     {
@@ -218,7 +218,7 @@ class FilingsCheckupModel implements ModelInterface, ArrayAccess
     /**
      * Sets authorities
      *
-     * @param \Swagger\Client\Model\FilingsCheckupAuthorityModel[] $authorities A collection of authorities in the report
+     * @param \Together\Taxes\Model\FilingsCheckupAuthorityModel[] $authorities A collection of authorities in the report
      *
      * @return $this
      */

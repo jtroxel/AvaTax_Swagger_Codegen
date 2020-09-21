@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * NexusByAddressModel Class Doc Comment
  *
  * @category Class
  * @description Contains information about nexus jurisdictions that were declared  as a result of a call to &#x60;DeclareNexusByAddress&#x60;.  For each address,  this object model contains a list of the nexus objects that were declared  according to the geocoding that corresponds to this address.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class NexusByAddressModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => '\Swagger\Client\Model\DeclareNexusByAddressModel',
-        'declared_nexus' => '\Swagger\Client\Model\NexusModel[]'
+        'address' => '\Together\Taxes\Model\DeclareNexusByAddressModel',
+        'declared_nexus' => '\Together\Taxes\Model\NexusModel[]'
     ];
 
     /**
@@ -214,7 +214,7 @@ class NexusByAddressModel implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \Swagger\Client\Model\DeclareNexusByAddressModel
+     * @return \Together\Taxes\Model\DeclareNexusByAddressModel
      */
     public function getAddress()
     {
@@ -224,7 +224,7 @@ class NexusByAddressModel implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \Swagger\Client\Model\DeclareNexusByAddressModel $address The address that was provided by the user in the call to `DeclareNexusByAddress`
+     * @param \Together\Taxes\Model\DeclareNexusByAddressModel $address The address that was provided by the user in the call to `DeclareNexusByAddress`
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class NexusByAddressModel implements ModelInterface, ArrayAccess
     /**
      * Gets declared_nexus
      *
-     * @return \Swagger\Client\Model\NexusModel[]
+     * @return \Together\Taxes\Model\NexusModel[]
      */
     public function getDeclaredNexus()
     {
@@ -248,7 +248,7 @@ class NexusByAddressModel implements ModelInterface, ArrayAccess
     /**
      * Sets declared_nexus
      *
-     * @param \Swagger\Client\Model\NexusModel[] $declared_nexus List of all nexus objects that were affected by declaring nexus at the address specified  by `address`.
+     * @param \Together\Taxes\Model\NexusModel[] $declared_nexus List of all nexus objects that were affected by declaring nexus at the address specified  by `address`.
      *
      * @return $this
      */

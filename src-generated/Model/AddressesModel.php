@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AddressesModel Class Doc Comment
  *
  * @category Class
  * @description Information about all the addresses involved in this transaction.                For a physical in-person transaction at a retail point-of-sale location, please specify only one address using  the &#x60;singleLocation&#x60; field.                For a transaction that was shipped, delivered, or provided from an origin location such as a warehouse to  a destination location such as a customer, please specify the &#x60;shipFrom&#x60; and &#x60;shipTo&#x60; addresses.                In the United States, some jurisdictions recognize the address types &#x60;pointOfOrderOrigin&#x60; and &#x60;pointOfOrderAcceptance&#x60;.  These address types affect the sourcing models of some transactions.                If latitude and longitude information is provided for any of these addresses along with line, city, region, country and postal code information,  we will be using only latitude and longitude and will discard line, city, region, country and postal code information for the transaction.  Please ensure that you have the correct latitude/longitude information for the addresses prior to using the API.  If you provide either latitude or longitude information but not both, we will be using the line, city, region, country and postal code information for the addresses.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,13 +58,13 @@ class AddressesModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'single_location' => '\Swagger\Client\Model\AddressLocationInfo',
-        'ship_from' => '\Swagger\Client\Model\AddressLocationInfo',
-        'ship_to' => '\Swagger\Client\Model\AddressLocationInfo',
-        'point_of_order_origin' => '\Swagger\Client\Model\AddressLocationInfo',
-        'point_of_order_acceptance' => '\Swagger\Client\Model\AddressLocationInfo',
-        'goods_place_or_service_rendered' => '\Swagger\Client\Model\AddressLocationInfo',
-        'import' => '\Swagger\Client\Model\AddressLocationInfo'
+        'single_location' => '\Together\Taxes\Model\AddressLocationInfo',
+        'ship_from' => '\Together\Taxes\Model\AddressLocationInfo',
+        'ship_to' => '\Together\Taxes\Model\AddressLocationInfo',
+        'point_of_order_origin' => '\Together\Taxes\Model\AddressLocationInfo',
+        'point_of_order_acceptance' => '\Together\Taxes\Model\AddressLocationInfo',
+        'goods_place_or_service_rendered' => '\Together\Taxes\Model\AddressLocationInfo',
+        'import' => '\Together\Taxes\Model\AddressLocationInfo'
     ];
 
     /**
@@ -244,7 +244,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Gets single_location
      *
-     * @return \Swagger\Client\Model\AddressLocationInfo
+     * @return \Together\Taxes\Model\AddressLocationInfo
      */
     public function getSingleLocation()
     {
@@ -254,7 +254,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Sets single_location
      *
-     * @param \Swagger\Client\Model\AddressLocationInfo $single_location If this transaction occurred at a retail point-of-sale location, provide that single address here and leave  all other address types null.
+     * @param \Together\Taxes\Model\AddressLocationInfo $single_location If this transaction occurred at a retail point-of-sale location, provide that single address here and leave  all other address types null.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Gets ship_from
      *
-     * @return \Swagger\Client\Model\AddressLocationInfo
+     * @return \Together\Taxes\Model\AddressLocationInfo
      */
     public function getShipFrom()
     {
@@ -278,7 +278,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Sets ship_from
      *
-     * @param \Swagger\Client\Model\AddressLocationInfo $ship_from The origination address where the products were shipped from, or from where the services originated.
+     * @param \Together\Taxes\Model\AddressLocationInfo $ship_from The origination address where the products were shipped from, or from where the services originated.
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Gets ship_to
      *
-     * @return \Swagger\Client\Model\AddressLocationInfo
+     * @return \Together\Taxes\Model\AddressLocationInfo
      */
     public function getShipTo()
     {
@@ -302,7 +302,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Sets ship_to
      *
-     * @param \Swagger\Client\Model\AddressLocationInfo $ship_to The destination address where the products were shipped to, or where the services were delivered.
+     * @param \Together\Taxes\Model\AddressLocationInfo $ship_to The destination address where the products were shipped to, or where the services were delivered.
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Gets point_of_order_origin
      *
-     * @return \Swagger\Client\Model\AddressLocationInfo
+     * @return \Together\Taxes\Model\AddressLocationInfo
      */
     public function getPointOfOrderOrigin()
     {
@@ -326,7 +326,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Sets point_of_order_origin
      *
-     * @param \Swagger\Client\Model\AddressLocationInfo $point_of_order_origin The place of business where you receive the customer's order.  This address type is valid in the United States only  and only applies to tangible personal property.
+     * @param \Together\Taxes\Model\AddressLocationInfo $point_of_order_origin The place of business where you receive the customer's order.  This address type is valid in the United States only  and only applies to tangible personal property.
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Gets point_of_order_acceptance
      *
-     * @return \Swagger\Client\Model\AddressLocationInfo
+     * @return \Together\Taxes\Model\AddressLocationInfo
      */
     public function getPointOfOrderAcceptance()
     {
@@ -350,7 +350,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Sets point_of_order_acceptance
      *
-     * @param \Swagger\Client\Model\AddressLocationInfo $point_of_order_acceptance The place of business where you accept/approve the customer’s order,  thereby becoming contractually obligated to make the sale.  This address type is valid in the United States only  and only applies to tangible personal property.
+     * @param \Together\Taxes\Model\AddressLocationInfo $point_of_order_acceptance The place of business where you accept/approve the customer’s order,  thereby becoming contractually obligated to make the sale.  This address type is valid in the United States only  and only applies to tangible personal property.
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Gets goods_place_or_service_rendered
      *
-     * @return \Swagger\Client\Model\AddressLocationInfo
+     * @return \Together\Taxes\Model\AddressLocationInfo
      */
     public function getGoodsPlaceOrServiceRendered()
     {
@@ -374,7 +374,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Sets goods_place_or_service_rendered
      *
-     * @param \Swagger\Client\Model\AddressLocationInfo $goods_place_or_service_rendered The address where the goods are located or where services are rendered.This address type is valid only for VAT transactions.
+     * @param \Together\Taxes\Model\AddressLocationInfo $goods_place_or_service_rendered The address where the goods are located or where services are rendered.This address type is valid only for VAT transactions.
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Gets import
      *
-     * @return \Swagger\Client\Model\AddressLocationInfo
+     * @return \Together\Taxes\Model\AddressLocationInfo
      */
     public function getImport()
     {
@@ -398,7 +398,7 @@ class AddressesModel implements ModelInterface, ArrayAccess
     /**
      * Sets import
      *
-     * @param \Swagger\Client\Model\AddressLocationInfo $import The address of the buyer importing a good from another country.This address type is valid only for VAT transactions.
+     * @param \Together\Taxes\Model\AddressLocationInfo $import The address of the buyer importing a good from another country.This address type is valid only for VAT transactions.
      *
      * @return $this
      */

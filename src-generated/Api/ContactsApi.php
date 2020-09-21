@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * ContactsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class ContactsApi
      *
      * @param  int $company_id The ID of the company that owns this contact. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel[] $body The contacts you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ContactModel[] $body The contacts you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ContactModel[]
+     * @return \Together\Taxes\Model\ContactModel[]
      */
     public function createContacts($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class ContactsApi
      *
      * @param  int $company_id The ID of the company that owns this contact. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel[] $body The contacts you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ContactModel[] $body The contacts you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ContactModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ContactModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createContactsWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ContactModel[]';
+        $returnType = '\Together\Taxes\Model\ContactModel[]';
         $request = $this->createContactsRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ContactModel[]',
+                        '\Together\Taxes\Model\ContactModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class ContactsApi
      *
      * @param  int $company_id The ID of the company that owns this contact. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel[] $body The contacts you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ContactModel[] $body The contacts you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class ContactsApi
      *
      * @param  int $company_id The ID of the company that owns this contact. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel[] $body The contacts you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ContactModel[] $body The contacts you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createContactsAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ContactModel[]';
+        $returnType = '\Together\Taxes\Model\ContactModel[]';
         $request = $this->createContactsRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class ContactsApi
      *
      * @param  int $company_id The ID of the company that owns this contact. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel[] $body The contacts you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ContactModel[] $body The contacts you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -390,9 +390,9 @@ class ContactsApi
      * @param  int $id The ID of the contact you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteContact($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -409,13 +409,13 @@ class ContactsApi
      * @param  int $id The ID of the contact you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteContactWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteContactRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -467,7 +467,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class ContactsApi
      */
     public function deleteContactAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteContactRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -695,9 +695,9 @@ class ContactsApi
      * @param  int $id The primary key of this contact (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ContactModel
+     * @return \Together\Taxes\Model\ContactModel
      */
     public function getContact($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -714,13 +714,13 @@ class ContactsApi
      * @param  int $id The primary key of this contact (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ContactModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ContactModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContactWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ContactModel';
+        $returnType = '\Together\Taxes\Model\ContactModel';
         $request = $this->getContactRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -772,7 +772,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ContactModel',
+                        '\Together\Taxes\Model\ContactModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class ContactsApi
      */
     public function getContactAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ContactModel';
+        $returnType = '\Together\Taxes\Model\ContactModel';
         $request = $this->getContactRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1003,9 +1003,9 @@ class ContactsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultContactModel
+     * @return \Together\Taxes\Model\FetchResultContactModel
      */
     public function listContactsByCompany($company_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1025,13 +1025,13 @@ class ContactsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultContactModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultContactModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listContactsByCompanyWithHttpInfo($company_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultContactModel';
+        $returnType = '\Together\Taxes\Model\FetchResultContactModel';
         $request = $this->listContactsByCompanyRequest($company_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1083,7 +1083,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultContactModel',
+                        '\Together\Taxes\Model\FetchResultContactModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1135,7 +1135,7 @@ class ContactsApi
      */
     public function listContactsByCompanyAsyncWithHttpInfo($company_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultContactModel';
+        $returnType = '\Together\Taxes\Model\FetchResultContactModel';
         $request = $this->listContactsByCompanyRequest($company_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1324,9 +1324,9 @@ class ContactsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultContactModel
+     * @return \Together\Taxes\Model\FetchResultContactModel
      */
     public function queryContacts($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1345,13 +1345,13 @@ class ContactsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultContactModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultContactModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryContactsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultContactModel';
+        $returnType = '\Together\Taxes\Model\FetchResultContactModel';
         $request = $this->queryContactsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1403,7 +1403,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultContactModel',
+                        '\Together\Taxes\Model\FetchResultContactModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1453,7 +1453,7 @@ class ContactsApi
      */
     public function queryContactsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultContactModel';
+        $returnType = '\Together\Taxes\Model\FetchResultContactModel';
         $request = $this->queryContactsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1624,11 +1624,11 @@ class ContactsApi
      * @param  int $company_id The ID of the company that this contact belongs to. (required)
      * @param  int $id The ID of the contact you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel $body The contact you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ContactModel $body The contact you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ContactModel
+     * @return \Together\Taxes\Model\ContactModel
      */
     public function updateContact($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1644,15 +1644,15 @@ class ContactsApi
      * @param  int $company_id The ID of the company that this contact belongs to. (required)
      * @param  int $id The ID of the contact you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel $body The contact you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ContactModel $body The contact you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ContactModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ContactModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateContactWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ContactModel';
+        $returnType = '\Together\Taxes\Model\ContactModel';
         $request = $this->updateContactRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -1704,7 +1704,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ContactModel',
+                        '\Together\Taxes\Model\ContactModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1722,7 +1722,7 @@ class ContactsApi
      * @param  int $company_id The ID of the company that this contact belongs to. (required)
      * @param  int $id The ID of the contact you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel $body The contact you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ContactModel $body The contact you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1745,14 +1745,14 @@ class ContactsApi
      * @param  int $company_id The ID of the company that this contact belongs to. (required)
      * @param  int $id The ID of the contact you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel $body The contact you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ContactModel $body The contact you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateContactAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ContactModel';
+        $returnType = '\Together\Taxes\Model\ContactModel';
         $request = $this->updateContactRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -1798,7 +1798,7 @@ class ContactsApi
      * @param  int $company_id The ID of the company that this contact belongs to. (required)
      * @param  int $id The ID of the contact you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ContactModel $body The contact you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ContactModel $body The contact you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

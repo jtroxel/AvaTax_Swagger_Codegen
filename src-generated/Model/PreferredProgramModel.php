@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * PreferredProgramModel Class Doc Comment
  *
  * @category Class
  * @description A preferred program is a customs and/or duty program that can be used to handle cross-border transactions.  Customers who sign up for a preferred program may obtain better terms for their customs and duty payments.                To indicate that your company has signed up for a preferred program, specify the &#x60;code&#x60; value from this  object as the value for the &#x60;AvaTax.LC.PreferredProgram&#x60; parameter in your transaction.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

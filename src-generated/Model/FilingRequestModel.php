@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingRequestModel Class Doc Comment
  *
  * @category Class
  * @description Represents a commitment to file a tax return on a recurring basis.  Only used if you subscribe to Avalara Returns.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class FilingRequestModel implements ModelInterface, ArrayAccess
         'id' => 'int',
         'company_id' => 'int',
         'filing_request_status_id' => 'string',
-        'data' => '\Swagger\Client\Model\FilingRequestDataModel',
+        'data' => '\Together\Taxes\Model\FilingRequestDataModel',
         'created_date' => '\DateTime',
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
@@ -374,7 +374,7 @@ class FilingRequestModel implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\FilingRequestDataModel
+     * @return \Together\Taxes\Model\FilingRequestDataModel
      */
     public function getData()
     {
@@ -384,7 +384,7 @@ class FilingRequestModel implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\FilingRequestDataModel $data The data model object of the request
+     * @param \Together\Taxes\Model\FilingRequestDataModel $data The data model object of the request
      *
      * @return $this
      */

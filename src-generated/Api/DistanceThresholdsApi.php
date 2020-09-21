@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * DistanceThresholdsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class DistanceThresholdsApi
      *
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyDistanceThresholdModel[]
+     * @return \Together\Taxes\Model\CompanyDistanceThresholdModel[]
      */
     public function createDistanceThreshold($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class DistanceThresholdsApi
      *
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyDistanceThresholdModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyDistanceThresholdModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createDistanceThresholdWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyDistanceThresholdModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyDistanceThresholdModel[]';
         $request = $this->createDistanceThresholdRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class DistanceThresholdsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyDistanceThresholdModel[]',
+                        '\Together\Taxes\Model\CompanyDistanceThresholdModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class DistanceThresholdsApi
      *
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class DistanceThresholdsApi
      *
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createDistanceThresholdAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyDistanceThresholdModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyDistanceThresholdModel[]';
         $request = $this->createDistanceThresholdRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class DistanceThresholdsApi
      *
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel[] $body The DistanceThreshold object or objects you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -390,9 +390,9 @@ class DistanceThresholdsApi
      * @param  int $id The unique ID number of the DistanceThreshold object you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteDistanceThreshold($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -409,13 +409,13 @@ class DistanceThresholdsApi
      * @param  int $id The unique ID number of the DistanceThreshold object you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteDistanceThresholdWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteDistanceThresholdRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -467,7 +467,7 @@ class DistanceThresholdsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class DistanceThresholdsApi
      */
     public function deleteDistanceThresholdAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteDistanceThresholdRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -695,9 +695,9 @@ class DistanceThresholdsApi
      * @param  int $id The unique ID number referring to this DistanceThreshold object (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyDistanceThresholdModel
+     * @return \Together\Taxes\Model\CompanyDistanceThresholdModel
      */
     public function getDistanceThreshold($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -714,13 +714,13 @@ class DistanceThresholdsApi
      * @param  int $id The unique ID number referring to this DistanceThreshold object (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyDistanceThresholdModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyDistanceThresholdModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDistanceThresholdWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CompanyDistanceThresholdModel';
+        $returnType = '\Together\Taxes\Model\CompanyDistanceThresholdModel';
         $request = $this->getDistanceThresholdRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -772,7 +772,7 @@ class DistanceThresholdsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyDistanceThresholdModel',
+                        '\Together\Taxes\Model\CompanyDistanceThresholdModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class DistanceThresholdsApi
      */
     public function getDistanceThresholdAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CompanyDistanceThresholdModel';
+        $returnType = '\Together\Taxes\Model\CompanyDistanceThresholdModel';
         $request = $this->getDistanceThresholdRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1004,9 +1004,9 @@ class DistanceThresholdsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel
+     * @return \Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel
      */
     public function listDistanceThresholds($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1027,13 +1027,13 @@ class DistanceThresholdsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listDistanceThresholdsWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel';
         $request = $this->listDistanceThresholdsRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1085,7 +1085,7 @@ class DistanceThresholdsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel',
+                        '\Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1139,7 +1139,7 @@ class DistanceThresholdsApi
      */
     public function listDistanceThresholdsAsyncWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel';
         $request = $this->listDistanceThresholdsRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1334,9 +1334,9 @@ class DistanceThresholdsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel
+     * @return \Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel
      */
     public function queryDistanceThresholds($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1356,13 +1356,13 @@ class DistanceThresholdsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryDistanceThresholdsWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel';
         $request = $this->queryDistanceThresholdsRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1414,7 +1414,7 @@ class DistanceThresholdsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel',
+                        '\Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1466,7 +1466,7 @@ class DistanceThresholdsApi
      */
     public function queryDistanceThresholdsAsyncWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel';
         $request = $this->queryDistanceThresholdsRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1642,11 +1642,11 @@ class DistanceThresholdsApi
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold object. (required)
      * @param  int $id The unique ID number of the DistanceThreshold object to replace. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyDistanceThresholdModel
+     * @return \Together\Taxes\Model\CompanyDistanceThresholdModel
      */
     public function updateDistanceThreshold($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1662,15 +1662,15 @@ class DistanceThresholdsApi
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold object. (required)
      * @param  int $id The unique ID number of the DistanceThreshold object to replace. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyDistanceThresholdModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyDistanceThresholdModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDistanceThresholdWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyDistanceThresholdModel';
+        $returnType = '\Together\Taxes\Model\CompanyDistanceThresholdModel';
         $request = $this->updateDistanceThresholdRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -1722,7 +1722,7 @@ class DistanceThresholdsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyDistanceThresholdModel',
+                        '\Together\Taxes\Model\CompanyDistanceThresholdModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1740,7 +1740,7 @@ class DistanceThresholdsApi
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold object. (required)
      * @param  int $id The unique ID number of the DistanceThreshold object to replace. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1763,14 +1763,14 @@ class DistanceThresholdsApi
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold object. (required)
      * @param  int $id The unique ID number of the DistanceThreshold object to replace. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateDistanceThresholdAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyDistanceThresholdModel';
+        $returnType = '\Together\Taxes\Model\CompanyDistanceThresholdModel';
         $request = $this->updateDistanceThresholdRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -1816,7 +1816,7 @@ class DistanceThresholdsApi
      * @param  int $company_id The unique ID number of the company that owns this DistanceThreshold object. (required)
      * @param  int $id The unique ID number of the DistanceThreshold object to replace. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
+     * @param  \Together\Taxes\Model\CompanyDistanceThresholdModel $body The new DistanceThreshold object to store. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

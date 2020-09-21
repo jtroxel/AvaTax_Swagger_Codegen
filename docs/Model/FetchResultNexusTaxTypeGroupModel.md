@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recordset_count** | **int** |  | [optional] 
-**value** | [**\Swagger\Client\Model\NexusTaxTypeGroupModel[]**](NexusTaxTypeGroupModel.md) |  | [optional] 
+**value** | [**\Together\Taxes\Model\NexusTaxTypeGroupModel[]**](NexusTaxTypeGroupModel.md) |  | [optional] 
 **next_link** | **string** |  | [optional] 
 **page_key** | **string** |  | [optional] 
 

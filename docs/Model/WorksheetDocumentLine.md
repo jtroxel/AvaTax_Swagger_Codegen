@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **exempt_amount** | **double** |  | [optional] 
 **taxable_amount** | **double** |  | [optional] 
 **tax_amount** | **double** |  | [optional] 
-**messages** | [**\Swagger\Client\Model\Message[]**](Message.md) |  | [optional] 
+**messages** | [**\Together\Taxes\Model\Message[]**](Message.md) |  | [optional] 
 **result_code** | **string** |  | [optional] 
 **transaction_id** | **string** |  | [optional] 
 

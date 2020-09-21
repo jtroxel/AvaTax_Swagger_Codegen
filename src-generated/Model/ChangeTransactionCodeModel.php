@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * ChangeTransactionCodeModel Class Doc Comment
  *
  * @category Class
  * @description Settle this transaction with your ledger by verifying its amounts.  If the transaction is not yet committed, you may specify the \&quot;commit\&quot; value to commit it to the ledger and allow it to be reported.  You may also optionally change the transaction&#39;s code by specifying the \&quot;newTransactionCode\&quot; value.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

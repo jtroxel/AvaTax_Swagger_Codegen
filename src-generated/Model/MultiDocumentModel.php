@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * MultiDocumentModel Class Doc Comment
  *
  * @category Class
  * @description A MultiDocument transaction represents a sale or purchase that occurred between more than two companies.                A traditional transaction requires exactly two parties: a seller and a buyer.  MultiDocument transactions can  involve a marketplace of vendors, each of which contributes some portion of the final transaction.  Within  a MultiDocument transaction, each individual buyer and seller pair are matched up and converted to a separate  document.  This separation of documents allows each seller to file their taxes separately.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,7 +66,7 @@ class MultiDocumentModel implements ModelInterface, ArrayAccess
         'created_date' => '\DateTime',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'documents' => '\Swagger\Client\Model\TransactionModel[]'
+        'documents' => '\Together\Taxes\Model\TransactionModel[]'
     ];
 
     /**
@@ -502,7 +502,7 @@ class MultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Gets documents
      *
-     * @return \Swagger\Client\Model\TransactionModel[]
+     * @return \Together\Taxes\Model\TransactionModel[]
      */
     public function getDocuments()
     {
@@ -512,7 +512,7 @@ class MultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Sets documents
      *
-     * @param \Swagger\Client\Model\TransactionModel[] $documents A separate document will exist for each unique combination of buyer and seller in this MultiDocument transaction.
+     * @param \Together\Taxes\Model\TransactionModel[] $documents A separate document will exist for each unique combination of buyer and seller in this MultiDocument transaction.
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# Swagger\Client\AdvancedRulesApi
+# Together\Taxes\AdvancedRulesApi
 
 All URIs are relative to *https://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createCompanyLookupFile**
-> \Swagger\Client\Model\AdvancedRuleLookupFileModel createCompanyLookupFile($account_id, $company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\AdvancedRuleLookupFileModel createCompanyLookupFile($account_id, $company_id, $x_avalara_client, $body)
 
 Create a lookup file for a company
 
@@ -23,14 +23,14 @@ Create a lookup file for a company
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AdvancedRulesApi(
+$apiInstance = new Together\Taxes\Api\AdvancedRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -39,7 +39,7 @@ $apiInstance = new Swagger\Client\Api\AdvancedRulesApi(
 $account_id = 56; // int | The ID of the account for the company
 $company_id = 56; // int | The ID of the company for which the lookup file is to be created
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AdvancedRuleLookupFileModel(); // \Swagger\Client\Model\AdvancedRuleLookupFileModel | The lookup file you wish to create
+$body = new \Together\Taxes\Model\AdvancedRuleLookupFileModel(); // \Together\Taxes\Model\AdvancedRuleLookupFileModel | The lookup file you wish to create
 
 try {
     $result = $apiInstance->createCompanyLookupFile($account_id, $company_id, $x_avalara_client, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
  **account_id** | **int**| The ID of the account for the company |
  **company_id** | **int**| The ID of the company for which the lookup file is to be created |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)| The lookup file you wish to create | [optional]
+ **body** | [**\Together\Taxes\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)| The lookup file you wish to create | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)
+[**\Together\Taxes\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteLookupFile**
-> \Swagger\Client\Model\ErrorDetail[] deleteLookupFile($account_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteLookupFile($account_id, $id, $x_avalara_client)
 
 Delete a lookup file
 
@@ -85,14 +85,14 @@ Delete a lookup file
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AdvancedRulesApi(
+$apiInstance = new Together\Taxes\Api\AdvancedRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAuditRecords**
-> \Swagger\Client\Model\AdvancedRuleLookupFileModel getAuditRecords($account_id, $from_date, $to_date, $x_avalara_client)
+> \Together\Taxes\Model\AdvancedRuleLookupFileModel getAuditRecords($account_id, $from_date, $to_date, $x_avalara_client)
 
 Get audit records by account id and date range.
 
@@ -145,14 +145,14 @@ Get audit records by account id and date range.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AdvancedRulesApi(
+$apiInstance = new Together\Taxes\Api\AdvancedRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)
+[**\Together\Taxes\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCompanyLookupFiles**
-> \Swagger\Client\Model\FetchResultAdvancedRuleLookupFileModel getCompanyLookupFiles($account_id, $company_id, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultAdvancedRuleLookupFileModel getCompanyLookupFiles($account_id, $company_id, $x_avalara_client)
 
 Get the lookup files for a company
 
@@ -207,14 +207,14 @@ Get the lookup files for a company
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AdvancedRulesApi(
+$apiInstance = new Together\Taxes\Api\AdvancedRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultAdvancedRuleLookupFileModel**](../Model/FetchResultAdvancedRuleLookupFileModel.md)
+[**\Together\Taxes\Model\FetchResultAdvancedRuleLookupFileModel**](../Model/FetchResultAdvancedRuleLookupFileModel.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLookupFile**
-> \Swagger\Client\Model\AdvancedRuleLookupFileModel getLookupFile($account_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\AdvancedRuleLookupFileModel getLookupFile($account_id, $id, $x_avalara_client)
 
 Get a lookup file for an accountId and companyLookupFileId
 
@@ -267,14 +267,14 @@ Get a lookup file for an accountId and companyLookupFileId
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AdvancedRulesApi(
+$apiInstance = new Together\Taxes\Api\AdvancedRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)
+[**\Together\Taxes\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateLookupFile**
-> \Swagger\Client\Model\AdvancedRuleLookupFileModel updateLookupFile($account_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\AdvancedRuleLookupFileModel updateLookupFile($account_id, $id, $x_avalara_client, $body)
 
 Update a lookup file
 
@@ -327,14 +327,14 @@ Update a lookup file
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AdvancedRulesApi(
+$apiInstance = new Together\Taxes\Api\AdvancedRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -343,7 +343,7 @@ $apiInstance = new Swagger\Client\Api\AdvancedRulesApi(
 $account_id = 56; // int | The ID of the account for the company the lookup file is for
 $id = "id_example"; // string | The unique ID/GUID of the company lookup file to be updated
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AdvancedRuleLookupFileModel(); // \Swagger\Client\Model\AdvancedRuleLookupFileModel | The new values to update the lookup file
+$body = new \Together\Taxes\Model\AdvancedRuleLookupFileModel(); // \Together\Taxes\Model\AdvancedRuleLookupFileModel | The new values to update the lookup file
 
 try {
     $result = $apiInstance->updateLookupFile($account_id, $id, $x_avalara_client, $body);
@@ -361,11 +361,11 @@ Name | Type | Description  | Notes
  **account_id** | **int**| The ID of the account for the company the lookup file is for |
  **id** | **string**| The unique ID/GUID of the company lookup file to be updated |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)| The new values to update the lookup file | [optional]
+ **body** | [**\Together\Taxes\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)| The new values to update the lookup file | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)
+[**\Together\Taxes\Model\AdvancedRuleLookupFileModel**](../Model/AdvancedRuleLookupFileModel.md)
 
 ### Authorization
 

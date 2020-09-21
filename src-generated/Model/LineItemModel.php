@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * LineItemModel Class Doc Comment
  *
  * @category Class
  * @description Represents one line item in a transaction
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class LineItemModel implements ModelInterface, ArrayAccess
         'number' => 'string',
         'quantity' => 'double',
         'amount' => 'double',
-        'addresses' => '\Swagger\Client\Model\AddressesModel',
+        'addresses' => '\Together\Taxes\Model\AddressesModel',
         'tax_code' => 'string',
         'customer_usage_type' => 'string',
         'entity_use_code' => 'string',
@@ -74,8 +74,8 @@ class LineItemModel implements ModelInterface, ArrayAccess
         'ref2' => 'string',
         'description' => 'string',
         'business_identification_no' => 'string',
-        'tax_override' => '\Swagger\Client\Model\TaxOverrideModel',
-        'parameters' => '\Swagger\Client\Model\TransactionLineParameterModel[]',
+        'tax_override' => '\Together\Taxes\Model\TaxOverrideModel',
+        'parameters' => '\Together\Taxes\Model\TransactionLineParameterModel[]',
         'hs_code' => 'string'
     ];
 
@@ -486,7 +486,7 @@ class LineItemModel implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \Swagger\Client\Model\AddressesModel
+     * @return \Together\Taxes\Model\AddressesModel
      */
     public function getAddresses()
     {
@@ -496,7 +496,7 @@ class LineItemModel implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \Swagger\Client\Model\AddressesModel $addresses The addresses to use for this transaction line.                If you set this value to `null`, or if you omit this element from your API call, then instead the transaction  will use the `addresses` from the document level.                If you specify any other value besides `null`, only addresses specified for this line will be used for this line.
+     * @param \Together\Taxes\Model\AddressesModel $addresses The addresses to use for this transaction line.                If you set this value to `null`, or if you omit this element from your API call, then instead the transaction  will use the `addresses` from the document level.                If you specify any other value besides `null`, only addresses specified for this line will be used for this line.
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class LineItemModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_override
      *
-     * @return \Swagger\Client\Model\TaxOverrideModel
+     * @return \Together\Taxes\Model\TaxOverrideModel
      */
     public function getTaxOverride()
     {
@@ -871,7 +871,7 @@ class LineItemModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_override
      *
-     * @param \Swagger\Client\Model\TaxOverrideModel $tax_override Specifies a tax override for this line.
+     * @param \Together\Taxes\Model\TaxOverrideModel $tax_override Specifies a tax override for this line.
      *
      * @return $this
      */
@@ -885,7 +885,7 @@ class LineItemModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\TransactionLineParameterModel[]
+     * @return \Together\Taxes\Model\TransactionLineParameterModel[]
      */
     public function getParameters()
     {
@@ -895,7 +895,7 @@ class LineItemModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\TransactionLineParameterModel[] $parameters Special parameters that apply to this line within this transaction.                To get a full list of available parameters, please use the `ListParameters` API.
+     * @param \Together\Taxes\Model\TransactionLineParameterModel[] $parameters Special parameters that apply to this line within this transaction.                To get a full list of available parameters, please use the `ListParameters` API.
      *
      * @return $this
      */

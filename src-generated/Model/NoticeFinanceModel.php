@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * NoticeFinanceModel Class Doc Comment
  *
  * @category Class
  * @description Represents estimated financial results from responding to a tax notice.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -77,7 +77,7 @@ class NoticeFinanceModel implements ModelInterface, ArrayAccess
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'attachment_upload_request' => '\Swagger\Client\Model\ResourceFileUploadRequestModel'
+        'attachment_upload_request' => '\Together\Taxes\Model\ResourceFileUploadRequestModel'
     ];
 
     /**
@@ -778,7 +778,7 @@ class NoticeFinanceModel implements ModelInterface, ArrayAccess
     /**
      * Gets attachment_upload_request
      *
-     * @return \Swagger\Client\Model\ResourceFileUploadRequestModel
+     * @return \Together\Taxes\Model\ResourceFileUploadRequestModel
      */
     public function getAttachmentUploadRequest()
     {
@@ -788,7 +788,7 @@ class NoticeFinanceModel implements ModelInterface, ArrayAccess
     /**
      * Sets attachment_upload_request
      *
-     * @param \Swagger\Client\Model\ResourceFileUploadRequestModel $attachment_upload_request An attachment to the finance detail
+     * @param \Together\Taxes\Model\ResourceFileUploadRequestModel $attachment_upload_request An attachment to the finance detail
      *
      * @return $this
      */

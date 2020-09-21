@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * AvaFileFormsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class AvaFileFormsApi
      * Create a new AvaFileForm
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AvaFileFormModel[]
+     * @return \Together\Taxes\Model\AvaFileFormModel[]
      */
     public function createAvaFileForms($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -111,15 +111,15 @@ class AvaFileFormsApi
      * Create a new AvaFileForm
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AvaFileFormModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AvaFileFormModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createAvaFileFormsWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AvaFileFormModel[]';
+        $returnType = '\Together\Taxes\Model\AvaFileFormModel[]';
         $request = $this->createAvaFileFormsRequest($x_avalara_client, $body);
 
         try {
@@ -171,7 +171,7 @@ class AvaFileFormsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AvaFileFormModel[]',
+                        '\Together\Taxes\Model\AvaFileFormModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class AvaFileFormsApi
      * Create a new AvaFileForm
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class AvaFileFormsApi
      * Create a new AvaFileForm
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createAvaFileFormsAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AvaFileFormModel[]';
+        $returnType = '\Together\Taxes\Model\AvaFileFormModel[]';
         $request = $this->createAvaFileFormsRequest($x_avalara_client, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class AvaFileFormsApi
      * Create request for operation 'createAvaFileForms'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel[] $body The AvaFileForm you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -370,9 +370,9 @@ class AvaFileFormsApi
      * @param  int $id The ID of the AvaFileForm you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteAvaFileForm($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -388,13 +388,13 @@ class AvaFileFormsApi
      * @param  int $id The ID of the AvaFileForm you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAvaFileFormWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteAvaFileFormRequest($id, $x_avalara_client);
 
         try {
@@ -446,7 +446,7 @@ class AvaFileFormsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -490,7 +490,7 @@ class AvaFileFormsApi
      */
     public function deleteAvaFileFormAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteAvaFileFormRequest($id, $x_avalara_client);
 
         return $this->client
@@ -656,9 +656,9 @@ class AvaFileFormsApi
      * @param  int $id The primary key of this AvaFileForm (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AvaFileFormModel
+     * @return \Together\Taxes\Model\AvaFileFormModel
      */
     public function getAvaFileForm($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -674,13 +674,13 @@ class AvaFileFormsApi
      * @param  int $id The primary key of this AvaFileForm (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AvaFileFormModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AvaFileFormModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAvaFileFormWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AvaFileFormModel';
+        $returnType = '\Together\Taxes\Model\AvaFileFormModel';
         $request = $this->getAvaFileFormRequest($id, $x_avalara_client);
 
         try {
@@ -732,7 +732,7 @@ class AvaFileFormsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AvaFileFormModel',
+                        '\Together\Taxes\Model\AvaFileFormModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -776,7 +776,7 @@ class AvaFileFormsApi
      */
     public function getAvaFileFormAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AvaFileFormModel';
+        $returnType = '\Together\Taxes\Model\AvaFileFormModel';
         $request = $this->getAvaFileFormRequest($id, $x_avalara_client);
 
         return $this->client
@@ -945,9 +945,9 @@ class AvaFileFormsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultAvaFileFormModel
+     * @return \Together\Taxes\Model\FetchResultAvaFileFormModel
      */
     public function queryAvaFileForms($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -966,13 +966,13 @@ class AvaFileFormsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultAvaFileFormModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultAvaFileFormModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryAvaFileFormsWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAvaFileFormModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAvaFileFormModel';
         $request = $this->queryAvaFileFormsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1024,7 +1024,7 @@ class AvaFileFormsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultAvaFileFormModel',
+                        '\Together\Taxes\Model\FetchResultAvaFileFormModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1074,7 +1074,7 @@ class AvaFileFormsApi
      */
     public function queryAvaFileFormsAsyncWithHttpInfo($filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAvaFileFormModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAvaFileFormModel';
         $request = $this->queryAvaFileFormsRequest($filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1244,11 +1244,11 @@ class AvaFileFormsApi
      *
      * @param  int $id The ID of the AvaFileForm you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AvaFileFormModel
+     * @return \Together\Taxes\Model\AvaFileFormModel
      */
     public function updateAvaFileForm($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1263,15 +1263,15 @@ class AvaFileFormsApi
      *
      * @param  int $id The ID of the AvaFileForm you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AvaFileFormModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AvaFileFormModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAvaFileFormWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AvaFileFormModel';
+        $returnType = '\Together\Taxes\Model\AvaFileFormModel';
         $request = $this->updateAvaFileFormRequest($id, $x_avalara_client, $body);
 
         try {
@@ -1323,7 +1323,7 @@ class AvaFileFormsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AvaFileFormModel',
+                        '\Together\Taxes\Model\AvaFileFormModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1340,7 +1340,7 @@ class AvaFileFormsApi
      *
      * @param  int $id The ID of the AvaFileForm you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1362,14 +1362,14 @@ class AvaFileFormsApi
      *
      * @param  int $id The ID of the AvaFileForm you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateAvaFileFormAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AvaFileFormModel';
+        $returnType = '\Together\Taxes\Model\AvaFileFormModel';
         $request = $this->updateAvaFileFormRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -1414,7 +1414,7 @@ class AvaFileFormsApi
      *
      * @param  int $id The ID of the AvaFileForm you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AvaFileFormModel $body The AvaFileForm model you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

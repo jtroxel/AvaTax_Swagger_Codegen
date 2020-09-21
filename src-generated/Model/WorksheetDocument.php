@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * WorksheetDocument Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,8 +62,8 @@ class WorksheetDocument implements ModelInterface, ArrayAccess
         'total_exempt' => 'double',
         'total_taxable' => 'double',
         'total_tax' => 'double',
-        'lines' => '\Swagger\Client\Model\WorksheetDocumentLine[]',
-        'messages' => '\Swagger\Client\Model\Message[]',
+        'lines' => '\Together\Taxes\Model\WorksheetDocumentLine[]',
+        'messages' => '\Together\Taxes\Model\Message[]',
         'result_code' => 'string',
         'transaction_id' => 'string'
     ];
@@ -402,7 +402,7 @@ class WorksheetDocument implements ModelInterface, ArrayAccess
     /**
      * Gets lines
      *
-     * @return \Swagger\Client\Model\WorksheetDocumentLine[]
+     * @return \Together\Taxes\Model\WorksheetDocumentLine[]
      */
     public function getLines()
     {
@@ -412,7 +412,7 @@ class WorksheetDocument implements ModelInterface, ArrayAccess
     /**
      * Sets lines
      *
-     * @param \Swagger\Client\Model\WorksheetDocumentLine[] $lines lines
+     * @param \Together\Taxes\Model\WorksheetDocumentLine[] $lines lines
      *
      * @return $this
      */
@@ -426,7 +426,7 @@ class WorksheetDocument implements ModelInterface, ArrayAccess
     /**
      * Gets messages
      *
-     * @return \Swagger\Client\Model\Message[]
+     * @return \Together\Taxes\Model\Message[]
      */
     public function getMessages()
     {
@@ -436,7 +436,7 @@ class WorksheetDocument implements ModelInterface, ArrayAccess
     /**
      * Sets messages
      *
-     * @param \Swagger\Client\Model\Message[] $messages messages
+     * @param \Together\Taxes\Model\Message[] $messages messages
      *
      * @return $this
      */

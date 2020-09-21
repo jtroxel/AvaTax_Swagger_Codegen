@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AuditModel Class Doc Comment
  *
  * @category Class
  * @description Provides detailed information about an API call.                The information on this record was captured by AvaTax when your API call was made.  If you are unsure why you  received an error, you can fetch these audit objects and examine the &#x60;RequestUrl&#x60;, &#x60;RequestBody&#x60;, and &#x60;ErrorMessage&#x60;  fields to determine root cause for the error.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -85,12 +85,12 @@ class AuditModel implements ModelInterface, ArrayAccess
         'database_call_count' => 'int',
         'database_call_duration' => 'string',
         'remote_call_duration' => 'string',
-        'events' => '\Swagger\Client\Model\AuditEvent[]',
+        'events' => '\Together\Taxes\Model\AuditEvent[]',
         'request_url' => 'string',
         'request_body' => 'string',
         'response_status' => 'int',
         'response_body' => 'string',
-        'remote_calls' => '\Swagger\Client\Model\AuditModel[]'
+        'remote_calls' => '\Together\Taxes\Model\AuditModel[]'
     ];
 
     /**
@@ -1048,7 +1048,7 @@ class AuditModel implements ModelInterface, ArrayAccess
     /**
      * Gets events
      *
-     * @return \Swagger\Client\Model\AuditEvent[]
+     * @return \Together\Taxes\Model\AuditEvent[]
      */
     public function getEvents()
     {
@@ -1058,7 +1058,7 @@ class AuditModel implements ModelInterface, ArrayAccess
     /**
      * Sets events
      *
-     * @param \Swagger\Client\Model\AuditEvent[] $events Reserved for Avalara internal usage.
+     * @param \Together\Taxes\Model\AuditEvent[] $events Reserved for Avalara internal usage.
      *
      * @return $this
      */
@@ -1168,7 +1168,7 @@ class AuditModel implements ModelInterface, ArrayAccess
     /**
      * Gets remote_calls
      *
-     * @return \Swagger\Client\Model\AuditModel[]
+     * @return \Together\Taxes\Model\AuditModel[]
      */
     public function getRemoteCalls()
     {
@@ -1178,7 +1178,7 @@ class AuditModel implements ModelInterface, ArrayAccess
     /**
      * Sets remote_calls
      *
-     * @param \Swagger\Client\Model\AuditModel[] $remote_calls Reserved for Avalara internal usage.
+     * @param \Together\Taxes\Model\AuditModel[] $remote_calls Reserved for Avalara internal usage.
      *
      * @return $this
      */

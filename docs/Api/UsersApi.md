@@ -1,4 +1,4 @@
-# Swagger\Client\UsersApi
+# Together\Taxes\UsersApi
 
 All URIs are relative to *https://localhost*
 
@@ -27,21 +27,21 @@ Allows a user to change their password via an API call.                This API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Together\Taxes\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\PasswordChangeModel(); // \Swagger\Client\Model\PasswordChangeModel | An object containing your current password and the new password.
+$body = new \Together\Taxes\Model\PasswordChangeModel(); // \Together\Taxes\Model\PasswordChangeModel | An object containing your current password and the new password.
 
 try {
     $result = $apiInstance->changePassword($x_avalara_client, $body);
@@ -57,7 +57,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\PasswordChangeModel**](../Model/PasswordChangeModel.md)| An object containing your current password and the new password. | [optional]
+ **body** | [**\Together\Taxes\Model\PasswordChangeModel**](../Model/PasswordChangeModel.md)| An object containing your current password and the new password. | [optional]
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createUsers**
-> \Swagger\Client\Model\UserModel[] createUsers($account_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\UserModel[] createUsers($account_id, $x_avalara_client, $body)
 
 Create new users
 
@@ -87,14 +87,14 @@ Create one or more new user objects attached to this account.                A u
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Together\Taxes\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -102,7 +102,7 @@ $apiInstance = new Swagger\Client\Api\UsersApi(
 );
 $account_id = 56; // int | The unique ID number of the account where these users will be created.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\UserModel()); // \Swagger\Client\Model\UserModel[] | The user or array of users you wish to create.
+$body = array(new \Together\Taxes\Model\UserModel()); // \Together\Taxes\Model\UserModel[] | The user or array of users you wish to create.
 
 try {
     $result = $apiInstance->createUsers($account_id, $x_avalara_client, $body);
@@ -119,11 +119,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **int**| The unique ID number of the account where these users will be created. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\UserModel[]**](../Model/UserModel.md)| The user or array of users you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\UserModel[]**](../Model/UserModel.md)| The user or array of users you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\UserModel[]**](../Model/UserModel.md)
+[**\Together\Taxes\Model\UserModel[]**](../Model/UserModel.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteUser**
-> \Swagger\Client\Model\ErrorDetail[] deleteUser($id, $account_id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteUser($id, $account_id, $x_avalara_client)
 
 Delete a single user
 
@@ -149,14 +149,14 @@ Mark the user object identified by this URL as deleted.                This API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Together\Taxes\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUser**
-> \Swagger\Client\Model\UserModel getUser($id, $account_id, $include, $x_avalara_client)
+> \Together\Taxes\Model\UserModel getUser($id, $account_id, $include, $x_avalara_client)
 
 Retrieve a single user
 
@@ -211,14 +211,14 @@ Get the user object identified by this URL.  A user represents one person with a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Together\Taxes\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UserModel**](../Model/UserModel.md)
+[**\Together\Taxes\Model\UserModel**](../Model/UserModel.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserEntitlements**
-> \Swagger\Client\Model\UserEntitlementModel getUserEntitlements($id, $account_id, $x_avalara_client)
+> \Together\Taxes\Model\UserEntitlementModel getUserEntitlements($id, $account_id, $x_avalara_client)
 
 Retrieve all entitlements for a single user
 
@@ -275,14 +275,14 @@ Return a list of all entitlements to which this user has rights to access.  Enti
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Together\Taxes\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UserEntitlementModel**](../Model/UserEntitlementModel.md)
+[**\Together\Taxes\Model\UserEntitlementModel**](../Model/UserEntitlementModel.md)
 
 ### Authorization
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listUsersByAccount**
-> \Swagger\Client\Model\FetchResultUserModel listUsersByAccount($account_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultUserModel listUsersByAccount($account_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve users for this account
 
@@ -337,14 +337,14 @@ List all user objects attached to this account.  A user represents one person wi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Together\Taxes\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultUserModel**](../Model/FetchResultUserModel.md)
+[**\Together\Taxes\Model\FetchResultUserModel**](../Model/FetchResultUserModel.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryUsers**
-> \Swagger\Client\Model\FetchResultUserModel queryUsers($include, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultUserModel queryUsers($include, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all users
 
@@ -407,14 +407,14 @@ Get multiple user objects across all accounts.                A user represents 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Together\Taxes\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultUserModel**](../Model/FetchResultUserModel.md)
+[**\Together\Taxes\Model\FetchResultUserModel**](../Model/FetchResultUserModel.md)
 
 ### Authorization
 
@@ -463,7 +463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUser**
-> \Swagger\Client\Model\UserModel updateUser($id, $account_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\UserModel updateUser($id, $account_id, $x_avalara_client, $body)
 
 Update a single user
 
@@ -475,14 +475,14 @@ Replace the existing user object at this URL with an updated object.  A user rep
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Together\Taxes\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -491,7 +491,7 @@ $apiInstance = new Swagger\Client\Api\UsersApi(
 $id = 56; // int | The ID of the user you wish to update.
 $account_id = 56; // int | The accountID of the user you wish to update.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\UserModel(); // \Swagger\Client\Model\UserModel | The user object you wish to update.
+$body = new \Together\Taxes\Model\UserModel(); // \Together\Taxes\Model\UserModel | The user object you wish to update.
 
 try {
     $result = $apiInstance->updateUser($id, $account_id, $x_avalara_client, $body);
@@ -509,11 +509,11 @@ Name | Type | Description  | Notes
  **id** | **int**| The ID of the user you wish to update. |
  **account_id** | **int**| The accountID of the user you wish to update. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\UserModel**](../Model/UserModel.md)| The user object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\UserModel**](../Model/UserModel.md)| The user object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\UserModel**](../Model/UserModel.md)
+[**\Together\Taxes\Model\UserModel**](../Model/UserModel.md)
 
 ### Authorization
 

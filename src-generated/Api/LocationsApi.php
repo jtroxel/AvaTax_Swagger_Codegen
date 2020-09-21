@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * LocationsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,11 +95,11 @@ class LocationsApi
      * @param  int $company_id The ID of the company that owns this location parameter. (required)
      * @param  int $location_id The location id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LocationParameterModel[]
+     * @return \Together\Taxes\Model\LocationParameterModel[]
      */
     public function createLocationParameters($company_id, $location_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -115,15 +115,15 @@ class LocationsApi
      * @param  int $company_id The ID of the company that owns this location parameter. (required)
      * @param  int $location_id The location id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LocationParameterModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LocationParameterModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createLocationParametersWithHttpInfo($company_id, $location_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LocationParameterModel[]';
+        $returnType = '\Together\Taxes\Model\LocationParameterModel[]';
         $request = $this->createLocationParametersRequest($company_id, $location_id, $x_avalara_client, $body);
 
         try {
@@ -175,7 +175,7 @@ class LocationsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LocationParameterModel[]',
+                        '\Together\Taxes\Model\LocationParameterModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -193,7 +193,7 @@ class LocationsApi
      * @param  int $company_id The ID of the company that owns this location parameter. (required)
      * @param  int $location_id The location id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -216,14 +216,14 @@ class LocationsApi
      * @param  int $company_id The ID of the company that owns this location parameter. (required)
      * @param  int $location_id The location id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createLocationParametersAsyncWithHttpInfo($company_id, $location_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LocationParameterModel[]';
+        $returnType = '\Together\Taxes\Model\LocationParameterModel[]';
         $request = $this->createLocationParametersRequest($company_id, $location_id, $x_avalara_client, $body);
 
         return $this->client
@@ -269,7 +269,7 @@ class LocationsApi
      * @param  int $company_id The ID of the company that owns this location parameter. (required)
      * @param  int $location_id The location id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel[] $body The location parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -407,11 +407,11 @@ class LocationsApi
      *
      * @param  int $company_id The ID of the company that owns this location. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel[] $body The location you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationModel[] $body The location you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LocationModel[]
+     * @return \Together\Taxes\Model\LocationModel[]
      */
     public function createLocations($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -426,15 +426,15 @@ class LocationsApi
      *
      * @param  int $company_id The ID of the company that owns this location. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel[] $body The location you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationModel[] $body The location you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LocationModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LocationModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createLocationsWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LocationModel[]';
+        $returnType = '\Together\Taxes\Model\LocationModel[]';
         $request = $this->createLocationsRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -486,7 +486,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LocationModel[]',
+                        '\Together\Taxes\Model\LocationModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -503,7 +503,7 @@ class LocationsApi
      *
      * @param  int $company_id The ID of the company that owns this location. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel[] $body The location you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationModel[] $body The location you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -525,14 +525,14 @@ class LocationsApi
      *
      * @param  int $company_id The ID of the company that owns this location. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel[] $body The location you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationModel[] $body The location you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createLocationsAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LocationModel[]';
+        $returnType = '\Together\Taxes\Model\LocationModel[]';
         $request = $this->createLocationsRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -577,7 +577,7 @@ class LocationsApi
      *
      * @param  int $company_id The ID of the company that owns this location. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel[] $body The location you wish to create. (optional)
+     * @param  \Together\Taxes\Model\LocationModel[] $body The location you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -703,9 +703,9 @@ class LocationsApi
      * @param  int $id The ID of the location you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteLocation($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -722,13 +722,13 @@ class LocationsApi
      * @param  int $id The ID of the location you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteLocationWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteLocationRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -780,7 +780,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -826,7 +826,7 @@ class LocationsApi
      */
     public function deleteLocationAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteLocationRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1009,9 +1009,9 @@ class LocationsApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteLocationParameter($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1029,13 +1029,13 @@ class LocationsApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteLocationParameterWithHttpInfo($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteLocationParameterRequest($company_id, $location_id, $id, $x_avalara_client);
 
         try {
@@ -1087,7 +1087,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1135,7 +1135,7 @@ class LocationsApi
      */
     public function deleteLocationParameterAsyncWithHttpInfo($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteLocationParameterRequest($company_id, $location_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1333,9 +1333,9 @@ class LocationsApi
      * @param  string $include A comma separated list of additional data to retrieve. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LocationModel
+     * @return \Together\Taxes\Model\LocationModel
      */
     public function getLocation($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1353,13 +1353,13 @@ class LocationsApi
      * @param  string $include A comma separated list of additional data to retrieve. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LocationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LocationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLocationWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\LocationModel';
+        $returnType = '\Together\Taxes\Model\LocationModel';
         $request = $this->getLocationRequest($company_id, $id, $include, $x_avalara_client);
 
         try {
@@ -1411,7 +1411,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LocationModel',
+                        '\Together\Taxes\Model\LocationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1459,7 +1459,7 @@ class LocationsApi
      */
     public function getLocationAsyncWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\LocationModel';
+        $returnType = '\Together\Taxes\Model\LocationModel';
         $request = $this->getLocationRequest($company_id, $id, $include, $x_avalara_client);
 
         return $this->client
@@ -1647,9 +1647,9 @@ class LocationsApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LocationParameterModel
+     * @return \Together\Taxes\Model\LocationParameterModel
      */
     public function getLocationParameter($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1667,13 +1667,13 @@ class LocationsApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LocationParameterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LocationParameterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLocationParameterWithHttpInfo($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\LocationParameterModel';
+        $returnType = '\Together\Taxes\Model\LocationParameterModel';
         $request = $this->getLocationParameterRequest($company_id, $location_id, $id, $x_avalara_client);
 
         try {
@@ -1725,7 +1725,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LocationParameterModel',
+                        '\Together\Taxes\Model\LocationParameterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1773,7 +1773,7 @@ class LocationsApi
      */
     public function getLocationParameterAsyncWithHttpInfo($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\LocationParameterModel';
+        $returnType = '\Together\Taxes\Model\LocationParameterModel';
         $request = $this->getLocationParameterRequest($company_id, $location_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1974,9 +1974,9 @@ class LocationsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultLocationParameterModel
+     * @return \Together\Taxes\Model\FetchResultLocationParameterModel
      */
     public function listLocationParameters($company_id, $location_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1997,13 +1997,13 @@ class LocationsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultLocationParameterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultLocationParameterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listLocationParametersWithHttpInfo($company_id, $location_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultLocationParameterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultLocationParameterModel';
         $request = $this->listLocationParametersRequest($company_id, $location_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2055,7 +2055,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultLocationParameterModel',
+                        '\Together\Taxes\Model\FetchResultLocationParameterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2109,7 +2109,7 @@ class LocationsApi
      */
     public function listLocationParametersAsyncWithHttpInfo($company_id, $location_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultLocationParameterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultLocationParameterModel';
         $request = $this->listLocationParametersRequest($company_id, $location_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2315,9 +2315,9 @@ class LocationsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultLocationModel
+     * @return \Together\Taxes\Model\FetchResultLocationModel
      */
     public function listLocationsByCompany($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2338,13 +2338,13 @@ class LocationsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultLocationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultLocationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listLocationsByCompanyWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultLocationModel';
+        $returnType = '\Together\Taxes\Model\FetchResultLocationModel';
         $request = $this->listLocationsByCompanyRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2396,7 +2396,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultLocationModel',
+                        '\Together\Taxes\Model\FetchResultLocationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2450,7 +2450,7 @@ class LocationsApi
      */
     public function listLocationsByCompanyAsyncWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultLocationModel';
+        $returnType = '\Together\Taxes\Model\FetchResultLocationModel';
         $request = $this->listLocationsByCompanyRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2645,9 +2645,9 @@ class LocationsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultLocationModel
+     * @return \Together\Taxes\Model\FetchResultLocationModel
      */
     public function queryLocations($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2667,13 +2667,13 @@ class LocationsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultLocationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultLocationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryLocationsWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultLocationModel';
+        $returnType = '\Together\Taxes\Model\FetchResultLocationModel';
         $request = $this->queryLocationsRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2725,7 +2725,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultLocationModel',
+                        '\Together\Taxes\Model\FetchResultLocationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2777,7 +2777,7 @@ class LocationsApi
      */
     public function queryLocationsAsyncWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultLocationModel';
+        $returnType = '\Together\Taxes\Model\FetchResultLocationModel';
         $request = $this->queryLocationsRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2953,11 +2953,11 @@ class LocationsApi
      * @param  int $company_id The ID of the company that this location belongs to. (required)
      * @param  int $id The ID of the location you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel $body The location you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationModel $body The location you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LocationModel
+     * @return \Together\Taxes\Model\LocationModel
      */
     public function updateLocation($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2973,15 +2973,15 @@ class LocationsApi
      * @param  int $company_id The ID of the company that this location belongs to. (required)
      * @param  int $id The ID of the location you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel $body The location you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationModel $body The location you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LocationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LocationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateLocationWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LocationModel';
+        $returnType = '\Together\Taxes\Model\LocationModel';
         $request = $this->updateLocationRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -3033,7 +3033,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LocationModel',
+                        '\Together\Taxes\Model\LocationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3051,7 +3051,7 @@ class LocationsApi
      * @param  int $company_id The ID of the company that this location belongs to. (required)
      * @param  int $id The ID of the location you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel $body The location you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationModel $body The location you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3074,14 +3074,14 @@ class LocationsApi
      * @param  int $company_id The ID of the company that this location belongs to. (required)
      * @param  int $id The ID of the location you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel $body The location you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationModel $body The location you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateLocationAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LocationModel';
+        $returnType = '\Together\Taxes\Model\LocationModel';
         $request = $this->updateLocationRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -3127,7 +3127,7 @@ class LocationsApi
      * @param  int $company_id The ID of the company that this location belongs to. (required)
      * @param  int $id The ID of the location you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationModel $body The location you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationModel $body The location you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3267,11 +3267,11 @@ class LocationsApi
      * @param  int $location_id The location id (required)
      * @param  int $id The location parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LocationParameterModel
+     * @return \Together\Taxes\Model\LocationParameterModel
      */
     public function updateLocationParameter($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -3288,15 +3288,15 @@ class LocationsApi
      * @param  int $location_id The location id (required)
      * @param  int $id The location parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LocationParameterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LocationParameterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateLocationParameterWithHttpInfo($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LocationParameterModel';
+        $returnType = '\Together\Taxes\Model\LocationParameterModel';
         $request = $this->updateLocationParameterRequest($company_id, $location_id, $id, $x_avalara_client, $body);
 
         try {
@@ -3348,7 +3348,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LocationParameterModel',
+                        '\Together\Taxes\Model\LocationParameterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3367,7 +3367,7 @@ class LocationsApi
      * @param  int $location_id The location id (required)
      * @param  int $id The location parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3391,14 +3391,14 @@ class LocationsApi
      * @param  int $location_id The location id (required)
      * @param  int $id The location parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateLocationParameterAsyncWithHttpInfo($company_id, $location_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LocationParameterModel';
+        $returnType = '\Together\Taxes\Model\LocationParameterModel';
         $request = $this->updateLocationParameterRequest($company_id, $location_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -3445,7 +3445,7 @@ class LocationsApi
      * @param  int $location_id The location id (required)
      * @param  int $id The location parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\LocationParameterModel $body The location parameter object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3599,9 +3599,9 @@ class LocationsApi
      * @param  int $id The primary key of this location (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LocationValidationModel
+     * @return \Together\Taxes\Model\LocationValidationModel
      */
     public function validateLocation($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3618,13 +3618,13 @@ class LocationsApi
      * @param  int $id The primary key of this location (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LocationValidationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LocationValidationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function validateLocationWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\LocationValidationModel';
+        $returnType = '\Together\Taxes\Model\LocationValidationModel';
         $request = $this->validateLocationRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -3676,7 +3676,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LocationValidationModel',
+                        '\Together\Taxes\Model\LocationValidationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3722,7 +3722,7 @@ class LocationsApi
      */
     public function validateLocationAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\LocationValidationModel';
+        $returnType = '\Together\Taxes\Model\LocationValidationModel';
         $request = $this->validateLocationRequest($company_id, $id, $x_avalara_client);
 
         return $this->client

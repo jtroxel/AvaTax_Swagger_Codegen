@@ -1,4 +1,4 @@
-# Swagger\Client\ProvisioningApi
+# Together\Taxes\ProvisioningApi
 
 All URIs are relative to *https://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **requestNewAccount**
-> \Swagger\Client\Model\NewAccountModel requestNewAccount($x_avalara_client, $body)
+> \Together\Taxes\Model\NewAccountModel requestNewAccount($x_avalara_client, $body)
 
 Request a new Avalara account
 
@@ -21,21 +21,21 @@ This API is for use by partner provisioning services customers only.            
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ProvisioningApi(
+$apiInstance = new Together\Taxes\Api\ProvisioningApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\NewAccountRequestModel(); // \Swagger\Client\Model\NewAccountRequestModel | Information about the account you wish to create and the selected product offerings.
+$body = new \Together\Taxes\Model\NewAccountRequestModel(); // \Together\Taxes\Model\NewAccountRequestModel | Information about the account you wish to create and the selected product offerings.
 
 try {
     $result = $apiInstance->requestNewAccount($x_avalara_client, $body);
@@ -51,11 +51,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\NewAccountRequestModel**](../Model/NewAccountRequestModel.md)| Information about the account you wish to create and the selected product offerings. | [optional]
+ **body** | [**\Together\Taxes\Model\NewAccountRequestModel**](../Model/NewAccountRequestModel.md)| Information about the account you wish to create and the selected product offerings. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NewAccountModel**](../Model/NewAccountModel.md)
+[**\Together\Taxes\Model\NewAccountModel**](../Model/NewAccountModel.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **requestNewEntitlement**
-> \Swagger\Client\Model\OfferModel requestNewEntitlement($id, $offer, $x_avalara_client)
+> \Together\Taxes\Model\OfferModel requestNewEntitlement($id, $offer, $x_avalara_client)
 
 Request a new entitilement to an existing customer
 
@@ -81,14 +81,14 @@ This API is for use by partner provisioning services customers only. This will a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ProvisioningApi(
+$apiInstance = new Together\Taxes\Api\ProvisioningApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\OfferModel**](../Model/OfferModel.md)
+[**\Together\Taxes\Model\OfferModel**](../Model/OfferModel.md)
 
 ### Authorization
 

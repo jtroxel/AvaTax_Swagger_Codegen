@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **created_user_id** | **int** | The User ID of the user who created this record. | [optional] 
 **modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 
 **modified_user_id** | **int** | The user ID of the user who last modified this record. | [optional] 
-**attachment_upload_request** | [**\Swagger\Client\Model\ResourceFileUploadRequestModel**](ResourceFileUploadRequestModel.md) | An attachment to the finance detail | [optional] 
+**attachment_upload_request** | [**\Together\Taxes\Model\ResourceFileUploadRequestModel**](ResourceFileUploadRequestModel.md) | An attachment to the finance detail | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

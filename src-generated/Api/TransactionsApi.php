@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * TransactionsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
+     * @param  \Together\Taxes\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function addLines($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
+     * @param  \Together\Taxes\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function addLinesWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->addLinesRequest($include, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
+     * @param  \Together\Taxes\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
+     * @param  \Together\Taxes\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addLinesAsyncWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->addLinesRequest($include, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
+     * @param  \Together\Taxes\Model\AddTransactionLineModel $body information about the transaction and lines to be added (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -381,11 +381,11 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to adjust. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
+     * @param  \Together\Taxes\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function adjustTransaction($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -403,15 +403,15 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to adjust. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
+     * @param  \Together\Taxes\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function adjustTransactionWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->adjustTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         try {
@@ -463,7 +463,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -483,7 +483,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to adjust. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
+     * @param  \Together\Taxes\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -508,14 +508,14 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to adjust. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
+     * @param  \Together\Taxes\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function adjustTransactionAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->adjustTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -563,7 +563,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to adjust. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
+     * @param  \Together\Taxes\Model\AdjustTransactionModel $body The adjustment you wish to make (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -711,9 +711,9 @@ class TransactionsApi
      * @param  string $transaction_code The code identifying the transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AuditTransactionModel
+     * @return \Together\Taxes\Model\AuditTransactionModel
      */
     public function auditTransaction($company_code, $transaction_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -730,13 +730,13 @@ class TransactionsApi
      * @param  string $transaction_code The code identifying the transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AuditTransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AuditTransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function auditTransactionWithHttpInfo($company_code, $transaction_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AuditTransactionModel';
+        $returnType = '\Together\Taxes\Model\AuditTransactionModel';
         $request = $this->auditTransactionRequest($company_code, $transaction_code, $x_avalara_client);
 
         try {
@@ -788,7 +788,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AuditTransactionModel',
+                        '\Together\Taxes\Model\AuditTransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -834,7 +834,7 @@ class TransactionsApi
      */
     public function auditTransactionAsyncWithHttpInfo($company_code, $transaction_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AuditTransactionModel';
+        $returnType = '\Together\Taxes\Model\AuditTransactionModel';
         $request = $this->auditTransactionRequest($company_code, $transaction_code, $x_avalara_client);
 
         return $this->client
@@ -1017,9 +1017,9 @@ class TransactionsApi
      * @param  string $document_type The document type of the original transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AuditTransactionModel
+     * @return \Together\Taxes\Model\AuditTransactionModel
      */
     public function auditTransactionWithType($company_code, $transaction_code, $document_type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1037,13 +1037,13 @@ class TransactionsApi
      * @param  string $document_type The document type of the original transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AuditTransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AuditTransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function auditTransactionWithTypeWithHttpInfo($company_code, $transaction_code, $document_type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AuditTransactionModel';
+        $returnType = '\Together\Taxes\Model\AuditTransactionModel';
         $request = $this->auditTransactionWithTypeRequest($company_code, $transaction_code, $document_type, $x_avalara_client);
 
         try {
@@ -1095,7 +1095,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AuditTransactionModel',
+                        '\Together\Taxes\Model\AuditTransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1143,7 +1143,7 @@ class TransactionsApi
      */
     public function auditTransactionWithTypeAsyncWithHttpInfo($company_code, $transaction_code, $document_type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AuditTransactionModel';
+        $returnType = '\Together\Taxes\Model\AuditTransactionModel';
         $request = $this->auditTransactionWithTypeRequest($company_code, $transaction_code, $document_type, $x_avalara_client);
 
         return $this->client
@@ -1337,11 +1337,11 @@ class TransactionsApi
      * Lock a set of documents
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BulkLockTransactionModel $body bulk lock request (optional)
+     * @param  \Together\Taxes\Model\BulkLockTransactionModel $body bulk lock request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\BulkLockTransactionResult
+     * @return \Together\Taxes\Model\BulkLockTransactionResult
      */
     public function bulkLockTransaction($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1355,15 +1355,15 @@ class TransactionsApi
      * Lock a set of documents
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BulkLockTransactionModel $body bulk lock request (optional)
+     * @param  \Together\Taxes\Model\BulkLockTransactionModel $body bulk lock request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\BulkLockTransactionResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\BulkLockTransactionResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function bulkLockTransactionWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\BulkLockTransactionResult';
+        $returnType = '\Together\Taxes\Model\BulkLockTransactionResult';
         $request = $this->bulkLockTransactionRequest($x_avalara_client, $body);
 
         try {
@@ -1415,7 +1415,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\BulkLockTransactionResult',
+                        '\Together\Taxes\Model\BulkLockTransactionResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1431,7 +1431,7 @@ class TransactionsApi
      * Lock a set of documents
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BulkLockTransactionModel $body bulk lock request (optional)
+     * @param  \Together\Taxes\Model\BulkLockTransactionModel $body bulk lock request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1452,14 +1452,14 @@ class TransactionsApi
      * Lock a set of documents
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BulkLockTransactionModel $body bulk lock request (optional)
+     * @param  \Together\Taxes\Model\BulkLockTransactionModel $body bulk lock request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function bulkLockTransactionAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\BulkLockTransactionResult';
+        $returnType = '\Together\Taxes\Model\BulkLockTransactionResult';
         $request = $this->bulkLockTransactionRequest($x_avalara_client, $body);
 
         return $this->client
@@ -1503,7 +1503,7 @@ class TransactionsApi
      * Create request for operation 'bulkLockTransaction'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BulkLockTransactionModel $body bulk lock request (optional)
+     * @param  \Together\Taxes\Model\BulkLockTransactionModel $body bulk lock request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1616,11 +1616,11 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to change document code. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function changeTransactionCode($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1638,15 +1638,15 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to change document code. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function changeTransactionCodeWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->changeTransactionCodeRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         try {
@@ -1698,7 +1698,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1718,7 +1718,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to change document code. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1743,14 +1743,14 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to change document code. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function changeTransactionCodeAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->changeTransactionCodeRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -1798,7 +1798,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to change document code. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\ChangeTransactionCodeModel $body The code change request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1947,11 +1947,11 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to commit. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function commitTransaction($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1969,15 +1969,15 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to commit. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function commitTransactionWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->commitTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         try {
@@ -2029,7 +2029,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2049,7 +2049,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to commit. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2074,14 +2074,14 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to commit. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function commitTransactionAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->commitTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -2129,7 +2129,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to commit. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitTransactionModel $body The commit request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2275,11 +2275,11 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
+     * @param  \Together\Taxes\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function createOrAdjustTransaction($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2294,15 +2294,15 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
+     * @param  \Together\Taxes\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrAdjustTransactionWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->createOrAdjustTransactionRequest($include, $x_avalara_client, $body);
 
         try {
@@ -2354,7 +2354,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2371,7 +2371,7 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
+     * @param  \Together\Taxes\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2393,14 +2393,14 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
+     * @param  \Together\Taxes\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createOrAdjustTransactionAsyncWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->createOrAdjustTransactionRequest($include, $x_avalara_client, $body);
 
         return $this->client
@@ -2445,7 +2445,7 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
+     * @param  \Together\Taxes\Model\CreateOrAdjustTransactionModel $body The transaction you wish to create or adjust (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2559,11 +2559,11 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionModel $body The transaction you wish to create (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionModel $body The transaction you wish to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function createTransaction($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2578,15 +2578,15 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionModel $body The transaction you wish to create (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionModel $body The transaction you wish to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTransactionWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->createTransactionRequest($include, $x_avalara_client, $body);
 
         try {
@@ -2638,7 +2638,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2655,7 +2655,7 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionModel $body The transaction you wish to create (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionModel $body The transaction you wish to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2677,14 +2677,14 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionModel $body The transaction you wish to create (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionModel $body The transaction you wish to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createTransactionAsyncWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->createTransactionRequest($include, $x_avalara_client, $body);
 
         return $this->client
@@ -2729,7 +2729,7 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionModel $body The transaction you wish to create (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionModel $body The transaction you wish to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2843,11 +2843,11 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
+     * @param  \Together\Taxes\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function deleteLines($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2862,15 +2862,15 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
+     * @param  \Together\Taxes\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteLinesWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->deleteLinesRequest($include, $x_avalara_client, $body);
 
         try {
@@ -2922,7 +2922,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2939,7 +2939,7 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
+     * @param  \Together\Taxes\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2961,14 +2961,14 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
+     * @param  \Together\Taxes\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function deleteLinesAsyncWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->deleteLinesRequest($include, $x_avalara_client, $body);
 
         return $this->client
@@ -3013,7 +3013,7 @@ class TransactionsApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
+     * @param  \Together\Taxes\Model\RemoveTransactionLineModel $body information about the transaction and lines to be removed (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3131,9 +3131,9 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function getTransactionByCode($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3152,13 +3152,13 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionByCodeWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->getTransactionByCodeRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client);
 
         try {
@@ -3210,7 +3210,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3260,7 +3260,7 @@ class TransactionsApi
      */
     public function getTransactionByCodeAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->getTransactionByCodeRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client);
 
         return $this->client
@@ -3454,9 +3454,9 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function getTransactionByCodeAndType($company_code, $transaction_code, $document_type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3475,13 +3475,13 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionByCodeAndTypeWithHttpInfo($company_code, $transaction_code, $document_type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->getTransactionByCodeAndTypeRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client);
 
         try {
@@ -3533,7 +3533,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3583,7 +3583,7 @@ class TransactionsApi
      */
     public function getTransactionByCodeAndTypeAsyncWithHttpInfo($company_code, $transaction_code, $document_type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->getTransactionByCodeAndTypeRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client);
 
         return $this->client
@@ -3785,9 +3785,9 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function getTransactionById($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3804,13 +3804,13 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionByIdWithHttpInfo($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->getTransactionByIdRequest($id, $include, $x_avalara_client);
 
         try {
@@ -3862,7 +3862,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3908,7 +3908,7 @@ class TransactionsApi
      */
     public function getTransactionByIdAsyncWithHttpInfo($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->getTransactionByIdRequest($id, $include, $x_avalara_client);
 
         return $this->client
@@ -4085,9 +4085,9 @@ class TransactionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTransactionModel
+     * @return \Together\Taxes\Model\FetchResultTransactionModel
      */
     public function listTransactionsByCompany($company_code, $data_source_id = null, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4109,13 +4109,13 @@ class TransactionsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTransactionsByCompanyWithHttpInfo($company_code, $data_source_id = null, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTransactionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTransactionModel';
         $request = $this->listTransactionsByCompanyRequest($company_code, $data_source_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -4167,7 +4167,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTransactionModel',
+                        '\Together\Taxes\Model\FetchResultTransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4223,7 +4223,7 @@ class TransactionsApi
      */
     public function listTransactionsByCompanyAsyncWithHttpInfo($company_code, $data_source_id = null, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTransactionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTransactionModel';
         $request = $this->listTransactionsByCompanyRequest($company_code, $data_source_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -4421,11 +4421,11 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to lock. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LockTransactionModel $body The lock request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\LockTransactionModel $body The lock request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function lockTransaction($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -4443,15 +4443,15 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to lock. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LockTransactionModel $body The lock request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\LockTransactionModel $body The lock request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function lockTransactionWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->lockTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         try {
@@ -4503,7 +4503,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4523,7 +4523,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to lock. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LockTransactionModel $body The lock request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\LockTransactionModel $body The lock request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4548,14 +4548,14 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to lock. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LockTransactionModel $body The lock request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\LockTransactionModel $body The lock request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function lockTransactionAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->lockTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -4603,7 +4603,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to lock. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LockTransactionModel $body The lock request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\LockTransactionModel $body The lock request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4753,11 +4753,11 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to refund. If not provided, the default is SalesInvoice. (optional)
      * @param  bool $use_tax_date_override (Optional): If set to true, processes refund using taxDateOverride rather than taxAmountOverride (Note: taxAmountOverride is not allowed for SST states). (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function refundTransaction($company_code, $transaction_code, $include = null, $document_type = null, $use_tax_date_override = 'false', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -4776,15 +4776,15 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to refund. If not provided, the default is SalesInvoice. (optional)
      * @param  bool $use_tax_date_override (Optional): If set to true, processes refund using taxDateOverride rather than taxAmountOverride (Note: taxAmountOverride is not allowed for SST states). (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function refundTransactionWithHttpInfo($company_code, $transaction_code, $include = null, $document_type = null, $use_tax_date_override = 'false', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->refundTransactionRequest($company_code, $transaction_code, $include, $document_type, $use_tax_date_override, $x_avalara_client, $body);
 
         try {
@@ -4836,7 +4836,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4857,7 +4857,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to refund. If not provided, the default is SalesInvoice. (optional)
      * @param  bool $use_tax_date_override (Optional): If set to true, processes refund using taxDateOverride rather than taxAmountOverride (Note: taxAmountOverride is not allowed for SST states). (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4883,14 +4883,14 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to refund. If not provided, the default is SalesInvoice. (optional)
      * @param  bool $use_tax_date_override (Optional): If set to true, processes refund using taxDateOverride rather than taxAmountOverride (Note: taxAmountOverride is not allowed for SST states). (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function refundTransactionAsyncWithHttpInfo($company_code, $transaction_code, $include = null, $document_type = null, $use_tax_date_override = 'false', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->refundTransactionRequest($company_code, $transaction_code, $include, $document_type, $use_tax_date_override, $x_avalara_client, $body);
 
         return $this->client
@@ -4939,7 +4939,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to refund. If not provided, the default is SalesInvoice. (optional)
      * @param  bool $use_tax_date_override (Optional): If set to true, processes refund using taxDateOverride rather than taxAmountOverride (Note: taxAmountOverride is not allowed for SST states). (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5092,11 +5092,11 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to settle. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function settleTransaction($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -5114,15 +5114,15 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to settle. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function settleTransactionWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->settleTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         try {
@@ -5174,7 +5174,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5194,7 +5194,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to settle. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5219,14 +5219,14 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to settle. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function settleTransactionAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->settleTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -5274,7 +5274,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to settle. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\SettleTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5424,9 +5424,9 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function uncommitTransaction($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -5445,13 +5445,13 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function uncommitTransactionWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->uncommitTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client);
 
         try {
@@ -5503,7 +5503,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5553,7 +5553,7 @@ class TransactionsApi
      */
     public function uncommitTransactionAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->uncommitTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client);
 
         return $this->client
@@ -5747,9 +5747,9 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function unvoidTransaction($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -5768,13 +5768,13 @@ class TransactionsApi
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function unvoidTransactionWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->unvoidTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client);
 
         try {
@@ -5826,7 +5826,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5876,7 +5876,7 @@ class TransactionsApi
      */
     public function unvoidTransactionAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->unvoidTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client);
 
         return $this->client
@@ -6069,11 +6069,11 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to verify. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function verifyTransaction($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -6091,15 +6091,15 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to verify. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function verifyTransactionWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->verifyTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         try {
@@ -6151,7 +6151,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6171,7 +6171,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to verify. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6196,14 +6196,14 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to verify. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function verifyTransactionAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->verifyTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -6251,7 +6251,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to verify. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyTransactionModel $body The data from an external system to reconcile against AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6400,11 +6400,11 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to void. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TransactionModel
+     * @return \Together\Taxes\Model\TransactionModel
      */
     public function voidTransaction($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -6422,15 +6422,15 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to void. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TransactionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function voidTransactionWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->voidTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         try {
@@ -6482,7 +6482,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TransactionModel',
+                        '\Together\Taxes\Model\TransactionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6502,7 +6502,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to void. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6527,14 +6527,14 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to void. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function voidTransactionAsyncWithHttpInfo($company_code, $transaction_code, $document_type = null, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TransactionModel';
+        $returnType = '\Together\Taxes\Model\TransactionModel';
         $request = $this->voidTransactionRequest($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -6582,7 +6582,7 @@ class TransactionsApi
      * @param  string $document_type (Optional): The document type of the transaction to void. If not provided, the default is SalesInvoice. (optional)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

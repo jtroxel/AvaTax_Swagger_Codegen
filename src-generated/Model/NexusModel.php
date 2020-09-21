@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * NexusModel Class Doc Comment
  *
  * @category Class
  * @description Represents a declaration of nexus within a particular taxing jurisdiction.                To create a nexus declaration for your company, you must first call the Definitions API &#x60;ListNexus&#x60; to obtain a  list of Avalara-defined nexus.  Once you have determined which nexus you wish to declare, you should customize  only the user-selectable fields in this object.                The user selectable fields for the nexus object are &#x60;companyId&#x60;, &#x60;effectiveDate&#x60;, &#x60;endDate&#x60;, &#x60;localNexusTypeId&#x60;,  &#x60;taxId&#x60;, &#x60;nexusTypeId&#x60;, &#x60;hasPermanentEstablishment&#x60;, and &#x60;isSellerImporterOfRecord&#x60;.                When calling &#x60;CreateNexus&#x60; or &#x60;UpdateNexus&#x60;, all values in your nexus object except for the user-selectable fields  must match an Avalara-defined system nexus object.  You can retrieve a list of Avalara-defined system nexus objects  by calling &#x60;ListNexus&#x60;.  If any data does not match, AvaTax may not recognize your nexus declaration.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -87,7 +87,7 @@ class NexusModel implements ModelInterface, ArrayAccess
         'tax_authority_id' => 'int',
         'is_seller_importer_of_record' => 'bool',
         'tax_name' => 'string',
-        'parameters' => '\Swagger\Client\Model\NexusParameterDetailModel[]'
+        'parameters' => '\Together\Taxes\Model\NexusParameterDetailModel[]'
     ];
 
     /**
@@ -1362,7 +1362,7 @@ class NexusModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\NexusParameterDetailModel[]
+     * @return \Together\Taxes\Model\NexusParameterDetailModel[]
      */
     public function getParameters()
     {
@@ -1372,7 +1372,7 @@ class NexusModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\NexusParameterDetailModel[] $parameters List of nexus parameters.
+     * @param \Together\Taxes\Model\NexusParameterDetailModel[] $parameters List of nexus parameters.
      *
      * @return $this
      */

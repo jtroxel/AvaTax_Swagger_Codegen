@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AddTransactionLineModel Class Doc Comment
  *
  * @category Class
  * @description Model to add specific lines to exising transaction
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class AddTransactionLineModel implements ModelInterface, ArrayAccess
         'company_code' => 'string',
         'transaction_code' => 'string',
         'document_type' => 'string',
-        'lines' => '\Swagger\Client\Model\LineItemModel[]',
+        'lines' => '\Together\Taxes\Model\LineItemModel[]',
         'renumber' => 'bool'
     ];
 
@@ -367,7 +367,7 @@ class AddTransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Gets lines
      *
-     * @return \Swagger\Client\Model\LineItemModel[]
+     * @return \Together\Taxes\Model\LineItemModel[]
      */
     public function getLines()
     {
@@ -377,7 +377,7 @@ class AddTransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Sets lines
      *
-     * @param \Swagger\Client\Model\LineItemModel[] $lines List of lines to be added
+     * @param \Together\Taxes\Model\LineItemModel[] $lines List of lines to be added
      *
      * @return $this
      */

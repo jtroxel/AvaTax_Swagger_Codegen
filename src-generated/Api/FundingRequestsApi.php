@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * FundingRequestsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class FundingRequestsApi
      * @param  int $id The unique ID number of this funding request (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FundingStatusModel
+     * @return \Together\Taxes\Model\FundingStatusModel
      */
     public function activateFundingRequest($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -113,13 +113,13 @@ class FundingRequestsApi
      * @param  int $id The unique ID number of this funding request (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FundingStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FundingStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function activateFundingRequestWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingStatusModel';
+        $returnType = '\Together\Taxes\Model\FundingStatusModel';
         $request = $this->activateFundingRequestRequest($id, $x_avalara_client);
 
         try {
@@ -171,7 +171,7 @@ class FundingRequestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FundingStatusModel',
+                        '\Together\Taxes\Model\FundingStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class FundingRequestsApi
      */
     public function activateFundingRequestAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingStatusModel';
+        $returnType = '\Together\Taxes\Model\FundingStatusModel';
         $request = $this->activateFundingRequestRequest($id, $x_avalara_client);
 
         return $this->client
@@ -381,9 +381,9 @@ class FundingRequestsApi
      * @param  int $id The unique ID number of this funding request (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FundingStatusModel
+     * @return \Together\Taxes\Model\FundingStatusModel
      */
     public function fundingRequestStatus($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -399,13 +399,13 @@ class FundingRequestsApi
      * @param  int $id The unique ID number of this funding request (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FundingStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FundingStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function fundingRequestStatusWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingStatusModel';
+        $returnType = '\Together\Taxes\Model\FundingStatusModel';
         $request = $this->fundingRequestStatusRequest($id, $x_avalara_client);
 
         try {
@@ -457,7 +457,7 @@ class FundingRequestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FundingStatusModel',
+                        '\Together\Taxes\Model\FundingStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class FundingRequestsApi
      */
     public function fundingRequestStatusAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingStatusModel';
+        $returnType = '\Together\Taxes\Model\FundingStatusModel';
         $request = $this->fundingRequestStatusRequest($id, $x_avalara_client);
 
         return $this->client

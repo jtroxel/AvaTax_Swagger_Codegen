@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **active_poa** | **bool** | Notes if there is an actice POA | [optional] 
 **effective_date** | [**\DateTime**](\DateTime.md) | Effective Date of the POA | [optional] 
 **expiration_date** | [**\DateTime**](\DateTime.md) | End Date of POA | [optional] 
-**available_poa** | [**\Swagger\Client\Model\ResourceFileDownloadResult**](ResourceFileDownloadResult.md) | POA download | [optional] 
+**available_poa** | [**\Together\Taxes\Model\ResourceFileDownloadResult**](ResourceFileDownloadResult.md) | POA download | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

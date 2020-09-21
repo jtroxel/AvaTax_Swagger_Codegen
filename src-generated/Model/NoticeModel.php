@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * NoticeModel Class Doc Comment
  *
  * @category Class
  * @description Represents a letter received from a tax authority regarding tax filing.  These letters often have the warning \&quot;Notice\&quot; printed at the top, which is why  they are called \&quot;Notices\&quot;.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -97,10 +97,10 @@ class NoticeModel implements ModelInterface, ArrayAccess
         'document_reference' => 'string',
         'jurisdiction_name' => 'string',
         'jurisdiction_type' => 'string',
-        'comments' => '\Swagger\Client\Model\NoticeCommentModel[]',
-        'finances' => '\Swagger\Client\Model\NoticeFinanceModel[]',
-        'responsibility' => '\Swagger\Client\Model\NoticeResponsibilityDetailModel[]',
-        'root_cause' => '\Swagger\Client\Model\NoticeRootCauseDetailModel[]',
+        'comments' => '\Together\Taxes\Model\NoticeCommentModel[]',
+        'finances' => '\Together\Taxes\Model\NoticeFinanceModel[]',
+        'responsibility' => '\Together\Taxes\Model\NoticeResponsibilityDetailModel[]',
+        'root_cause' => '\Together\Taxes\Model\NoticeRootCauseDetailModel[]',
         'created_date' => '\DateTime',
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
@@ -1649,7 +1649,7 @@ class NoticeModel implements ModelInterface, ArrayAccess
     /**
      * Gets comments
      *
-     * @return \Swagger\Client\Model\NoticeCommentModel[]
+     * @return \Together\Taxes\Model\NoticeCommentModel[]
      */
     public function getComments()
     {
@@ -1659,7 +1659,7 @@ class NoticeModel implements ModelInterface, ArrayAccess
     /**
      * Sets comments
      *
-     * @param \Swagger\Client\Model\NoticeCommentModel[] $comments Additional comments on the notice
+     * @param \Together\Taxes\Model\NoticeCommentModel[] $comments Additional comments on the notice
      *
      * @return $this
      */
@@ -1673,7 +1673,7 @@ class NoticeModel implements ModelInterface, ArrayAccess
     /**
      * Gets finances
      *
-     * @return \Swagger\Client\Model\NoticeFinanceModel[]
+     * @return \Together\Taxes\Model\NoticeFinanceModel[]
      */
     public function getFinances()
     {
@@ -1683,7 +1683,7 @@ class NoticeModel implements ModelInterface, ArrayAccess
     /**
      * Sets finances
      *
-     * @param \Swagger\Client\Model\NoticeFinanceModel[] $finances Finance details of the notice
+     * @param \Together\Taxes\Model\NoticeFinanceModel[] $finances Finance details of the notice
      *
      * @return $this
      */
@@ -1697,7 +1697,7 @@ class NoticeModel implements ModelInterface, ArrayAccess
     /**
      * Gets responsibility
      *
-     * @return \Swagger\Client\Model\NoticeResponsibilityDetailModel[]
+     * @return \Together\Taxes\Model\NoticeResponsibilityDetailModel[]
      */
     public function getResponsibility()
     {
@@ -1707,7 +1707,7 @@ class NoticeModel implements ModelInterface, ArrayAccess
     /**
      * Sets responsibility
      *
-     * @param \Swagger\Client\Model\NoticeResponsibilityDetailModel[] $responsibility Notice Responsibility Details
+     * @param \Together\Taxes\Model\NoticeResponsibilityDetailModel[] $responsibility Notice Responsibility Details
      *
      * @return $this
      */
@@ -1721,7 +1721,7 @@ class NoticeModel implements ModelInterface, ArrayAccess
     /**
      * Gets root_cause
      *
-     * @return \Swagger\Client\Model\NoticeRootCauseDetailModel[]
+     * @return \Together\Taxes\Model\NoticeRootCauseDetailModel[]
      */
     public function getRootCause()
     {
@@ -1731,7 +1731,7 @@ class NoticeModel implements ModelInterface, ArrayAccess
     /**
      * Sets root_cause
      *
-     * @param \Swagger\Client\Model\NoticeRootCauseDetailModel[] $root_cause Notice Root Cause Details
+     * @param \Together\Taxes\Model\NoticeRootCauseDetailModel[] $root_cause Notice Root Cause Details
      *
      * @return $this
      */

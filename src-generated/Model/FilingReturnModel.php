@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingReturnModel Class Doc Comment
  *
  * @category Class
  * @description Filing Returns Model
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -101,17 +101,17 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
         'consumer_use_tax_accrual_amount' => 'double',
         'consumer_use_taxable_accrual_amount' => 'double',
         'consumer_use_non_taxable_accrual_amount' => 'double',
-        'adjustments' => '\Swagger\Client\Model\FilingAdjustmentModel[]',
+        'adjustments' => '\Together\Taxes\Model\FilingAdjustmentModel[]',
         'total_augmentations' => 'double',
-        'augmentations' => '\Swagger\Client\Model\FilingAugmentationModel[]',
+        'augmentations' => '\Together\Taxes\Model\FilingAugmentationModel[]',
         'total_payments' => 'double',
-        'payments' => '\Swagger\Client\Model\FilingPaymentModel[]',
+        'payments' => '\Together\Taxes\Model\FilingPaymentModel[]',
         'accrual_type' => 'string',
         'month' => 'int',
         'year' => 'int',
-        'attachments' => '\Swagger\Client\Model\FilingAttachmentModel[]',
-        'excluded_carry_over_credits' => '\Swagger\Client\Model\FilingReturnCreditModel',
-        'applied_carry_over_credits' => '\Swagger\Client\Model\FilingReturnCreditModel',
+        'attachments' => '\Together\Taxes\Model\FilingAttachmentModel[]',
+        'excluded_carry_over_credits' => '\Together\Taxes\Model\FilingReturnCreditModel',
+        'applied_carry_over_credits' => '\Together\Taxes\Model\FilingReturnCreditModel',
         'created_date' => '\DateTime',
         'created_user_id' => 'int',
         'modified_date' => '\DateTime'
@@ -1747,7 +1747,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Gets adjustments
      *
-     * @return \Swagger\Client\Model\FilingAdjustmentModel[]
+     * @return \Together\Taxes\Model\FilingAdjustmentModel[]
      */
     public function getAdjustments()
     {
@@ -1757,7 +1757,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Sets adjustments
      *
-     * @param \Swagger\Client\Model\FilingAdjustmentModel[] $adjustments The Adjustments for this return.
+     * @param \Together\Taxes\Model\FilingAdjustmentModel[] $adjustments The Adjustments for this return.
      *
      * @return $this
      */
@@ -1795,7 +1795,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Gets augmentations
      *
-     * @return \Swagger\Client\Model\FilingAugmentationModel[]
+     * @return \Together\Taxes\Model\FilingAugmentationModel[]
      */
     public function getAugmentations()
     {
@@ -1805,7 +1805,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Sets augmentations
      *
-     * @param \Swagger\Client\Model\FilingAugmentationModel[] $augmentations The Augmentations for this return.
+     * @param \Together\Taxes\Model\FilingAugmentationModel[] $augmentations The Augmentations for this return.
      *
      * @return $this
      */
@@ -1843,7 +1843,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Gets payments
      *
-     * @return \Swagger\Client\Model\FilingPaymentModel[]
+     * @return \Together\Taxes\Model\FilingPaymentModel[]
      */
     public function getPayments()
     {
@@ -1853,7 +1853,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Sets payments
      *
-     * @param \Swagger\Client\Model\FilingPaymentModel[] $payments The payments for this return.
+     * @param \Together\Taxes\Model\FilingPaymentModel[] $payments The payments for this return.
      *
      * @return $this
      */
@@ -1948,7 +1948,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Gets attachments
      *
-     * @return \Swagger\Client\Model\FilingAttachmentModel[]
+     * @return \Together\Taxes\Model\FilingAttachmentModel[]
      */
     public function getAttachments()
     {
@@ -1958,7 +1958,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Sets attachments
      *
-     * @param \Swagger\Client\Model\FilingAttachmentModel[] $attachments The attachments for this return.
+     * @param \Together\Taxes\Model\FilingAttachmentModel[] $attachments The attachments for this return.
      *
      * @return $this
      */
@@ -1972,7 +1972,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Gets excluded_carry_over_credits
      *
-     * @return \Swagger\Client\Model\FilingReturnCreditModel
+     * @return \Together\Taxes\Model\FilingReturnCreditModel
      */
     public function getExcludedCarryOverCredits()
     {
@@ -1982,7 +1982,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Sets excluded_carry_over_credits
      *
-     * @param \Swagger\Client\Model\FilingReturnCreditModel $excluded_carry_over_credits The excluded carry over credit documents
+     * @param \Together\Taxes\Model\FilingReturnCreditModel $excluded_carry_over_credits The excluded carry over credit documents
      *
      * @return $this
      */
@@ -1996,7 +1996,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Gets applied_carry_over_credits
      *
-     * @return \Swagger\Client\Model\FilingReturnCreditModel
+     * @return \Together\Taxes\Model\FilingReturnCreditModel
      */
     public function getAppliedCarryOverCredits()
     {
@@ -2006,7 +2006,7 @@ class FilingReturnModel implements ModelInterface, ArrayAccess
     /**
      * Sets applied_carry_over_credits
      *
-     * @param \Swagger\Client\Model\FilingReturnCreditModel $applied_carry_over_credits The applied carry over credit documents
+     * @param \Together\Taxes\Model\FilingReturnCreditModel $applied_carry_over_credits The applied carry over credit documents
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * MultiTaxFilingModel Class Doc Comment
  *
  * @category Class
  * @description Represents a listing of all tax calculation data for filings and for accruing to future filings.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,9 +63,9 @@ class MultiTaxFilingModel implements ModelInterface, ArrayAccess
         'month' => 'int',
         'year' => 'int',
         'type' => 'string',
-        'tax_summary' => '\Swagger\Client\Model\FilingsTaxSummaryModel',
-        'tax_details' => '\Swagger\Client\Model\FilingsTaxDetailsModel[]',
-        'filing_regions' => '\Swagger\Client\Model\MultiTaxFilingRegionModel[]'
+        'tax_summary' => '\Together\Taxes\Model\FilingsTaxSummaryModel',
+        'tax_details' => '\Together\Taxes\Model\FilingsTaxDetailsModel[]',
+        'filing_regions' => '\Together\Taxes\Model\MultiTaxFilingRegionModel[]'
     ];
 
     /**
@@ -404,7 +404,7 @@ class MultiTaxFilingModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_summary
      *
-     * @return \Swagger\Client\Model\FilingsTaxSummaryModel
+     * @return \Together\Taxes\Model\FilingsTaxSummaryModel
      */
     public function getTaxSummary()
     {
@@ -414,7 +414,7 @@ class MultiTaxFilingModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_summary
      *
-     * @param \Swagger\Client\Model\FilingsTaxSummaryModel $tax_summary A summary of all taxes combined for this period
+     * @param \Together\Taxes\Model\FilingsTaxSummaryModel $tax_summary A summary of all taxes combined for this period
      *
      * @return $this
      */
@@ -428,7 +428,7 @@ class MultiTaxFilingModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_details
      *
-     * @return \Swagger\Client\Model\FilingsTaxDetailsModel[]
+     * @return \Together\Taxes\Model\FilingsTaxDetailsModel[]
      */
     public function getTaxDetails()
     {
@@ -438,7 +438,7 @@ class MultiTaxFilingModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_details
      *
-     * @param \Swagger\Client\Model\FilingsTaxDetailsModel[] $tax_details A detailed breakdown of the taxes in this filing
+     * @param \Together\Taxes\Model\FilingsTaxDetailsModel[] $tax_details A detailed breakdown of the taxes in this filing
      *
      * @return $this
      */
@@ -452,7 +452,7 @@ class MultiTaxFilingModel implements ModelInterface, ArrayAccess
     /**
      * Gets filing_regions
      *
-     * @return \Swagger\Client\Model\MultiTaxFilingRegionModel[]
+     * @return \Together\Taxes\Model\MultiTaxFilingRegionModel[]
      */
     public function getFilingRegions()
     {
@@ -462,7 +462,7 @@ class MultiTaxFilingModel implements ModelInterface, ArrayAccess
     /**
      * Sets filing_regions
      *
-     * @param \Swagger\Client\Model\MultiTaxFilingRegionModel[] $filing_regions A listing of regional tax filings within this time period.
+     * @param \Together\Taxes\Model\MultiTaxFilingRegionModel[] $filing_regions A listing of regional tax filings within this time period.
      *
      * @return $this
      */

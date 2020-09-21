@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * TransactionModel Class Doc Comment
  *
  * @category Class
  * @description This object represents a single transaction; for example, a sales invoice or purchase order.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -105,14 +105,14 @@ class TransactionModel implements ModelInterface, ArrayAccess
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
         'tax_date' => '\DateTime',
-        'lines' => '\Swagger\Client\Model\TransactionLineModel[]',
-        'addresses' => '\Swagger\Client\Model\TransactionAddressModel[]',
-        'location_types' => '\Swagger\Client\Model\TransactionLocationTypeModel[]',
-        'summary' => '\Swagger\Client\Model\TransactionSummary[]',
-        'tax_details_by_tax_type' => '\Swagger\Client\Model\TaxDetailsByTaxType[]',
-        'parameters' => '\Swagger\Client\Model\TransactionParameterModel[]',
-        'messages' => '\Swagger\Client\Model\AvaTaxMessage[]',
-        'invoice_messages' => '\Swagger\Client\Model\InvoiceMessageModel[]'
+        'lines' => '\Together\Taxes\Model\TransactionLineModel[]',
+        'addresses' => '\Together\Taxes\Model\TransactionAddressModel[]',
+        'location_types' => '\Together\Taxes\Model\TransactionLocationTypeModel[]',
+        'summary' => '\Together\Taxes\Model\TransactionSummary[]',
+        'tax_details_by_tax_type' => '\Together\Taxes\Model\TaxDetailsByTaxType[]',
+        'parameters' => '\Together\Taxes\Model\TransactionParameterModel[]',
+        'messages' => '\Together\Taxes\Model\AvaTaxMessage[]',
+        'invoice_messages' => '\Together\Taxes\Model\InvoiceMessageModel[]'
     ];
 
     /**
@@ -1865,7 +1865,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets lines
      *
-     * @return \Swagger\Client\Model\TransactionLineModel[]
+     * @return \Together\Taxes\Model\TransactionLineModel[]
      */
     public function getLines()
     {
@@ -1875,7 +1875,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets lines
      *
-     * @param \Swagger\Client\Model\TransactionLineModel[] $lines A list of line items in this transaction.  To fetch this list, add the query string `?$include=Lines` or `?$include=Details` to your URL.
+     * @param \Together\Taxes\Model\TransactionLineModel[] $lines A list of line items in this transaction.  To fetch this list, add the query string `?$include=Lines` or `?$include=Details` to your URL.
      *
      * @return $this
      */
@@ -1889,7 +1889,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \Swagger\Client\Model\TransactionAddressModel[]
+     * @return \Together\Taxes\Model\TransactionAddressModel[]
      */
     public function getAddresses()
     {
@@ -1899,7 +1899,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \Swagger\Client\Model\TransactionAddressModel[] $addresses A list of line items in this transaction.  To fetch this list, add the query string `?$include=Addresses` to your URL.                For more information about transaction addresses, please see [Using Address Types](https://developer.avalara.com/avatax/dev-guide/customizing-transaction/address-types/)  in the AvaTax Developer Guide.
+     * @param \Together\Taxes\Model\TransactionAddressModel[] $addresses A list of line items in this transaction.  To fetch this list, add the query string `?$include=Addresses` to your URL.                For more information about transaction addresses, please see [Using Address Types](https://developer.avalara.com/avatax/dev-guide/customizing-transaction/address-types/)  in the AvaTax Developer Guide.
      *
      * @return $this
      */
@@ -1913,7 +1913,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets location_types
      *
-     * @return \Swagger\Client\Model\TransactionLocationTypeModel[]
+     * @return \Together\Taxes\Model\TransactionLocationTypeModel[]
      */
     public function getLocationTypes()
     {
@@ -1923,7 +1923,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets location_types
      *
-     * @param \Swagger\Client\Model\TransactionLocationTypeModel[] $location_types A list of location types in this transaction.  To fetch this list, add the query string `?$include=Addresses` to your URL.
+     * @param \Together\Taxes\Model\TransactionLocationTypeModel[] $location_types A list of location types in this transaction.  To fetch this list, add the query string `?$include=Addresses` to your URL.
      *
      * @return $this
      */
@@ -1937,7 +1937,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets summary
      *
-     * @return \Swagger\Client\Model\TransactionSummary[]
+     * @return \Together\Taxes\Model\TransactionSummary[]
      */
     public function getSummary()
     {
@@ -1947,7 +1947,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets summary
      *
-     * @param \Swagger\Client\Model\TransactionSummary[] $summary Contains a summary of tax on this transaction.
+     * @param \Together\Taxes\Model\TransactionSummary[] $summary Contains a summary of tax on this transaction.
      *
      * @return $this
      */
@@ -1961,7 +1961,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_details_by_tax_type
      *
-     * @return \Swagger\Client\Model\TaxDetailsByTaxType[]
+     * @return \Together\Taxes\Model\TaxDetailsByTaxType[]
      */
     public function getTaxDetailsByTaxType()
     {
@@ -1971,7 +1971,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_details_by_tax_type
      *
-     * @param \Swagger\Client\Model\TaxDetailsByTaxType[] $tax_details_by_tax_type Contains the tax details per tax type
+     * @param \Together\Taxes\Model\TaxDetailsByTaxType[] $tax_details_by_tax_type Contains the tax details per tax type
      *
      * @return $this
      */
@@ -1985,7 +1985,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\TransactionParameterModel[]
+     * @return \Together\Taxes\Model\TransactionParameterModel[]
      */
     public function getParameters()
     {
@@ -1995,7 +1995,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\TransactionParameterModel[] $parameters Contains a list of extra parameters that were set when the transaction was created.
+     * @param \Together\Taxes\Model\TransactionParameterModel[] $parameters Contains a list of extra parameters that were set when the transaction was created.
      *
      * @return $this
      */
@@ -2009,7 +2009,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets messages
      *
-     * @return \Swagger\Client\Model\AvaTaxMessage[]
+     * @return \Together\Taxes\Model\AvaTaxMessage[]
      */
     public function getMessages()
     {
@@ -2019,7 +2019,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets messages
      *
-     * @param \Swagger\Client\Model\AvaTaxMessage[] $messages List of informational and warning messages regarding this API call.  These messages are only relevant to the current API call.
+     * @param \Together\Taxes\Model\AvaTaxMessage[] $messages List of informational and warning messages regarding this API call.  These messages are only relevant to the current API call.
      *
      * @return $this
      */
@@ -2033,7 +2033,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets invoice_messages
      *
-     * @return \Swagger\Client\Model\InvoiceMessageModel[]
+     * @return \Together\Taxes\Model\InvoiceMessageModel[]
      */
     public function getInvoiceMessages()
     {
@@ -2043,7 +2043,7 @@ class TransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_messages
      *
-     * @param \Swagger\Client\Model\InvoiceMessageModel[] $invoice_messages Invoice messages associated with this document. Currently, this stores legally-required VAT messages.
+     * @param \Together\Taxes\Model\InvoiceMessageModel[] $invoice_messages Invoice messages associated with this document. Currently, this stores legally-required VAT messages.
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * TransactionLineModel Class Doc Comment
  *
  * @category Class
  * @description One line item on this transaction.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,10 +95,10 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
         'tax_override_amount' => 'double',
         'tax_override_reason' => 'string',
         'tax_included' => 'bool',
-        'details' => '\Swagger\Client\Model\TransactionLineDetailModel[]',
-        'non_passthrough_details' => '\Swagger\Client\Model\TransactionLineDetailModel[]',
-        'line_location_types' => '\Swagger\Client\Model\TransactionLineLocationTypeModel[]',
-        'parameters' => '\Swagger\Client\Model\TransactionLineParameterModel[]',
+        'details' => '\Together\Taxes\Model\TransactionLineDetailModel[]',
+        'non_passthrough_details' => '\Together\Taxes\Model\TransactionLineDetailModel[]',
+        'line_location_types' => '\Together\Taxes\Model\TransactionLineLocationTypeModel[]',
+        'parameters' => '\Together\Taxes\Model\TransactionLineParameterModel[]',
         'hs_code' => 'string',
         'cost_insurance_freight' => 'double',
         'vat_code' => 'string',
@@ -1436,7 +1436,7 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Gets details
      *
-     * @return \Swagger\Client\Model\TransactionLineDetailModel[]
+     * @return \Together\Taxes\Model\TransactionLineDetailModel[]
      */
     public function getDetails()
     {
@@ -1446,7 +1446,7 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Sets details
      *
-     * @param \Swagger\Client\Model\TransactionLineDetailModel[] $details Optional: A list of tax details for this line item.                Tax details represent taxes being charged by various tax authorities. Taxes that appear in the `details` collection are intended to be  displayed to the customer and charged as a 'tax' on the invoice.                To fetch this list, add the query string `?$include=Details` to your URL.
+     * @param \Together\Taxes\Model\TransactionLineDetailModel[] $details Optional: A list of tax details for this line item.                Tax details represent taxes being charged by various tax authorities. Taxes that appear in the `details` collection are intended to be  displayed to the customer and charged as a 'tax' on the invoice.                To fetch this list, add the query string `?$include=Details` to your URL.
      *
      * @return $this
      */
@@ -1460,7 +1460,7 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Gets non_passthrough_details
      *
-     * @return \Swagger\Client\Model\TransactionLineDetailModel[]
+     * @return \Together\Taxes\Model\TransactionLineDetailModel[]
      */
     public function getNonPassthroughDetails()
     {
@@ -1470,7 +1470,7 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Sets non_passthrough_details
      *
-     * @param \Swagger\Client\Model\TransactionLineDetailModel[] $non_passthrough_details Optional: A list of non-passthrough tax details for this line item.                Tax details represent taxes being charged by various tax authorities. Taxes that appear in the `nonPassthroughDetails` collection are  taxes that must be paid directly by the company and not shown to the customer.
+     * @param \Together\Taxes\Model\TransactionLineDetailModel[] $non_passthrough_details Optional: A list of non-passthrough tax details for this line item.                Tax details represent taxes being charged by various tax authorities. Taxes that appear in the `nonPassthroughDetails` collection are  taxes that must be paid directly by the company and not shown to the customer.
      *
      * @return $this
      */
@@ -1484,7 +1484,7 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Gets line_location_types
      *
-     * @return \Swagger\Client\Model\TransactionLineLocationTypeModel[]
+     * @return \Together\Taxes\Model\TransactionLineLocationTypeModel[]
      */
     public function getLineLocationTypes()
     {
@@ -1494,7 +1494,7 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Sets line_location_types
      *
-     * @param \Swagger\Client\Model\TransactionLineLocationTypeModel[] $line_location_types Optional: A list of location types for this line item.  To fetch this list, add the query string \"?$include=LineLocationTypes\" to your URL.
+     * @param \Together\Taxes\Model\TransactionLineLocationTypeModel[] $line_location_types Optional: A list of location types for this line item.  To fetch this list, add the query string \"?$include=LineLocationTypes\" to your URL.
      *
      * @return $this
      */
@@ -1508,7 +1508,7 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\TransactionLineParameterModel[]
+     * @return \Together\Taxes\Model\TransactionLineParameterModel[]
      */
     public function getParameters()
     {
@@ -1518,7 +1518,7 @@ class TransactionLineModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\TransactionLineParameterModel[] $parameters Contains a list of extra parameters that were set when the transaction was created.
+     * @param \Together\Taxes\Model\TransactionLineParameterModel[] $parameters Contains a list of extra parameters that were set when the transaction was created.
      *
      * @return $this
      */

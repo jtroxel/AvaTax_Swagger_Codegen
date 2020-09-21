@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * CompaniesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,7 +95,7 @@ class CompaniesApi
      * @param  int $id The ID of the company to check if its integration is certified. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -113,7 +113,7 @@ class CompaniesApi
      * @param  int $id The ID of the company to check if its integration is certified. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -380,9 +380,9 @@ class CompaniesApi
      *
      * @param  int $id id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FilingStatusChangeModel $body body (optional)
+     * @param  \Together\Taxes\Model\FilingStatusChangeModel $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -399,9 +399,9 @@ class CompaniesApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FilingStatusChangeModel $body (optional)
+     * @param  \Together\Taxes\Model\FilingStatusChangeModel $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -476,7 +476,7 @@ class CompaniesApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FilingStatusChangeModel $body (optional)
+     * @param  \Together\Taxes\Model\FilingStatusChangeModel $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -498,7 +498,7 @@ class CompaniesApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FilingStatusChangeModel $body (optional)
+     * @param  \Together\Taxes\Model\FilingStatusChangeModel $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -550,7 +550,7 @@ class CompaniesApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FilingStatusChangeModel $body (optional)
+     * @param  \Together\Taxes\Model\FilingStatusChangeModel $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -673,11 +673,11 @@ class CompaniesApi
      * Quick setup for a company with a single physical address
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyModel
+     * @return \Together\Taxes\Model\CompanyModel
      */
     public function companyInitialize($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -691,15 +691,15 @@ class CompaniesApi
      * Quick setup for a company with a single physical address
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function companyInitializeWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyModel';
+        $returnType = '\Together\Taxes\Model\CompanyModel';
         $request = $this->companyInitializeRequest($x_avalara_client, $body);
 
         try {
@@ -751,7 +751,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyModel',
+                        '\Together\Taxes\Model\CompanyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -767,7 +767,7 @@ class CompaniesApi
      * Quick setup for a company with a single physical address
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -788,14 +788,14 @@ class CompaniesApi
      * Quick setup for a company with a single physical address
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function companyInitializeAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyModel';
+        $returnType = '\Together\Taxes\Model\CompanyModel';
         $request = $this->companyInitializeRequest($x_avalara_client, $body);
 
         return $this->client
@@ -839,7 +839,7 @@ class CompaniesApi
      * Create request for operation 'companyInitialize'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyInitializationModel $body Information about the company you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -948,11 +948,11 @@ class CompaniesApi
      * Create new companies
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
+     * @param  \Together\Taxes\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyModel[]
+     * @return \Together\Taxes\Model\CompanyModel[]
      */
     public function createCompanies($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -966,15 +966,15 @@ class CompaniesApi
      * Create new companies
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
+     * @param  \Together\Taxes\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createCompaniesWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyModel[]';
         $request = $this->createCompaniesRequest($x_avalara_client, $body);
 
         try {
@@ -1026,7 +1026,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyModel[]',
+                        '\Together\Taxes\Model\CompanyModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class CompaniesApi
      * Create new companies
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
+     * @param  \Together\Taxes\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1063,14 +1063,14 @@ class CompaniesApi
      * Create new companies
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
+     * @param  \Together\Taxes\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCompaniesAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyModel[]';
         $request = $this->createCompaniesRequest($x_avalara_client, $body);
 
         return $this->client
@@ -1114,7 +1114,7 @@ class CompaniesApi
      * Create request for operation 'createCompanies'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
+     * @param  \Together\Taxes\Model\CompanyModel[] $body Either a single company object or an array of companies to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1224,11 +1224,11 @@ class CompaniesApi
      *
      * @param  int $company_id The ID of the company that owns this company parameter. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyParameterDetailModel[]
+     * @return \Together\Taxes\Model\CompanyParameterDetailModel[]
      */
     public function createCompanyParameters($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1243,15 +1243,15 @@ class CompaniesApi
      *
      * @param  int $company_id The ID of the company that owns this company parameter. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyParameterDetailModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyParameterDetailModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createCompanyParametersWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyParameterDetailModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyParameterDetailModel[]';
         $request = $this->createCompanyParametersRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -1303,7 +1303,7 @@ class CompaniesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyParameterDetailModel[]',
+                        '\Together\Taxes\Model\CompanyParameterDetailModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1320,7 +1320,7 @@ class CompaniesApi
      *
      * @param  int $company_id The ID of the company that owns this company parameter. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1342,14 +1342,14 @@ class CompaniesApi
      *
      * @param  int $company_id The ID of the company that owns this company parameter. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCompanyParametersAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyParameterDetailModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyParameterDetailModel[]';
         $request = $this->createCompanyParametersRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -1394,7 +1394,7 @@ class CompaniesApi
      *
      * @param  int $company_id The ID of the company that owns this company parameter. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel[] $body The company parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1518,11 +1518,11 @@ class CompaniesApi
      *
      * @param  int $id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FundingInitiateModel $body The funding initialization request (optional)
+     * @param  \Together\Taxes\Model\FundingInitiateModel $body The funding initialization request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FundingStatusModel
+     * @return \Together\Taxes\Model\FundingStatusModel
      */
     public function createFundingRequest($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1537,15 +1537,15 @@ class CompaniesApi
      *
      * @param  int $id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FundingInitiateModel $body The funding initialization request (optional)
+     * @param  \Together\Taxes\Model\FundingInitiateModel $body The funding initialization request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FundingStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FundingStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFundingRequestWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FundingStatusModel';
+        $returnType = '\Together\Taxes\Model\FundingStatusModel';
         $request = $this->createFundingRequestRequest($id, $x_avalara_client, $body);
 
         try {
@@ -1597,7 +1597,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FundingStatusModel',
+                        '\Together\Taxes\Model\FundingStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1614,7 +1614,7 @@ class CompaniesApi
      *
      * @param  int $id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FundingInitiateModel $body The funding initialization request (optional)
+     * @param  \Together\Taxes\Model\FundingInitiateModel $body The funding initialization request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1636,14 +1636,14 @@ class CompaniesApi
      *
      * @param  int $id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FundingInitiateModel $body The funding initialization request (optional)
+     * @param  \Together\Taxes\Model\FundingInitiateModel $body The funding initialization request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createFundingRequestAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FundingStatusModel';
+        $returnType = '\Together\Taxes\Model\FundingStatusModel';
         $request = $this->createFundingRequestRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -1688,7 +1688,7 @@ class CompaniesApi
      *
      * @param  int $id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FundingInitiateModel $body The funding initialization request (optional)
+     * @param  \Together\Taxes\Model\FundingInitiateModel $body The funding initialization request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1813,9 +1813,9 @@ class CompaniesApi
      * @param  int $id The ID of the company you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteCompany($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1831,13 +1831,13 @@ class CompaniesApi
      * @param  int $id The ID of the company you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCompanyWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteCompanyRequest($id, $x_avalara_client);
 
         try {
@@ -1889,7 +1889,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1933,7 +1933,7 @@ class CompaniesApi
      */
     public function deleteCompanyAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteCompanyRequest($id, $x_avalara_client);
 
         return $this->client
@@ -2100,9 +2100,9 @@ class CompaniesApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteCompanyParameter($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2119,13 +2119,13 @@ class CompaniesApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCompanyParameterWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteCompanyParameterRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -2177,7 +2177,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2223,7 +2223,7 @@ class CompaniesApi
      */
     public function deleteCompanyParameterAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteCompanyParameterRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -2404,9 +2404,9 @@ class CompaniesApi
      * @param  int $company_id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FundingConfigurationModel
+     * @return \Together\Taxes\Model\FundingConfigurationModel
      */
     public function fundingConfigurationByCompany($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2422,13 +2422,13 @@ class CompaniesApi
      * @param  int $company_id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FundingConfigurationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FundingConfigurationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function fundingConfigurationByCompanyWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingConfigurationModel';
+        $returnType = '\Together\Taxes\Model\FundingConfigurationModel';
         $request = $this->fundingConfigurationByCompanyRequest($company_id, $x_avalara_client);
 
         try {
@@ -2480,7 +2480,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FundingConfigurationModel',
+                        '\Together\Taxes\Model\FundingConfigurationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2524,7 +2524,7 @@ class CompaniesApi
      */
     public function fundingConfigurationByCompanyAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingConfigurationModel';
+        $returnType = '\Together\Taxes\Model\FundingConfigurationModel';
         $request = $this->fundingConfigurationByCompanyRequest($company_id, $x_avalara_client);
 
         return $this->client
@@ -2691,9 +2691,9 @@ class CompaniesApi
      * @param  string $currency The currency of the funding.  USD and CAD are the only valid currencies (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FundingConfigurationModel[]
+     * @return \Together\Taxes\Model\FundingConfigurationModel[]
      */
     public function fundingConfigurationsByCompanyAndCurrency($company_id, $currency = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2710,13 +2710,13 @@ class CompaniesApi
      * @param  string $currency The currency of the funding.  USD and CAD are the only valid currencies (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FundingConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FundingConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function fundingConfigurationsByCompanyAndCurrencyWithHttpInfo($company_id, $currency = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\FundingConfigurationModel[]';
         $request = $this->fundingConfigurationsByCompanyAndCurrencyRequest($company_id, $currency, $x_avalara_client);
 
         try {
@@ -2768,7 +2768,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FundingConfigurationModel[]',
+                        '\Together\Taxes\Model\FundingConfigurationModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2814,7 +2814,7 @@ class CompaniesApi
      */
     public function fundingConfigurationsByCompanyAndCurrencyAsyncWithHttpInfo($company_id, $currency = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\FundingConfigurationModel[]';
         $request = $this->fundingConfigurationsByCompanyAndCurrencyRequest($company_id, $currency, $x_avalara_client);
 
         return $this->client
@@ -2986,9 +2986,9 @@ class CompaniesApi
      * @param  string $include OPTIONAL: A comma separated list of special fetch options.                              * Child objects - Specify one or more of the following to retrieve objects related to each company: \&quot;Contacts\&quot;, \&quot;FilingCalendars\&quot;, \&quot;Items\&quot;, \&quot;Locations\&quot;, \&quot;Nexus\&quot;, \&quot;TaxCodes\&quot;, \&quot;NonReportingChildren\&quot; or \&quot;TaxRules\&quot;.                * Deleted objects - Specify \&quot;FetchDeleted\&quot; to retrieve information about previously deleted objects. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyModel
+     * @return \Together\Taxes\Model\CompanyModel
      */
     public function getCompany($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3005,13 +3005,13 @@ class CompaniesApi
      * @param  string $include OPTIONAL: A comma separated list of special fetch options.                              * Child objects - Specify one or more of the following to retrieve objects related to each company: \&quot;Contacts\&quot;, \&quot;FilingCalendars\&quot;, \&quot;Items\&quot;, \&quot;Locations\&quot;, \&quot;Nexus\&quot;, \&quot;TaxCodes\&quot;, \&quot;NonReportingChildren\&quot; or \&quot;TaxRules\&quot;.                * Deleted objects - Specify \&quot;FetchDeleted\&quot; to retrieve information about previously deleted objects. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompanyWithHttpInfo($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CompanyModel';
+        $returnType = '\Together\Taxes\Model\CompanyModel';
         $request = $this->getCompanyRequest($id, $include, $x_avalara_client);
 
         try {
@@ -3063,7 +3063,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyModel',
+                        '\Together\Taxes\Model\CompanyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3109,7 +3109,7 @@ class CompaniesApi
      */
     public function getCompanyAsyncWithHttpInfo($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CompanyModel';
+        $returnType = '\Together\Taxes\Model\CompanyModel';
         $request = $this->getCompanyRequest($id, $include, $x_avalara_client);
 
         return $this->client
@@ -3280,9 +3280,9 @@ class CompaniesApi
      * @param  int $id id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyConfigurationModel[]
+     * @return \Together\Taxes\Model\CompanyConfigurationModel[]
      */
     public function getCompanyConfiguration($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3298,13 +3298,13 @@ class CompaniesApi
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompanyConfigurationWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CompanyConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyConfigurationModel[]';
         $request = $this->getCompanyConfigurationRequest($id, $x_avalara_client);
 
         try {
@@ -3356,7 +3356,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyConfigurationModel[]',
+                        '\Together\Taxes\Model\CompanyConfigurationModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3400,7 +3400,7 @@ class CompaniesApi
      */
     public function getCompanyConfigurationAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CompanyConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyConfigurationModel[]';
         $request = $this->getCompanyConfigurationRequest($id, $x_avalara_client);
 
         return $this->client
@@ -3567,9 +3567,9 @@ class CompaniesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyParameterDetailModel
+     * @return \Together\Taxes\Model\CompanyParameterDetailModel
      */
     public function getCompanyParameterDetail($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3586,13 +3586,13 @@ class CompaniesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompanyParameterDetailWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CompanyParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\CompanyParameterDetailModel';
         $request = $this->getCompanyParameterDetailRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -3644,7 +3644,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyParameterDetailModel',
+                        '\Together\Taxes\Model\CompanyParameterDetailModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3690,7 +3690,7 @@ class CompaniesApi
      */
     public function getCompanyParameterDetailAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CompanyParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\CompanyParameterDetailModel';
         $request = $this->getCompanyParameterDetailRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -3871,7 +3871,7 @@ class CompaniesApi
      * @param  int $id id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -3889,7 +3889,7 @@ class CompaniesApi
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4161,9 +4161,9 @@ class CompaniesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCompanyParameterDetailModel
+     * @return \Together\Taxes\Model\FetchResultCompanyParameterDetailModel
      */
     public function listCompanyParameterDetails($company_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4183,13 +4183,13 @@ class CompaniesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCompanyParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCompanyParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCompanyParameterDetailsWithHttpInfo($company_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCompanyParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCompanyParameterDetailModel';
         $request = $this->listCompanyParameterDetailsRequest($company_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -4241,7 +4241,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCompanyParameterDetailModel',
+                        '\Together\Taxes\Model\FetchResultCompanyParameterDetailModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4293,7 +4293,7 @@ class CompaniesApi
      */
     public function listCompanyParameterDetailsAsyncWithHttpInfo($company_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCompanyParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCompanyParameterDetailModel';
         $request = $this->listCompanyParameterDetailsRequest($company_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -4479,9 +4479,9 @@ class CompaniesApi
      * @param  int $id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FundingStatusModel[]
+     * @return \Together\Taxes\Model\FundingStatusModel[]
      */
     public function listFundingRequestsByCompany($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4497,13 +4497,13 @@ class CompaniesApi
      * @param  int $id The unique identifier of the company (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FundingStatusModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FundingStatusModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listFundingRequestsByCompanyWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingStatusModel[]';
+        $returnType = '\Together\Taxes\Model\FundingStatusModel[]';
         $request = $this->listFundingRequestsByCompanyRequest($id, $x_avalara_client);
 
         try {
@@ -4555,7 +4555,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FundingStatusModel[]',
+                        '\Together\Taxes\Model\FundingStatusModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4599,7 +4599,7 @@ class CompaniesApi
      */
     public function listFundingRequestsByCompanyAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FundingStatusModel[]';
+        $returnType = '\Together\Taxes\Model\FundingStatusModel[]';
         $request = $this->listFundingRequestsByCompanyRequest($id, $x_avalara_client);
 
         return $this->client
@@ -4764,9 +4764,9 @@ class CompaniesApi
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultMrsCompanyModel
+     * @return \Together\Taxes\Model\FetchResultMrsCompanyModel
      */
     public function listMrsCompanies($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4781,13 +4781,13 @@ class CompaniesApi
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultMrsCompanyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultMrsCompanyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listMrsCompaniesWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultMrsCompanyModel';
+        $returnType = '\Together\Taxes\Model\FetchResultMrsCompanyModel';
         $request = $this->listMrsCompaniesRequest($x_avalara_client);
 
         try {
@@ -4839,7 +4839,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultMrsCompanyModel',
+                        '\Together\Taxes\Model\FetchResultMrsCompanyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4881,7 +4881,7 @@ class CompaniesApi
      */
     public function listMrsCompaniesAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultMrsCompanyModel';
+        $returnType = '\Together\Taxes\Model\FetchResultMrsCompanyModel';
         $request = $this->listMrsCompaniesRequest($x_avalara_client);
 
         return $this->client
@@ -5036,9 +5036,9 @@ class CompaniesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCompanyModel
+     * @return \Together\Taxes\Model\FetchResultCompanyModel
      */
     public function queryCompanies($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -5058,13 +5058,13 @@ class CompaniesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCompanyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCompanyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryCompaniesWithHttpInfo($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCompanyModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCompanyModel';
         $request = $this->queryCompaniesRequest($include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -5116,7 +5116,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCompanyModel',
+                        '\Together\Taxes\Model\FetchResultCompanyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5168,7 +5168,7 @@ class CompaniesApi
      */
     public function queryCompaniesAsyncWithHttpInfo($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCompanyModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCompanyModel';
         $request = $this->queryCompaniesRequest($include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -5343,11 +5343,11 @@ class CompaniesApi
      *
      * @param  int $id id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyConfigurationModel[] $body body (optional)
+     * @param  \Together\Taxes\Model\CompanyConfigurationModel[] $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyConfigurationModel[]
+     * @return \Together\Taxes\Model\CompanyConfigurationModel[]
      */
     public function setCompanyConfiguration($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -5362,15 +5362,15 @@ class CompaniesApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyConfigurationModel[] $body (optional)
+     * @param  \Together\Taxes\Model\CompanyConfigurationModel[] $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function setCompanyConfigurationWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyConfigurationModel[]';
         $request = $this->setCompanyConfigurationRequest($id, $x_avalara_client, $body);
 
         try {
@@ -5422,7 +5422,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyConfigurationModel[]',
+                        '\Together\Taxes\Model\CompanyConfigurationModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5439,7 +5439,7 @@ class CompaniesApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyConfigurationModel[] $body (optional)
+     * @param  \Together\Taxes\Model\CompanyConfigurationModel[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5461,14 +5461,14 @@ class CompaniesApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyConfigurationModel[] $body (optional)
+     * @param  \Together\Taxes\Model\CompanyConfigurationModel[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function setCompanyConfigurationAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\CompanyConfigurationModel[]';
         $request = $this->setCompanyConfigurationRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -5513,7 +5513,7 @@ class CompaniesApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyConfigurationModel[] $body (optional)
+     * @param  \Together\Taxes\Model\CompanyConfigurationModel[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5637,11 +5637,11 @@ class CompaniesApi
      *
      * @param  int $id The ID of the company you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel $body The company object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyModel $body The company object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyModel
+     * @return \Together\Taxes\Model\CompanyModel
      */
     public function updateCompany($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -5656,15 +5656,15 @@ class CompaniesApi
      *
      * @param  int $id The ID of the company you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel $body The company object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyModel $body The company object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCompanyWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyModel';
+        $returnType = '\Together\Taxes\Model\CompanyModel';
         $request = $this->updateCompanyRequest($id, $x_avalara_client, $body);
 
         try {
@@ -5716,7 +5716,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyModel',
+                        '\Together\Taxes\Model\CompanyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5733,7 +5733,7 @@ class CompaniesApi
      *
      * @param  int $id The ID of the company you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel $body The company object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyModel $body The company object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5755,14 +5755,14 @@ class CompaniesApi
      *
      * @param  int $id The ID of the company you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel $body The company object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyModel $body The company object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateCompanyAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyModel';
+        $returnType = '\Together\Taxes\Model\CompanyModel';
         $request = $this->updateCompanyRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -5807,7 +5807,7 @@ class CompaniesApi
      *
      * @param  int $id The ID of the company you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyModel $body The company object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyModel $body The company object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5932,11 +5932,11 @@ class CompaniesApi
      * @param  int $company_id The company id. (required)
      * @param  int $id The company parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CompanyParameterDetailModel
+     * @return \Together\Taxes\Model\CompanyParameterDetailModel
      */
     public function updateCompanyParameterDetail($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -5952,15 +5952,15 @@ class CompaniesApi
      * @param  int $company_id The company id. (required)
      * @param  int $id The company parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CompanyParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CompanyParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCompanyParameterDetailWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\CompanyParameterDetailModel';
         $request = $this->updateCompanyParameterDetailRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -6012,7 +6012,7 @@ class CompaniesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CompanyParameterDetailModel',
+                        '\Together\Taxes\Model\CompanyParameterDetailModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6030,7 +6030,7 @@ class CompaniesApi
      * @param  int $company_id The company id. (required)
      * @param  int $id The company parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6053,14 +6053,14 @@ class CompaniesApi
      * @param  int $company_id The company id. (required)
      * @param  int $id The company parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateCompanyParameterDetailAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CompanyParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\CompanyParameterDetailModel';
         $request = $this->updateCompanyParameterDetailRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -6106,7 +6106,7 @@ class CompaniesApi
      * @param  int $company_id The company id. (required)
      * @param  int $id The company parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\CompanyParameterDetailModel $body The company parameter object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

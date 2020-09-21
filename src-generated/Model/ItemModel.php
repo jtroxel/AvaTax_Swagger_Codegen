@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * ItemModel Class Doc Comment
  *
  * @category Class
  * @description Represents an item in your company&#39;s product catalog.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -69,8 +69,8 @@ class ItemModel implements ModelInterface, ArrayAccess
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'classifications' => '\Swagger\Client\Model\ClassificationModel[]',
-        'parameters' => '\Swagger\Client\Model\ItemParameterModel[]'
+        'classifications' => '\Together\Taxes\Model\ClassificationModel[]',
+        'parameters' => '\Together\Taxes\Model\ItemParameterModel[]'
     ];
 
     /**
@@ -613,7 +613,7 @@ class ItemModel implements ModelInterface, ArrayAccess
     /**
      * Gets classifications
      *
-     * @return \Swagger\Client\Model\ClassificationModel[]
+     * @return \Together\Taxes\Model\ClassificationModel[]
      */
     public function getClassifications()
     {
@@ -623,7 +623,7 @@ class ItemModel implements ModelInterface, ArrayAccess
     /**
      * Sets classifications
      *
-     * @param \Swagger\Client\Model\ClassificationModel[] $classifications List of classifications that belong to this item.  A single classification consits of a productCode and a systemCode for a particular item.
+     * @param \Together\Taxes\Model\ClassificationModel[] $classifications List of classifications that belong to this item.  A single classification consits of a productCode and a systemCode for a particular item.
      *
      * @return $this
      */
@@ -637,7 +637,7 @@ class ItemModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\ItemParameterModel[]
+     * @return \Together\Taxes\Model\ItemParameterModel[]
      */
     public function getParameters()
     {
@@ -647,7 +647,7 @@ class ItemModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\ItemParameterModel[] $parameters List of item parameters.
+     * @param \Together\Taxes\Model\ItemParameterModel[] $parameters List of item parameters.
      *
      * @return $this
      */

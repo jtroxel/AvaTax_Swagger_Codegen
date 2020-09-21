@@ -1,4 +1,4 @@
-# Swagger\Client\MultiDocumentApi
+# Together\Taxes\MultiDocumentApi
 
 All URIs are relative to *https://localhost*
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **adjustMultiDocumentTransaction**
-> \Swagger\Client\Model\MultiDocumentModel adjustMultiDocumentTransaction($code, $type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\MultiDocumentModel adjustMultiDocumentTransaction($code, $type, $include, $x_avalara_client, $body)
 
 Adjust a MultiDocument transaction
 
@@ -29,14 +29,14 @@ Adjusts the current MultiDocument transaction uniquely identified by this URL.  
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -46,7 +46,7 @@ $code = "code_example"; // string | The transaction code for this MultiDocument 
 $type = "type_example"; // string | The transaction type for this MultiDocument transaction
 $include = "include_example"; // string | Specifies objects to include in this fetch call
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AdjustMultiDocumentModel(); // \Swagger\Client\Model\AdjustMultiDocumentModel | The adjust request you wish to execute
+$body = new \Together\Taxes\Model\AdjustMultiDocumentModel(); // \Together\Taxes\Model\AdjustMultiDocumentModel | The adjust request you wish to execute
 
 try {
     $result = $apiInstance->adjustMultiDocumentTransaction($code, $type, $include, $x_avalara_client, $body);
@@ -65,11 +65,11 @@ Name | Type | Description  | Notes
  **type** | **string**| The transaction type for this MultiDocument transaction |
  **include** | **string**| Specifies objects to include in this fetch call | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AdjustMultiDocumentModel**](../Model/AdjustMultiDocumentModel.md)| The adjust request you wish to execute | [optional]
+ **body** | [**\Together\Taxes\Model\AdjustMultiDocumentModel**](../Model/AdjustMultiDocumentModel.md)| The adjust request you wish to execute | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
+[**\Together\Taxes\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **auditMultiDocumentTransaction**
-> \Swagger\Client\Model\AuditMultiDocumentModel auditMultiDocumentTransaction($code, $type, $x_avalara_client)
+> \Together\Taxes\Model\AuditMultiDocumentModel auditMultiDocumentTransaction($code, $type, $x_avalara_client)
 
 Get audit information about a MultiDocument transaction
 
@@ -95,14 +95,14 @@ Retrieve audit information about a MultiDocument transaction stored in AvaTax.  
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AuditMultiDocumentModel**](../Model/AuditMultiDocumentModel.md)
+[**\Together\Taxes\Model\AuditMultiDocumentModel**](../Model/AuditMultiDocumentModel.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **commitMultiDocumentTransaction**
-> \Swagger\Client\Model\MultiDocumentModel commitMultiDocumentTransaction($x_avalara_client, $body)
+> \Together\Taxes\Model\MultiDocumentModel commitMultiDocumentTransaction($x_avalara_client, $body)
 
 Commit a MultiDocument transaction
 
@@ -157,21 +157,21 @@ Marks a list of transactions by changing its status to `Committed`.             
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CommitMultiDocumentModel(); // \Swagger\Client\Model\CommitMultiDocumentModel | The commit request you wish to execute
+$body = new \Together\Taxes\Model\CommitMultiDocumentModel(); // \Together\Taxes\Model\CommitMultiDocumentModel | The commit request you wish to execute
 
 try {
     $result = $apiInstance->commitMultiDocumentTransaction($x_avalara_client, $body);
@@ -187,11 +187,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CommitMultiDocumentModel**](../Model/CommitMultiDocumentModel.md)| The commit request you wish to execute | [optional]
+ **body** | [**\Together\Taxes\Model\CommitMultiDocumentModel**](../Model/CommitMultiDocumentModel.md)| The commit request you wish to execute | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
+[**\Together\Taxes\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createMultiDocumentTransaction**
-> \Swagger\Client\Model\MultiDocumentModel createMultiDocumentTransaction($include, $x_avalara_client, $body)
+> \Together\Taxes\Model\MultiDocumentModel createMultiDocumentTransaction($include, $x_avalara_client, $body)
 
 Create a new MultiDocument transaction
 
@@ -217,14 +217,14 @@ Records a new MultiDocument transaction in AvaTax.                A traditional 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -232,7 +232,7 @@ $apiInstance = new Swagger\Client\Api\MultiDocumentApi(
 );
 $include = "include_example"; // string | Specifies objects to include in the response after transaction is created
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CreateMultiDocumentModel(); // \Swagger\Client\Model\CreateMultiDocumentModel | the multi document transaction model
+$body = new \Together\Taxes\Model\CreateMultiDocumentModel(); // \Together\Taxes\Model\CreateMultiDocumentModel | the multi document transaction model
 
 try {
     $result = $apiInstance->createMultiDocumentTransaction($include, $x_avalara_client, $body);
@@ -249,11 +249,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include** | **string**| Specifies objects to include in the response after transaction is created | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CreateMultiDocumentModel**](../Model/CreateMultiDocumentModel.md)| the multi document transaction model | [optional]
+ **body** | [**\Together\Taxes\Model\CreateMultiDocumentModel**](../Model/CreateMultiDocumentModel.md)| the multi document transaction model | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
+[**\Together\Taxes\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMultiDocumentTransactionByCodeAndType**
-> \Swagger\Client\Model\MultiDocumentModel getMultiDocumentTransactionByCodeAndType($code, $type, $include, $x_avalara_client)
+> \Together\Taxes\Model\MultiDocumentModel getMultiDocumentTransactionByCodeAndType($code, $type, $include, $x_avalara_client)
 
 Retrieve a MultiDocument transaction
 
@@ -279,14 +279,14 @@ Get the current MultiDocument transaction identified by this URL.               
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
+[**\Together\Taxes\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMultiDocumentTransactionById**
-> \Swagger\Client\Model\MultiDocumentModel getMultiDocumentTransactionById($id, $include, $x_avalara_client)
+> \Together\Taxes\Model\MultiDocumentModel getMultiDocumentTransactionById($id, $include, $x_avalara_client)
 
 Retrieve a MultiDocument transaction by ID
 
@@ -343,14 +343,14 @@ Get the unique MultiDocument transaction identified by this URL.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
+[**\Together\Taxes\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
 
 ### Authorization
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listMultiDocumentTransactions**
-> \Swagger\Client\Model\FetchResultMultiDocumentModel listMultiDocumentTransactions($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultMultiDocumentModel listMultiDocumentTransactions($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all MultiDocument transactions
 
@@ -405,14 +405,14 @@ List all MultiDocument transactions within this account.                This end
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultMultiDocumentModel**](../Model/FetchResultMultiDocumentModel.md)
+[**\Together\Taxes\Model\FetchResultMultiDocumentModel**](../Model/FetchResultMultiDocumentModel.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refundMultiDocumentTransaction**
-> \Swagger\Client\Model\MultiDocumentModel refundMultiDocumentTransaction($code, $type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\MultiDocumentModel refundMultiDocumentTransaction($code, $type, $include, $x_avalara_client, $body)
 
 Create a refund for a MultiDocument transaction
 
@@ -473,14 +473,14 @@ Create a refund for a MultiDocument transaction.                A traditional tr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -490,7 +490,7 @@ $code = "code_example"; // string | The code of this MultiDocument transaction
 $type = "type_example"; // string | The type of this MultiDocument transaction
 $include = "include_example"; // string | Specifies objects to include in the response after transaction is created
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\RefundTransactionModel(); // \Swagger\Client\Model\RefundTransactionModel | Information about the refund to create
+$body = new \Together\Taxes\Model\RefundTransactionModel(); // \Together\Taxes\Model\RefundTransactionModel | Information about the refund to create
 
 try {
     $result = $apiInstance->refundMultiDocumentTransaction($code, $type, $include, $x_avalara_client, $body);
@@ -509,11 +509,11 @@ Name | Type | Description  | Notes
  **type** | **string**| The type of this MultiDocument transaction |
  **include** | **string**| Specifies objects to include in the response after transaction is created | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\RefundTransactionModel**](../Model/RefundTransactionModel.md)| Information about the refund to create | [optional]
+ **body** | [**\Together\Taxes\Model\RefundTransactionModel**](../Model/RefundTransactionModel.md)| Information about the refund to create | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
+[**\Together\Taxes\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
 
 ### Authorization
 
@@ -527,7 +527,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **verifyMultiDocumentTransaction**
-> \Swagger\Client\Model\MultiDocumentModel verifyMultiDocumentTransaction($x_avalara_client, $body)
+> \Together\Taxes\Model\MultiDocumentModel verifyMultiDocumentTransaction($x_avalara_client, $body)
 
 Verify a MultiDocument transaction
 
@@ -539,21 +539,21 @@ Verifies that the MultiDocument transaction uniquely identified by this URL matc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\VerifyMultiDocumentModel(); // \Swagger\Client\Model\VerifyMultiDocumentModel | Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax
+$body = new \Together\Taxes\Model\VerifyMultiDocumentModel(); // \Together\Taxes\Model\VerifyMultiDocumentModel | Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax
 
 try {
     $result = $apiInstance->verifyMultiDocumentTransaction($x_avalara_client, $body);
@@ -569,11 +569,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\VerifyMultiDocumentModel**](../Model/VerifyMultiDocumentModel.md)| Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax | [optional]
+ **body** | [**\Together\Taxes\Model\VerifyMultiDocumentModel**](../Model/VerifyMultiDocumentModel.md)| Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
+[**\Together\Taxes\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
 
 ### Authorization
 
@@ -587,7 +587,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voidMultiDocumentTransaction**
-> \Swagger\Client\Model\MultiDocumentModel voidMultiDocumentTransaction($code, $type, $x_avalara_client, $body)
+> \Together\Taxes\Model\MultiDocumentModel voidMultiDocumentTransaction($code, $type, $x_avalara_client, $body)
 
 Void a MultiDocument transaction
 
@@ -599,14 +599,14 @@ Voids the current transaction uniquely identified by this URL.                A 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MultiDocumentApi(
+$apiInstance = new Together\Taxes\Api\MultiDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -615,7 +615,7 @@ $apiInstance = new Swagger\Client\Api\MultiDocumentApi(
 $code = "code_example"; // string | The transaction code for this MultiDocument transaction
 $type = "type_example"; // string | The transaction type for this MultiDocument transaction
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\VoidTransactionModel(); // \Swagger\Client\Model\VoidTransactionModel | The void request you wish to execute
+$body = new \Together\Taxes\Model\VoidTransactionModel(); // \Together\Taxes\Model\VoidTransactionModel | The void request you wish to execute
 
 try {
     $result = $apiInstance->voidMultiDocumentTransaction($code, $type, $x_avalara_client, $body);
@@ -633,11 +633,11 @@ Name | Type | Description  | Notes
  **code** | **string**| The transaction code for this MultiDocument transaction |
  **type** | **string**| The transaction type for this MultiDocument transaction |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\VoidTransactionModel**](../Model/VoidTransactionModel.md)| The void request you wish to execute | [optional]
+ **body** | [**\Together\Taxes\Model\VoidTransactionModel**](../Model/VoidTransactionModel.md)| The void request you wish to execute | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
+[**\Together\Taxes\Model\MultiDocumentModel**](../Model/MultiDocumentModel.md)
 
 ### Authorization
 

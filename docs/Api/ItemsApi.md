@@ -1,4 +1,4 @@
-# Swagger\Client\ItemsApi
+# Together\Taxes\ItemsApi
 
 All URIs are relative to *https://localhost*
 
@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 
 # **batchDeleteItemClassifications**
-> \Swagger\Client\Model\ErrorDetail[] batchDeleteItemClassifications($company_id, $item_id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] batchDeleteItemClassifications($company_id, $item_id, $x_avalara_client)
 
 Delete all classifications for an item
 
@@ -38,14 +38,14 @@ Delete all the classifications for a given item.                A classification
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchDeleteItemParameters**
-> \Swagger\Client\Model\ErrorDetail[] batchDeleteItemParameters($company_id, $item_id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] batchDeleteItemParameters($company_id, $item_id, $x_avalara_client)
 
 Delete all parameters for an item
 
@@ -100,14 +100,14 @@ Delete all the parameters for a given item.                Some items can be tax
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createItemClassifications**
-> \Swagger\Client\Model\ItemClassificationOutputModel[] createItemClassifications($company_id, $item_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ItemClassificationOutputModel[] createItemClassifications($company_id, $item_id, $x_avalara_client, $body)
 
 Add classifications to an item.
 
@@ -162,14 +162,14 @@ Add classifications to an item.                A classification is the code for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ $apiInstance = new Swagger\Client\Api\ItemsApi(
 $company_id = 56; // int | The company id.
 $item_id = 789; // int | The item id.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\ItemClassificationInputModel()); // \Swagger\Client\Model\ItemClassificationInputModel[] | The item classifications you wish to create.
+$body = array(new \Together\Taxes\Model\ItemClassificationInputModel()); // \Together\Taxes\Model\ItemClassificationInputModel[] | The item classifications you wish to create.
 
 try {
     $result = $apiInstance->createItemClassifications($company_id, $item_id, $x_avalara_client, $body);
@@ -196,11 +196,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The company id. |
  **item_id** | **int**| The item id. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ItemClassificationInputModel[]**](../Model/ItemClassificationInputModel.md)| The item classifications you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\ItemClassificationInputModel[]**](../Model/ItemClassificationInputModel.md)| The item classifications you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemClassificationOutputModel[]**](../Model/ItemClassificationOutputModel.md)
+[**\Together\Taxes\Model\ItemClassificationOutputModel[]**](../Model/ItemClassificationOutputModel.md)
 
 ### Authorization
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createItemParameters**
-> \Swagger\Client\Model\ItemParameterModel[] createItemParameters($company_id, $item_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ItemParameterModel[] createItemParameters($company_id, $item_id, $x_avalara_client, $body)
 
 Add parameters to an item.
 
@@ -226,14 +226,14 @@ Add parameters to an item.                Some items can be taxed differently de
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -242,7 +242,7 @@ $apiInstance = new Swagger\Client\Api\ItemsApi(
 $company_id = 56; // int | The ID of the company that owns this item parameter.
 $item_id = 789; // int | The item id.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\ItemParameterModel()); // \Swagger\Client\Model\ItemParameterModel[] | The item parameters you wish to create.
+$body = array(new \Together\Taxes\Model\ItemParameterModel()); // \Together\Taxes\Model\ItemParameterModel[] | The item parameters you wish to create.
 
 try {
     $result = $apiInstance->createItemParameters($company_id, $item_id, $x_avalara_client, $body);
@@ -260,11 +260,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that owns this item parameter. |
  **item_id** | **int**| The item id. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ItemParameterModel[]**](../Model/ItemParameterModel.md)| The item parameters you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\ItemParameterModel[]**](../Model/ItemParameterModel.md)| The item parameters you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemParameterModel[]**](../Model/ItemParameterModel.md)
+[**\Together\Taxes\Model\ItemParameterModel[]**](../Model/ItemParameterModel.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createItems**
-> \Swagger\Client\Model\ItemModel[] createItems($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ItemModel[] createItems($company_id, $x_avalara_client, $body)
 
 Create a new item
 
@@ -290,14 +290,14 @@ Creates one or more new item objects attached to this company.                It
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -305,7 +305,7 @@ $apiInstance = new Swagger\Client\Api\ItemsApi(
 );
 $company_id = 56; // int | The ID of the company that owns this item.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\ItemModel()); // \Swagger\Client\Model\ItemModel[] | The item you wish to create.
+$body = array(new \Together\Taxes\Model\ItemModel()); // \Together\Taxes\Model\ItemModel[] | The item you wish to create.
 
 try {
     $result = $apiInstance->createItems($company_id, $x_avalara_client, $body);
@@ -322,11 +322,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this item. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ItemModel[]**](../Model/ItemModel.md)| The item you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\ItemModel[]**](../Model/ItemModel.md)| The item you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemModel[]**](../Model/ItemModel.md)
+[**\Together\Taxes\Model\ItemModel[]**](../Model/ItemModel.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteItem**
-> \Swagger\Client\Model\ErrorDetail[] deleteItem($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteItem($company_id, $id, $x_avalara_client)
 
 Delete a single item
 
@@ -352,14 +352,14 @@ Deletes the item object at this URL.                Items are a way of separatin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteItemClassification**
-> \Swagger\Client\Model\ErrorDetail[] deleteItemClassification($company_id, $item_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteItemClassification($company_id, $item_id, $id, $x_avalara_client)
 
 Delete a single item classification.
 
@@ -414,14 +414,14 @@ Delete a single item classification.                A classification is the code
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteItemParameter**
-> \Swagger\Client\Model\ErrorDetail[] deleteItemParameter($company_id, $item_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteItemParameter($company_id, $item_id, $id, $x_avalara_client)
 
 Delete a single item parameter
 
@@ -478,14 +478,14 @@ Delete a single item parameter.                Some items can be taxed different
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getItem**
-> \Swagger\Client\Model\ItemModel getItem($company_id, $id, $include, $x_avalara_client)
+> \Together\Taxes\Model\ItemModel getItem($company_id, $id, $include, $x_avalara_client)
 
 Retrieve a single item
 
@@ -542,14 +542,14 @@ Get the `Item` object identified by this URL.                Items are a way of 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -580,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemModel**](../Model/ItemModel.md)
+[**\Together\Taxes\Model\ItemModel**](../Model/ItemModel.md)
 
 ### Authorization
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getItemClassification**
-> \Swagger\Client\Model\ItemClassificationOutputModel getItemClassification($company_id, $item_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ItemClassificationOutputModel getItemClassification($company_id, $item_id, $id, $x_avalara_client)
 
 Retrieve a single item classification.
 
@@ -606,14 +606,14 @@ Retrieve a single item classification.                A classification is the co
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -644,7 +644,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemClassificationOutputModel**](../Model/ItemClassificationOutputModel.md)
+[**\Together\Taxes\Model\ItemClassificationOutputModel**](../Model/ItemClassificationOutputModel.md)
 
 ### Authorization
 
@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getItemParameter**
-> \Swagger\Client\Model\ItemParameterModel getItemParameter($company_id, $item_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ItemParameterModel getItemParameter($company_id, $item_id, $id, $x_avalara_client)
 
 Retrieve a single item parameter
 
@@ -670,14 +670,14 @@ Retrieve a single item parameter.                Some items can be taxed differe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -708,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemParameterModel**](../Model/ItemParameterModel.md)
+[**\Together\Taxes\Model\ItemParameterModel**](../Model/ItemParameterModel.md)
 
 ### Authorization
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listItemClassifications**
-> \Swagger\Client\Model\FetchResultItemClassificationOutputModel listItemClassifications($company_id, $item_id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultItemClassificationOutputModel listItemClassifications($company_id, $item_id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve classifications for an item.
 
@@ -734,14 +734,14 @@ List classifications for an item.                A classification is the code fo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -778,7 +778,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultItemClassificationOutputModel**](../Model/FetchResultItemClassificationOutputModel.md)
+[**\Together\Taxes\Model\FetchResultItemClassificationOutputModel**](../Model/FetchResultItemClassificationOutputModel.md)
 
 ### Authorization
 
@@ -792,7 +792,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listItemParameters**
-> \Swagger\Client\Model\FetchResultItemParameterModel listItemParameters($company_id, $item_id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultItemParameterModel listItemParameters($company_id, $item_id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve parameters for an item
 
@@ -804,14 +804,14 @@ List parameters for an item.                Some items can be taxed differently 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -848,7 +848,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultItemParameterModel**](../Model/FetchResultItemParameterModel.md)
+[**\Together\Taxes\Model\FetchResultItemParameterModel**](../Model/FetchResultItemParameterModel.md)
 
 ### Authorization
 
@@ -862,7 +862,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listItemsByCompany**
-> \Swagger\Client\Model\FetchResultItemModel listItemsByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultItemModel listItemsByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve items for this company
 
@@ -874,14 +874,14 @@ List all items defined for the current company.                Items are a way o
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -918,7 +918,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultItemModel**](../Model/FetchResultItemModel.md)
+[**\Together\Taxes\Model\FetchResultItemModel**](../Model/FetchResultItemModel.md)
 
 ### Authorization
 
@@ -932,7 +932,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryItems**
-> \Swagger\Client\Model\FetchResultItemModel queryItems($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultItemModel queryItems($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all items
 
@@ -944,14 +944,14 @@ Get multiple item objects across all companies.                Items are a way o
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -986,7 +986,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultItemModel**](../Model/FetchResultItemModel.md)
+[**\Together\Taxes\Model\FetchResultItemModel**](../Model/FetchResultItemModel.md)
 
 ### Authorization
 
@@ -1000,7 +1000,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **syncItems**
-> \Swagger\Client\Model\SyncItemsResponseModel syncItems($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\SyncItemsResponseModel syncItems($company_id, $x_avalara_client, $body)
 
 Sync items from a product catalog
 
@@ -1012,14 +1012,14 @@ Syncs a list of items with AvaTax without waiting for them to be created. It is 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1027,7 +1027,7 @@ $apiInstance = new Swagger\Client\Api\ItemsApi(
 );
 $company_id = 56; // int | The ID of the company that owns this item.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\SyncItemsRequestModel(); // \Swagger\Client\Model\SyncItemsRequestModel | The request object.
+$body = new \Together\Taxes\Model\SyncItemsRequestModel(); // \Together\Taxes\Model\SyncItemsRequestModel | The request object.
 
 try {
     $result = $apiInstance->syncItems($company_id, $x_avalara_client, $body);
@@ -1044,11 +1044,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this item. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\SyncItemsRequestModel**](../Model/SyncItemsRequestModel.md)| The request object. | [optional]
+ **body** | [**\Together\Taxes\Model\SyncItemsRequestModel**](../Model/SyncItemsRequestModel.md)| The request object. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SyncItemsResponseModel**](../Model/SyncItemsResponseModel.md)
+[**\Together\Taxes\Model\SyncItemsResponseModel**](../Model/SyncItemsResponseModel.md)
 
 ### Authorization
 
@@ -1062,7 +1062,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateItem**
-> \Swagger\Client\Model\ItemModel updateItem($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ItemModel updateItem($company_id, $id, $x_avalara_client, $body)
 
 Update a single item
 
@@ -1074,14 +1074,14 @@ Replace the existing `Item` object at this URL with an updated object.          
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1090,7 +1090,7 @@ $apiInstance = new Swagger\Client\Api\ItemsApi(
 $company_id = 56; // int | The ID of the company that this item belongs to.
 $id = 789; // int | The ID of the item you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\ItemModel(); // \Swagger\Client\Model\ItemModel | The item object you wish to update.
+$body = new \Together\Taxes\Model\ItemModel(); // \Together\Taxes\Model\ItemModel | The item object you wish to update.
 
 try {
     $result = $apiInstance->updateItem($company_id, $id, $x_avalara_client, $body);
@@ -1108,11 +1108,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that this item belongs to. |
  **id** | **int**| The ID of the item you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ItemModel**](../Model/ItemModel.md)| The item object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\ItemModel**](../Model/ItemModel.md)| The item object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemModel**](../Model/ItemModel.md)
+[**\Together\Taxes\Model\ItemModel**](../Model/ItemModel.md)
 
 ### Authorization
 
@@ -1126,7 +1126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateItemClassification**
-> \Swagger\Client\Model\ItemClassificationOutputModel updateItemClassification($company_id, $item_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ItemClassificationOutputModel updateItemClassification($company_id, $item_id, $id, $x_avalara_client, $body)
 
 Update an item classification.
 
@@ -1138,14 +1138,14 @@ Update an item classification.                A classification is the code for a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1155,7 +1155,7 @@ $company_id = 56; // int | The company id.
 $item_id = 789; // int | The item id.
 $id = 789; // int | The item classification id.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\ItemClassificationInputModel(); // \Swagger\Client\Model\ItemClassificationInputModel | The item object you wish to update.
+$body = new \Together\Taxes\Model\ItemClassificationInputModel(); // \Together\Taxes\Model\ItemClassificationInputModel | The item object you wish to update.
 
 try {
     $result = $apiInstance->updateItemClassification($company_id, $item_id, $id, $x_avalara_client, $body);
@@ -1174,11 +1174,11 @@ Name | Type | Description  | Notes
  **item_id** | **int**| The item id. |
  **id** | **int**| The item classification id. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ItemClassificationInputModel**](../Model/ItemClassificationInputModel.md)| The item object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\ItemClassificationInputModel**](../Model/ItemClassificationInputModel.md)| The item object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemClassificationOutputModel**](../Model/ItemClassificationOutputModel.md)
+[**\Together\Taxes\Model\ItemClassificationOutputModel**](../Model/ItemClassificationOutputModel.md)
 
 ### Authorization
 
@@ -1192,7 +1192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateItemParameter**
-> \Swagger\Client\Model\ItemParameterModel updateItemParameter($company_id, $item_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ItemParameterModel updateItemParameter($company_id, $item_id, $id, $x_avalara_client, $body)
 
 Update an item parameter
 
@@ -1204,14 +1204,14 @@ Update an item parameter.                Some items can be taxed differently dep
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ItemsApi(
+$apiInstance = new Together\Taxes\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1221,7 +1221,7 @@ $company_id = 56; // int | The company id.
 $item_id = 789; // int | The item id
 $id = 789; // int | The item parameter id
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\ItemParameterModel(); // \Swagger\Client\Model\ItemParameterModel | The item object you wish to update.
+$body = new \Together\Taxes\Model\ItemParameterModel(); // \Together\Taxes\Model\ItemParameterModel | The item object you wish to update.
 
 try {
     $result = $apiInstance->updateItemParameter($company_id, $item_id, $id, $x_avalara_client, $body);
@@ -1240,11 +1240,11 @@ Name | Type | Description  | Notes
  **item_id** | **int**| The item id |
  **id** | **int**| The item parameter id |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ItemParameterModel**](../Model/ItemParameterModel.md)| The item object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\ItemParameterModel**](../Model/ItemParameterModel.md)| The item object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ItemParameterModel**](../Model/ItemParameterModel.md)
+[**\Together\Taxes\Model\ItemParameterModel**](../Model/ItemParameterModel.md)
 
 ### Authorization
 

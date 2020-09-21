@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * CertExpressInvitesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,11 +95,11 @@ class CertExpressInvitesApi
      * @param  int $company_id The unique ID number of the company that will record certificates (required)
      * @param  string $customer_code The number of the customer where the request is sent to (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
+     * @param  \Together\Taxes\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CertExpressInvitationStatusModel[]
+     * @return \Together\Taxes\Model\CertExpressInvitationStatusModel[]
      */
     public function createCertExpressInvitation($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -115,15 +115,15 @@ class CertExpressInvitesApi
      * @param  int $company_id The unique ID number of the company that will record certificates (required)
      * @param  string $customer_code The number of the customer where the request is sent to (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
+     * @param  \Together\Taxes\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CertExpressInvitationStatusModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CertExpressInvitationStatusModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createCertExpressInvitationWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CertExpressInvitationStatusModel[]';
+        $returnType = '\Together\Taxes\Model\CertExpressInvitationStatusModel[]';
         $request = $this->createCertExpressInvitationRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         try {
@@ -175,7 +175,7 @@ class CertExpressInvitesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CertExpressInvitationStatusModel[]',
+                        '\Together\Taxes\Model\CertExpressInvitationStatusModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -193,7 +193,7 @@ class CertExpressInvitesApi
      * @param  int $company_id The unique ID number of the company that will record certificates (required)
      * @param  string $customer_code The number of the customer where the request is sent to (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
+     * @param  \Together\Taxes\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -216,14 +216,14 @@ class CertExpressInvitesApi
      * @param  int $company_id The unique ID number of the company that will record certificates (required)
      * @param  string $customer_code The number of the customer where the request is sent to (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
+     * @param  \Together\Taxes\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCertExpressInvitationAsyncWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CertExpressInvitationStatusModel[]';
+        $returnType = '\Together\Taxes\Model\CertExpressInvitationStatusModel[]';
         $request = $this->createCertExpressInvitationRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         return $this->client
@@ -269,7 +269,7 @@ class CertExpressInvitesApi
      * @param  int $company_id The unique ID number of the company that will record certificates (required)
      * @param  string $customer_code The number of the customer where the request is sent to (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
+     * @param  \Together\Taxes\Model\CreateCertExpressInvitationModel[] $body the requests to send out to customers (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -411,9 +411,9 @@ class CertExpressInvitesApi
      * @param  string $include OPTIONAL: A comma separated list of special fetch options.  No options are defined at this time. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CertExpressInvitationModel
+     * @return \Together\Taxes\Model\CertExpressInvitationModel
      */
     public function getCertExpressInvitation($company_id, $customer_code, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -432,13 +432,13 @@ class CertExpressInvitesApi
      * @param  string $include OPTIONAL: A comma separated list of special fetch options.  No options are defined at this time. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CertExpressInvitationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CertExpressInvitationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCertExpressInvitationWithHttpInfo($company_id, $customer_code, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CertExpressInvitationModel';
+        $returnType = '\Together\Taxes\Model\CertExpressInvitationModel';
         $request = $this->getCertExpressInvitationRequest($company_id, $customer_code, $id, $include, $x_avalara_client);
 
         try {
@@ -490,7 +490,7 @@ class CertExpressInvitesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CertExpressInvitationModel',
+                        '\Together\Taxes\Model\CertExpressInvitationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -540,7 +540,7 @@ class CertExpressInvitesApi
      */
     public function getCertExpressInvitationAsyncWithHttpInfo($company_id, $customer_code, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CertExpressInvitationModel';
+        $returnType = '\Together\Taxes\Model\CertExpressInvitationModel';
         $request = $this->getCertExpressInvitationRequest($company_id, $customer_code, $id, $include, $x_avalara_client);
 
         return $this->client
@@ -746,9 +746,9 @@ class CertExpressInvitesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertExpressInvitationModel
+     * @return \Together\Taxes\Model\FetchResultCertExpressInvitationModel
      */
     public function listCertExpressInvitations($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -769,13 +769,13 @@ class CertExpressInvitesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertExpressInvitationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertExpressInvitationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCertExpressInvitationsWithHttpInfo($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertExpressInvitationModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertExpressInvitationModel';
         $request = $this->listCertExpressInvitationsRequest($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -827,7 +827,7 @@ class CertExpressInvitesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertExpressInvitationModel',
+                        '\Together\Taxes\Model\FetchResultCertExpressInvitationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class CertExpressInvitesApi
      */
     public function listCertExpressInvitationsAsyncWithHttpInfo($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertExpressInvitationModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertExpressInvitationModel';
         $request = $this->listCertExpressInvitationsRequest($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client

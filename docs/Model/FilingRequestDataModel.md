@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **region** | **string** | The two or three character ISO 3166 code of the region / state / province that issued the tax form for this filing calendar. | [optional] 
 **tax_authority_id** | **int** | The tax authority id of the return | [optional] 
 **tax_authority_name** | **string** | The tax authority name on the return | [optional] 
-**answers** | [**\Swagger\Client\Model\FilingAnswerModel[]**](FilingAnswerModel.md) | Filing question answers | [optional] 
+**answers** | [**\Together\Taxes\Model\FilingAnswerModel[]**](FilingAnswerModel.md) | Filing question answers | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

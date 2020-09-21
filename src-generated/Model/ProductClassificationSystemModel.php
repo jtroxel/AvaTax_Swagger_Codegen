@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * ProductClassificationSystemModel Class Doc Comment
  *
  * @category Class
  * @description Represents a product classification system.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class ProductClassificationSystemModel implements ModelInterface, ArrayAccess
         'system_code' => 'string',
         'description' => 'string',
         'customs_value' => 'string',
-        'countries' => '\Swagger\Client\Model\ProductSystemCountryModel[]'
+        'countries' => '\Together\Taxes\Model\ProductSystemCountryModel[]'
     ];
 
     /**
@@ -328,7 +328,7 @@ class ProductClassificationSystemModel implements ModelInterface, ArrayAccess
     /**
      * Gets countries
      *
-     * @return \Swagger\Client\Model\ProductSystemCountryModel[]
+     * @return \Together\Taxes\Model\ProductSystemCountryModel[]
      */
     public function getCountries()
     {
@@ -338,7 +338,7 @@ class ProductClassificationSystemModel implements ModelInterface, ArrayAccess
     /**
      * Sets countries
      *
-     * @param \Swagger\Client\Model\ProductSystemCountryModel[] $countries List of all countries that belong to the system including
+     * @param \Together\Taxes\Model\ProductSystemCountryModel[] $countries List of all countries that belong to the system including
      *
      * @return $this
      */

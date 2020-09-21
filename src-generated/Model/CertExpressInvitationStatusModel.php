@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CertExpressInvitationStatusModel Class Doc Comment
  *
  * @category Class
  * @description Represent what is the current status of certificate request
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class CertExpressInvitationStatusModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'status' => 'string',
-        'invitation' => '\Swagger\Client\Model\CertExpressInvitationModel'
+        'invitation' => '\Together\Taxes\Model\CertExpressInvitationModel'
     ];
 
     /**
@@ -270,7 +270,7 @@ class CertExpressInvitationStatusModel implements ModelInterface, ArrayAccess
     /**
      * Gets invitation
      *
-     * @return \Swagger\Client\Model\CertExpressInvitationModel
+     * @return \Together\Taxes\Model\CertExpressInvitationModel
      */
     public function getInvitation()
     {
@@ -280,7 +280,7 @@ class CertExpressInvitationStatusModel implements ModelInterface, ArrayAccess
     /**
      * Sets invitation
      *
-     * @param \Swagger\Client\Model\CertExpressInvitationModel $invitation The CertExpress invitation for the customer.  If you specified an email address in the invitation  request, this invitation will be sent via email.  Otherwise, you are expected to direct the customer  using a hyperlink directly in your application.
+     * @param \Together\Taxes\Model\CertExpressInvitationModel $invitation The CertExpress invitation for the customer.  If you specified an email address in the invitation  request, this invitation will be sent via email.  Otherwise, you are expected to direct the customer  using a hyperlink directly in your application.
      *
      * @return $this
      */

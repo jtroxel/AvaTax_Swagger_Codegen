@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AdjustMultiDocumentModel Class Doc Comment
  *
  * @category Class
  * @description Replace an existing MultiDocument transaction recorded in AvaTax with a new one.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class AdjustMultiDocumentModel implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'adjustment_reason' => 'string',
         'adjust_description' => 'string',
-        'new_transaction' => '\Swagger\Client\Model\CreateMultiDocumentModel'
+        'new_transaction' => '\Together\Taxes\Model\CreateMultiDocumentModel'
     ];
 
     /**
@@ -322,7 +322,7 @@ class AdjustMultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Gets new_transaction
      *
-     * @return \Swagger\Client\Model\CreateMultiDocumentModel
+     * @return \Together\Taxes\Model\CreateMultiDocumentModel
      */
     public function getNewTransaction()
     {
@@ -332,7 +332,7 @@ class AdjustMultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Sets new_transaction
      *
-     * @param \Swagger\Client\Model\CreateMultiDocumentModel $new_transaction Replace the current MultiDocument transaction with tax data calculated for this new MultiDocument transaction
+     * @param \Together\Taxes\Model\CreateMultiDocumentModel $new_transaction Replace the current MultiDocument transaction with tax data calculated for this new MultiDocument transaction
      *
      * @return $this
      */

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **total_exempt** | **double** |  | [optional] 
 **total_taxable** | **double** |  | [optional] 
 **total_tax** | **double** |  | [optional] 
-**lines** | [**\Swagger\Client\Model\WorksheetDocumentLine[]**](WorksheetDocumentLine.md) |  | [optional] 
-**messages** | [**\Swagger\Client\Model\Message[]**](Message.md) |  | [optional] 
+**lines** | [**\Together\Taxes\Model\WorksheetDocumentLine[]**](WorksheetDocumentLine.md) |  | [optional] 
+**messages** | [**\Together\Taxes\Model\Message[]**](Message.md) |  | [optional] 
 **result_code** | **string** |  | [optional] 
 **transaction_id** | **string** |  | [optional] 
 

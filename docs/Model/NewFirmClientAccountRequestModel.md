@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **phone_number** | **string** | Phone number of the primary contact person for this account | [optional] 
 **email** | **string** | Email of the primary contact person for this account | 
 **company_code** | **string** | Company code to be assigned to the company created for this account.                If no company code is provided, this will be defaulted to \&quot;DEFAULT\&quot; company code. | [optional] 
-**company_address** | [**\Swagger\Client\Model\CompanyAddress**](CompanyAddress.md) | Address information of the account being created. | 
+**company_address** | [**\Together\Taxes\Model\CompanyAddress**](CompanyAddress.md) | Address information of the account being created. | 
 **tax_payer_id_number** | **string** | United States Taxpayer ID number, usually your Employer Identification Number if you are a business or your  Social Security Number if you are an individual.  This value is required if the address provided is inside the US. Otherwise it is optional. | [optional] 
 **properties** | **string[]** | Properties of the primary contact person for this account | [optional] 
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **country** | **string** | Name or ISO 3166 code identifying the country of this jurisdiction.                This field supports many different country identifiers:   * Two character ISO 3166 codes   * Three character ISO 3166 codes   * Fully spelled out names of the country in ISO supported languages   * Common alternative spellings for many countries                For a full list of all supported codes and names, please see the Definitions API &#x60;ListCountries&#x60;. | [optional] 
 **tax_region_name** | **string** | The name of the tax region. | [optional] 
 **tax_authority_id** | **int** | The id of the tax authority. | [optional] 
-**rates** | [**\Swagger\Client\Model\ComplianceAggregatedTaxRateModel[]**](ComplianceAggregatedTaxRateModel.md) | Optional: A list of rates for this jurisdiction. To fetch this list, add the query string &#x60;?$include&#x3D;TaxRates&#x60; to your URL. | [optional] 
+**rates** | [**\Together\Taxes\Model\ComplianceAggregatedTaxRateModel[]**](ComplianceAggregatedTaxRateModel.md) | Optional: A list of rates for this jurisdiction. To fetch this list, add the query string &#x60;?$include&#x3D;TaxRates&#x60; to your URL. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

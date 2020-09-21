@@ -1,4 +1,4 @@
-# Swagger\Client\JurisdictionOverridesApi
+# Together\Taxes\JurisdictionOverridesApi
 
 All URIs are relative to *https://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createJurisdictionOverrides**
-> \Swagger\Client\Model\JurisdictionOverrideModel[] createJurisdictionOverrides($account_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\JurisdictionOverrideModel[] createJurisdictionOverrides($account_id, $x_avalara_client, $body)
 
 Create one or more overrides
 
@@ -25,14 +25,14 @@ Creates one or more jurisdiction override objects for this account.             
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\JurisdictionOverridesApi(
+$apiInstance = new Together\Taxes\Api\JurisdictionOverridesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Swagger\Client\Api\JurisdictionOverridesApi(
 );
 $account_id = 56; // int | The ID of the account that owns this override
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\JurisdictionOverrideModel()); // \Swagger\Client\Model\JurisdictionOverrideModel[] | The jurisdiction override objects to create
+$body = array(new \Together\Taxes\Model\JurisdictionOverrideModel()); // \Together\Taxes\Model\JurisdictionOverrideModel[] | The jurisdiction override objects to create
 
 try {
     $result = $apiInstance->createJurisdictionOverrides($account_id, $x_avalara_client, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **int**| The ID of the account that owns this override |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\JurisdictionOverrideModel[]**](../Model/JurisdictionOverrideModel.md)| The jurisdiction override objects to create | [optional]
+ **body** | [**\Together\Taxes\Model\JurisdictionOverrideModel[]**](../Model/JurisdictionOverrideModel.md)| The jurisdiction override objects to create | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\JurisdictionOverrideModel[]**](../Model/JurisdictionOverrideModel.md)
+[**\Together\Taxes\Model\JurisdictionOverrideModel[]**](../Model/JurisdictionOverrideModel.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteJurisdictionOverride**
-> \Swagger\Client\Model\ErrorDetail[] deleteJurisdictionOverride($account_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteJurisdictionOverride($account_id, $id, $x_avalara_client)
 
 Delete a single override
 
@@ -87,14 +87,14 @@ Marks the item object at this URL as deleted.  ### Security Policies  * This API
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\JurisdictionOverridesApi(
+$apiInstance = new Together\Taxes\Api\JurisdictionOverridesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getJurisdictionOverride**
-> \Swagger\Client\Model\JurisdictionOverrideModel getJurisdictionOverride($account_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\JurisdictionOverrideModel getJurisdictionOverride($account_id, $id, $x_avalara_client)
 
 Retrieve a single override
 
@@ -149,14 +149,14 @@ Get the item object identified by this URL.                A Jurisdiction Overri
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\JurisdictionOverridesApi(
+$apiInstance = new Together\Taxes\Api\JurisdictionOverridesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\JurisdictionOverrideModel**](../Model/JurisdictionOverrideModel.md)
+[**\Together\Taxes\Model\JurisdictionOverrideModel**](../Model/JurisdictionOverrideModel.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listJurisdictionOverridesByAccount**
-> \Swagger\Client\Model\FetchResultJurisdictionOverrideModel listJurisdictionOverridesByAccount($account_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultJurisdictionOverrideModel listJurisdictionOverridesByAccount($account_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve overrides for this account
 
@@ -211,14 +211,14 @@ List all jurisdiction override objects defined for this account.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\JurisdictionOverridesApi(
+$apiInstance = new Together\Taxes\Api\JurisdictionOverridesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultJurisdictionOverrideModel**](../Model/FetchResultJurisdictionOverrideModel.md)
+[**\Together\Taxes\Model\FetchResultJurisdictionOverrideModel**](../Model/FetchResultJurisdictionOverrideModel.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryJurisdictionOverrides**
-> \Swagger\Client\Model\FetchResultJurisdictionOverrideModel queryJurisdictionOverrides($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultJurisdictionOverrideModel queryJurisdictionOverrides($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all overrides
 
@@ -281,14 +281,14 @@ Get multiple jurisdiction override objects across all companies.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\JurisdictionOverridesApi(
+$apiInstance = new Together\Taxes\Api\JurisdictionOverridesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultJurisdictionOverrideModel**](../Model/FetchResultJurisdictionOverrideModel.md)
+[**\Together\Taxes\Model\FetchResultJurisdictionOverrideModel**](../Model/FetchResultJurisdictionOverrideModel.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateJurisdictionOverride**
-> \Swagger\Client\Model\JurisdictionOverrideModel updateJurisdictionOverride($account_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\JurisdictionOverrideModel updateJurisdictionOverride($account_id, $id, $x_avalara_client, $body)
 
 Update a single jurisdictionoverride
 
@@ -349,14 +349,14 @@ Replace the existing jurisdictionoverride object at this URL with an updated obj
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\JurisdictionOverridesApi(
+$apiInstance = new Together\Taxes\Api\JurisdictionOverridesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -365,7 +365,7 @@ $apiInstance = new Swagger\Client\Api\JurisdictionOverridesApi(
 $account_id = 56; // int | The ID of the account that this jurisdictionoverride belongs to.
 $id = 56; // int | The ID of the jurisdictionoverride you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\JurisdictionOverrideModel(); // \Swagger\Client\Model\JurisdictionOverrideModel | The jurisdictionoverride object you wish to update.
+$body = new \Together\Taxes\Model\JurisdictionOverrideModel(); // \Together\Taxes\Model\JurisdictionOverrideModel | The jurisdictionoverride object you wish to update.
 
 try {
     $result = $apiInstance->updateJurisdictionOverride($account_id, $id, $x_avalara_client, $body);
@@ -383,11 +383,11 @@ Name | Type | Description  | Notes
  **account_id** | **int**| The ID of the account that this jurisdictionoverride belongs to. |
  **id** | **int**| The ID of the jurisdictionoverride you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\JurisdictionOverrideModel**](../Model/JurisdictionOverrideModel.md)| The jurisdictionoverride object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\JurisdictionOverrideModel**](../Model/JurisdictionOverrideModel.md)| The jurisdictionoverride object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\JurisdictionOverrideModel**](../Model/JurisdictionOverrideModel.md)
+[**\Together\Taxes\Model\JurisdictionOverrideModel**](../Model/JurisdictionOverrideModel.md)
 
 ### Authorization
 

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **created_user_id** | **int** | The User ID of the user who created this record. | [optional] 
 **modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 
 **modified_user_id** | **int** | The user ID of the user who last modified this record. | [optional] 
-**jurisdictions** | [**\Swagger\Client\Model\JurisdictionModel[]**](JurisdictionModel.md) | A list of the tax jurisdictions that will be assigned to this overridden address. | 
+**jurisdictions** | [**\Together\Taxes\Model\JurisdictionModel[]**](JurisdictionModel.md) | A list of the tax jurisdictions that will be assigned to this overridden address. | 
 **tax_region_id** | **int** | The TaxRegionId of the new location affected by this jurisdiction override. | 
 **boundary_level** | **string** | The boundary level of this override | [optional] 
 **is_default** | **bool** | True if this is a default boundary | [optional] 

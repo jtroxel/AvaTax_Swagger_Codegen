@@ -50,14 +50,14 @@ Name | Type | Description | Notes
 **modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 
 **modified_user_id** | **int** | The user ID of the user who last modified this record. | [optional] 
 **tax_date** | [**\DateTime**](\DateTime.md) | Tax date for this transaction | [optional] 
-**lines** | [**\Swagger\Client\Model\TransactionLineModel[]**](TransactionLineModel.md) | A list of line items in this transaction.  To fetch this list, add the query string &#x60;?$include&#x3D;Lines&#x60; or &#x60;?$include&#x3D;Details&#x60; to your URL. | [optional] 
-**addresses** | [**\Swagger\Client\Model\TransactionAddressModel[]**](TransactionAddressModel.md) | A list of line items in this transaction.  To fetch this list, add the query string &#x60;?$include&#x3D;Addresses&#x60; to your URL.                For more information about transaction addresses, please see [Using Address Types](https://developer.avalara.com/avatax/dev-guide/customizing-transaction/address-types/)  in the AvaTax Developer Guide. | [optional] 
-**location_types** | [**\Swagger\Client\Model\TransactionLocationTypeModel[]**](TransactionLocationTypeModel.md) | A list of location types in this transaction.  To fetch this list, add the query string &#x60;?$include&#x3D;Addresses&#x60; to your URL. | [optional] 
-**summary** | [**\Swagger\Client\Model\TransactionSummary[]**](TransactionSummary.md) | Contains a summary of tax on this transaction. | [optional] 
-**tax_details_by_tax_type** | [**\Swagger\Client\Model\TaxDetailsByTaxType[]**](TaxDetailsByTaxType.md) | Contains the tax details per tax type | [optional] 
-**parameters** | [**\Swagger\Client\Model\TransactionParameterModel[]**](TransactionParameterModel.md) | Contains a list of extra parameters that were set when the transaction was created. | [optional] 
-**messages** | [**\Swagger\Client\Model\AvaTaxMessage[]**](AvaTaxMessage.md) | List of informational and warning messages regarding this API call.  These messages are only relevant to the current API call. | [optional] 
-**invoice_messages** | [**\Swagger\Client\Model\InvoiceMessageModel[]**](InvoiceMessageModel.md) | Invoice messages associated with this document. Currently, this stores legally-required VAT messages. | [optional] 
+**lines** | [**\Together\Taxes\Model\TransactionLineModel[]**](TransactionLineModel.md) | A list of line items in this transaction.  To fetch this list, add the query string &#x60;?$include&#x3D;Lines&#x60; or &#x60;?$include&#x3D;Details&#x60; to your URL. | [optional] 
+**addresses** | [**\Together\Taxes\Model\TransactionAddressModel[]**](TransactionAddressModel.md) | A list of line items in this transaction.  To fetch this list, add the query string &#x60;?$include&#x3D;Addresses&#x60; to your URL.                For more information about transaction addresses, please see [Using Address Types](https://developer.avalara.com/avatax/dev-guide/customizing-transaction/address-types/)  in the AvaTax Developer Guide. | [optional] 
+**location_types** | [**\Together\Taxes\Model\TransactionLocationTypeModel[]**](TransactionLocationTypeModel.md) | A list of location types in this transaction.  To fetch this list, add the query string &#x60;?$include&#x3D;Addresses&#x60; to your URL. | [optional] 
+**summary** | [**\Together\Taxes\Model\TransactionSummary[]**](TransactionSummary.md) | Contains a summary of tax on this transaction. | [optional] 
+**tax_details_by_tax_type** | [**\Together\Taxes\Model\TaxDetailsByTaxType[]**](TaxDetailsByTaxType.md) | Contains the tax details per tax type | [optional] 
+**parameters** | [**\Together\Taxes\Model\TransactionParameterModel[]**](TransactionParameterModel.md) | Contains a list of extra parameters that were set when the transaction was created. | [optional] 
+**messages** | [**\Together\Taxes\Model\AvaTaxMessage[]**](AvaTaxMessage.md) | List of informational and warning messages regarding this API call.  These messages are only relevant to the current API call. | [optional] 
+**invoice_messages** | [**\Together\Taxes\Model\InvoiceMessageModel[]**](InvoiceMessageModel.md) | Invoice messages associated with this document. Currently, this stores legally-required VAT messages. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

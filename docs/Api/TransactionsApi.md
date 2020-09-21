@@ -1,4 +1,4 @@
-# Swagger\Client\TransactionsApi
+# Together\Taxes\TransactionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 
 # **addLines**
-> \Swagger\Client\Model\TransactionModel addLines($include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel addLines($include, $x_avalara_client, $body)
 
 Add lines to an existing unlocked transaction
 
@@ -40,14 +40,14 @@ Add lines to an existing unlocked transaction.                 The `AddLines` AP
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ $apiInstance = new Swagger\Client\Api\TransactionsApi(
 );
 $include = "include_example"; // string | Specifies objects to include in the response after transaction is created
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AddTransactionLineModel(); // \Swagger\Client\Model\AddTransactionLineModel | information about the transaction and lines to be added
+$body = new \Together\Taxes\Model\AddTransactionLineModel(); // \Together\Taxes\Model\AddTransactionLineModel | information about the transaction and lines to be added
 
 try {
     $result = $apiInstance->addLines($include, $x_avalara_client, $body);
@@ -72,11 +72,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include** | **string**| Specifies objects to include in the response after transaction is created | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AddTransactionLineModel**](../Model/AddTransactionLineModel.md)| information about the transaction and lines to be added | [optional]
+ **body** | [**\Together\Taxes\Model\AddTransactionLineModel**](../Model/AddTransactionLineModel.md)| information about the transaction and lines to be added | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **adjustTransaction**
-> \Swagger\Client\Model\TransactionModel adjustTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel adjustTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
 
 Correct a previously created transaction
 
@@ -102,14 +102,14 @@ Replaces the current transaction uniquely identified by this URL with a new tran
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -120,7 +120,7 @@ $transaction_code = "transaction_code_example"; // string | The transaction code
 $document_type = "document_type_example"; // string | (Optional): The document type of the transaction to adjust.
 $include = "include_example"; // string | Specifies objects to include in this fetch call
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AdjustTransactionModel(); // \Swagger\Client\Model\AdjustTransactionModel | The adjustment you wish to make
+$body = new \Together\Taxes\Model\AdjustTransactionModel(); // \Together\Taxes\Model\AdjustTransactionModel | The adjustment you wish to make
 
 try {
     $result = $apiInstance->adjustTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
@@ -140,11 +140,11 @@ Name | Type | Description  | Notes
  **document_type** | **string**| (Optional): The document type of the transaction to adjust. | [optional]
  **include** | **string**| Specifies objects to include in this fetch call | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AdjustTransactionModel**](../Model/AdjustTransactionModel.md)| The adjustment you wish to make | [optional]
+ **body** | [**\Together\Taxes\Model\AdjustTransactionModel**](../Model/AdjustTransactionModel.md)| The adjustment you wish to make | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **auditTransaction**
-> \Swagger\Client\Model\AuditTransactionModel auditTransaction($company_code, $transaction_code, $x_avalara_client)
+> \Together\Taxes\Model\AuditTransactionModel auditTransaction($company_code, $transaction_code, $x_avalara_client)
 
 Get audit information about a transaction
 
@@ -170,14 +170,14 @@ Retrieve audit information about a transaction stored in AvaTax.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AuditTransactionModel**](../Model/AuditTransactionModel.md)
+[**\Together\Taxes\Model\AuditTransactionModel**](../Model/AuditTransactionModel.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **auditTransactionWithType**
-> \Swagger\Client\Model\AuditTransactionModel auditTransactionWithType($company_code, $transaction_code, $document_type, $x_avalara_client)
+> \Together\Taxes\Model\AuditTransactionModel auditTransactionWithType($company_code, $transaction_code, $document_type, $x_avalara_client)
 
 Get audit information about a transaction
 
@@ -232,14 +232,14 @@ Retrieve audit information about a transaction stored in AvaTax.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AuditTransactionModel**](../Model/AuditTransactionModel.md)
+[**\Together\Taxes\Model\AuditTransactionModel**](../Model/AuditTransactionModel.md)
 
 ### Authorization
 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **bulkLockTransaction**
-> \Swagger\Client\Model\BulkLockTransactionResult bulkLockTransaction($x_avalara_client, $body)
+> \Together\Taxes\Model\BulkLockTransactionResult bulkLockTransaction($x_avalara_client, $body)
 
 Lock a set of documents
 
@@ -296,21 +296,21 @@ This API is available by invitation only.                Lock a set of transacti
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\BulkLockTransactionModel(); // \Swagger\Client\Model\BulkLockTransactionModel | bulk lock request
+$body = new \Together\Taxes\Model\BulkLockTransactionModel(); // \Together\Taxes\Model\BulkLockTransactionModel | bulk lock request
 
 try {
     $result = $apiInstance->bulkLockTransaction($x_avalara_client, $body);
@@ -326,11 +326,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\BulkLockTransactionModel**](../Model/BulkLockTransactionModel.md)| bulk lock request | [optional]
+ **body** | [**\Together\Taxes\Model\BulkLockTransactionModel**](../Model/BulkLockTransactionModel.md)| bulk lock request | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\BulkLockTransactionResult**](../Model/BulkLockTransactionResult.md)
+[**\Together\Taxes\Model\BulkLockTransactionResult**](../Model/BulkLockTransactionResult.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **changeTransactionCode**
-> \Swagger\Client\Model\TransactionModel changeTransactionCode($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel changeTransactionCode($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
 
 Change a transaction's code
 
@@ -356,14 +356,14 @@ Renames a transaction uniquely identified by this URL by changing its `code` val
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -374,7 +374,7 @@ $transaction_code = "transaction_code_example"; // string | The transaction code
 $document_type = "document_type_example"; // string | (Optional): The document type of the transaction to change document code. If not provided, the default is SalesInvoice.
 $include = "include_example"; // string | Specifies objects to include in this fetch call
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\ChangeTransactionCodeModel(); // \Swagger\Client\Model\ChangeTransactionCodeModel | The code change request you wish to execute
+$body = new \Together\Taxes\Model\ChangeTransactionCodeModel(); // \Together\Taxes\Model\ChangeTransactionCodeModel | The code change request you wish to execute
 
 try {
     $result = $apiInstance->changeTransactionCode($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
@@ -394,11 +394,11 @@ Name | Type | Description  | Notes
  **document_type** | **string**| (Optional): The document type of the transaction to change document code. If not provided, the default is SalesInvoice. | [optional]
  **include** | **string**| Specifies objects to include in this fetch call | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ChangeTransactionCodeModel**](../Model/ChangeTransactionCodeModel.md)| The code change request you wish to execute | [optional]
+ **body** | [**\Together\Taxes\Model\ChangeTransactionCodeModel**](../Model/ChangeTransactionCodeModel.md)| The code change request you wish to execute | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **commitTransaction**
-> \Swagger\Client\Model\TransactionModel commitTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel commitTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
 
 Commit a transaction for reporting
 
@@ -424,14 +424,14 @@ Marks a transaction by changing its status to `Committed`.                Transa
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -442,7 +442,7 @@ $transaction_code = "transaction_code_example"; // string | The transaction code
 $document_type = "document_type_example"; // string | (Optional): The document type of the transaction to commit. If not provided, the default is SalesInvoice.
 $include = "include_example"; // string | Specifies objects to include in this fetch call
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CommitTransactionModel(); // \Swagger\Client\Model\CommitTransactionModel | The commit request you wish to execute
+$body = new \Together\Taxes\Model\CommitTransactionModel(); // \Together\Taxes\Model\CommitTransactionModel | The commit request you wish to execute
 
 try {
     $result = $apiInstance->commitTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
@@ -462,11 +462,11 @@ Name | Type | Description  | Notes
  **document_type** | **string**| (Optional): The document type of the transaction to commit. If not provided, the default is SalesInvoice. | [optional]
  **include** | **string**| Specifies objects to include in this fetch call | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CommitTransactionModel**](../Model/CommitTransactionModel.md)| The commit request you wish to execute | [optional]
+ **body** | [**\Together\Taxes\Model\CommitTransactionModel**](../Model/CommitTransactionModel.md)| The commit request you wish to execute | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createOrAdjustTransaction**
-> \Swagger\Client\Model\TransactionModel createOrAdjustTransaction($include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel createOrAdjustTransaction($include, $x_avalara_client, $body)
 
 Create or adjust a transaction
 
@@ -492,14 +492,14 @@ Records a new transaction or adjust an existing transaction in AvaTax.          
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -507,7 +507,7 @@ $apiInstance = new Swagger\Client\Api\TransactionsApi(
 );
 $include = "include_example"; // string | Specifies objects to include in the response after transaction is created
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CreateOrAdjustTransactionModel(); // \Swagger\Client\Model\CreateOrAdjustTransactionModel | The transaction you wish to create or adjust
+$body = new \Together\Taxes\Model\CreateOrAdjustTransactionModel(); // \Together\Taxes\Model\CreateOrAdjustTransactionModel | The transaction you wish to create or adjust
 
 try {
     $result = $apiInstance->createOrAdjustTransaction($include, $x_avalara_client, $body);
@@ -524,11 +524,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include** | **string**| Specifies objects to include in the response after transaction is created | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CreateOrAdjustTransactionModel**](../Model/CreateOrAdjustTransactionModel.md)| The transaction you wish to create or adjust | [optional]
+ **body** | [**\Together\Taxes\Model\CreateOrAdjustTransactionModel**](../Model/CreateOrAdjustTransactionModel.md)| The transaction you wish to create or adjust | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createTransaction**
-> \Swagger\Client\Model\TransactionModel createTransaction($include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel createTransaction($include, $x_avalara_client, $body)
 
 Create a new transaction
 
@@ -554,14 +554,14 @@ Records a new transaction in AvaTax.                A transaction represents a u
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -569,7 +569,7 @@ $apiInstance = new Swagger\Client\Api\TransactionsApi(
 );
 $include = "include_example"; // string | Specifies objects to include in the response after transaction is created
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CreateTransactionModel(); // \Swagger\Client\Model\CreateTransactionModel | The transaction you wish to create
+$body = new \Together\Taxes\Model\CreateTransactionModel(); // \Together\Taxes\Model\CreateTransactionModel | The transaction you wish to create
 
 try {
     $result = $apiInstance->createTransaction($include, $x_avalara_client, $body);
@@ -586,11 +586,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include** | **string**| Specifies objects to include in the response after transaction is created | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CreateTransactionModel**](../Model/CreateTransactionModel.md)| The transaction you wish to create | [optional]
+ **body** | [**\Together\Taxes\Model\CreateTransactionModel**](../Model/CreateTransactionModel.md)| The transaction you wish to create | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -604,7 +604,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteLines**
-> \Swagger\Client\Model\TransactionModel deleteLines($include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel deleteLines($include, $x_avalara_client, $body)
 
 Remove lines from an existing unlocked transaction
 
@@ -616,14 +616,14 @@ Remove lines to an existing unlocked transaction.                 The `DeleteLin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -631,7 +631,7 @@ $apiInstance = new Swagger\Client\Api\TransactionsApi(
 );
 $include = "include_example"; // string | Specifies objects to include in the response after transaction is created
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\RemoveTransactionLineModel(); // \Swagger\Client\Model\RemoveTransactionLineModel | information about the transaction and lines to be removed
+$body = new \Together\Taxes\Model\RemoveTransactionLineModel(); // \Together\Taxes\Model\RemoveTransactionLineModel | information about the transaction and lines to be removed
 
 try {
     $result = $apiInstance->deleteLines($include, $x_avalara_client, $body);
@@ -648,11 +648,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include** | **string**| Specifies objects to include in the response after transaction is created | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\RemoveTransactionLineModel**](../Model/RemoveTransactionLineModel.md)| information about the transaction and lines to be removed | [optional]
+ **body** | [**\Together\Taxes\Model\RemoveTransactionLineModel**](../Model/RemoveTransactionLineModel.md)| information about the transaction and lines to be removed | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTransactionByCode**
-> \Swagger\Client\Model\TransactionModel getTransactionByCode($company_code, $transaction_code, $document_type, $include, $x_avalara_client)
+> \Together\Taxes\Model\TransactionModel getTransactionByCode($company_code, $transaction_code, $document_type, $include, $x_avalara_client)
 
 Retrieve a single transaction by code
 
@@ -678,14 +678,14 @@ Get the current transaction identified by this company code, transaction code, a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -718,7 +718,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -732,7 +732,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTransactionByCodeAndType**
-> \Swagger\Client\Model\TransactionModel getTransactionByCodeAndType($company_code, $transaction_code, $document_type, $include, $x_avalara_client)
+> \Together\Taxes\Model\TransactionModel getTransactionByCodeAndType($company_code, $transaction_code, $document_type, $include, $x_avalara_client)
 
 Retrieve a single transaction by code
 
@@ -744,14 +744,14 @@ DEPRECATED: Please use the `GetTransactionByCode` API instead.                NO
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -784,7 +784,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -798,7 +798,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTransactionById**
-> \Swagger\Client\Model\TransactionModel getTransactionById($id, $include, $x_avalara_client)
+> \Together\Taxes\Model\TransactionModel getTransactionById($id, $include, $x_avalara_client)
 
 Retrieve a single transaction by ID
 
@@ -810,14 +810,14 @@ Get the unique transaction identified by this URL.                This endpoint 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -846,7 +846,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -860,7 +860,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTransactionsByCompany**
-> \Swagger\Client\Model\FetchResultTransactionModel listTransactionsByCompany($company_code, $data_source_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTransactionModel listTransactionsByCompany($company_code, $data_source_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all transactions
 
@@ -872,14 +872,14 @@ List all transactions attached to this company.                This endpoint is 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -918,7 +918,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTransactionModel**](../Model/FetchResultTransactionModel.md)
+[**\Together\Taxes\Model\FetchResultTransactionModel**](../Model/FetchResultTransactionModel.md)
 
 ### Authorization
 
@@ -932,7 +932,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **lockTransaction**
-> \Swagger\Client\Model\TransactionModel lockTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel lockTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
 
 Lock a single transaction
 
@@ -944,14 +944,14 @@ Lock a transaction uniquely identified by this URL.                This API is m
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -962,7 +962,7 @@ $transaction_code = "transaction_code_example"; // string | The transaction code
 $document_type = "document_type_example"; // string | (Optional): The document type of the transaction to lock. If not provided, the default is SalesInvoice.
 $include = "include_example"; // string | Specifies objects to include in this fetch call
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\LockTransactionModel(); // \Swagger\Client\Model\LockTransactionModel | The lock request you wish to execute
+$body = new \Together\Taxes\Model\LockTransactionModel(); // \Together\Taxes\Model\LockTransactionModel | The lock request you wish to execute
 
 try {
     $result = $apiInstance->lockTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
@@ -982,11 +982,11 @@ Name | Type | Description  | Notes
  **document_type** | **string**| (Optional): The document type of the transaction to lock. If not provided, the default is SalesInvoice. | [optional]
  **include** | **string**| Specifies objects to include in this fetch call | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LockTransactionModel**](../Model/LockTransactionModel.md)| The lock request you wish to execute | [optional]
+ **body** | [**\Together\Taxes\Model\LockTransactionModel**](../Model/LockTransactionModel.md)| The lock request you wish to execute | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -1000,7 +1000,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refundTransaction**
-> \Swagger\Client\Model\TransactionModel refundTransaction($company_code, $transaction_code, $include, $document_type, $use_tax_date_override, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel refundTransaction($company_code, $transaction_code, $include, $document_type, $use_tax_date_override, $x_avalara_client, $body)
 
 Create a refund for a transaction
 
@@ -1012,14 +1012,14 @@ Create a refund for a transaction.                The `RefundTransaction` API al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1031,7 +1031,7 @@ $include = "include_example"; // string | Specifies objects to include in the re
 $document_type = "document_type_example"; // string | (Optional): The document type of the transaction to refund. If not provided, the default is SalesInvoice.
 $use_tax_date_override = false; // bool | (Optional): If set to true, processes refund using taxDateOverride rather than taxAmountOverride (Note: taxAmountOverride is not allowed for SST states).
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\RefundTransactionModel(); // \Swagger\Client\Model\RefundTransactionModel | Information about the refund to create
+$body = new \Together\Taxes\Model\RefundTransactionModel(); // \Together\Taxes\Model\RefundTransactionModel | Information about the refund to create
 
 try {
     $result = $apiInstance->refundTransaction($company_code, $transaction_code, $include, $document_type, $use_tax_date_override, $x_avalara_client, $body);
@@ -1052,11 +1052,11 @@ Name | Type | Description  | Notes
  **document_type** | **string**| (Optional): The document type of the transaction to refund. If not provided, the default is SalesInvoice. | [optional]
  **use_tax_date_override** | **bool**| (Optional): If set to true, processes refund using taxDateOverride rather than taxAmountOverride (Note: taxAmountOverride is not allowed for SST states). | [optional] [default to false]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\RefundTransactionModel**](../Model/RefundTransactionModel.md)| Information about the refund to create | [optional]
+ **body** | [**\Together\Taxes\Model\RefundTransactionModel**](../Model/RefundTransactionModel.md)| Information about the refund to create | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -1070,7 +1070,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **settleTransaction**
-> \Swagger\Client\Model\TransactionModel settleTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel settleTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
 
 Perform multiple actions on a transaction
 
@@ -1082,14 +1082,14 @@ Performs one or more actions against the current transaction uniquely identified
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1100,7 +1100,7 @@ $transaction_code = "transaction_code_example"; // string | The transaction code
 $document_type = "document_type_example"; // string | (Optional): The document type of the transaction to settle. If not provided, the default is SalesInvoice.
 $include = "include_example"; // string | Specifies objects to include in this fetch call
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\SettleTransactionModel(); // \Swagger\Client\Model\SettleTransactionModel | The data from an external system to reconcile against AvaTax
+$body = new \Together\Taxes\Model\SettleTransactionModel(); // \Together\Taxes\Model\SettleTransactionModel | The data from an external system to reconcile against AvaTax
 
 try {
     $result = $apiInstance->settleTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
@@ -1120,11 +1120,11 @@ Name | Type | Description  | Notes
  **document_type** | **string**| (Optional): The document type of the transaction to settle. If not provided, the default is SalesInvoice. | [optional]
  **include** | **string**| Specifies objects to include in this fetch call | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\SettleTransactionModel**](../Model/SettleTransactionModel.md)| The data from an external system to reconcile against AvaTax | [optional]
+ **body** | [**\Together\Taxes\Model\SettleTransactionModel**](../Model/SettleTransactionModel.md)| The data from an external system to reconcile against AvaTax | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -1138,7 +1138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uncommitTransaction**
-> \Swagger\Client\Model\TransactionModel uncommitTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client)
+> \Together\Taxes\Model\TransactionModel uncommitTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client)
 
 Uncommit a transaction for reporting
 
@@ -1150,14 +1150,14 @@ Adjusts a transaction by changing it to an uncommitted status.                Tr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1190,7 +1190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -1204,7 +1204,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **unvoidTransaction**
-> \Swagger\Client\Model\TransactionModel unvoidTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client)
+> \Together\Taxes\Model\TransactionModel unvoidTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client)
 
 Unvoids a transaction
 
@@ -1216,14 +1216,14 @@ Unvoids a voided transaction                You may specify one or more of the f
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1256,7 +1256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -1270,7 +1270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **verifyTransaction**
-> \Swagger\Client\Model\TransactionModel verifyTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel verifyTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
 
 Verify a transaction
 
@@ -1282,14 +1282,14 @@ Verifies that the transaction uniquely identified by this URL matches certain ex
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1300,7 +1300,7 @@ $transaction_code = "transaction_code_example"; // string | The transaction code
 $document_type = "document_type_example"; // string | (Optional): The document type of the transaction to verify. If not provided, the default is SalesInvoice.
 $include = "include_example"; // string | Specifies objects to include in this fetch call
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\VerifyTransactionModel(); // \Swagger\Client\Model\VerifyTransactionModel | The data from an external system to reconcile against AvaTax
+$body = new \Together\Taxes\Model\VerifyTransactionModel(); // \Together\Taxes\Model\VerifyTransactionModel | The data from an external system to reconcile against AvaTax
 
 try {
     $result = $apiInstance->verifyTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
@@ -1320,11 +1320,11 @@ Name | Type | Description  | Notes
  **document_type** | **string**| (Optional): The document type of the transaction to verify. If not provided, the default is SalesInvoice. | [optional]
  **include** | **string**| Specifies objects to include in this fetch call | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\VerifyTransactionModel**](../Model/VerifyTransactionModel.md)| The data from an external system to reconcile against AvaTax | [optional]
+ **body** | [**\Together\Taxes\Model\VerifyTransactionModel**](../Model/VerifyTransactionModel.md)| The data from an external system to reconcile against AvaTax | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 
@@ -1338,7 +1338,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **voidTransaction**
-> \Swagger\Client\Model\TransactionModel voidTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
+> \Together\Taxes\Model\TransactionModel voidTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body)
 
 Void a transaction
 
@@ -1350,14 +1350,14 @@ Voids the current transaction uniquely identified by this URL.                A 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new Together\Taxes\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1368,7 +1368,7 @@ $transaction_code = "transaction_code_example"; // string | The transaction code
 $document_type = "document_type_example"; // string | (Optional): The document type of the transaction to void. If not provided, the default is SalesInvoice.
 $include = "include_example"; // string | Specifies objects to include in this fetch call
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\VoidTransactionModel(); // \Swagger\Client\Model\VoidTransactionModel | The void request you wish to execute. To void a transaction the code must be set to 'DocVoided'
+$body = new \Together\Taxes\Model\VoidTransactionModel(); // \Together\Taxes\Model\VoidTransactionModel | The void request you wish to execute. To void a transaction the code must be set to 'DocVoided'
 
 try {
     $result = $apiInstance->voidTransaction($company_code, $transaction_code, $document_type, $include, $x_avalara_client, $body);
@@ -1388,11 +1388,11 @@ Name | Type | Description  | Notes
  **document_type** | **string**| (Optional): The document type of the transaction to void. If not provided, the default is SalesInvoice. | [optional]
  **include** | **string**| Specifies objects to include in this fetch call | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\VoidTransactionModel**](../Model/VoidTransactionModel.md)| The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; | [optional]
+ **body** | [**\Together\Taxes\Model\VoidTransactionModel**](../Model/VoidTransactionModel.md)| The void request you wish to execute. To void a transaction the code must be set to &#39;DocVoided&#39; | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionModel**](../Model/TransactionModel.md)
+[**\Together\Taxes\Model\TransactionModel**](../Model/TransactionModel.md)
 
 ### Authorization
 

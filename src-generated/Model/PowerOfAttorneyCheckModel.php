@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * PowerOfAttorneyCheckModel Class Doc Comment
  *
  * @category Class
  * @description Response when checking if a company has a POA on file with Avalara
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,7 +64,7 @@ class PowerOfAttorneyCheckModel implements ModelInterface, ArrayAccess
         'active_poa' => 'bool',
         'effective_date' => '\DateTime',
         'expiration_date' => '\DateTime',
-        'available_poa' => '\Swagger\Client\Model\ResourceFileDownloadResult'
+        'available_poa' => '\Together\Taxes\Model\ResourceFileDownloadResult'
     ];
 
     /**
@@ -388,7 +388,7 @@ class PowerOfAttorneyCheckModel implements ModelInterface, ArrayAccess
     /**
      * Gets available_poa
      *
-     * @return \Swagger\Client\Model\ResourceFileDownloadResult
+     * @return \Together\Taxes\Model\ResourceFileDownloadResult
      */
     public function getAvailablePoa()
     {
@@ -398,7 +398,7 @@ class PowerOfAttorneyCheckModel implements ModelInterface, ArrayAccess
     /**
      * Sets available_poa
      *
-     * @param \Swagger\Client\Model\ResourceFileDownloadResult $available_poa POA download
+     * @param \Together\Taxes\Model\ResourceFileDownloadResult $available_poa POA download
      *
      * @return $this
      */

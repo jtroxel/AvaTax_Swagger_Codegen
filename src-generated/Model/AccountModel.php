@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AccountModel Class Doc Comment
  *
  * @category Class
  * @description An AvaTax account.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -69,8 +69,8 @@ class AccountModel implements ModelInterface, ArrayAccess
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'subscriptions' => '\Swagger\Client\Model\SubscriptionModel[]',
-        'users' => '\Swagger\Client\Model\UserModel[]'
+        'subscriptions' => '\Together\Taxes\Model\SubscriptionModel[]',
+        'users' => '\Together\Taxes\Model\UserModel[]'
     ];
 
     /**
@@ -650,7 +650,7 @@ class AccountModel implements ModelInterface, ArrayAccess
     /**
      * Gets subscriptions
      *
-     * @return \Swagger\Client\Model\SubscriptionModel[]
+     * @return \Together\Taxes\Model\SubscriptionModel[]
      */
     public function getSubscriptions()
     {
@@ -660,7 +660,7 @@ class AccountModel implements ModelInterface, ArrayAccess
     /**
      * Sets subscriptions
      *
-     * @param \Swagger\Client\Model\SubscriptionModel[] $subscriptions Optional: A list of subscriptions granted to this account.  To fetch this list, add the query string \"?$include=Subscriptions\" to your URL.
+     * @param \Together\Taxes\Model\SubscriptionModel[] $subscriptions Optional: A list of subscriptions granted to this account.  To fetch this list, add the query string \"?$include=Subscriptions\" to your URL.
      *
      * @return $this
      */
@@ -674,7 +674,7 @@ class AccountModel implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Swagger\Client\Model\UserModel[]
+     * @return \Together\Taxes\Model\UserModel[]
      */
     public function getUsers()
     {
@@ -684,7 +684,7 @@ class AccountModel implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Swagger\Client\Model\UserModel[] $users Optional: A list of all the users belonging to this account.  To fetch this list, add the query string \"?$include=Users\" to your URL.
+     * @param \Together\Taxes\Model\UserModel[] $users Optional: A list of all the users belonging to this account.  To fetch this list, add the query string \"?$include=Users\" to your URL.
      *
      * @return $this
      */

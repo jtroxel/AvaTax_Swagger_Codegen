@@ -1,4 +1,4 @@
-# Swagger\Client\TaxRulesApi
+# Together\Taxes\TaxRulesApi
 
 All URIs are relative to *https://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createTaxRules**
-> \Swagger\Client\Model\TaxRuleModel[] createTaxRules($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\TaxRuleModel[] createTaxRules($company_id, $x_avalara_client, $body)
 
 Create a new tax rule
 
@@ -25,14 +25,14 @@ Create one or more custom tax rules attached to this company.                A t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxRulesApi(
+$apiInstance = new Together\Taxes\Api\TaxRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Swagger\Client\Api\TaxRulesApi(
 );
 $company_id = 56; // int | The ID of the company that owns this tax rule.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\TaxRuleModel()); // \Swagger\Client\Model\TaxRuleModel[] | The tax rule you wish to create.
+$body = array(new \Together\Taxes\Model\TaxRuleModel()); // \Together\Taxes\Model\TaxRuleModel[] | The tax rule you wish to create.
 
 try {
     $result = $apiInstance->createTaxRules($company_id, $x_avalara_client, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this tax rule. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\TaxRuleModel[]**](../Model/TaxRuleModel.md)| The tax rule you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\TaxRuleModel[]**](../Model/TaxRuleModel.md)| The tax rule you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxRuleModel[]**](../Model/TaxRuleModel.md)
+[**\Together\Taxes\Model\TaxRuleModel[]**](../Model/TaxRuleModel.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTaxRule**
-> \Swagger\Client\Model\ErrorDetail[] deleteTaxRule($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteTaxRule($company_id, $id, $x_avalara_client)
 
 Delete a single tax rule
 
@@ -87,14 +87,14 @@ Mark the custom tax rule identified by this URL as deleted.                A tax
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxRulesApi(
+$apiInstance = new Together\Taxes\Api\TaxRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaxRule**
-> \Swagger\Client\Model\TaxRuleModel getTaxRule($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\TaxRuleModel getTaxRule($company_id, $id, $x_avalara_client)
 
 Retrieve a single tax rule
 
@@ -149,14 +149,14 @@ Get the taxrule object identified by this URL.                A tax rule represe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxRulesApi(
+$apiInstance = new Together\Taxes\Api\TaxRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxRuleModel**](../Model/TaxRuleModel.md)
+[**\Together\Taxes\Model\TaxRuleModel**](../Model/TaxRuleModel.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxRules**
-> \Swagger\Client\Model\FetchResultTaxRuleModel listTaxRules($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxRuleModel listTaxRules($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve tax rules for this company
 
@@ -211,14 +211,14 @@ List all taxrule objects attached to this company.                A tax rule rep
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxRulesApi(
+$apiInstance = new Together\Taxes\Api\TaxRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxRuleModel**](../Model/FetchResultTaxRuleModel.md)
+[**\Together\Taxes\Model\FetchResultTaxRuleModel**](../Model/FetchResultTaxRuleModel.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryTaxRules**
-> \Swagger\Client\Model\FetchResultTaxRuleModel queryTaxRules($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxRuleModel queryTaxRules($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all tax rules
 
@@ -281,14 +281,14 @@ Get multiple taxrule objects across all companies.                A tax rule rep
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxRulesApi(
+$apiInstance = new Together\Taxes\Api\TaxRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxRuleModel**](../Model/FetchResultTaxRuleModel.md)
+[**\Together\Taxes\Model\FetchResultTaxRuleModel**](../Model/FetchResultTaxRuleModel.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTaxRule**
-> \Swagger\Client\Model\TaxRuleModel updateTaxRule($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\TaxRuleModel updateTaxRule($company_id, $id, $x_avalara_client, $body)
 
 Update a single tax rule
 
@@ -349,14 +349,14 @@ Replace the existing custom tax rule object at this URL with an updated object. 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TaxRulesApi(
+$apiInstance = new Together\Taxes\Api\TaxRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -365,7 +365,7 @@ $apiInstance = new Swagger\Client\Api\TaxRulesApi(
 $company_id = 56; // int | The ID of the company that this tax rule belongs to.
 $id = 56; // int | The ID of the tax rule you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\TaxRuleModel(); // \Swagger\Client\Model\TaxRuleModel | The tax rule you wish to update.
+$body = new \Together\Taxes\Model\TaxRuleModel(); // \Together\Taxes\Model\TaxRuleModel | The tax rule you wish to update.
 
 try {
     $result = $apiInstance->updateTaxRule($company_id, $id, $x_avalara_client, $body);
@@ -383,11 +383,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that this tax rule belongs to. |
  **id** | **int**| The ID of the tax rule you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\TaxRuleModel**](../Model/TaxRuleModel.md)| The tax rule you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\TaxRuleModel**](../Model/TaxRuleModel.md)| The tax rule you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxRuleModel**](../Model/TaxRuleModel.md)
+[**\Together\Taxes\Model\TaxRuleModel**](../Model/TaxRuleModel.md)
 
 ### Authorization
 

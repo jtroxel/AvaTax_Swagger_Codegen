@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingRegionModel Class Doc Comment
  *
  * @category Class
  * @description Regions
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -77,8 +77,8 @@ class FilingRegionModel implements ModelInterface, ArrayAccess
         'end_date' => '\DateTime',
         'has_nexus' => 'bool',
         'status' => 'string',
-        'returns' => '\Swagger\Client\Model\FilingReturnModel[]',
-        'suggest_returns' => '\Swagger\Client\Model\FilingsCheckupSuggestedFormModel[]',
+        'returns' => '\Together\Taxes\Model\FilingReturnModel[]',
+        'suggest_returns' => '\Together\Taxes\Model\FilingsCheckupSuggestedFormModel[]',
         'created_date' => '\DateTime',
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
@@ -870,7 +870,7 @@ class FilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Gets returns
      *
-     * @return \Swagger\Client\Model\FilingReturnModel[]
+     * @return \Together\Taxes\Model\FilingReturnModel[]
      */
     public function getReturns()
     {
@@ -880,7 +880,7 @@ class FilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Sets returns
      *
-     * @param \Swagger\Client\Model\FilingReturnModel[] $returns A list of tax returns in this region.
+     * @param \Together\Taxes\Model\FilingReturnModel[] $returns A list of tax returns in this region.
      *
      * @return $this
      */
@@ -894,7 +894,7 @@ class FilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Gets suggest_returns
      *
-     * @return \Swagger\Client\Model\FilingsCheckupSuggestedFormModel[]
+     * @return \Together\Taxes\Model\FilingsCheckupSuggestedFormModel[]
      */
     public function getSuggestReturns()
     {
@@ -904,7 +904,7 @@ class FilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Sets suggest_returns
      *
-     * @param \Swagger\Client\Model\FilingsCheckupSuggestedFormModel[] $suggest_returns A list of tax returns in this region.
+     * @param \Together\Taxes\Model\FilingsCheckupSuggestedFormModel[] $suggest_returns A list of tax returns in this region.
      *
      * @return $this
      */

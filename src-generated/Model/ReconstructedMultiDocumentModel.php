@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * ReconstructedMultiDocumentModel Class Doc Comment
  *
  * @category Class
  * @description Contains information about the original API request and response that created  a MultiDocument object.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class ReconstructedMultiDocumentModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'request' => '\Swagger\Client\Model\CreateMultiDocumentModel'
+        'request' => '\Together\Taxes\Model\CreateMultiDocumentModel'
     ];
 
     /**
@@ -208,7 +208,7 @@ class ReconstructedMultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Gets request
      *
-     * @return \Swagger\Client\Model\CreateMultiDocumentModel
+     * @return \Together\Taxes\Model\CreateMultiDocumentModel
      */
     public function getRequest()
     {
@@ -218,7 +218,7 @@ class ReconstructedMultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Sets request
      *
-     * @param \Swagger\Client\Model\CreateMultiDocumentModel $request The original request that was used to create a MultiDocument object.
+     * @param \Together\Taxes\Model\CreateMultiDocumentModel $request The original request that was used to create a MultiDocument object.
      *
      * @return $this
      */

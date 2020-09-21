@@ -1,4 +1,4 @@
-# Swagger\Client\CertExpressInvitesApi
+# Together\Taxes\CertExpressInvitesApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **createCertExpressInvitation**
-> \Swagger\Client\Model\CertExpressInvitationStatusModel[] createCertExpressInvitation($company_id, $customer_code, $x_avalara_client, $body)
+> \Together\Taxes\Model\CertExpressInvitationStatusModel[] createCertExpressInvitation($company_id, $customer_code, $x_avalara_client, $body)
 
 Create a CertExpress invitation
 
@@ -22,14 +22,14 @@ Creates an invitation for a customer to self-report certificates using the CertE
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertExpressInvitesApi(
+$apiInstance = new Together\Taxes\Api\CertExpressInvitesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -38,7 +38,7 @@ $apiInstance = new Swagger\Client\Api\CertExpressInvitesApi(
 $company_id = 56; // int | The unique ID number of the company that will record certificates
 $customer_code = "customer_code_example"; // string | The number of the customer where the request is sent to
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CreateCertExpressInvitationModel()); // \Swagger\Client\Model\CreateCertExpressInvitationModel[] | the requests to send out to customers
+$body = array(new \Together\Taxes\Model\CreateCertExpressInvitationModel()); // \Together\Taxes\Model\CreateCertExpressInvitationModel[] | the requests to send out to customers
 
 try {
     $result = $apiInstance->createCertExpressInvitation($company_id, $customer_code, $x_avalara_client, $body);
@@ -56,11 +56,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that will record certificates |
  **customer_code** | **string**| The number of the customer where the request is sent to |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CreateCertExpressInvitationModel[]**](../Model/CreateCertExpressInvitationModel.md)| the requests to send out to customers | [optional]
+ **body** | [**\Together\Taxes\Model\CreateCertExpressInvitationModel[]**](../Model/CreateCertExpressInvitationModel.md)| the requests to send out to customers | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CertExpressInvitationStatusModel[]**](../Model/CertExpressInvitationStatusModel.md)
+[**\Together\Taxes\Model\CertExpressInvitationStatusModel[]**](../Model/CertExpressInvitationStatusModel.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCertExpressInvitation**
-> \Swagger\Client\Model\CertExpressInvitationModel getCertExpressInvitation($company_id, $customer_code, $id, $include, $x_avalara_client)
+> \Together\Taxes\Model\CertExpressInvitationModel getCertExpressInvitation($company_id, $customer_code, $id, $include, $x_avalara_client)
 
 Retrieve a single CertExpress invitation
 
@@ -86,14 +86,14 @@ Retrieve an existing CertExpress invitation sent to a customer.                A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertExpressInvitesApi(
+$apiInstance = new Together\Taxes\Api\CertExpressInvitesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CertExpressInvitationModel**](../Model/CertExpressInvitationModel.md)
+[**\Together\Taxes\Model\CertExpressInvitationModel**](../Model/CertExpressInvitationModel.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCertExpressInvitations**
-> \Swagger\Client\Model\FetchResultCertExpressInvitationModel listCertExpressInvitations($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCertExpressInvitationModel listCertExpressInvitations($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 List CertExpress invitations
 
@@ -152,14 +152,14 @@ Retrieve CertExpress invitations sent by this company.                A CertExpr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertExpressInvitesApi(
+$apiInstance = new Together\Taxes\Api\CertExpressInvitesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertExpressInvitationModel**](../Model/FetchResultCertExpressInvitationModel.md)
+[**\Together\Taxes\Model\FetchResultCertExpressInvitationModel**](../Model/FetchResultCertExpressInvitationModel.md)
 
 ### Authorization
 

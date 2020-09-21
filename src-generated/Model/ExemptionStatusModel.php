@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * ExemptionStatusModel Class Doc Comment
  *
  * @category Class
  * @description Indicates the customer&#39;s exemption status in a specific country and region.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class ExemptionStatusModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'status' => 'string',
-        'certificate' => '\Swagger\Client\Model\CertificateModel'
+        'certificate' => '\Together\Taxes\Model\CertificateModel'
     ];
 
     /**
@@ -238,7 +238,7 @@ class ExemptionStatusModel implements ModelInterface, ArrayAccess
     /**
      * Gets certificate
      *
-     * @return \Swagger\Client\Model\CertificateModel
+     * @return \Together\Taxes\Model\CertificateModel
      */
     public function getCertificate()
     {
@@ -248,7 +248,7 @@ class ExemptionStatusModel implements ModelInterface, ArrayAccess
     /**
      * Sets certificate
      *
-     * @param \Swagger\Client\Model\CertificateModel $certificate Certificate if the customer is exempted
+     * @param \Together\Taxes\Model\CertificateModel $certificate Certificate if the customer is exempted
      *
      * @return $this
      */

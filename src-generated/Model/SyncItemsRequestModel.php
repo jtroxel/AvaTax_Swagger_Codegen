@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * SyncItemsRequestModel Class Doc Comment
  *
  * @category Class
  * @description Represents a request to sync items.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class SyncItemsRequestModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\Swagger\Client\Model\ItemSyncModel[]'
+        'items' => '\Together\Taxes\Model\ItemSyncModel[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class SyncItemsRequestModel implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Swagger\Client\Model\ItemSyncModel[]
+     * @return \Together\Taxes\Model\ItemSyncModel[]
      */
     public function getItems()
     {
@@ -221,7 +221,7 @@ class SyncItemsRequestModel implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Swagger\Client\Model\ItemSyncModel[] $items A list of items to sync with AvaTax.
+     * @param \Together\Taxes\Model\ItemSyncModel[] $items A list of items to sync with AvaTax.
      *
      * @return $this
      */

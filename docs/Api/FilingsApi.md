@@ -1,4 +1,4 @@
-# Swagger\Client\FilingsApi
+# Together\Taxes\FilingsApi
 
 All URIs are relative to *https://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getAccrualFilings**
-> \Swagger\Client\Model\FetchResultMultiTaxFilingModel getAccrualFilings($company_id, $filing_return_id, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultMultiTaxFilingModel getAccrualFilings($company_id, $filing_return_id, $x_avalara_client)
 
 Retrieve a filing containing the return and all its accrual returns.
 
@@ -21,14 +21,14 @@ Retrieve a filing containing the return and all its accrual returns.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\FilingsApi(
+$apiInstance = new Together\Taxes\Api\FilingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultMultiTaxFilingModel**](../Model/FetchResultMultiTaxFilingModel.md)
+[**\Together\Taxes\Model\FetchResultMultiTaxFilingModel**](../Model/FetchResultMultiTaxFilingModel.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFiledReturns**
-> \Swagger\Client\Model\FetchResultFiledReturnModel getFiledReturns($company_id, $end_period_month, $end_period_year, $frequency, $status, $country, $region, $filing_calendar_id, $taxform_code, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultFiledReturnModel getFiledReturns($company_id, $end_period_month, $end_period_year, $frequency, $status, $country, $region, $filing_calendar_id, $taxform_code, $x_avalara_client)
 
 Retrieve a list of filed returns for the specified company in the year and month of a given filing period.
 
@@ -83,14 +83,14 @@ Retrieve a list of filed returns for the specified company in the year and month
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\FilingsApi(
+$apiInstance = new Together\Taxes\Api\FilingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultFiledReturnModel**](../Model/FetchResultFiledReturnModel.md)
+[**\Together\Taxes\Model\FetchResultFiledReturnModel**](../Model/FetchResultFiledReturnModel.md)
 
 ### Authorization
 

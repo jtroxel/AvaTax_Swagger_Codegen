@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * DeleteErrorTransactionsResponseModel Class Doc Comment
  *
  * @category Class
  * @description Response model of error transaction batch delete
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class DeleteErrorTransactionsResponseModel implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'results' => '\Swagger\Client\Model\DeleteErrorTransactionResponseModel[]'
+        'results' => '\Together\Taxes\Model\DeleteErrorTransactionResponseModel[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DeleteErrorTransactionsResponseModel implements ModelInterface, ArrayAcces
     /**
      * Gets results
      *
-     * @return \Swagger\Client\Model\DeleteErrorTransactionResponseModel[]
+     * @return \Together\Taxes\Model\DeleteErrorTransactionResponseModel[]
      */
     public function getResults()
     {
@@ -218,7 +218,7 @@ class DeleteErrorTransactionsResponseModel implements ModelInterface, ArrayAcces
     /**
      * Sets results
      *
-     * @param \Swagger\Client\Model\DeleteErrorTransactionResponseModel[] $results The individual result of each error transaction in the request batch
+     * @param \Together\Taxes\Model\DeleteErrorTransactionResponseModel[] $results The individual result of each error transaction in the request batch
      *
      * @return $this
      */

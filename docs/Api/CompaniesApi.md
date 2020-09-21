@@ -1,4 +1,4 @@
-# Swagger\Client\CompaniesApi
+# Together\Taxes\CompaniesApi
 
 All URIs are relative to *https://localhost*
 
@@ -40,14 +40,14 @@ Examines the most recent 100 transactions or data from the last month when verif
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -100,14 +100,14 @@ Changes the current filing status of this company.                For customers 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ $apiInstance = new Swagger\Client\Api\CompaniesApi(
 );
 $id = 56; // int | 
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\FilingStatusChangeModel(); // \Swagger\Client\Model\FilingStatusChangeModel | 
+$body = new \Together\Taxes\Model\FilingStatusChangeModel(); // \Together\Taxes\Model\FilingStatusChangeModel | 
 
 try {
     $result = $apiInstance->changeFilingStatus($id, $x_avalara_client, $body);
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\FilingStatusChangeModel**](../Model/FilingStatusChangeModel.md)|  | [optional]
+ **body** | [**\Together\Taxes\Model\FilingStatusChangeModel**](../Model/FilingStatusChangeModel.md)|  | [optional]
 
 ### Return type
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **companyInitialize**
-> \Swagger\Client\Model\CompanyModel companyInitialize($x_avalara_client, $body)
+> \Together\Taxes\Model\CompanyModel companyInitialize($x_avalara_client, $body)
 
 Quick setup for a company with a single physical address
 
@@ -162,21 +162,21 @@ Shortcut to quickly setup a single-physical-location company with critical infor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CompanyInitializationModel(); // \Swagger\Client\Model\CompanyInitializationModel | Information about the company you wish to create.
+$body = new \Together\Taxes\Model\CompanyInitializationModel(); // \Together\Taxes\Model\CompanyInitializationModel | Information about the company you wish to create.
 
 try {
     $result = $apiInstance->companyInitialize($x_avalara_client, $body);
@@ -192,11 +192,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CompanyInitializationModel**](../Model/CompanyInitializationModel.md)| Information about the company you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\CompanyInitializationModel**](../Model/CompanyInitializationModel.md)| Information about the company you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyModel**](../Model/CompanyModel.md)
+[**\Together\Taxes\Model\CompanyModel**](../Model/CompanyModel.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCompanies**
-> \Swagger\Client\Model\CompanyModel[] createCompanies($x_avalara_client, $body)
+> \Together\Taxes\Model\CompanyModel[] createCompanies($x_avalara_client, $body)
 
 Create new companies
 
@@ -222,21 +222,21 @@ Create one or more new company objects.  A 'company' represents a single corpora
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CompanyModel()); // \Swagger\Client\Model\CompanyModel[] | Either a single company object or an array of companies to create
+$body = array(new \Together\Taxes\Model\CompanyModel()); // \Together\Taxes\Model\CompanyModel[] | Either a single company object or an array of companies to create
 
 try {
     $result = $apiInstance->createCompanies($x_avalara_client, $body);
@@ -252,11 +252,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CompanyModel[]**](../Model/CompanyModel.md)| Either a single company object or an array of companies to create | [optional]
+ **body** | [**\Together\Taxes\Model\CompanyModel[]**](../Model/CompanyModel.md)| Either a single company object or an array of companies to create | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyModel[]**](../Model/CompanyModel.md)
+[**\Together\Taxes\Model\CompanyModel[]**](../Model/CompanyModel.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCompanyParameters**
-> \Swagger\Client\Model\CompanyParameterDetailModel[] createCompanyParameters($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CompanyParameterDetailModel[] createCompanyParameters($company_id, $x_avalara_client, $body)
 
 Add parameters to a company.
 
@@ -282,14 +282,14 @@ Add parameters to a company.                Some companies can be taxed and repo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -297,7 +297,7 @@ $apiInstance = new Swagger\Client\Api\CompaniesApi(
 );
 $company_id = 56; // int | The ID of the company that owns this company parameter.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CompanyParameterDetailModel()); // \Swagger\Client\Model\CompanyParameterDetailModel[] | The company parameters you wish to create.
+$body = array(new \Together\Taxes\Model\CompanyParameterDetailModel()); // \Together\Taxes\Model\CompanyParameterDetailModel[] | The company parameters you wish to create.
 
 try {
     $result = $apiInstance->createCompanyParameters($company_id, $x_avalara_client, $body);
@@ -314,11 +314,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this company parameter. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CompanyParameterDetailModel[]**](../Model/CompanyParameterDetailModel.md)| The company parameters you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\CompanyParameterDetailModel[]**](../Model/CompanyParameterDetailModel.md)| The company parameters you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyParameterDetailModel[]**](../Model/CompanyParameterDetailModel.md)
+[**\Together\Taxes\Model\CompanyParameterDetailModel[]**](../Model/CompanyParameterDetailModel.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createFundingRequest**
-> \Swagger\Client\Model\FundingStatusModel createFundingRequest($id, $x_avalara_client, $body)
+> \Together\Taxes\Model\FundingStatusModel createFundingRequest($id, $x_avalara_client, $body)
 
 Request managed returns funding setup for a company
 
@@ -344,14 +344,14 @@ This API is available by invitation only.  Companies that use the Avalara Manage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -359,7 +359,7 @@ $apiInstance = new Swagger\Client\Api\CompaniesApi(
 );
 $id = 56; // int | The unique identifier of the company
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\FundingInitiateModel(); // \Swagger\Client\Model\FundingInitiateModel | The funding initialization request
+$body = new \Together\Taxes\Model\FundingInitiateModel(); // \Together\Taxes\Model\FundingInitiateModel | The funding initialization request
 
 try {
     $result = $apiInstance->createFundingRequest($id, $x_avalara_client, $body);
@@ -376,11 +376,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The unique identifier of the company |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\FundingInitiateModel**](../Model/FundingInitiateModel.md)| The funding initialization request | [optional]
+ **body** | [**\Together\Taxes\Model\FundingInitiateModel**](../Model/FundingInitiateModel.md)| The funding initialization request | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FundingStatusModel**](../Model/FundingStatusModel.md)
+[**\Together\Taxes\Model\FundingStatusModel**](../Model/FundingStatusModel.md)
 
 ### Authorization
 
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteCompany**
-> \Swagger\Client\Model\ErrorDetail[] deleteCompany($id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteCompany($id, $x_avalara_client)
 
 Delete a single company
 
@@ -406,14 +406,14 @@ Deleting a company will delete all child companies, and all users attached to th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteCompanyParameter**
-> \Swagger\Client\Model\ErrorDetail[] deleteCompanyParameter($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteCompanyParameter($company_id, $id, $x_avalara_client)
 
 Delete a single company parameter
 
@@ -466,14 +466,14 @@ Delete a parameter of a company.  Some companies can be taxed and reported diffe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fundingConfigurationByCompany**
-> \Swagger\Client\Model\FundingConfigurationModel fundingConfigurationByCompany($company_id, $x_avalara_client)
+> \Together\Taxes\Model\FundingConfigurationModel fundingConfigurationByCompany($company_id, $x_avalara_client)
 
 Check the funding configuration of a company
 
@@ -528,14 +528,14 @@ This API is available by invitation only.  Requires a subscription to Avalara Ma
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FundingConfigurationModel**](../Model/FundingConfigurationModel.md)
+[**\Together\Taxes\Model\FundingConfigurationModel**](../Model/FundingConfigurationModel.md)
 
 ### Authorization
 
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fundingConfigurationsByCompanyAndCurrency**
-> \Swagger\Client\Model\FundingConfigurationModel[] fundingConfigurationsByCompanyAndCurrency($company_id, $currency, $x_avalara_client)
+> \Together\Taxes\Model\FundingConfigurationModel[] fundingConfigurationsByCompanyAndCurrency($company_id, $currency, $x_avalara_client)
 
 Check the funding configuration of a company
 
@@ -588,14 +588,14 @@ This API is available by invitation only.  Requires a subscription to Avalara Ma
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -624,7 +624,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FundingConfigurationModel[]**](../Model/FundingConfigurationModel.md)
+[**\Together\Taxes\Model\FundingConfigurationModel[]**](../Model/FundingConfigurationModel.md)
 
 ### Authorization
 
@@ -638,7 +638,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCompany**
-> \Swagger\Client\Model\CompanyModel getCompany($id, $include, $x_avalara_client)
+> \Together\Taxes\Model\CompanyModel getCompany($id, $include, $x_avalara_client)
 
 Retrieve a single company
 
@@ -650,14 +650,14 @@ Get the company object identified by this URL.  A 'company' represents a single 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -686,7 +686,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyModel**](../Model/CompanyModel.md)
+[**\Together\Taxes\Model\CompanyModel**](../Model/CompanyModel.md)
 
 ### Authorization
 
@@ -700,7 +700,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCompanyConfiguration**
-> \Swagger\Client\Model\CompanyConfigurationModel[] getCompanyConfiguration($id, $x_avalara_client)
+> \Together\Taxes\Model\CompanyConfigurationModel[] getCompanyConfiguration($id, $x_avalara_client)
 
 Get configuration settings for this company
 
@@ -712,14 +712,14 @@ Retrieve a list of all configuration settings tied to this company.             
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -746,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyConfigurationModel[]**](../Model/CompanyConfigurationModel.md)
+[**\Together\Taxes\Model\CompanyConfigurationModel[]**](../Model/CompanyConfigurationModel.md)
 
 ### Authorization
 
@@ -760,7 +760,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCompanyParameterDetail**
-> \Swagger\Client\Model\CompanyParameterDetailModel getCompanyParameterDetail($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\CompanyParameterDetailModel getCompanyParameterDetail($company_id, $id, $x_avalara_client)
 
 Retrieve a single company parameter
 
@@ -772,14 +772,14 @@ Retrieves a single parameter of a company.                Some companies can be 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -808,7 +808,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyParameterDetailModel**](../Model/CompanyParameterDetailModel.md)
+[**\Together\Taxes\Model\CompanyParameterDetailModel**](../Model/CompanyParameterDetailModel.md)
 
 ### Authorization
 
@@ -834,14 +834,14 @@ Retrieve the current filing status of this company.                For customers
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCompanyParameterDetails**
-> \Swagger\Client\Model\FetchResultCompanyParameterDetailModel listCompanyParameterDetails($company_id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCompanyParameterDetailModel listCompanyParameterDetails($company_id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve parameters for a company
 
@@ -894,14 +894,14 @@ Retrieve all parameters of a company.                Some companies can be taxed
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -936,7 +936,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCompanyParameterDetailModel**](../Model/FetchResultCompanyParameterDetailModel.md)
+[**\Together\Taxes\Model\FetchResultCompanyParameterDetailModel**](../Model/FetchResultCompanyParameterDetailModel.md)
 
 ### Authorization
 
@@ -950,7 +950,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listFundingRequestsByCompany**
-> \Swagger\Client\Model\FundingStatusModel[] listFundingRequestsByCompany($id, $x_avalara_client)
+> \Together\Taxes\Model\FundingStatusModel[] listFundingRequestsByCompany($id, $x_avalara_client)
 
 Check managed returns funding status for a company
 
@@ -962,14 +962,14 @@ This API is available by invitation only.  Requires a subscription to Avalara Ma
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -996,7 +996,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FundingStatusModel[]**](../Model/FundingStatusModel.md)
+[**\Together\Taxes\Model\FundingStatusModel[]**](../Model/FundingStatusModel.md)
 
 ### Authorization
 
@@ -1010,7 +1010,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listMrsCompanies**
-> \Swagger\Client\Model\FetchResultMrsCompanyModel listMrsCompanies($x_avalara_client)
+> \Together\Taxes\Model\FetchResultMrsCompanyModel listMrsCompanies($x_avalara_client)
 
 Retrieve a list of MRS Companies with account
 
@@ -1022,14 +1022,14 @@ This API is available by invitation only.                Get a list of companies
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1054,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultMrsCompanyModel**](../Model/FetchResultMrsCompanyModel.md)
+[**\Together\Taxes\Model\FetchResultMrsCompanyModel**](../Model/FetchResultMrsCompanyModel.md)
 
 ### Authorization
 
@@ -1068,7 +1068,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryCompanies**
-> \Swagger\Client\Model\FetchResultCompanyModel queryCompanies($include, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCompanyModel queryCompanies($include, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all companies
 
@@ -1080,14 +1080,14 @@ Get multiple company objects.                A `company` represents a single cor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1122,7 +1122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCompanyModel**](../Model/FetchResultCompanyModel.md)
+[**\Together\Taxes\Model\FetchResultCompanyModel**](../Model/FetchResultCompanyModel.md)
 
 ### Authorization
 
@@ -1136,7 +1136,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setCompanyConfiguration**
-> \Swagger\Client\Model\CompanyConfigurationModel[] setCompanyConfiguration($id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CompanyConfigurationModel[] setCompanyConfiguration($id, $x_avalara_client, $body)
 
 Change configuration settings for this company
 
@@ -1148,14 +1148,14 @@ Update configuration settings tied to this company.                Configuration
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1163,7 +1163,7 @@ $apiInstance = new Swagger\Client\Api\CompaniesApi(
 );
 $id = 56; // int | 
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CompanyConfigurationModel()); // \Swagger\Client\Model\CompanyConfigurationModel[] | 
+$body = array(new \Together\Taxes\Model\CompanyConfigurationModel()); // \Together\Taxes\Model\CompanyConfigurationModel[] | 
 
 try {
     $result = $apiInstance->setCompanyConfiguration($id, $x_avalara_client, $body);
@@ -1180,11 +1180,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CompanyConfigurationModel[]**](../Model/CompanyConfigurationModel.md)|  | [optional]
+ **body** | [**\Together\Taxes\Model\CompanyConfigurationModel[]**](../Model/CompanyConfigurationModel.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyConfigurationModel[]**](../Model/CompanyConfigurationModel.md)
+[**\Together\Taxes\Model\CompanyConfigurationModel[]**](../Model/CompanyConfigurationModel.md)
 
 ### Authorization
 
@@ -1198,7 +1198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCompany**
-> \Swagger\Client\Model\CompanyModel updateCompany($id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CompanyModel updateCompany($id, $x_avalara_client, $body)
 
 Update a single company
 
@@ -1210,14 +1210,14 @@ Replace the existing company object at this URL with an updated object.         
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1225,7 +1225,7 @@ $apiInstance = new Swagger\Client\Api\CompaniesApi(
 );
 $id = 56; // int | The ID of the company you wish to update.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CompanyModel(); // \Swagger\Client\Model\CompanyModel | The company object you wish to update.
+$body = new \Together\Taxes\Model\CompanyModel(); // \Together\Taxes\Model\CompanyModel | The company object you wish to update.
 
 try {
     $result = $apiInstance->updateCompany($id, $x_avalara_client, $body);
@@ -1242,11 +1242,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The ID of the company you wish to update. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CompanyModel**](../Model/CompanyModel.md)| The company object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\CompanyModel**](../Model/CompanyModel.md)| The company object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyModel**](../Model/CompanyModel.md)
+[**\Together\Taxes\Model\CompanyModel**](../Model/CompanyModel.md)
 
 ### Authorization
 
@@ -1260,7 +1260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCompanyParameterDetail**
-> \Swagger\Client\Model\CompanyParameterDetailModel updateCompanyParameterDetail($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CompanyParameterDetailModel updateCompanyParameterDetail($company_id, $id, $x_avalara_client, $body)
 
 Update a company parameter
 
@@ -1272,14 +1272,14 @@ Update a parameter of a company.                Some companies can be taxed and 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CompaniesApi(
+$apiInstance = new Together\Taxes\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1288,7 +1288,7 @@ $apiInstance = new Swagger\Client\Api\CompaniesApi(
 $company_id = 56; // int | The company id.
 $id = 789; // int | The company parameter id
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CompanyParameterDetailModel(); // \Swagger\Client\Model\CompanyParameterDetailModel | The company parameter object you wish to update.
+$body = new \Together\Taxes\Model\CompanyParameterDetailModel(); // \Together\Taxes\Model\CompanyParameterDetailModel | The company parameter object you wish to update.
 
 try {
     $result = $apiInstance->updateCompanyParameterDetail($company_id, $id, $x_avalara_client, $body);
@@ -1306,11 +1306,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The company id. |
  **id** | **int**| The company parameter id |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CompanyParameterDetailModel**](../Model/CompanyParameterDetailModel.md)| The company parameter object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\CompanyParameterDetailModel**](../Model/CompanyParameterDetailModel.md)| The company parameter object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyParameterDetailModel**](../Model/CompanyParameterDetailModel.md)
+[**\Together\Taxes\Model\CompanyParameterDetailModel**](../Model/CompanyParameterDetailModel.md)
 
 ### Authorization
 

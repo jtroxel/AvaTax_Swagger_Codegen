@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * EcmsModel Class Doc Comment
  *
  * @category Class
  * @description Exempt certificate
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -87,7 +87,7 @@ class EcmsModel implements ModelInterface, ArrayAccess
         'country_issued' => 'string',
         'ava_cert_id' => 'string',
         'exempt_cert_review_status_id' => 'string',
-        'details' => '\Swagger\Client\Model\EcmsDetailModel[]'
+        'details' => '\Together\Taxes\Model\EcmsDetailModel[]'
     ];
 
     /**
@@ -1405,7 +1405,7 @@ class EcmsModel implements ModelInterface, ArrayAccess
     /**
      * Gets details
      *
-     * @return \Swagger\Client\Model\EcmsDetailModel[]
+     * @return \Together\Taxes\Model\EcmsDetailModel[]
      */
     public function getDetails()
     {
@@ -1415,7 +1415,7 @@ class EcmsModel implements ModelInterface, ArrayAccess
     /**
      * Sets details
      *
-     * @param \Swagger\Client\Model\EcmsDetailModel[] $details Exempt Cert details
+     * @param \Together\Taxes\Model\EcmsDetailModel[] $details Exempt Cert details
      *
      * @return $this
      */

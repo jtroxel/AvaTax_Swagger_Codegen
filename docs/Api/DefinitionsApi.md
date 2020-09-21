@@ -1,4 +1,4 @@
-# Swagger\Client\DefinitionsApi
+# Together\Taxes\DefinitionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -66,7 +66,7 @@ Method | HTTP request | Description
 
 
 # **getCrossBorderCode**
-> \Swagger\Client\Model\FetchResultHsCodeModel getCrossBorderCode($country, $hs_code, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultHsCodeModel getCrossBorderCode($country, $hs_code, $x_avalara_client)
 
 Lists all parents of an HS Code.
 
@@ -78,14 +78,14 @@ Retrieves the specified HS code and all of its parents, reflecting all sections,
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultHsCodeModel**](../Model/FetchResultHsCodeModel.md)
+[**\Together\Taxes\Model\FetchResultHsCodeModel**](../Model/FetchResultHsCodeModel.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLoginVerifierByForm**
-> \Swagger\Client\Model\FetchResultSkyscraperStatusModel getLoginVerifierByForm($form, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultSkyscraperStatusModel getLoginVerifierByForm($form, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Test whether a form supports online login verification
 
@@ -140,14 +140,14 @@ This API is intended to be useful to identify whether the user should be allowed
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultSkyscraperStatusModel**](../Model/FetchResultSkyscraperStatusModel.md)
+[**\Together\Taxes\Model\FetchResultSkyscraperStatusModel**](../Model/FetchResultSkyscraperStatusModel.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listAvaFileForms**
-> \Swagger\Client\Model\FetchResultAvaFileFormModel listAvaFileForms($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultAvaFileFormModel listAvaFileForms($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of the AvaFile Forms available
 
@@ -208,14 +208,14 @@ This API is deprecated.                Please use the ListTaxForms API.         
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultAvaFileFormModel**](../Model/FetchResultAvaFileFormModel.md)
+[**\Together\Taxes\Model\FetchResultAvaFileFormModel**](../Model/FetchResultAvaFileFormModel.md)
 
 ### Authorization
 
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCertificateAttributes**
-> \Swagger\Client\Model\FetchResultCertificateAttributeModel listCertificateAttributes($companyid, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCertificateAttributeModel listCertificateAttributes($companyid, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 List certificate attributes used by a company
 
@@ -274,14 +274,14 @@ List the certificate attributes defined by a company either specified by the use
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertificateAttributeModel**](../Model/FetchResultCertificateAttributeModel.md)
+[**\Together\Taxes\Model\FetchResultCertificateAttributeModel**](../Model/FetchResultCertificateAttributeModel.md)
 
 ### Authorization
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCertificateExemptReasons**
-> \Swagger\Client\Model\FetchResultExemptionReasonModel listCertificateExemptReasons($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultExemptionReasonModel listCertificateExemptReasons($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List the certificate exempt reasons defined by a company
 
@@ -342,14 +342,14 @@ List the certificate exempt reasons defined by a company.                An exem
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultExemptionReasonModel**](../Model/FetchResultExemptionReasonModel.md)
+[**\Together\Taxes\Model\FetchResultExemptionReasonModel**](../Model/FetchResultExemptionReasonModel.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCertificateExposureZones**
-> \Swagger\Client\Model\FetchResultExposureZoneModel listCertificateExposureZones($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultExposureZoneModel listCertificateExposureZones($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List certificate exposure zones used by a company
 
@@ -408,14 +408,14 @@ List the certificate exposure zones defined by a company.                An expo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultExposureZoneModel**](../Model/FetchResultExposureZoneModel.md)
+[**\Together\Taxes\Model\FetchResultExposureZoneModel**](../Model/FetchResultExposureZoneModel.md)
 
 ### Authorization
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCommunicationsServiceTypes**
-> \Swagger\Client\Model\FetchResultCommunicationsTSPairModel listCommunicationsServiceTypes($id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCommunicationsTSPairModel listCommunicationsServiceTypes($id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of communications service types
 
@@ -474,14 +474,14 @@ Returns full list of service types for a given transaction type ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCommunicationsTSPairModel**](../Model/FetchResultCommunicationsTSPairModel.md)
+[**\Together\Taxes\Model\FetchResultCommunicationsTSPairModel**](../Model/FetchResultCommunicationsTSPairModel.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCommunicationsTSPairs**
-> \Swagger\Client\Model\FetchResultCommunicationsTSPairModel listCommunicationsTSPairs($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCommunicationsTSPairModel listCommunicationsTSPairs($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of communications transaction/service type pairs
 
@@ -542,14 +542,14 @@ Returns full list of communications transaction/service type pairs which  are ac
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -582,7 +582,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCommunicationsTSPairModel**](../Model/FetchResultCommunicationsTSPairModel.md)
+[**\Together\Taxes\Model\FetchResultCommunicationsTSPairModel**](../Model/FetchResultCommunicationsTSPairModel.md)
 
 ### Authorization
 
@@ -596,7 +596,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCommunicationsTransactionTypes**
-> \Swagger\Client\Model\FetchResultCommunicationsTransactionTypeModel listCommunicationsTransactionTypes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCommunicationsTransactionTypeModel listCommunicationsTransactionTypes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of communications transactiontypes
 
@@ -608,14 +608,14 @@ Returns full list of communications transaction types which  are accepted in com
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -648,7 +648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCommunicationsTransactionTypeModel**](../Model/FetchResultCommunicationsTransactionTypeModel.md)
+[**\Together\Taxes\Model\FetchResultCommunicationsTransactionTypeModel**](../Model/FetchResultCommunicationsTransactionTypeModel.md)
 
 ### Authorization
 
@@ -662,7 +662,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCountries**
-> \Swagger\Client\Model\FetchResultIsoCountryModel listCountries($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultIsoCountryModel listCountries($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all ISO 3166 countries
 
@@ -674,14 +674,14 @@ Returns a list of all ISO 3166 country codes, and their US English friendly name
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -714,7 +714,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultIsoCountryModel**](../Model/FetchResultIsoCountryModel.md)
+[**\Together\Taxes\Model\FetchResultIsoCountryModel**](../Model/FetchResultIsoCountryModel.md)
 
 ### Authorization
 
@@ -728,7 +728,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCoverLetters**
-> \Swagger\Client\Model\FetchResultCoverLetterModel listCoverLetters($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCoverLetterModel listCoverLetters($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List certificate exposure zones used by a company
 
@@ -740,14 +740,14 @@ List available cover letters that can be used when sending invitation to use Cer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -780,7 +780,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCoverLetterModel**](../Model/FetchResultCoverLetterModel.md)
+[**\Together\Taxes\Model\FetchResultCoverLetterModel**](../Model/FetchResultCoverLetterModel.md)
 
 ### Authorization
 
@@ -794,7 +794,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCrossBorderCodes**
-> \Swagger\Client\Model\FetchResultHsCodeModel listCrossBorderCodes($country, $hs_code, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultHsCodeModel listCrossBorderCodes($country, $hs_code, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Lists the next level of HS Codes given a destination country and HS Code prefix.
 
@@ -806,14 +806,14 @@ Retrieves a list of HS Codes that are the children of the prefix for the given d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -850,7 +850,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultHsCodeModel**](../Model/FetchResultHsCodeModel.md)
+[**\Together\Taxes\Model\FetchResultHsCodeModel**](../Model/FetchResultHsCodeModel.md)
 
 ### Authorization
 
@@ -864,7 +864,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCrossBorderSections**
-> \Swagger\Client\Model\FetchResultHsCodeModel listCrossBorderSections($x_avalara_client)
+> \Together\Taxes\Model\FetchResultHsCodeModel listCrossBorderSections($x_avalara_client)
 
 List top level HS Code Sections.
 
@@ -876,14 +876,14 @@ Returns the full list of top level HS Code Sections. Sections are the broadest l
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -908,7 +908,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultHsCodeModel**](../Model/FetchResultHsCodeModel.md)
+[**\Together\Taxes\Model\FetchResultHsCodeModel**](../Model/FetchResultHsCodeModel.md)
 
 ### Authorization
 
@@ -922,7 +922,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCurrencies**
-> \Swagger\Client\Model\FetchResultCurrencyModel listCurrencies($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCurrencyModel listCurrencies($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all ISO 4217 currencies supported by AvaTax.
 
@@ -934,14 +934,14 @@ Lists all ISO 4217 currencies supported by AvaTax.                This API produ
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -974,7 +974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCurrencyModel**](../Model/FetchResultCurrencyModel.md)
+[**\Together\Taxes\Model\FetchResultCurrencyModel**](../Model/FetchResultCurrencyModel.md)
 
 ### Authorization
 
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listEntityUseCodes**
-> \Swagger\Client\Model\FetchResultEntityUseCodeModel listEntityUseCodes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultEntityUseCodeModel listEntityUseCodes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported entity use codes
 
@@ -1000,14 +1000,14 @@ Returns the full list of Avalara-supported entity use codes.  Entity/Use Codes a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1040,7 +1040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultEntityUseCodeModel**](../Model/FetchResultEntityUseCodeModel.md)
+[**\Together\Taxes\Model\FetchResultEntityUseCodeModel**](../Model/FetchResultEntityUseCodeModel.md)
 
 ### Authorization
 
@@ -1054,7 +1054,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listFilingFrequencies**
-> \Swagger\Client\Model\FetchResultFilingFrequencyModel listFilingFrequencies($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultFilingFrequencyModel listFilingFrequencies($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported filing frequencies.
 
@@ -1066,14 +1066,14 @@ Returns the full list of Avalara-supported filing frequencies.  This API is inte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1106,7 +1106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultFilingFrequencyModel**](../Model/FetchResultFilingFrequencyModel.md)
+[**\Together\Taxes\Model\FetchResultFilingFrequencyModel**](../Model/FetchResultFilingFrequencyModel.md)
 
 ### Authorization
 
@@ -1120,7 +1120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listJurisdictions**
-> \Swagger\Client\Model\FetchResultJurisdictionModel listJurisdictions($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultJurisdictionModel listJurisdictions($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List jurisdictions based on the filter provided
 
@@ -1132,14 +1132,14 @@ Returns a list of all Avalara-supported taxing jurisdictions.                Thi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1172,7 +1172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultJurisdictionModel**](../Model/FetchResultJurisdictionModel.md)
+[**\Together\Taxes\Model\FetchResultJurisdictionModel**](../Model/FetchResultJurisdictionModel.md)
 
 ### Authorization
 
@@ -1186,7 +1186,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listJurisdictionsByAddress**
-> \Swagger\Client\Model\FetchResultJurisdictionOverrideModel listJurisdictionsByAddress($country, $line1, $line2, $line3, $city, $region, $postal_code, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultJurisdictionOverrideModel listJurisdictionsByAddress($country, $line1, $line2, $line3, $city, $region, $postal_code, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 List jurisdictions near a specific address
 
@@ -1198,14 +1198,14 @@ Returns a list of all Avalara-supported taxing jurisdictions that apply to this 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1252,7 +1252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultJurisdictionOverrideModel**](../Model/FetchResultJurisdictionOverrideModel.md)
+[**\Together\Taxes\Model\FetchResultJurisdictionOverrideModel**](../Model/FetchResultJurisdictionOverrideModel.md)
 
 ### Authorization
 
@@ -1266,7 +1266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listLocationQuestionsByAddress**
-> \Swagger\Client\Model\FetchResultLocationQuestionModel listLocationQuestionsByAddress($line1, $line2, $line3, $city, $region, $postal_code, $country, $latitude, $longitude, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultLocationQuestionModel listLocationQuestionsByAddress($line1, $line2, $line3, $city, $region, $postal_code, $country, $latitude, $longitude, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the list of questions that are required for a tax location
 
@@ -1278,14 +1278,14 @@ Returns the list of additional questions you must answer when declaring a locati
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1336,7 +1336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultLocationQuestionModel**](../Model/FetchResultLocationQuestionModel.md)
+[**\Together\Taxes\Model\FetchResultLocationQuestionModel**](../Model/FetchResultLocationQuestionModel.md)
 
 ### Authorization
 
@@ -1350,7 +1350,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listLoginVerifiers**
-> \Swagger\Client\Model\FetchResultSkyscraperStatusModel listLoginVerifiers($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultSkyscraperStatusModel listLoginVerifiers($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all forms where logins can be verified automatically
 
@@ -1362,14 +1362,14 @@ List all forms where logins can be verified automatically.  This API is intended
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1402,7 +1402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultSkyscraperStatusModel**](../Model/FetchResultSkyscraperStatusModel.md)
+[**\Together\Taxes\Model\FetchResultSkyscraperStatusModel**](../Model/FetchResultSkyscraperStatusModel.md)
 
 ### Authorization
 
@@ -1416,7 +1416,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listMarketplaceLocations**
-> \Swagger\Client\Model\FetchResultMarketplaceLocationModel listMarketplaceLocations($marketplace_id, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultMarketplaceLocationModel listMarketplaceLocations($marketplace_id, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the list of locations for a marketplace.
 
@@ -1428,14 +1428,14 @@ Retrieves the list of suggested locations for a marketplace.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1468,7 +1468,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultMarketplaceLocationModel**](../Model/FetchResultMarketplaceLocationModel.md)
+[**\Together\Taxes\Model\FetchResultMarketplaceLocationModel**](../Model/FetchResultMarketplaceLocationModel.md)
 
 ### Authorization
 
@@ -1482,7 +1482,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNexus**
-> \Swagger\Client\Model\FetchResultNexusModel listNexus($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNexusModel listNexus($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported nexus for all countries and regions.
 
@@ -1494,14 +1494,14 @@ Returns the full list of all Avalara-supported nexus for all countries and regio
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1534,7 +1534,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
+[**\Together\Taxes\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
 
 ### Authorization
 
@@ -1548,7 +1548,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNexusByAddress**
-> \Swagger\Client\Model\FetchResultNexusModel listNexusByAddress($region, $country, $line1, $line2, $line3, $city, $postal_code, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNexusModel listNexusByAddress($region, $country, $line1, $line2, $line3, $city, $postal_code, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all nexus that apply to a specific address.
 
@@ -1560,14 +1560,14 @@ Returns a list of all Avalara-supported taxing jurisdictions that apply to this 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1614,7 +1614,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
+[**\Together\Taxes\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
 
 ### Authorization
 
@@ -1628,7 +1628,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNexusByCountry**
-> \Swagger\Client\Model\FetchResultNexusModel listNexusByCountry($country, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNexusModel listNexusByCountry($country, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported nexus for a country.
 
@@ -1640,14 +1640,14 @@ Returns all Avalara-supported nexus for the specified country.                Th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1682,7 +1682,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
+[**\Together\Taxes\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
 
 ### Authorization
 
@@ -1696,7 +1696,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNexusByCountryAndRegion**
-> \Swagger\Client\Model\FetchResultNexusModel listNexusByCountryAndRegion($country, $region, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNexusModel listNexusByCountryAndRegion($country, $region, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported nexus for a country and region.
 
@@ -1708,14 +1708,14 @@ Returns all Avalara-supported nexus for the specified country and region.       
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1752,7 +1752,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
+[**\Together\Taxes\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
 
 ### Authorization
 
@@ -1766,7 +1766,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNexusByFormCode**
-> \Swagger\Client\Model\NexusByTaxFormModel listNexusByFormCode($form_code, $x_avalara_client)
+> \Together\Taxes\Model\NexusByTaxFormModel listNexusByFormCode($form_code, $x_avalara_client)
 
 List nexus related to a tax form
 
@@ -1778,14 +1778,14 @@ Retrieves a list of nexus related to a tax form.                The concept of `
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1812,7 +1812,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusByTaxFormModel**](../Model/NexusByTaxFormModel.md)
+[**\Together\Taxes\Model\NexusByTaxFormModel**](../Model/NexusByTaxFormModel.md)
 
 ### Authorization
 
@@ -1826,7 +1826,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNexusTaxTypeGroups**
-> \Swagger\Client\Model\FetchResultNexusTaxTypeGroupModel listNexusTaxTypeGroups($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNexusTaxTypeGroupModel listNexusTaxTypeGroups($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of nexus tax type groups
 
@@ -1838,14 +1838,14 @@ Returns the full list of Avalara-supported nexus tax type groups  This API is in
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1878,7 +1878,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNexusTaxTypeGroupModel**](../Model/FetchResultNexusTaxTypeGroupModel.md)
+[**\Together\Taxes\Model\FetchResultNexusTaxTypeGroupModel**](../Model/FetchResultNexusTaxTypeGroupModel.md)
 
 ### Authorization
 
@@ -1892,7 +1892,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticeCustomerFundingOptions**
-> \Swagger\Client\Model\FetchResultNoticeCustomerFundingOptionModel listNoticeCustomerFundingOptions($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticeCustomerFundingOptionModel listNoticeCustomerFundingOptions($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice customer funding options.
 
@@ -1904,14 +1904,14 @@ Returns the full list of Avalara-supported tax notice customer funding options. 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1944,7 +1944,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticeCustomerFundingOptionModel**](../Model/FetchResultNoticeCustomerFundingOptionModel.md)
+[**\Together\Taxes\Model\FetchResultNoticeCustomerFundingOptionModel**](../Model/FetchResultNoticeCustomerFundingOptionModel.md)
 
 ### Authorization
 
@@ -1958,7 +1958,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticeCustomerTypes**
-> \Swagger\Client\Model\FetchResultNoticeCustomerTypeModel listNoticeCustomerTypes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticeCustomerTypeModel listNoticeCustomerTypes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice customer types.
 
@@ -1970,14 +1970,14 @@ Returns the full list of Avalara-supported tax notice customer types.  This API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2010,7 +2010,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticeCustomerTypeModel**](../Model/FetchResultNoticeCustomerTypeModel.md)
+[**\Together\Taxes\Model\FetchResultNoticeCustomerTypeModel**](../Model/FetchResultNoticeCustomerTypeModel.md)
 
 ### Authorization
 
@@ -2024,7 +2024,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticeFilingtypes**
-> \Swagger\Client\Model\FetchResultNoticeFilingTypeModel listNoticeFilingtypes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticeFilingTypeModel listNoticeFilingtypes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice filing types.
 
@@ -2036,14 +2036,14 @@ Returns the full list of Avalara-supported tax notice filing types.  This API is
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2076,7 +2076,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticeFilingTypeModel**](../Model/FetchResultNoticeFilingTypeModel.md)
+[**\Together\Taxes\Model\FetchResultNoticeFilingTypeModel**](../Model/FetchResultNoticeFilingTypeModel.md)
 
 ### Authorization
 
@@ -2090,7 +2090,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticePriorities**
-> \Swagger\Client\Model\FetchResultNoticePriorityModel listNoticePriorities($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticePriorityModel listNoticePriorities($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice priorities.
 
@@ -2102,14 +2102,14 @@ Returns the full list of Avalara-supported tax notice priorities.  This API is i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2142,7 +2142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticePriorityModel**](../Model/FetchResultNoticePriorityModel.md)
+[**\Together\Taxes\Model\FetchResultNoticePriorityModel**](../Model/FetchResultNoticePriorityModel.md)
 
 ### Authorization
 
@@ -2156,7 +2156,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticeReasons**
-> \Swagger\Client\Model\FetchResultNoticeReasonModel listNoticeReasons($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticeReasonModel listNoticeReasons($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice reasons.
 
@@ -2168,14 +2168,14 @@ Returns the full list of Avalara-supported tax notice reasons.  This API is inte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2208,7 +2208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticeReasonModel**](../Model/FetchResultNoticeReasonModel.md)
+[**\Together\Taxes\Model\FetchResultNoticeReasonModel**](../Model/FetchResultNoticeReasonModel.md)
 
 ### Authorization
 
@@ -2222,7 +2222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticeResponsibilities**
-> \Swagger\Client\Model\FetchResultNoticeResponsibilityModel listNoticeResponsibilities($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticeResponsibilityModel listNoticeResponsibilities($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice responsibility ids
 
@@ -2234,14 +2234,14 @@ Returns the full list of Avalara-supported tax notice responsibility ids  This A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2274,7 +2274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticeResponsibilityModel**](../Model/FetchResultNoticeResponsibilityModel.md)
+[**\Together\Taxes\Model\FetchResultNoticeResponsibilityModel**](../Model/FetchResultNoticeResponsibilityModel.md)
 
 ### Authorization
 
@@ -2288,7 +2288,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticeRootCauses**
-> \Swagger\Client\Model\FetchResultNoticeRootCauseModel listNoticeRootCauses($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticeRootCauseModel listNoticeRootCauses($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice root causes
 
@@ -2300,14 +2300,14 @@ Returns the full list of Avalara-supported tax notice root causes  This API is i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2340,7 +2340,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticeRootCauseModel**](../Model/FetchResultNoticeRootCauseModel.md)
+[**\Together\Taxes\Model\FetchResultNoticeRootCauseModel**](../Model/FetchResultNoticeRootCauseModel.md)
 
 ### Authorization
 
@@ -2354,7 +2354,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticeStatuses**
-> \Swagger\Client\Model\FetchResultNoticeStatusModel listNoticeStatuses($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticeStatusModel listNoticeStatuses($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice statuses.
 
@@ -2366,14 +2366,14 @@ Returns the full list of Avalara-supported tax notice statuses.  This API is int
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2406,7 +2406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticeStatusModel**](../Model/FetchResultNoticeStatusModel.md)
+[**\Together\Taxes\Model\FetchResultNoticeStatusModel**](../Model/FetchResultNoticeStatusModel.md)
 
 ### Authorization
 
@@ -2420,7 +2420,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNoticeTypes**
-> \Swagger\Client\Model\FetchResultNoticeTypeModel listNoticeTypes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNoticeTypeModel listNoticeTypes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax notice types.
 
@@ -2432,14 +2432,14 @@ Returns the full list of Avalara-supported tax notice types.  This API is intend
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2472,7 +2472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNoticeTypeModel**](../Model/FetchResultNoticeTypeModel.md)
+[**\Together\Taxes\Model\FetchResultNoticeTypeModel**](../Model/FetchResultNoticeTypeModel.md)
 
 ### Authorization
 
@@ -2486,7 +2486,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listParameters**
-> \Swagger\Client\Model\FetchResultParameterModel listParameters($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultParameterModel listParameters($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported extra parameters for creating transactions.
 
@@ -2498,14 +2498,14 @@ Returns the full list of Avalara-supported extra parameters for the 'Create Tran
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2538,7 +2538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultParameterModel**](../Model/FetchResultParameterModel.md)
+[**\Together\Taxes\Model\FetchResultParameterModel**](../Model/FetchResultParameterModel.md)
 
 ### Authorization
 
@@ -2552,7 +2552,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listParametersByItem**
-> \Swagger\Client\Model\FetchResultParameterModel listParametersByItem($company_code, $item_code, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultParameterModel listParametersByItem($company_code, $item_code, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the parameters by companyCode and itemCode.
 
@@ -2564,14 +2564,14 @@ Returns the list of parameters based on the company country and state jurisdicti
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2608,7 +2608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultParameterModel**](../Model/FetchResultParameterModel.md)
+[**\Together\Taxes\Model\FetchResultParameterModel**](../Model/FetchResultParameterModel.md)
 
 ### Authorization
 
@@ -2622,7 +2622,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listParametersUsage**
-> \Swagger\Client\Model\FetchResultParameterUsageModel listParametersUsage($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultParameterUsageModel listParametersUsage($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported usage of extra parameters for creating transactions.
 
@@ -2634,14 +2634,14 @@ Returns the full list of Avalara-supported usage of extra parameters for the 'Cr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2674,7 +2674,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultParameterUsageModel**](../Model/FetchResultParameterUsageModel.md)
+[**\Together\Taxes\Model\FetchResultParameterUsageModel**](../Model/FetchResultParameterUsageModel.md)
 
 ### Authorization
 
@@ -2688,7 +2688,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPermissions**
-> \Swagger\Client\Model\FetchResultString listPermissions($top, $skip, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultString listPermissions($top, $skip, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported permissions
 
@@ -2700,14 +2700,14 @@ Returns the full list of Avalara-supported permission types.  This API is intend
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2736,7 +2736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultString**](../Model/FetchResultString.md)
+[**\Together\Taxes\Model\FetchResultString**](../Model/FetchResultString.md)
 
 ### Authorization
 
@@ -2750,7 +2750,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPostalCodes**
-> \Swagger\Client\Model\FetchResultPostalCodeModel listPostalCodes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultPostalCodeModel listPostalCodes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported postal codes.
 
@@ -2762,14 +2762,14 @@ Retrieves the list of Avalara-supported postal codes.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2802,7 +2802,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultPostalCodeModel**](../Model/FetchResultPostalCodeModel.md)
+[**\Together\Taxes\Model\FetchResultPostalCodeModel**](../Model/FetchResultPostalCodeModel.md)
 
 ### Authorization
 
@@ -2816,7 +2816,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPreferredPrograms**
-> \Swagger\Client\Model\FetchResultPreferredProgramModel listPreferredPrograms($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultPreferredProgramModel listPreferredPrograms($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all customs duty programs recognized by AvaTax
 
@@ -2828,14 +2828,14 @@ List all preferred customs duty programs recognized by AvaTax.                A 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2868,7 +2868,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultPreferredProgramModel**](../Model/FetchResultPreferredProgramModel.md)
+[**\Together\Taxes\Model\FetchResultPreferredProgramModel**](../Model/FetchResultPreferredProgramModel.md)
 
 ### Authorization
 
@@ -2882,7 +2882,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listProductClassificationSystems**
-> \Swagger\Client\Model\FetchResultProductClassificationSystemModel listProductClassificationSystems($filter, $top, $skip, $order_by, $country_code, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultProductClassificationSystemModel listProductClassificationSystems($filter, $top, $skip, $order_by, $country_code, $x_avalara_client)
 
 List all available product classification systems.
 
@@ -2894,14 +2894,14 @@ List all available product classification systems.                Tax authoritie
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2936,7 +2936,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultProductClassificationSystemModel**](../Model/FetchResultProductClassificationSystemModel.md)
+[**\Together\Taxes\Model\FetchResultProductClassificationSystemModel**](../Model/FetchResultProductClassificationSystemModel.md)
 
 ### Authorization
 
@@ -2950,7 +2950,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listProductClassificationSystemsByCompany**
-> \Swagger\Client\Model\FetchResultProductClassificationSystemModel listProductClassificationSystemsByCompany($company_code, $filter, $top, $skip, $order_by, $country_code, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultProductClassificationSystemModel listProductClassificationSystemsByCompany($company_code, $filter, $top, $skip, $order_by, $country_code, $x_avalara_client)
 
 List all product classification systems available to a company based on its nexus.
 
@@ -2962,14 +2962,14 @@ Lists all product classification systems available to a company based on its nex
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3006,7 +3006,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultProductClassificationSystemModel**](../Model/FetchResultProductClassificationSystemModel.md)
+[**\Together\Taxes\Model\FetchResultProductClassificationSystemModel**](../Model/FetchResultProductClassificationSystemModel.md)
 
 ### Authorization
 
@@ -3020,7 +3020,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listRateTypesByCountry**
-> \Swagger\Client\Model\FetchResultRateTypeModel listRateTypesByCountry($country, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultRateTypeModel listRateTypesByCountry($country, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of rate types for each country
 
@@ -3032,14 +3032,14 @@ Returns the full list of Avalara-supported rate type file types  This API is int
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3074,7 +3074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultRateTypeModel**](../Model/FetchResultRateTypeModel.md)
+[**\Together\Taxes\Model\FetchResultRateTypeModel**](../Model/FetchResultRateTypeModel.md)
 
 ### Authorization
 
@@ -3088,7 +3088,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listRegions**
-> \Swagger\Client\Model\FetchResultIsoRegionModel listRegions($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultIsoRegionModel listRegions($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all ISO 3166 regions
 
@@ -3100,14 +3100,14 @@ Returns a list of all ISO 3166 region codes and their US English friendly names.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3140,7 +3140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultIsoRegionModel**](../Model/FetchResultIsoRegionModel.md)
+[**\Together\Taxes\Model\FetchResultIsoRegionModel**](../Model/FetchResultIsoRegionModel.md)
 
 ### Authorization
 
@@ -3154,7 +3154,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listRegionsByCountry**
-> \Swagger\Client\Model\FetchResultIsoRegionModel listRegionsByCountry($country, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultIsoRegionModel listRegionsByCountry($country, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all ISO 3166 regions for a country
 
@@ -3166,14 +3166,14 @@ Returns a list of all ISO 3166 region codes for a specific country code, and the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3208,7 +3208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultIsoRegionModel**](../Model/FetchResultIsoRegionModel.md)
+[**\Together\Taxes\Model\FetchResultIsoRegionModel**](../Model/FetchResultIsoRegionModel.md)
 
 ### Authorization
 
@@ -3222,7 +3222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listResourceFileTypes**
-> \Swagger\Client\Model\FetchResultResourceFileTypeModel listResourceFileTypes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultResourceFileTypeModel listResourceFileTypes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported resource file types
 
@@ -3234,14 +3234,14 @@ Returns the full list of Avalara-supported resource file types  This API is inte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3274,7 +3274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultResourceFileTypeModel**](../Model/FetchResultResourceFileTypeModel.md)
+[**\Together\Taxes\Model\FetchResultResourceFileTypeModel**](../Model/FetchResultResourceFileTypeModel.md)
 
 ### Authorization
 
@@ -3288,7 +3288,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listSecurityRoles**
-> \Swagger\Client\Model\FetchResultSecurityRoleModel listSecurityRoles($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultSecurityRoleModel listSecurityRoles($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported permissions
 
@@ -3300,14 +3300,14 @@ Returns the full list of Avalara-supported permission types.  This API is intend
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3340,7 +3340,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultSecurityRoleModel**](../Model/FetchResultSecurityRoleModel.md)
+[**\Together\Taxes\Model\FetchResultSecurityRoleModel**](../Model/FetchResultSecurityRoleModel.md)
 
 ### Authorization
 
@@ -3354,7 +3354,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listSubscriptionTypes**
-> \Swagger\Client\Model\FetchResultSubscriptionTypeModel listSubscriptionTypes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultSubscriptionTypeModel listSubscriptionTypes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported subscription types
 
@@ -3366,14 +3366,14 @@ Returns the full list of Avalara-supported subscription types.  This API is inte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3406,7 +3406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultSubscriptionTypeModel**](../Model/FetchResultSubscriptionTypeModel.md)
+[**\Together\Taxes\Model\FetchResultSubscriptionTypeModel**](../Model/FetchResultSubscriptionTypeModel.md)
 
 ### Authorization
 
@@ -3420,7 +3420,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxAuthorities**
-> \Swagger\Client\Model\FetchResultTaxAuthorityModel listTaxAuthorities($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxAuthorityModel listTaxAuthorities($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax authorities.
 
@@ -3432,14 +3432,14 @@ Returns the full list of Avalara-supported tax authorities.  This API is intende
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3472,7 +3472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxAuthorityModel**](../Model/FetchResultTaxAuthorityModel.md)
+[**\Together\Taxes\Model\FetchResultTaxAuthorityModel**](../Model/FetchResultTaxAuthorityModel.md)
 
 ### Authorization
 
@@ -3486,7 +3486,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxAuthorityForms**
-> \Swagger\Client\Model\FetchResultTaxAuthorityFormModel listTaxAuthorityForms($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxAuthorityFormModel listTaxAuthorityForms($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported forms for each tax authority.
 
@@ -3498,14 +3498,14 @@ Returns the full list of Avalara-supported forms for each tax authority.  This l
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3538,7 +3538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxAuthorityFormModel**](../Model/FetchResultTaxAuthorityFormModel.md)
+[**\Together\Taxes\Model\FetchResultTaxAuthorityFormModel**](../Model/FetchResultTaxAuthorityFormModel.md)
 
 ### Authorization
 
@@ -3552,7 +3552,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxAuthorityTypes**
-> \Swagger\Client\Model\FetchResultTaxAuthorityTypeModel listTaxAuthorityTypes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxAuthorityTypeModel listTaxAuthorityTypes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax authority types.
 
@@ -3564,14 +3564,14 @@ Returns the full list of Avalara-supported tax authority types.  This API is int
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3604,7 +3604,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxAuthorityTypeModel**](../Model/FetchResultTaxAuthorityTypeModel.md)
+[**\Together\Taxes\Model\FetchResultTaxAuthorityTypeModel**](../Model/FetchResultTaxAuthorityTypeModel.md)
 
 ### Authorization
 
@@ -3618,7 +3618,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxCodeTypes**
-> \Swagger\Client\Model\TaxCodeTypesModel listTaxCodeTypes($top, $skip, $x_avalara_client)
+> \Together\Taxes\Model\TaxCodeTypesModel listTaxCodeTypes($top, $skip, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax code types.
 
@@ -3630,14 +3630,14 @@ Returns the full list of recognized tax code types.  A 'Tax Code Type' represent
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3666,7 +3666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxCodeTypesModel**](../Model/TaxCodeTypesModel.md)
+[**\Together\Taxes\Model\TaxCodeTypesModel**](../Model/TaxCodeTypesModel.md)
 
 ### Authorization
 
@@ -3680,7 +3680,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxCodes**
-> \Swagger\Client\Model\FetchResultTaxCodeModel listTaxCodes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxCodeModel listTaxCodes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of Avalara-supported tax codes.
 
@@ -3692,14 +3692,14 @@ Retrieves the list of Avalara-supported system tax codes.  A 'TaxCode' represent
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3732,7 +3732,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxCodeModel**](../Model/FetchResultTaxCodeModel.md)
+[**\Together\Taxes\Model\FetchResultTaxCodeModel**](../Model/FetchResultTaxCodeModel.md)
 
 ### Authorization
 
@@ -3746,7 +3746,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxForms**
-> \Swagger\Client\Model\FetchResultFormMasterModel listTaxForms($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultFormMasterModel listTaxForms($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of the Tax Forms available
 
@@ -3758,14 +3758,14 @@ Returns the full list of Avalara-supported Tax Forms  This API is intended to be
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3798,7 +3798,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultFormMasterModel**](../Model/FetchResultFormMasterModel.md)
+[**\Together\Taxes\Model\FetchResultFormMasterModel**](../Model/FetchResultFormMasterModel.md)
 
 ### Authorization
 
@@ -3812,7 +3812,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxSubTypes**
-> \Swagger\Client\Model\FetchResultTaxSubTypeModel listTaxSubTypes($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxSubTypeModel listTaxSubTypes($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of tax sub types
 
@@ -3824,14 +3824,14 @@ Returns the full list of Avalara-supported tax sub-types  This API is intended t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3864,7 +3864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxSubTypeModel**](../Model/FetchResultTaxSubTypeModel.md)
+[**\Together\Taxes\Model\FetchResultTaxSubTypeModel**](../Model/FetchResultTaxSubTypeModel.md)
 
 ### Authorization
 
@@ -3878,7 +3878,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listTaxTypeGroups**
-> \Swagger\Client\Model\FetchResultTaxTypeGroupModel listTaxTypeGroups($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultTaxTypeGroupModel listTaxTypeGroups($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve the full list of tax type groups
 
@@ -3890,14 +3890,14 @@ Returns the full list of Avalara-supported tax type groups  This API is intended
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3930,7 +3930,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultTaxTypeGroupModel**](../Model/FetchResultTaxTypeGroupModel.md)
+[**\Together\Taxes\Model\FetchResultTaxTypeGroupModel**](../Model/FetchResultTaxTypeGroupModel.md)
 
 ### Authorization
 
@@ -3944,7 +3944,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listUnitOfMeasurement**
-> \Swagger\Client\Model\FetchResultUomModel listUnitOfMeasurement($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultUomModel listUnitOfMeasurement($filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all defined units of measurement
 
@@ -3956,14 +3956,14 @@ List all units of measurement systems defined by Avalara.                A unit 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DefinitionsApi(
+$apiInstance = new Together\Taxes\Api\DefinitionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3996,7 +3996,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultUomModel**](../Model/FetchResultUomModel.md)
+[**\Together\Taxes\Model\FetchResultUomModel**](../Model/FetchResultUomModel.md)
 
 ### Authorization
 

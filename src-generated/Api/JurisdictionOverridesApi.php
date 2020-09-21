@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * JurisdictionOverridesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class JurisdictionOverridesApi
      *
      * @param  int $account_id The ID of the account that owns this override (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\JurisdictionOverrideModel[]
+     * @return \Together\Taxes\Model\JurisdictionOverrideModel[]
      */
     public function createJurisdictionOverrides($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class JurisdictionOverridesApi
      *
      * @param  int $account_id The ID of the account that owns this override (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\JurisdictionOverrideModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\JurisdictionOverrideModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createJurisdictionOverridesWithHttpInfo($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\JurisdictionOverrideModel[]';
+        $returnType = '\Together\Taxes\Model\JurisdictionOverrideModel[]';
         $request = $this->createJurisdictionOverridesRequest($account_id, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class JurisdictionOverridesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\JurisdictionOverrideModel[]',
+                        '\Together\Taxes\Model\JurisdictionOverrideModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class JurisdictionOverridesApi
      *
      * @param  int $account_id The ID of the account that owns this override (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class JurisdictionOverridesApi
      *
      * @param  int $account_id The ID of the account that owns this override (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createJurisdictionOverridesAsyncWithHttpInfo($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\JurisdictionOverrideModel[]';
+        $returnType = '\Together\Taxes\Model\JurisdictionOverrideModel[]';
         $request = $this->createJurisdictionOverridesRequest($account_id, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class JurisdictionOverridesApi
      *
      * @param  int $account_id The ID of the account that owns this override (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel[] $body The jurisdiction override objects to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -390,9 +390,9 @@ class JurisdictionOverridesApi
      * @param  int $id The ID of the override you wish to delete (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteJurisdictionOverride($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -409,13 +409,13 @@ class JurisdictionOverridesApi
      * @param  int $id The ID of the override you wish to delete (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteJurisdictionOverrideWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteJurisdictionOverrideRequest($account_id, $id, $x_avalara_client);
 
         try {
@@ -467,7 +467,7 @@ class JurisdictionOverridesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class JurisdictionOverridesApi
      */
     public function deleteJurisdictionOverrideAsyncWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteJurisdictionOverrideRequest($account_id, $id, $x_avalara_client);
 
         return $this->client
@@ -695,9 +695,9 @@ class JurisdictionOverridesApi
      * @param  int $id The primary key of this override (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\JurisdictionOverrideModel
+     * @return \Together\Taxes\Model\JurisdictionOverrideModel
      */
     public function getJurisdictionOverride($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -714,13 +714,13 @@ class JurisdictionOverridesApi
      * @param  int $id The primary key of this override (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\JurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\JurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getJurisdictionOverrideWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\JurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\JurisdictionOverrideModel';
         $request = $this->getJurisdictionOverrideRequest($account_id, $id, $x_avalara_client);
 
         try {
@@ -772,7 +772,7 @@ class JurisdictionOverridesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\JurisdictionOverrideModel',
+                        '\Together\Taxes\Model\JurisdictionOverrideModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class JurisdictionOverridesApi
      */
     public function getJurisdictionOverrideAsyncWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\JurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\JurisdictionOverrideModel';
         $request = $this->getJurisdictionOverrideRequest($account_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1004,9 +1004,9 @@ class JurisdictionOverridesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultJurisdictionOverrideModel
+     * @return \Together\Taxes\Model\FetchResultJurisdictionOverrideModel
      */
     public function listJurisdictionOverridesByAccount($account_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1027,13 +1027,13 @@ class JurisdictionOverridesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultJurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultJurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listJurisdictionOverridesByAccountWithHttpInfo($account_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel';
         $request = $this->listJurisdictionOverridesByAccountRequest($account_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1085,7 +1085,7 @@ class JurisdictionOverridesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel',
+                        '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1139,7 +1139,7 @@ class JurisdictionOverridesApi
      */
     public function listJurisdictionOverridesByAccountAsyncWithHttpInfo($account_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel';
         $request = $this->listJurisdictionOverridesByAccountRequest($account_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1334,9 +1334,9 @@ class JurisdictionOverridesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultJurisdictionOverrideModel
+     * @return \Together\Taxes\Model\FetchResultJurisdictionOverrideModel
      */
     public function queryJurisdictionOverrides($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1356,13 +1356,13 @@ class JurisdictionOverridesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultJurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultJurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryJurisdictionOverridesWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel';
         $request = $this->queryJurisdictionOverridesRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1414,7 +1414,7 @@ class JurisdictionOverridesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel',
+                        '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1466,7 +1466,7 @@ class JurisdictionOverridesApi
      */
     public function queryJurisdictionOverridesAsyncWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultJurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\FetchResultJurisdictionOverrideModel';
         $request = $this->queryJurisdictionOverridesRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1642,11 +1642,11 @@ class JurisdictionOverridesApi
      * @param  int $account_id The ID of the account that this jurisdictionoverride belongs to. (required)
      * @param  int $id The ID of the jurisdictionoverride you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\JurisdictionOverrideModel
+     * @return \Together\Taxes\Model\JurisdictionOverrideModel
      */
     public function updateJurisdictionOverride($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1662,15 +1662,15 @@ class JurisdictionOverridesApi
      * @param  int $account_id The ID of the account that this jurisdictionoverride belongs to. (required)
      * @param  int $id The ID of the jurisdictionoverride you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\JurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\JurisdictionOverrideModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateJurisdictionOverrideWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\JurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\JurisdictionOverrideModel';
         $request = $this->updateJurisdictionOverrideRequest($account_id, $id, $x_avalara_client, $body);
 
         try {
@@ -1722,7 +1722,7 @@ class JurisdictionOverridesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\JurisdictionOverrideModel',
+                        '\Together\Taxes\Model\JurisdictionOverrideModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1740,7 +1740,7 @@ class JurisdictionOverridesApi
      * @param  int $account_id The ID of the account that this jurisdictionoverride belongs to. (required)
      * @param  int $id The ID of the jurisdictionoverride you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1763,14 +1763,14 @@ class JurisdictionOverridesApi
      * @param  int $account_id The ID of the account that this jurisdictionoverride belongs to. (required)
      * @param  int $id The ID of the jurisdictionoverride you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateJurisdictionOverrideAsyncWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\JurisdictionOverrideModel';
+        $returnType = '\Together\Taxes\Model\JurisdictionOverrideModel';
         $request = $this->updateJurisdictionOverrideRequest($account_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -1816,7 +1816,7 @@ class JurisdictionOverridesApi
      * @param  int $account_id The ID of the account that this jurisdictionoverride belongs to. (required)
      * @param  int $id The ID of the jurisdictionoverride you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\JurisdictionOverrideModel $body The jurisdictionoverride object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

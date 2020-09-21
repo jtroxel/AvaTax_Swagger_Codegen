@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * TaxRateModel Class Doc Comment
  *
  * @category Class
  * @description Contains information about the general tangible personal property sales tax rates for this jurisdiction.                This rate is calculated by making assumptions about the tax calculation process.  It does not account for:                * Sourcing rules, such as origin-and-destination based transactions.  * Product taxability rules, such as different tax rates for different product types.  * Nexus declarations, where some customers are not obligated to collect tax in specific jurisdictions.  * Tax thresholds and rate differences by amounts.  * And many more custom use cases.                To upgrade to a fully-featured and accurate tax process that handles these scenarios correctly, please  contact Avalara to upgrade to AvaTax!
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class TaxRateModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'total_rate' => 'double',
-        'rates' => '\Swagger\Client\Model\RateModel[]'
+        'rates' => '\Together\Taxes\Model\RateModel[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class TaxRateModel implements ModelInterface, ArrayAccess
     /**
      * Gets rates
      *
-     * @return \Swagger\Client\Model\RateModel[]
+     * @return \Together\Taxes\Model\RateModel[]
      */
     public function getRates()
     {
@@ -248,7 +248,7 @@ class TaxRateModel implements ModelInterface, ArrayAccess
     /**
      * Sets rates
      *
-     * @param \Swagger\Client\Model\RateModel[] $rates The list of individual rate elements for general tangible personal property sold at a retail  point of presence in this jurisdiction on this date.
+     * @param \Together\Taxes\Model\RateModel[] $rates The list of individual rate elements for general tangible personal property sold at a retail  point of presence in this jurisdiction on this date.
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AdjustTransactionModel Class Doc Comment
  *
  * @category Class
  * @description Replace an existing transaction recorded in AvaTax with a new one.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class AdjustTransactionModel implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'adjustment_reason' => 'string',
         'adjustment_description' => 'string',
-        'new_transaction' => '\Swagger\Client\Model\CreateTransactionModel'
+        'new_transaction' => '\Together\Taxes\Model\CreateTransactionModel'
     ];
 
     /**
@@ -322,7 +322,7 @@ class AdjustTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets new_transaction
      *
-     * @return \Swagger\Client\Model\CreateTransactionModel
+     * @return \Together\Taxes\Model\CreateTransactionModel
      */
     public function getNewTransaction()
     {
@@ -332,7 +332,7 @@ class AdjustTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets new_transaction
      *
-     * @param \Swagger\Client\Model\CreateTransactionModel $new_transaction Replace the current transaction with tax data calculated for this new transaction
+     * @param \Together\Taxes\Model\CreateTransactionModel $new_transaction Replace the current transaction with tax data calculated for this new transaction
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * InspectLineResponseModel Class Doc Comment
  *
  * @category Class
  * @description Response model used as output for InspectLine API.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InspectLineResponseModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'determination_factors' => '\Swagger\Client\Model\DeterminationFactorModel[]'
+        'determination_factors' => '\Together\Taxes\Model\DeterminationFactorModel[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class InspectLineResponseModel implements ModelInterface, ArrayAccess
     /**
      * Gets determination_factors
      *
-     * @return \Swagger\Client\Model\DeterminationFactorModel[]
+     * @return \Together\Taxes\Model\DeterminationFactorModel[]
      */
     public function getDeterminationFactors()
     {
@@ -218,7 +218,7 @@ class InspectLineResponseModel implements ModelInterface, ArrayAccess
     /**
      * Sets determination_factors
      *
-     * @param \Swagger\Client\Model\DeterminationFactorModel[] $determination_factors A list of determination factors for a line that is being inspected through the InspectLine API.
+     * @param \Together\Taxes\Model\DeterminationFactorModel[] $determination_factors A list of determination factors for a line that is being inspected through the InspectLine API.
      *
      * @return $this
      */

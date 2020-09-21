@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **end_date** | [**\DateTime**](\DateTime.md) | The date this tax region stops to take effect. | [optional] 
 **is_acm** | **bool** | Is Acm flag. | [optional] 
 **is_sst** | **bool** | Is SST flag. | [optional] 
-**jurisdictions** | [**\Swagger\Client\Model\DenormalizedJurisModel[]**](DenormalizedJurisModel.md) | List of jurisdictions associated with this tax region. | [optional] 
+**jurisdictions** | [**\Together\Taxes\Model\DenormalizedJurisModel[]**](DenormalizedJurisModel.md) | List of jurisdictions associated with this tax region. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

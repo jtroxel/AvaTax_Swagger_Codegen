@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CompanyModel Class Doc Comment
  *
  * @category Class
  * @description A company or business entity.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -84,19 +84,19 @@ class CompanyModel implements ModelInterface, ArrayAccess
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'contacts' => '\Swagger\Client\Model\ContactModel[]',
-        'items' => '\Swagger\Client\Model\ItemModel[]',
-        'locations' => '\Swagger\Client\Model\LocationModel[]',
-        'nexus' => '\Swagger\Client\Model\NexusModel[]',
-        'settings' => '\Swagger\Client\Model\SettingModel[]',
-        'tax_codes' => '\Swagger\Client\Model\TaxCodeModel[]',
-        'tax_rules' => '\Swagger\Client\Model\TaxRuleModel[]',
-        'upcs' => '\Swagger\Client\Model\UPCModel[]',
-        'non_reporting_child_companies' => '\Swagger\Client\Model\CompanyModel[]',
-        'exempt_certs' => '\Swagger\Client\Model\EcmsModel[]',
+        'contacts' => '\Together\Taxes\Model\ContactModel[]',
+        'items' => '\Together\Taxes\Model\ItemModel[]',
+        'locations' => '\Together\Taxes\Model\LocationModel[]',
+        'nexus' => '\Together\Taxes\Model\NexusModel[]',
+        'settings' => '\Together\Taxes\Model\SettingModel[]',
+        'tax_codes' => '\Together\Taxes\Model\TaxCodeModel[]',
+        'tax_rules' => '\Together\Taxes\Model\TaxRuleModel[]',
+        'upcs' => '\Together\Taxes\Model\UPCModel[]',
+        'non_reporting_child_companies' => '\Together\Taxes\Model\CompanyModel[]',
+        'exempt_certs' => '\Together\Taxes\Model\EcmsModel[]',
         'moss_id' => 'string',
         'moss_country' => 'string',
-        'parameters' => '\Swagger\Client\Model\CompanyParameterDetailModel[]'
+        'parameters' => '\Together\Taxes\Model\CompanyParameterDetailModel[]'
     ];
 
     /**
@@ -1261,7 +1261,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets contacts
      *
-     * @return \Swagger\Client\Model\ContactModel[]
+     * @return \Together\Taxes\Model\ContactModel[]
      */
     public function getContacts()
     {
@@ -1271,7 +1271,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets contacts
      *
-     * @param \Swagger\Client\Model\ContactModel[] $contacts Optional: A list of contacts defined for this company.  To fetch this list, add the query string `?$include=Contacts` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
+     * @param \Together\Taxes\Model\ContactModel[] $contacts Optional: A list of contacts defined for this company.  To fetch this list, add the query string `?$include=Contacts` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
      *
      * @return $this
      */
@@ -1285,7 +1285,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Swagger\Client\Model\ItemModel[]
+     * @return \Together\Taxes\Model\ItemModel[]
      */
     public function getItems()
     {
@@ -1295,7 +1295,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Swagger\Client\Model\ItemModel[] $items Optional: A list of items defined for this company.  To fetch this list, add the query string `?$include=Items` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
+     * @param \Together\Taxes\Model\ItemModel[] $items Optional: A list of items defined for this company.  To fetch this list, add the query string `?$include=Items` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
      *
      * @return $this
      */
@@ -1309,7 +1309,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets locations
      *
-     * @return \Swagger\Client\Model\LocationModel[]
+     * @return \Together\Taxes\Model\LocationModel[]
      */
     public function getLocations()
     {
@@ -1319,7 +1319,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets locations
      *
-     * @param \Swagger\Client\Model\LocationModel[] $locations Optional: A list of locations defined for this company.  To fetch this list, add the query string `?$include=Locations` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
+     * @param \Together\Taxes\Model\LocationModel[] $locations Optional: A list of locations defined for this company.  To fetch this list, add the query string `?$include=Locations` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
      *
      * @return $this
      */
@@ -1333,7 +1333,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets nexus
      *
-     * @return \Swagger\Client\Model\NexusModel[]
+     * @return \Together\Taxes\Model\NexusModel[]
      */
     public function getNexus()
     {
@@ -1343,7 +1343,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets nexus
      *
-     * @param \Swagger\Client\Model\NexusModel[] $nexus Optional: A list of nexus defined for this company.  To fetch this list, add the query string `?$include=Nexus` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
+     * @param \Together\Taxes\Model\NexusModel[] $nexus Optional: A list of nexus defined for this company.  To fetch this list, add the query string `?$include=Nexus` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
      *
      * @return $this
      */
@@ -1357,7 +1357,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\SettingModel[]
+     * @return \Together\Taxes\Model\SettingModel[]
      */
     public function getSettings()
     {
@@ -1367,7 +1367,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\SettingModel[] $settings Optional: A list of settings defined for this company.  To fetch this list, add the query string `?$include=Settings` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
+     * @param \Together\Taxes\Model\SettingModel[] $settings Optional: A list of settings defined for this company.  To fetch this list, add the query string `?$include=Settings` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
      *
      * @return $this
      */
@@ -1381,7 +1381,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_codes
      *
-     * @return \Swagger\Client\Model\TaxCodeModel[]
+     * @return \Together\Taxes\Model\TaxCodeModel[]
      */
     public function getTaxCodes()
     {
@@ -1391,7 +1391,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_codes
      *
-     * @param \Swagger\Client\Model\TaxCodeModel[] $tax_codes Optional: A list of tax codes defined for this company.  To fetch this list, add the query string `?$include=TaxCodes` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
+     * @param \Together\Taxes\Model\TaxCodeModel[] $tax_codes Optional: A list of tax codes defined for this company.  To fetch this list, add the query string `?$include=TaxCodes` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
      *
      * @return $this
      */
@@ -1405,7 +1405,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_rules
      *
-     * @return \Swagger\Client\Model\TaxRuleModel[]
+     * @return \Together\Taxes\Model\TaxRuleModel[]
      */
     public function getTaxRules()
     {
@@ -1415,7 +1415,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_rules
      *
-     * @param \Swagger\Client\Model\TaxRuleModel[] $tax_rules Optional: A list of tax rules defined for this company.  To fetch this list, add the query string `?$include=TaxRules` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
+     * @param \Together\Taxes\Model\TaxRuleModel[] $tax_rules Optional: A list of tax rules defined for this company.  To fetch this list, add the query string `?$include=TaxRules` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
      *
      * @return $this
      */
@@ -1429,7 +1429,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets upcs
      *
-     * @return \Swagger\Client\Model\UPCModel[]
+     * @return \Together\Taxes\Model\UPCModel[]
      */
     public function getUpcs()
     {
@@ -1439,7 +1439,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets upcs
      *
-     * @param \Swagger\Client\Model\UPCModel[] $upcs Optional: A list of UPCs defined for this company.  To fetch this list, add the query string `?$include=UPCs` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
+     * @param \Together\Taxes\Model\UPCModel[] $upcs Optional: A list of UPCs defined for this company.  To fetch this list, add the query string `?$include=UPCs` to your URL.                When calling `CreateCompany`, you may provide a list of objects in this element and they will be created alongside the company.  The `UpdateCompany` API does not permit updating nested objects.
      *
      * @return $this
      */
@@ -1453,7 +1453,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets non_reporting_child_companies
      *
-     * @return \Swagger\Client\Model\CompanyModel[]
+     * @return \Together\Taxes\Model\CompanyModel[]
      */
     public function getNonReportingChildCompanies()
     {
@@ -1463,7 +1463,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets non_reporting_child_companies
      *
-     * @param \Swagger\Client\Model\CompanyModel[] $non_reporting_child_companies Optional: A list of non reporting child companies associated with this company.  To fetch this list, add the query string `?$include=NonReportingChildren` to your URL.
+     * @param \Together\Taxes\Model\CompanyModel[] $non_reporting_child_companies Optional: A list of non reporting child companies associated with this company.  To fetch this list, add the query string `?$include=NonReportingChildren` to your URL.
      *
      * @return $this
      */
@@ -1477,7 +1477,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets exempt_certs
      *
-     * @return \Swagger\Client\Model\EcmsModel[]
+     * @return \Together\Taxes\Model\EcmsModel[]
      */
     public function getExemptCerts()
     {
@@ -1487,7 +1487,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets exempt_certs
      *
-     * @param \Swagger\Client\Model\EcmsModel[] $exempt_certs DEPRECATED - Date: 9/15/2017, Version: 17.10, Message: Please use the `ListCertificates` API.
+     * @param \Together\Taxes\Model\EcmsModel[] $exempt_certs DEPRECATED - Date: 9/15/2017, Version: 17.10, Message: Please use the `ListCertificates` API.
      *
      * @return $this
      */
@@ -1563,7 +1563,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\CompanyParameterDetailModel[]
+     * @return \Together\Taxes\Model\CompanyParameterDetailModel[]
      */
     public function getParameters()
     {
@@ -1573,7 +1573,7 @@ class CompanyModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\CompanyParameterDetailModel[] $parameters The parameters of a company
+     * @param \Together\Taxes\Model\CompanyParameterDetailModel[] $parameters The parameters of a company
      *
      * @return $this
      */

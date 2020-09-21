@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * FirmClientLinkagesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FirmClientLinkageOutputModel
+     * @return \Together\Taxes\Model\FirmClientLinkageOutputModel
      */
     public function approveFirmClientLinkage($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -113,13 +113,13 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function approveFirmClientLinkageWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->approveFirmClientLinkageRequest($id, $x_avalara_client);
 
         try {
@@ -171,7 +171,7 @@ class FirmClientLinkagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FirmClientLinkageOutputModel',
+                        '\Together\Taxes\Model\FirmClientLinkageOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class FirmClientLinkagesApi
      */
     public function approveFirmClientLinkageAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->approveFirmClientLinkageRequest($id, $x_avalara_client);
 
         return $this->client
@@ -379,11 +379,11 @@ class FirmClientLinkagesApi
      * Request a new FirmClient account and create an approved linkage to it
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FirmClientLinkageOutputModel
+     * @return \Together\Taxes\Model\FirmClientLinkageOutputModel
      */
     public function createAndLinkNewFirmClientAccount($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -397,15 +397,15 @@ class FirmClientLinkagesApi
      * Request a new FirmClient account and create an approved linkage to it
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAndLinkNewFirmClientAccountWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->createAndLinkNewFirmClientAccountRequest($x_avalara_client, $body);
 
         try {
@@ -457,7 +457,7 @@ class FirmClientLinkagesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FirmClientLinkageOutputModel',
+                        '\Together\Taxes\Model\FirmClientLinkageOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -473,7 +473,7 @@ class FirmClientLinkagesApi
      * Request a new FirmClient account and create an approved linkage to it
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -494,14 +494,14 @@ class FirmClientLinkagesApi
      * Request a new FirmClient account and create an approved linkage to it
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createAndLinkNewFirmClientAccountAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->createAndLinkNewFirmClientAccountRequest($x_avalara_client, $body);
 
         return $this->client
@@ -545,7 +545,7 @@ class FirmClientLinkagesApi
      * Create request for operation 'createAndLinkNewFirmClientAccount'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NewFirmClientAccountRequestModel $body Information about the account you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -654,11 +654,11 @@ class FirmClientLinkagesApi
      * Links a firm account with the client account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
+     * @param  \Together\Taxes\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FirmClientLinkageOutputModel
+     * @return \Together\Taxes\Model\FirmClientLinkageOutputModel
      */
     public function createFirmClientLinkage($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -672,15 +672,15 @@ class FirmClientLinkagesApi
      * Links a firm account with the client account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
+     * @param  \Together\Taxes\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFirmClientLinkageWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->createFirmClientLinkageRequest($x_avalara_client, $body);
 
         try {
@@ -732,7 +732,7 @@ class FirmClientLinkagesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FirmClientLinkageOutputModel',
+                        '\Together\Taxes\Model\FirmClientLinkageOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -748,7 +748,7 @@ class FirmClientLinkagesApi
      * Links a firm account with the client account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
+     * @param  \Together\Taxes\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -769,14 +769,14 @@ class FirmClientLinkagesApi
      * Links a firm account with the client account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
+     * @param  \Together\Taxes\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createFirmClientLinkageAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->createFirmClientLinkageRequest($x_avalara_client, $body);
 
         return $this->client
@@ -820,7 +820,7 @@ class FirmClientLinkagesApi
      * Create request for operation 'createFirmClientLinkage'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
+     * @param  \Together\Taxes\Model\FirmClientLinkageInputModel $body FirmClientLinkageInputModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -931,9 +931,9 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteFirmClientLinkage($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -949,13 +949,13 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteFirmClientLinkageWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteFirmClientLinkageRequest($id, $x_avalara_client);
 
         try {
@@ -1007,7 +1007,7 @@ class FirmClientLinkagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1051,7 +1051,7 @@ class FirmClientLinkagesApi
      */
     public function deleteFirmClientLinkageAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteFirmClientLinkageRequest($id, $x_avalara_client);
 
         return $this->client
@@ -1217,9 +1217,9 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FirmClientLinkageOutputModel
+     * @return \Together\Taxes\Model\FirmClientLinkageOutputModel
      */
     public function getFirmClientLinkage($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1235,13 +1235,13 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFirmClientLinkageWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->getFirmClientLinkageRequest($id, $x_avalara_client);
 
         try {
@@ -1293,7 +1293,7 @@ class FirmClientLinkagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FirmClientLinkageOutputModel',
+                        '\Together\Taxes\Model\FirmClientLinkageOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1337,7 +1337,7 @@ class FirmClientLinkagesApi
      */
     public function getFirmClientLinkageAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->getFirmClientLinkageRequest($id, $x_avalara_client);
 
         return $this->client
@@ -1503,9 +1503,9 @@ class FirmClientLinkagesApi
      * @param  string $filter A filter statement to identify specific records to retrieve.  For more information on filtering, see [Filtering in REST](http://developer.avalara.com/avatax/filtering-in-rest/).&lt;br /&gt;*Not filterable:* firmAccountName, clientAccountName (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultFirmClientLinkageOutputModel
+     * @return \Together\Taxes\Model\FetchResultFirmClientLinkageOutputModel
      */
     public function listFirmClientLinkage($filter = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1521,13 +1521,13 @@ class FirmClientLinkagesApi
      * @param  string $filter A filter statement to identify specific records to retrieve.  For more information on filtering, see [Filtering in REST](http://developer.avalara.com/avatax/filtering-in-rest/).&lt;br /&gt;*Not filterable:* firmAccountName, clientAccountName (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultFirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultFirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listFirmClientLinkageWithHttpInfo($filter = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultFirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FetchResultFirmClientLinkageOutputModel';
         $request = $this->listFirmClientLinkageRequest($filter, $x_avalara_client);
 
         try {
@@ -1579,7 +1579,7 @@ class FirmClientLinkagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultFirmClientLinkageOutputModel',
+                        '\Together\Taxes\Model\FetchResultFirmClientLinkageOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1623,7 +1623,7 @@ class FirmClientLinkagesApi
      */
     public function listFirmClientLinkageAsyncWithHttpInfo($filter = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultFirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FetchResultFirmClientLinkageOutputModel';
         $request = $this->listFirmClientLinkageRequest($filter, $x_avalara_client);
 
         return $this->client
@@ -1779,9 +1779,9 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FirmClientLinkageOutputModel
+     * @return \Together\Taxes\Model\FirmClientLinkageOutputModel
      */
     public function rejectFirmClientLinkage($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1797,13 +1797,13 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function rejectFirmClientLinkageWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->rejectFirmClientLinkageRequest($id, $x_avalara_client);
 
         try {
@@ -1855,7 +1855,7 @@ class FirmClientLinkagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FirmClientLinkageOutputModel',
+                        '\Together\Taxes\Model\FirmClientLinkageOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1899,7 +1899,7 @@ class FirmClientLinkagesApi
      */
     public function rejectFirmClientLinkageAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->rejectFirmClientLinkageRequest($id, $x_avalara_client);
 
         return $this->client
@@ -2065,9 +2065,9 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FirmClientLinkageOutputModel
+     * @return \Together\Taxes\Model\FirmClientLinkageOutputModel
      */
     public function resetFirmClientLinkage($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2083,13 +2083,13 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function resetFirmClientLinkageWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->resetFirmClientLinkageRequest($id, $x_avalara_client);
 
         try {
@@ -2141,7 +2141,7 @@ class FirmClientLinkagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FirmClientLinkageOutputModel',
+                        '\Together\Taxes\Model\FirmClientLinkageOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2185,7 +2185,7 @@ class FirmClientLinkagesApi
      */
     public function resetFirmClientLinkageAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->resetFirmClientLinkageRequest($id, $x_avalara_client);
 
         return $this->client
@@ -2351,9 +2351,9 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FirmClientLinkageOutputModel
+     * @return \Together\Taxes\Model\FirmClientLinkageOutputModel
      */
     public function revokeFirmClientLinkage($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2369,13 +2369,13 @@ class FirmClientLinkagesApi
      * @param  int $id  (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FirmClientLinkageOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function revokeFirmClientLinkageWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->revokeFirmClientLinkageRequest($id, $x_avalara_client);
 
         try {
@@ -2427,7 +2427,7 @@ class FirmClientLinkagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FirmClientLinkageOutputModel',
+                        '\Together\Taxes\Model\FirmClientLinkageOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2471,7 +2471,7 @@ class FirmClientLinkagesApi
      */
     public function revokeFirmClientLinkageAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FirmClientLinkageOutputModel';
+        $returnType = '\Together\Taxes\Model\FirmClientLinkageOutputModel';
         $request = $this->revokeFirmClientLinkageRequest($id, $x_avalara_client);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * ReportModel Class Doc Comment
  *
  * @category Class
  * @description A model for displaying report task metadata
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class ReportModel implements ModelInterface, ArrayAccess
         'account_id' => 'int',
         'company_id' => 'int',
         'report_type' => 'string',
-        'parameters' => '\Swagger\Client\Model\ReportParametersModel',
+        'parameters' => '\Together\Taxes\Model\ReportParametersModel',
         'status' => 'string',
         'size' => 'int',
         'format' => 'string',
@@ -376,7 +376,7 @@ class ReportModel implements ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Swagger\Client\Model\ReportParametersModel
+     * @return \Together\Taxes\Model\ReportParametersModel
      */
     public function getParameters()
     {
@@ -386,7 +386,7 @@ class ReportModel implements ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Swagger\Client\Model\ReportParametersModel $parameters The parametes used to build the report
+     * @param \Together\Taxes\Model\ReportParametersModel $parameters The parametes used to build the report
      *
      * @return $this
      */

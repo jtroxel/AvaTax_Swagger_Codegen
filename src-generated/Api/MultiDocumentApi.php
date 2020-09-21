@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * MultiDocumentApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,11 +96,11 @@ class MultiDocumentApi
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MultiDocumentModel
+     * @return \Together\Taxes\Model\MultiDocumentModel
      */
     public function adjustMultiDocumentTransaction($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -117,15 +117,15 @@ class MultiDocumentApi
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function adjustMultiDocumentTransactionWithHttpInfo($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->adjustMultiDocumentTransactionRequest($code, $type, $include, $x_avalara_client, $body);
 
         try {
@@ -177,7 +177,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MultiDocumentModel',
+                        '\Together\Taxes\Model\MultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -196,7 +196,7 @@ class MultiDocumentApi
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -220,14 +220,14 @@ class MultiDocumentApi
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function adjustMultiDocumentTransactionAsyncWithHttpInfo($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->adjustMultiDocumentTransactionRequest($code, $type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -274,7 +274,7 @@ class MultiDocumentApi
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in this fetch call (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\AdjustMultiDocumentModel $body The adjust request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -418,9 +418,9 @@ class MultiDocumentApi
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AuditMultiDocumentModel
+     * @return \Together\Taxes\Model\AuditMultiDocumentModel
      */
     public function auditMultiDocumentTransaction($code, $type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -437,13 +437,13 @@ class MultiDocumentApi
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AuditMultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AuditMultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function auditMultiDocumentTransactionWithHttpInfo($code, $type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AuditMultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\AuditMultiDocumentModel';
         $request = $this->auditMultiDocumentTransactionRequest($code, $type, $x_avalara_client);
 
         try {
@@ -495,7 +495,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AuditMultiDocumentModel',
+                        '\Together\Taxes\Model\AuditMultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -541,7 +541,7 @@ class MultiDocumentApi
      */
     public function auditMultiDocumentTransactionAsyncWithHttpInfo($code, $type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AuditMultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\AuditMultiDocumentModel';
         $request = $this->auditMultiDocumentTransactionRequest($code, $type, $x_avalara_client);
 
         return $this->client
@@ -720,11 +720,11 @@ class MultiDocumentApi
      * Commit a MultiDocument transaction
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MultiDocumentModel
+     * @return \Together\Taxes\Model\MultiDocumentModel
      */
     public function commitMultiDocumentTransaction($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -738,15 +738,15 @@ class MultiDocumentApi
      * Commit a MultiDocument transaction
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function commitMultiDocumentTransactionWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->commitMultiDocumentTransactionRequest($x_avalara_client, $body);
 
         try {
@@ -798,7 +798,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MultiDocumentModel',
+                        '\Together\Taxes\Model\MultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -814,7 +814,7 @@ class MultiDocumentApi
      * Commit a MultiDocument transaction
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -835,14 +835,14 @@ class MultiDocumentApi
      * Commit a MultiDocument transaction
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function commitMultiDocumentTransactionAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->commitMultiDocumentTransactionRequest($x_avalara_client, $body);
 
         return $this->client
@@ -886,7 +886,7 @@ class MultiDocumentApi
      * Create request for operation 'commitMultiDocumentTransaction'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\CommitMultiDocumentModel $body The commit request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -996,11 +996,11 @@ class MultiDocumentApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
+     * @param  \Together\Taxes\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MultiDocumentModel
+     * @return \Together\Taxes\Model\MultiDocumentModel
      */
     public function createMultiDocumentTransaction($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1015,15 +1015,15 @@ class MultiDocumentApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
+     * @param  \Together\Taxes\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMultiDocumentTransactionWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->createMultiDocumentTransactionRequest($include, $x_avalara_client, $body);
 
         try {
@@ -1075,7 +1075,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MultiDocumentModel',
+                        '\Together\Taxes\Model\MultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1092,7 +1092,7 @@ class MultiDocumentApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
+     * @param  \Together\Taxes\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1114,14 +1114,14 @@ class MultiDocumentApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
+     * @param  \Together\Taxes\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createMultiDocumentTransactionAsyncWithHttpInfo($include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->createMultiDocumentTransactionRequest($include, $x_avalara_client, $body);
 
         return $this->client
@@ -1166,7 +1166,7 @@ class MultiDocumentApi
      *
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
+     * @param  \Together\Taxes\Model\CreateMultiDocumentModel $body the multi document transaction model (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1283,9 +1283,9 @@ class MultiDocumentApi
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MultiDocumentModel
+     * @return \Together\Taxes\Model\MultiDocumentModel
      */
     public function getMultiDocumentTransactionByCodeAndType($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1303,13 +1303,13 @@ class MultiDocumentApi
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMultiDocumentTransactionByCodeAndTypeWithHttpInfo($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->getMultiDocumentTransactionByCodeAndTypeRequest($code, $type, $include, $x_avalara_client);
 
         try {
@@ -1361,7 +1361,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MultiDocumentModel',
+                        '\Together\Taxes\Model\MultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1409,7 +1409,7 @@ class MultiDocumentApi
      */
     public function getMultiDocumentTransactionByCodeAndTypeAsyncWithHttpInfo($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->getMultiDocumentTransactionByCodeAndTypeRequest($code, $type, $include, $x_avalara_client);
 
         return $this->client
@@ -1596,9 +1596,9 @@ class MultiDocumentApi
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MultiDocumentModel
+     * @return \Together\Taxes\Model\MultiDocumentModel
      */
     public function getMultiDocumentTransactionById($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1615,13 +1615,13 @@ class MultiDocumentApi
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMultiDocumentTransactionByIdWithHttpInfo($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->getMultiDocumentTransactionByIdRequest($id, $include, $x_avalara_client);
 
         try {
@@ -1673,7 +1673,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MultiDocumentModel',
+                        '\Together\Taxes\Model\MultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1719,7 +1719,7 @@ class MultiDocumentApi
      */
     public function getMultiDocumentTransactionByIdAsyncWithHttpInfo($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->getMultiDocumentTransactionByIdRequest($id, $include, $x_avalara_client);
 
         return $this->client
@@ -1894,9 +1894,9 @@ class MultiDocumentApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultMultiDocumentModel
+     * @return \Together\Taxes\Model\FetchResultMultiDocumentModel
      */
     public function listMultiDocumentTransactions($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1916,13 +1916,13 @@ class MultiDocumentApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultMultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultMultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listMultiDocumentTransactionsWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultMultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\FetchResultMultiDocumentModel';
         $request = $this->listMultiDocumentTransactionsRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1974,7 +1974,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultMultiDocumentModel',
+                        '\Together\Taxes\Model\FetchResultMultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2026,7 +2026,7 @@ class MultiDocumentApi
      */
     public function listMultiDocumentTransactionsAsyncWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultMultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\FetchResultMultiDocumentModel';
         $request = $this->listMultiDocumentTransactionsRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2203,11 +2203,11 @@ class MultiDocumentApi
      * @param  string $type The type of this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MultiDocumentModel
+     * @return \Together\Taxes\Model\MultiDocumentModel
      */
     public function refundMultiDocumentTransaction($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2224,15 +2224,15 @@ class MultiDocumentApi
      * @param  string $type The type of this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function refundMultiDocumentTransactionWithHttpInfo($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->refundMultiDocumentTransactionRequest($code, $type, $include, $x_avalara_client, $body);
 
         try {
@@ -2284,7 +2284,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MultiDocumentModel',
+                        '\Together\Taxes\Model\MultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2303,7 +2303,7 @@ class MultiDocumentApi
      * @param  string $type The type of this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2327,14 +2327,14 @@ class MultiDocumentApi
      * @param  string $type The type of this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function refundMultiDocumentTransactionAsyncWithHttpInfo($code, $type, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->refundMultiDocumentTransactionRequest($code, $type, $include, $x_avalara_client, $body);
 
         return $this->client
@@ -2381,7 +2381,7 @@ class MultiDocumentApi
      * @param  string $type The type of this MultiDocument transaction (required)
      * @param  string $include Specifies objects to include in the response after transaction is created (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\RefundTransactionModel $body Information about the refund to create (optional)
+     * @param  \Together\Taxes\Model\RefundTransactionModel $body Information about the refund to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2522,11 +2522,11 @@ class MultiDocumentApi
      * Verify a MultiDocument transaction
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MultiDocumentModel
+     * @return \Together\Taxes\Model\MultiDocumentModel
      */
     public function verifyMultiDocumentTransaction($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2540,15 +2540,15 @@ class MultiDocumentApi
      * Verify a MultiDocument transaction
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function verifyMultiDocumentTransactionWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->verifyMultiDocumentTransactionRequest($x_avalara_client, $body);
 
         try {
@@ -2600,7 +2600,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MultiDocumentModel',
+                        '\Together\Taxes\Model\MultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2616,7 +2616,7 @@ class MultiDocumentApi
      * Verify a MultiDocument transaction
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2637,14 +2637,14 @@ class MultiDocumentApi
      * Verify a MultiDocument transaction
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function verifyMultiDocumentTransactionAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->verifyMultiDocumentTransactionRequest($x_avalara_client, $body);
 
         return $this->client
@@ -2688,7 +2688,7 @@ class MultiDocumentApi
      * Create request for operation 'verifyMultiDocumentTransaction'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
+     * @param  \Together\Taxes\Model\VerifyMultiDocumentModel $body Information from your accounting system to verify against this MultiDocument transaction as it is stored in AvaTax (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2799,11 +2799,11 @@ class MultiDocumentApi
      * @param  string $code The transaction code for this MultiDocument transaction (required)
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MultiDocumentModel
+     * @return \Together\Taxes\Model\MultiDocumentModel
      */
     public function voidMultiDocumentTransaction($code, $type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2819,15 +2819,15 @@ class MultiDocumentApi
      * @param  string $code The transaction code for this MultiDocument transaction (required)
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\MultiDocumentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function voidMultiDocumentTransactionWithHttpInfo($code, $type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->voidMultiDocumentTransactionRequest($code, $type, $x_avalara_client, $body);
 
         try {
@@ -2879,7 +2879,7 @@ class MultiDocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MultiDocumentModel',
+                        '\Together\Taxes\Model\MultiDocumentModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2897,7 +2897,7 @@ class MultiDocumentApi
      * @param  string $code The transaction code for this MultiDocument transaction (required)
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2920,14 +2920,14 @@ class MultiDocumentApi
      * @param  string $code The transaction code for this MultiDocument transaction (required)
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function voidMultiDocumentTransactionAsyncWithHttpInfo($code, $type, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\MultiDocumentModel';
+        $returnType = '\Together\Taxes\Model\MultiDocumentModel';
         $request = $this->voidMultiDocumentTransactionRequest($code, $type, $x_avalara_client, $body);
 
         return $this->client
@@ -2973,7 +2973,7 @@ class MultiDocumentApi
      * @param  string $code The transaction code for this MultiDocument transaction (required)
      * @param  string $type The transaction type for this MultiDocument transaction (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\VoidTransactionModel $body The void request you wish to execute (optional)
+     * @param  \Together\Taxes\Model\VoidTransactionModel $body The void request you wish to execute (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

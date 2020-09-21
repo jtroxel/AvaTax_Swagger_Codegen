@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * MultiTaxFilingRegionModel Class Doc Comment
  *
  * @category Class
  * @description Regions
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,10 +62,10 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
         'region' => 'string',
         'has_nexus' => 'bool',
         'status' => 'string',
-        'region_tax_summary' => '\Swagger\Client\Model\FilingsTaxSummaryModel',
-        'region_tax_details' => '\Swagger\Client\Model\FilingsTaxDetailsModel[]',
-        'suggest_returns' => '\Swagger\Client\Model\FilingsCheckupSuggestedFormModel[]',
-        'returns' => '\Swagger\Client\Model\MultiTaxFilingReturnModel[]'
+        'region_tax_summary' => '\Together\Taxes\Model\FilingsTaxSummaryModel',
+        'region_tax_details' => '\Together\Taxes\Model\FilingsTaxDetailsModel[]',
+        'suggest_returns' => '\Together\Taxes\Model\FilingsCheckupSuggestedFormModel[]',
+        'returns' => '\Together\Taxes\Model\MultiTaxFilingReturnModel[]'
     ];
 
     /**
@@ -408,7 +408,7 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Gets region_tax_summary
      *
-     * @return \Swagger\Client\Model\FilingsTaxSummaryModel
+     * @return \Together\Taxes\Model\FilingsTaxSummaryModel
      */
     public function getRegionTaxSummary()
     {
@@ -418,7 +418,7 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Sets region_tax_summary
      *
-     * @param \Swagger\Client\Model\FilingsTaxSummaryModel $region_tax_summary A summary of all taxes compbined for this period
+     * @param \Together\Taxes\Model\FilingsTaxSummaryModel $region_tax_summary A summary of all taxes compbined for this period
      *
      * @return $this
      */
@@ -432,7 +432,7 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Gets region_tax_details
      *
-     * @return \Swagger\Client\Model\FilingsTaxDetailsModel[]
+     * @return \Together\Taxes\Model\FilingsTaxDetailsModel[]
      */
     public function getRegionTaxDetails()
     {
@@ -442,7 +442,7 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Sets region_tax_details
      *
-     * @param \Swagger\Client\Model\FilingsTaxDetailsModel[] $region_tax_details A detailed breakdown of the taxes in this filing
+     * @param \Together\Taxes\Model\FilingsTaxDetailsModel[] $region_tax_details A detailed breakdown of the taxes in this filing
      *
      * @return $this
      */
@@ -456,7 +456,7 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Gets suggest_returns
      *
-     * @return \Swagger\Client\Model\FilingsCheckupSuggestedFormModel[]
+     * @return \Together\Taxes\Model\FilingsCheckupSuggestedFormModel[]
      */
     public function getSuggestReturns()
     {
@@ -466,7 +466,7 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Sets suggest_returns
      *
-     * @param \Swagger\Client\Model\FilingsCheckupSuggestedFormModel[] $suggest_returns A list of tax returns in this region.
+     * @param \Together\Taxes\Model\FilingsCheckupSuggestedFormModel[] $suggest_returns A list of tax returns in this region.
      *
      * @return $this
      */
@@ -480,7 +480,7 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Gets returns
      *
-     * @return \Swagger\Client\Model\MultiTaxFilingReturnModel[]
+     * @return \Together\Taxes\Model\MultiTaxFilingReturnModel[]
      */
     public function getReturns()
     {
@@ -490,7 +490,7 @@ class MultiTaxFilingRegionModel implements ModelInterface, ArrayAccess
     /**
      * Sets returns
      *
-     * @param \Swagger\Client\Model\MultiTaxFilingReturnModel[] $returns A list of tax returns in this region.
+     * @param \Together\Taxes\Model\MultiTaxFilingReturnModel[] $returns A list of tax returns in this region.
      *
      * @return $this
      */

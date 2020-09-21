@@ -1,4 +1,4 @@
-# Swagger\Client\ReportsApi
+# Together\Taxes\ReportsApi
 
 All URIs are relative to *https://localhost*
 
@@ -23,14 +23,14 @@ This API downloads the file associated with a report.                If the repo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Together\Taxes\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getReport**
-> \Swagger\Client\Model\ReportModel getReport($id, $x_avalara_client)
+> \Together\Taxes\Model\ReportModel getReport($id, $x_avalara_client)
 
 Retrieve a single report
 
@@ -83,14 +83,14 @@ Retrieve a single report by its unique ID number.                Reports are run
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Together\Taxes\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ReportModel**](../Model/ReportModel.md)
+[**\Together\Taxes\Model\ReportModel**](../Model/ReportModel.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **initiateExportDocumentLineReport**
-> \Swagger\Client\Model\ReportModel[] initiateExportDocumentLineReport($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ReportModel[] initiateExportDocumentLineReport($company_id, $x_avalara_client, $body)
 
 Initiate an ExportDocumentLine report task
 
@@ -143,14 +143,14 @@ Begins running an `ExportDocumentLine` report task and returns the identity of t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Together\Taxes\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -158,7 +158,7 @@ $apiInstance = new Swagger\Client\Api\ReportsApi(
 );
 $company_id = 56; // int | The unique ID number of the company to report on.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\ExportDocumentLineModel(); // \Swagger\Client\Model\ExportDocumentLineModel | Options that may be configured to customize the report.
+$body = new \Together\Taxes\Model\ExportDocumentLineModel(); // \Together\Taxes\Model\ExportDocumentLineModel | Options that may be configured to customize the report.
 
 try {
     $result = $apiInstance->initiateExportDocumentLineReport($company_id, $x_avalara_client, $body);
@@ -175,11 +175,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The unique ID number of the company to report on. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ExportDocumentLineModel**](../Model/ExportDocumentLineModel.md)| Options that may be configured to customize the report. | [optional]
+ **body** | [**\Together\Taxes\Model\ExportDocumentLineModel**](../Model/ExportDocumentLineModel.md)| Options that may be configured to customize the report. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ReportModel[]**](../Model/ReportModel.md)
+[**\Together\Taxes\Model\ReportModel[]**](../Model/ReportModel.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listReports**
-> \Swagger\Client\Model\FetchResultReportModel listReports($company_id, $page_key, $skip, $top, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultReportModel listReports($company_id, $page_key, $skip, $top, $x_avalara_client)
 
 List all report tasks for account
 
@@ -205,14 +205,14 @@ List all report tasks for your account.                Reports are run as asynch
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Together\Taxes\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultReportModel**](../Model/FetchResultReportModel.md)
+[**\Together\Taxes\Model\FetchResultReportModel**](../Model/FetchResultReportModel.md)
 
 ### Authorization
 

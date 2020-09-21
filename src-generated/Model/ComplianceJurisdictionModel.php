@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * ComplianceJurisdictionModel Class Doc Comment
  *
  * @category Class
  * @description Model for distinct jurisdictions.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -68,7 +68,7 @@ class ComplianceJurisdictionModel implements ModelInterface, ArrayAccess
         'country' => 'string',
         'tax_region_name' => 'string',
         'tax_authority_id' => 'int',
-        'rates' => '\Swagger\Client\Model\ComplianceAggregatedTaxRateModel[]'
+        'rates' => '\Together\Taxes\Model\ComplianceAggregatedTaxRateModel[]'
     ];
 
     /**
@@ -508,7 +508,7 @@ class ComplianceJurisdictionModel implements ModelInterface, ArrayAccess
     /**
      * Gets rates
      *
-     * @return \Swagger\Client\Model\ComplianceAggregatedTaxRateModel[]
+     * @return \Together\Taxes\Model\ComplianceAggregatedTaxRateModel[]
      */
     public function getRates()
     {
@@ -518,7 +518,7 @@ class ComplianceJurisdictionModel implements ModelInterface, ArrayAccess
     /**
      * Sets rates
      *
-     * @param \Swagger\Client\Model\ComplianceAggregatedTaxRateModel[] $rates Optional: A list of rates for this jurisdiction. To fetch this list, add the query string `?$include=TaxRates` to your URL.
+     * @param \Together\Taxes\Model\ComplianceAggregatedTaxRateModel[] $rates Optional: A list of rates for this jurisdiction. To fetch this list, add the query string `?$include=TaxRates` to your URL.
      *
      * @return $this
      */

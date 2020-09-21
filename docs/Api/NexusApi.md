@@ -1,4 +1,4 @@
-# Swagger\Client\NexusApi
+# Together\Taxes\NexusApi
 
 All URIs are relative to *https://localhost*
 
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 # **createNexus**
-> \Swagger\Client\Model\NexusModel[] createNexus($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\NexusModel[] createNexus($company_id, $x_avalara_client, $body)
 
 Create a new nexus
 
@@ -33,14 +33,14 @@ Creates one or more new nexus declarations attached to this company.            
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -48,7 +48,7 @@ $apiInstance = new Swagger\Client\Api\NexusApi(
 );
 $company_id = 56; // int | The ID of the company that owns this nexus.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\NexusModel()); // \Swagger\Client\Model\NexusModel[] | The nexus you wish to create.
+$body = array(new \Together\Taxes\Model\NexusModel()); // \Together\Taxes\Model\NexusModel[] | The nexus you wish to create.
 
 try {
     $result = $apiInstance->createNexus($company_id, $x_avalara_client, $body);
@@ -65,11 +65,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this nexus. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\NexusModel[]**](../Model/NexusModel.md)| The nexus you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\NexusModel[]**](../Model/NexusModel.md)| The nexus you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusModel[]**](../Model/NexusModel.md)
+[**\Together\Taxes\Model\NexusModel[]**](../Model/NexusModel.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createNexusParameters**
-> \Swagger\Client\Model\NexusParameterDetailModel[] createNexusParameters($company_id, $nexus_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\NexusParameterDetailModel[] createNexusParameters($company_id, $nexus_id, $x_avalara_client, $body)
 
 Add parameters to a nexus.
 
@@ -95,14 +95,14 @@ Add parameters to the nexus.  Some tax calculation and reporting are different d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -111,7 +111,7 @@ $apiInstance = new Swagger\Client\Api\NexusApi(
 $company_id = 56; // int | The ID of the company that owns this nexus parameter.
 $nexus_id = 56; // int | The nexus id.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\NexusParameterDetailModel()); // \Swagger\Client\Model\NexusParameterDetailModel[] | The nexus parameters you wish to create.
+$body = array(new \Together\Taxes\Model\NexusParameterDetailModel()); // \Together\Taxes\Model\NexusParameterDetailModel[] | The nexus parameters you wish to create.
 
 try {
     $result = $apiInstance->createNexusParameters($company_id, $nexus_id, $x_avalara_client, $body);
@@ -129,11 +129,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that owns this nexus parameter. |
  **nexus_id** | **int**| The nexus id. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\NexusParameterDetailModel[]**](../Model/NexusParameterDetailModel.md)| The nexus parameters you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\NexusParameterDetailModel[]**](../Model/NexusParameterDetailModel.md)| The nexus parameters you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusParameterDetailModel[]**](../Model/NexusParameterDetailModel.md)
+[**\Together\Taxes\Model\NexusParameterDetailModel[]**](../Model/NexusParameterDetailModel.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **declareNexusByAddress**
-> \Swagger\Client\Model\NexusByAddressModel[] declareNexusByAddress($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\NexusByAddressModel[] declareNexusByAddress($company_id, $x_avalara_client, $body)
 
 Creates nexus for a list of addresses.
 
@@ -159,14 +159,14 @@ This call is intended to simplify adding all applicable nexus to a company, for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ $apiInstance = new Swagger\Client\Api\NexusApi(
 );
 $company_id = 56; // int | The ID of the company that will own this nexus.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\DeclareNexusByAddressModel()); // \Swagger\Client\Model\DeclareNexusByAddressModel[] | The nexus you wish to create.
+$body = array(new \Together\Taxes\Model\DeclareNexusByAddressModel()); // \Together\Taxes\Model\DeclareNexusByAddressModel[] | The nexus you wish to create.
 
 try {
     $result = $apiInstance->declareNexusByAddress($company_id, $x_avalara_client, $body);
@@ -191,11 +191,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that will own this nexus. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\DeclareNexusByAddressModel[]**](../Model/DeclareNexusByAddressModel.md)| The nexus you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\DeclareNexusByAddressModel[]**](../Model/DeclareNexusByAddressModel.md)| The nexus you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusByAddressModel[]**](../Model/NexusByAddressModel.md)
+[**\Together\Taxes\Model\NexusByAddressModel[]**](../Model/NexusByAddressModel.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteNexus**
-> \Swagger\Client\Model\ErrorDetail[] deleteNexus($company_id, $id, $cascade_delete, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteNexus($company_id, $id, $cascade_delete, $x_avalara_client)
 
 Delete a single nexus
 
@@ -221,14 +221,14 @@ Marks the existing nexus object at this URL as deleted.                The conce
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteNexusParameter**
-> \Swagger\Client\Model\ErrorDetail[] deleteNexusParameter($company_id, $nexus_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteNexusParameter($company_id, $nexus_id, $id, $x_avalara_client)
 
 Delete a single nexus parameter
 
@@ -285,14 +285,14 @@ Delete a single nexus parameter.  Some tax calculation and reporting are differe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteNexusParameters**
-> \Swagger\Client\Model\ErrorDetail[] deleteNexusParameters($company_id, $nexus_id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteNexusParameters($company_id, $nexus_id, $x_avalara_client)
 
 Delete all parameters for an nexus
 
@@ -349,14 +349,14 @@ Delete all the parameters for a given nexus.  Some tax calculation and reporting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getNexus**
-> \Swagger\Client\Model\NexusModel getNexus($company_id, $id, $include, $x_avalara_client)
+> \Together\Taxes\Model\NexusModel getNexus($company_id, $id, $include, $x_avalara_client)
 
 Retrieve a single nexus
 
@@ -411,14 +411,14 @@ Get the nexus object identified by this URL.                The concept of Nexus
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusModel**](../Model/NexusModel.md)
+[**\Together\Taxes\Model\NexusModel**](../Model/NexusModel.md)
 
 ### Authorization
 
@@ -463,7 +463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getNexusByFormCode**
-> \Swagger\Client\Model\NexusByTaxFormModel getNexusByFormCode($company_id, $form_code, $include, $x_avalara_client)
+> \Together\Taxes\Model\NexusByTaxFormModel getNexusByFormCode($company_id, $form_code, $include, $x_avalara_client)
 
 List company nexus related to a tax form
 
@@ -475,14 +475,14 @@ Retrieves a list of nexus related to a tax form.                The concept of N
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusByTaxFormModel**](../Model/NexusByTaxFormModel.md)
+[**\Together\Taxes\Model\NexusByTaxFormModel**](../Model/NexusByTaxFormModel.md)
 
 ### Authorization
 
@@ -527,7 +527,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getNexusParameter**
-> \Swagger\Client\Model\NexusParameterDetailModel getNexusParameter($company_id, $nexus_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\NexusParameterDetailModel getNexusParameter($company_id, $nexus_id, $id, $x_avalara_client)
 
 Retrieve a single nexus parameter
 
@@ -539,14 +539,14 @@ Retrieve a single nexus parameter.  Some tax calculation and reporting are diffe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusParameterDetailModel**](../Model/NexusParameterDetailModel.md)
+[**\Together\Taxes\Model\NexusParameterDetailModel**](../Model/NexusParameterDetailModel.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNexusByCompany**
-> \Swagger\Client\Model\FetchResultNexusModel listNexusByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNexusModel listNexusByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve nexus for this company
 
@@ -603,14 +603,14 @@ List all nexus objects defined for this company.                The concept of N
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -647,7 +647,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
+[**\Together\Taxes\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
 
 ### Authorization
 
@@ -661,7 +661,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listNexusParameters**
-> \Swagger\Client\Model\FetchResultNexusParameterDetailModel listNexusParameters($company_id, $nexus_id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNexusParameterDetailModel listNexusParameters($company_id, $nexus_id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve parameters for a nexus
 
@@ -673,14 +673,14 @@ List parameters for a nexus.  Some tax calculation and reporting are different d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNexusParameterDetailModel**](../Model/FetchResultNexusParameterDetailModel.md)
+[**\Together\Taxes\Model\FetchResultNexusParameterDetailModel**](../Model/FetchResultNexusParameterDetailModel.md)
 
 ### Authorization
 
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryNexus**
-> \Swagger\Client\Model\FetchResultNexusModel queryNexus($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultNexusModel queryNexus($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all nexus
 
@@ -743,14 +743,14 @@ Get multiple nexus objects across all companies.                The concept of N
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -785,7 +785,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
+[**\Together\Taxes\Model\FetchResultNexusModel**](../Model/FetchResultNexusModel.md)
 
 ### Authorization
 
@@ -799,7 +799,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateNexus**
-> \Swagger\Client\Model\NexusModel updateNexus($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\NexusModel updateNexus($company_id, $id, $x_avalara_client, $body)
 
 Update a single nexus
 
@@ -811,14 +811,14 @@ Replace the existing nexus declaration object at this URL with an updated object
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -827,7 +827,7 @@ $apiInstance = new Swagger\Client\Api\NexusApi(
 $company_id = 56; // int | The ID of the company that this nexus belongs to.
 $id = 56; // int | The ID of the nexus you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\NexusModel(); // \Swagger\Client\Model\NexusModel | The nexus object you wish to update.
+$body = new \Together\Taxes\Model\NexusModel(); // \Together\Taxes\Model\NexusModel | The nexus object you wish to update.
 
 try {
     $result = $apiInstance->updateNexus($company_id, $id, $x_avalara_client, $body);
@@ -845,11 +845,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that this nexus belongs to. |
  **id** | **int**| The ID of the nexus you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\NexusModel**](../Model/NexusModel.md)| The nexus object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\NexusModel**](../Model/NexusModel.md)| The nexus object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusModel**](../Model/NexusModel.md)
+[**\Together\Taxes\Model\NexusModel**](../Model/NexusModel.md)
 
 ### Authorization
 
@@ -863,7 +863,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateNexusParameter**
-> \Swagger\Client\Model\NexusParameterDetailModel updateNexusParameter($company_id, $nexus_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\NexusParameterDetailModel updateNexusParameter($company_id, $nexus_id, $id, $x_avalara_client, $body)
 
 Update an nexus parameter
 
@@ -875,14 +875,14 @@ Update an nexus parameter.                Some tax calculation and reporting are
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\NexusApi(
+$apiInstance = new Together\Taxes\Api\NexusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -892,7 +892,7 @@ $company_id = 56; // int | The company id.
 $nexus_id = 56; // int | The nexus id
 $id = 789; // int | The nexus parameter id
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\NexusParameterDetailModel(); // \Swagger\Client\Model\NexusParameterDetailModel | The nexus object you wish to update.
+$body = new \Together\Taxes\Model\NexusParameterDetailModel(); // \Together\Taxes\Model\NexusParameterDetailModel | The nexus object you wish to update.
 
 try {
     $result = $apiInstance->updateNexusParameter($company_id, $nexus_id, $id, $x_avalara_client, $body);
@@ -911,11 +911,11 @@ Name | Type | Description  | Notes
  **nexus_id** | **int**| The nexus id |
  **id** | **int**| The nexus parameter id |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\NexusParameterDetailModel**](../Model/NexusParameterDetailModel.md)| The nexus object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\NexusParameterDetailModel**](../Model/NexusParameterDetailModel.md)| The nexus object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NexusParameterDetailModel**](../Model/NexusParameterDetailModel.md)
+[**\Together\Taxes\Model\NexusParameterDetailModel**](../Model/NexusParameterDetailModel.md)
 
 ### Authorization
 

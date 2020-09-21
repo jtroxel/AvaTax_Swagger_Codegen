@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * ReconstructedApiRequestResponseModel Class Doc Comment
  *
  * @category Class
  * @description This model contains a reconstructed CreateTransaction request object that could potentially be used  to recreate this transaction.                Note that the API changes over time, and this reconstructed model is likely different from the exact request  that was originally used to create this transaction.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class ReconstructedApiRequestResponseModel implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'request' => '\Swagger\Client\Model\CreateTransactionModel'
+        'request' => '\Together\Taxes\Model\CreateTransactionModel'
     ];
 
     /**
@@ -208,7 +208,7 @@ class ReconstructedApiRequestResponseModel implements ModelInterface, ArrayAcces
     /**
      * Gets request
      *
-     * @return \Swagger\Client\Model\CreateTransactionModel
+     * @return \Together\Taxes\Model\CreateTransactionModel
      */
     public function getRequest()
     {
@@ -218,7 +218,7 @@ class ReconstructedApiRequestResponseModel implements ModelInterface, ArrayAcces
     /**
      * Sets request
      *
-     * @param \Swagger\Client\Model\CreateTransactionModel $request API request
+     * @param \Together\Taxes\Model\CreateTransactionModel $request API request
      *
      * @return $this
      */

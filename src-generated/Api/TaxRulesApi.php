@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * TaxRulesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class TaxRulesApi
      *
      * @param  int $company_id The ID of the company that owns this tax rule. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TaxRuleModel[]
+     * @return \Together\Taxes\Model\TaxRuleModel[]
      */
     public function createTaxRules($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class TaxRulesApi
      *
      * @param  int $company_id The ID of the company that owns this tax rule. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TaxRuleModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TaxRuleModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createTaxRulesWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TaxRuleModel[]';
+        $returnType = '\Together\Taxes\Model\TaxRuleModel[]';
         $request = $this->createTaxRulesRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class TaxRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TaxRuleModel[]',
+                        '\Together\Taxes\Model\TaxRuleModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class TaxRulesApi
      *
      * @param  int $company_id The ID of the company that owns this tax rule. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class TaxRulesApi
      *
      * @param  int $company_id The ID of the company that owns this tax rule. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createTaxRulesAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TaxRuleModel[]';
+        $returnType = '\Together\Taxes\Model\TaxRuleModel[]';
         $request = $this->createTaxRulesRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class TaxRulesApi
      *
      * @param  int $company_id The ID of the company that owns this tax rule. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel[] $body The tax rule you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -390,9 +390,9 @@ class TaxRulesApi
      * @param  int $id The ID of the tax rule you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteTaxRule($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -409,13 +409,13 @@ class TaxRulesApi
      * @param  int $id The ID of the tax rule you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteTaxRuleWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteTaxRuleRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -467,7 +467,7 @@ class TaxRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class TaxRulesApi
      */
     public function deleteTaxRuleAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteTaxRuleRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -695,9 +695,9 @@ class TaxRulesApi
      * @param  int $id The primary key of this tax rule (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TaxRuleModel
+     * @return \Together\Taxes\Model\TaxRuleModel
      */
     public function getTaxRule($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -714,13 +714,13 @@ class TaxRulesApi
      * @param  int $id The primary key of this tax rule (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TaxRuleModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TaxRuleModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaxRuleWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TaxRuleModel';
+        $returnType = '\Together\Taxes\Model\TaxRuleModel';
         $request = $this->getTaxRuleRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -772,7 +772,7 @@ class TaxRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TaxRuleModel',
+                        '\Together\Taxes\Model\TaxRuleModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class TaxRulesApi
      */
     public function getTaxRuleAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\TaxRuleModel';
+        $returnType = '\Together\Taxes\Model\TaxRuleModel';
         $request = $this->getTaxRuleRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1004,9 +1004,9 @@ class TaxRulesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTaxRuleModel
+     * @return \Together\Taxes\Model\FetchResultTaxRuleModel
      */
     public function listTaxRules($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1027,13 +1027,13 @@ class TaxRulesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTaxRuleModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTaxRuleModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTaxRulesWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxRuleModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxRuleModel';
         $request = $this->listTaxRulesRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1085,7 +1085,7 @@ class TaxRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTaxRuleModel',
+                        '\Together\Taxes\Model\FetchResultTaxRuleModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1139,7 +1139,7 @@ class TaxRulesApi
      */
     public function listTaxRulesAsyncWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxRuleModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxRuleModel';
         $request = $this->listTaxRulesRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1334,9 +1334,9 @@ class TaxRulesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultTaxRuleModel
+     * @return \Together\Taxes\Model\FetchResultTaxRuleModel
      */
     public function queryTaxRules($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1356,13 +1356,13 @@ class TaxRulesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultTaxRuleModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultTaxRuleModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryTaxRulesWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxRuleModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxRuleModel';
         $request = $this->queryTaxRulesRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -1414,7 +1414,7 @@ class TaxRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultTaxRuleModel',
+                        '\Together\Taxes\Model\FetchResultTaxRuleModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1466,7 +1466,7 @@ class TaxRulesApi
      */
     public function queryTaxRulesAsyncWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultTaxRuleModel';
+        $returnType = '\Together\Taxes\Model\FetchResultTaxRuleModel';
         $request = $this->queryTaxRulesRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -1642,11 +1642,11 @@ class TaxRulesApi
      * @param  int $company_id The ID of the company that this tax rule belongs to. (required)
      * @param  int $id The ID of the tax rule you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TaxRuleModel
+     * @return \Together\Taxes\Model\TaxRuleModel
      */
     public function updateTaxRule($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1662,15 +1662,15 @@ class TaxRulesApi
      * @param  int $company_id The ID of the company that this tax rule belongs to. (required)
      * @param  int $id The ID of the tax rule you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TaxRuleModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\TaxRuleModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTaxRuleWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TaxRuleModel';
+        $returnType = '\Together\Taxes\Model\TaxRuleModel';
         $request = $this->updateTaxRuleRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -1722,7 +1722,7 @@ class TaxRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TaxRuleModel',
+                        '\Together\Taxes\Model\TaxRuleModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1740,7 +1740,7 @@ class TaxRulesApi
      * @param  int $company_id The ID of the company that this tax rule belongs to. (required)
      * @param  int $id The ID of the tax rule you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1763,14 +1763,14 @@ class TaxRulesApi
      * @param  int $company_id The ID of the company that this tax rule belongs to. (required)
      * @param  int $id The ID of the tax rule you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateTaxRuleAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\TaxRuleModel';
+        $returnType = '\Together\Taxes\Model\TaxRuleModel';
         $request = $this->updateTaxRuleRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -1816,7 +1816,7 @@ class TaxRulesApi
      * @param  int $company_id The ID of the company that this tax rule belongs to. (required)
      * @param  int $id The ID of the tax rule you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
+     * @param  \Together\Taxes\Model\TaxRuleModel $body The tax rule you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

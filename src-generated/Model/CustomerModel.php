@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CustomerModel Class Doc Comment
  *
  * @category Class
  * @description Represents a customer to whom you sell products and/or services.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -80,11 +80,11 @@ class CustomerModel implements ModelInterface, ArrayAccess
         'is_bill' => 'bool',
         'is_ship' => 'bool',
         'taxpayer_id_number' => 'string',
-        'certificates' => '\Swagger\Client\Model\CertificateModel[]',
-        'custom_fields' => '\Swagger\Client\Model\CustomFieldModel[]',
-        'exposure_zones' => '\Swagger\Client\Model\ExposureZoneModel[]',
-        'ship_tos' => '\Swagger\Client\Model\CustomerModel[]',
-        'attributes' => '\Swagger\Client\Model\CustomerAttributeModel[]'
+        'certificates' => '\Together\Taxes\Model\CertificateModel[]',
+        'custom_fields' => '\Together\Taxes\Model\CustomFieldModel[]',
+        'exposure_zones' => '\Together\Taxes\Model\ExposureZoneModel[]',
+        'ship_tos' => '\Together\Taxes\Model\CustomerModel[]',
+        'attributes' => '\Together\Taxes\Model\CustomerAttributeModel[]'
     ];
 
     /**
@@ -931,7 +931,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Gets certificates
      *
-     * @return \Swagger\Client\Model\CertificateModel[]
+     * @return \Together\Taxes\Model\CertificateModel[]
      */
     public function getCertificates()
     {
@@ -941,7 +941,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Sets certificates
      *
-     * @param \Swagger\Client\Model\CertificateModel[] $certificates A list of exemption certficates that apply to this customer.  You can fetch this data by specifying  `$include=certificates` when calling a customer fetch API.
+     * @param \Together\Taxes\Model\CertificateModel[] $certificates A list of exemption certficates that apply to this customer.  You can fetch this data by specifying  `$include=certificates` when calling a customer fetch API.
      *
      * @return $this
      */
@@ -955,7 +955,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Gets custom_fields
      *
-     * @return \Swagger\Client\Model\CustomFieldModel[]
+     * @return \Together\Taxes\Model\CustomFieldModel[]
      */
     public function getCustomFields()
     {
@@ -965,7 +965,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Sets custom_fields
      *
-     * @param \Swagger\Client\Model\CustomFieldModel[] $custom_fields A list of custom fields defined on this customer.                For more information about custom fields, see the [Avalara Help Center article about custom fields](https://help.avalara.com/0021_Avalara_CertCapture/All_About_CertCapture/Edit_or_Remove_Details_about_Customers).
+     * @param \Together\Taxes\Model\CustomFieldModel[] $custom_fields A list of custom fields defined on this customer.                For more information about custom fields, see the [Avalara Help Center article about custom fields](https://help.avalara.com/0021_Avalara_CertCapture/All_About_CertCapture/Edit_or_Remove_Details_about_Customers).
      *
      * @return $this
      */
@@ -979,7 +979,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Gets exposure_zones
      *
-     * @return \Swagger\Client\Model\ExposureZoneModel[]
+     * @return \Together\Taxes\Model\ExposureZoneModel[]
      */
     public function getExposureZones()
     {
@@ -989,7 +989,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Sets exposure_zones
      *
-     * @param \Swagger\Client\Model\ExposureZoneModel[] $exposure_zones A list of exposure zones where you do business with this customer.                To keep track of certificates that are needed for each customer, set this value to a list of all exposure zones where you  sell products to this customer.  You can find a list of exposure zones by calling `ListExposureZones`.                This field is often called \"Ship-To States\" or \"Ship-To Zones\", since it generally refers to locations where you ship products  when this customer makes a purchase.                This field is useful for audit purposes since it helps you ensure you have the necessary certificates for each customer.
+     * @param \Together\Taxes\Model\ExposureZoneModel[] $exposure_zones A list of exposure zones where you do business with this customer.                To keep track of certificates that are needed for each customer, set this value to a list of all exposure zones where you  sell products to this customer.  You can find a list of exposure zones by calling `ListExposureZones`.                This field is often called \"Ship-To States\" or \"Ship-To Zones\", since it generally refers to locations where you ship products  when this customer makes a purchase.                This field is useful for audit purposes since it helps you ensure you have the necessary certificates for each customer.
      *
      * @return $this
      */
@@ -1003,7 +1003,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Gets ship_tos
      *
-     * @return \Swagger\Client\Model\CustomerModel[]
+     * @return \Together\Taxes\Model\CustomerModel[]
      */
     public function getShipTos()
     {
@@ -1013,7 +1013,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Sets ship_tos
      *
-     * @param \Swagger\Client\Model\CustomerModel[] $ship_tos A list of ship-to customer records that are connected to this bill-to customer.                Customer records represent businesses or individuals who can provide exemption certificates.  Some customers  may have certificates that are linked to their shipping address or their billing address.  To group these  customer records together, you may link multiple bill-to and ship-to addresses together to represent a single  entity that has multiple different addresses of different kinds.
+     * @param \Together\Taxes\Model\CustomerModel[] $ship_tos A list of ship-to customer records that are connected to this bill-to customer.                Customer records represent businesses or individuals who can provide exemption certificates.  Some customers  may have certificates that are linked to their shipping address or their billing address.  To group these  customer records together, you may link multiple bill-to and ship-to addresses together to represent a single  entity that has multiple different addresses of different kinds.
      *
      * @return $this
      */
@@ -1027,7 +1027,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return \Swagger\Client\Model\CustomerAttributeModel[]
+     * @return \Together\Taxes\Model\CustomerAttributeModel[]
      */
     public function getAttributes()
     {
@@ -1037,7 +1037,7 @@ class CustomerModel implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param \Swagger\Client\Model\CustomerAttributeModel[] $attributes A list of attributes that apply to this customer.                You can fetch this data by specifying `$include=attributes` when calling a customer fetch API.
+     * @param \Together\Taxes\Model\CustomerAttributeModel[] $attributes A list of attributes that apply to this customer.                You can fetch this data by specifying `$include=attributes` when calling a customer fetch API.
      *
      * @return $this
      */

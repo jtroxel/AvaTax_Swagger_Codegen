@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * UtilitiesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class UtilitiesApi
      * @param  string $service_type_id The service to check (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SubscriptionModel
+     * @return \Together\Taxes\Model\SubscriptionModel
      */
     public function getMySubscription($service_type_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -113,13 +113,13 @@ class UtilitiesApi
      * @param  string $service_type_id The service to check (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SubscriptionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\SubscriptionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMySubscriptionWithHttpInfo($service_type_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionModel';
+        $returnType = '\Together\Taxes\Model\SubscriptionModel';
         $request = $this->getMySubscriptionRequest($service_type_id, $x_avalara_client);
 
         try {
@@ -171,7 +171,7 @@ class UtilitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SubscriptionModel',
+                        '\Together\Taxes\Model\SubscriptionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class UtilitiesApi
      */
     public function getMySubscriptionAsyncWithHttpInfo($service_type_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionModel';
+        $returnType = '\Together\Taxes\Model\SubscriptionModel';
         $request = $this->getMySubscriptionRequest($service_type_id, $x_avalara_client);
 
         return $this->client
@@ -380,9 +380,9 @@ class UtilitiesApi
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultSubscriptionModel
+     * @return \Together\Taxes\Model\FetchResultSubscriptionModel
      */
     public function listMySubscriptions($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -397,13 +397,13 @@ class UtilitiesApi
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultSubscriptionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultSubscriptionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listMySubscriptionsWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSubscriptionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSubscriptionModel';
         $request = $this->listMySubscriptionsRequest($x_avalara_client);
 
         try {
@@ -455,7 +455,7 @@ class UtilitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultSubscriptionModel',
+                        '\Together\Taxes\Model\FetchResultSubscriptionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -497,7 +497,7 @@ class UtilitiesApi
      */
     public function listMySubscriptionsAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultSubscriptionModel';
+        $returnType = '\Together\Taxes\Model\FetchResultSubscriptionModel';
         $request = $this->listMySubscriptionsRequest($x_avalara_client);
 
         return $this->client
@@ -647,9 +647,9 @@ class UtilitiesApi
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PingResultModel
+     * @return \Together\Taxes\Model\PingResultModel
      */
     public function ping($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -664,13 +664,13 @@ class UtilitiesApi
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PingResultModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\PingResultModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function pingWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\PingResultModel';
+        $returnType = '\Together\Taxes\Model\PingResultModel';
         $request = $this->pingRequest($x_avalara_client);
 
         try {
@@ -722,7 +722,7 @@ class UtilitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PingResultModel',
+                        '\Together\Taxes\Model\PingResultModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -764,7 +764,7 @@ class UtilitiesApi
      */
     public function pingAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\PingResultModel';
+        $returnType = '\Together\Taxes\Model\PingResultModel';
         $request = $this->pingRequest($x_avalara_client);
 
         return $this->client

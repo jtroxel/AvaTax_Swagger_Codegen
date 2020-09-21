@@ -30,12 +30,12 @@ Name | Type | Description | Notes
 **database_call_count** | **int** | If this API call included requests made to any of the AvaTax data layers, this contains the number of requests that were traced.                Please note that not all data layers support this measurement. | [optional] 
 **database_call_duration** | **string** | If this API call included requests made to any of the AvaTax data layers, this contains the total duration time measured for all the requests.                Please note that not all data layers support this measurement. | [optional] 
 **remote_call_duration** | **string** | If this API call included interoperation with other Avalara services, this contains the amount of time taken by those services. | [optional] 
-**events** | [**\Swagger\Client\Model\AuditEvent[]**](AuditEvent.md) | Reserved for Avalara internal usage. | [optional] 
+**events** | [**\Together\Taxes\Model\AuditEvent[]**](AuditEvent.md) | Reserved for Avalara internal usage. | [optional] 
 **request_url** | **string** | The original request URL as provided by the client. | [optional] 
 **request_body** | **string** | If this request was an HTTP request that included a body such as a POST or a PUT, this will contain the request body sent by the client.                This request body is represented as a string, exactly as it was received from the client.  Regardless of whether the request was JSON,  Base64 encoded bytes, or a CSV file, this contains the exact contents of the request body. | [optional] 
 **response_status** | **int** | The HTTP response code that was sent by the server. | [optional] 
 **response_body** | **string** | The entire response body sent from the AvaTax server to the client.  This value is returned as a string regardless of whether the results  were JSON-formatted text, CSV files, or raw strings. | [optional] 
-**remote_calls** | [**\Swagger\Client\Model\AuditModel[]**](AuditModel.md) | Reserved for Avalara internal usage. | [optional] 
+**remote_calls** | [**\Together\Taxes\Model\AuditModel[]**](AuditModel.md) | Reserved for Avalara internal usage. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

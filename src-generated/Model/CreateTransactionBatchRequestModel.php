@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CreateTransactionBatchRequestModel Class Doc Comment
  *
  * @category Class
  * @description Represents a create transaction batch request model.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class CreateTransactionBatchRequestModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'transactions' => '\Swagger\Client\Model\TransactionBatchItemModel[]'
+        'transactions' => '\Together\Taxes\Model\TransactionBatchItemModel[]'
     ];
 
     /**
@@ -259,7 +259,7 @@ class CreateTransactionBatchRequestModel implements ModelInterface, ArrayAccess
     /**
      * Gets transactions
      *
-     * @return \Swagger\Client\Model\TransactionBatchItemModel[]
+     * @return \Together\Taxes\Model\TransactionBatchItemModel[]
      */
     public function getTransactions()
     {
@@ -269,7 +269,7 @@ class CreateTransactionBatchRequestModel implements ModelInterface, ArrayAccess
     /**
      * Sets transactions
      *
-     * @param \Swagger\Client\Model\TransactionBatchItemModel[] $transactions The list of transactions contained in this batch.
+     * @param \Together\Taxes\Model\TransactionBatchItemModel[] $transactions The list of transactions contained in this batch.
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# Swagger\Client\UtilitiesApi
+# Together\Taxes\UtilitiesApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getMySubscription**
-> \Swagger\Client\Model\SubscriptionModel getMySubscription($service_type_id, $x_avalara_client)
+> \Together\Taxes\Model\SubscriptionModel getMySubscription($service_type_id, $x_avalara_client)
 
 Checks if the current user is subscribed to a specific service
 
@@ -22,14 +22,14 @@ Returns a subscription object for the current account, or 404 Not Found if this 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UtilitiesApi(
+$apiInstance = new Together\Taxes\Api\UtilitiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionModel**](../Model/SubscriptionModel.md)
+[**\Together\Taxes\Model\SubscriptionModel**](../Model/SubscriptionModel.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listMySubscriptions**
-> \Swagger\Client\Model\FetchResultSubscriptionModel listMySubscriptions($x_avalara_client)
+> \Together\Taxes\Model\FetchResultSubscriptionModel listMySubscriptions($x_avalara_client)
 
 List all services to which the current user is subscribed
 
@@ -82,14 +82,14 @@ Returns the list of all subscriptions enabled for the currently logged in user. 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UtilitiesApi(
+$apiInstance = new Together\Taxes\Api\UtilitiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultSubscriptionModel**](../Model/FetchResultSubscriptionModel.md)
+[**\Together\Taxes\Model\FetchResultSubscriptionModel**](../Model/FetchResultSubscriptionModel.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ping**
-> \Swagger\Client\Model\PingResultModel ping($x_avalara_client)
+> \Together\Taxes\Model\PingResultModel ping($x_avalara_client)
 
 Tests connectivity and version of the service
 
@@ -140,14 +140,14 @@ Check connectivity to AvaTax and return information about the AvaTax API server.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UtilitiesApi(
+$apiInstance = new Together\Taxes\Api\UtilitiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PingResultModel**](../Model/PingResultModel.md)
+[**\Together\Taxes\Model\PingResultModel**](../Model/PingResultModel.md)
 
 ### Authorization
 

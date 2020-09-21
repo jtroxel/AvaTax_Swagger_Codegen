@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 **country_issued** | **string** | Name or ISO 3166 code identifying the country that issued this ECMS certificate.                This field supports many different country identifiers:   * Two character ISO 3166 codes   * Three character ISO 3166 codes   * Fully spelled out names of the country in ISO supported languages   * Common alternative spellings for many countries                For a full list of all supported codes and names, please see the Definitions API &#x60;ListCountries&#x60;. | 
 **ava_cert_id** | **string** | If the certificate record was synced from an AvaTax Certs account(as opposed to being entered in ECMS directly),  the unique AvaTax Certs identifier for the certificate record. Usually same as the Id of a Certificate. | [optional] 
 **exempt_cert_review_status_id** | **string** | Review status for this exempt certificate | [optional] 
-**details** | [**\Swagger\Client\Model\EcmsDetailModel[]**](EcmsDetailModel.md) | Exempt Cert details | [optional] 
+**details** | [**\Together\Taxes\Model\EcmsDetailModel[]**](EcmsDetailModel.md) | Exempt Cert details | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

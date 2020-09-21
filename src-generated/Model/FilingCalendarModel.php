@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingCalendarModel Class Doc Comment
  *
  * @category Class
  * @description Represents a commitment to file a tax return on a recurring basis.  Only used if you subscribe to Avalara Returns.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -119,7 +119,7 @@ class FilingCalendarModel implements ModelInterface, ArrayAccess
         'bulk_account_id' => 'string',
         'site_code' => 'string',
         'bulk_account_validation_status' => 'string',
-        'settings' => '\Swagger\Client\Model\CompanyReturnSettingModel[]'
+        'settings' => '\Together\Taxes\Model\CompanyReturnSettingModel[]'
     ];
 
     /**
@@ -2769,7 +2769,7 @@ class FilingCalendarModel implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\CompanyReturnSettingModel[]
+     * @return \Together\Taxes\Model\CompanyReturnSettingModel[]
      */
     public function getSettings()
     {
@@ -2779,7 +2779,7 @@ class FilingCalendarModel implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\CompanyReturnSettingModel[] $settings CompanyReturn settings for complext filing calendar
+     * @param \Together\Taxes\Model\CompanyReturnSettingModel[] $settings CompanyReturn settings for complext filing calendar
      *
      * @return $this
      */

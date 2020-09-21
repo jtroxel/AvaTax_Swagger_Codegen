@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **document_key** | **string** | DocumentKey | [optional] 
 **document_type** | **string** | DocumentType | [optional] 
 **document_name** | **string** | DocumentName | [optional] 
-**method_return** | [**\Swagger\Client\Model\FundingESignMethodReturn**](FundingESignMethodReturn.md) | MethodReturn | [optional] 
+**method_return** | [**\Together\Taxes\Model\FundingESignMethodReturn**](FundingESignMethodReturn.md) | MethodReturn | [optional] 
 **status** | **string** | Status | [optional] 
 **error_message** | **string** | ErrorMessage | [optional] 
 **last_polled** | [**\DateTime**](\DateTime.md) | LastPolled | [optional] 

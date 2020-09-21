@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recordset_count** | **int** |  | [optional] 
-**value** | [**\Swagger\Client\Model\SubscriptionModel[]**](SubscriptionModel.md) |  | [optional] 
+**value** | [**\Together\Taxes\Model\SubscriptionModel[]**](SubscriptionModel.md) |  | [optional] 
 **next_link** | **string** |  | [optional] 
 **page_key** | **string** |  | [optional] 
 

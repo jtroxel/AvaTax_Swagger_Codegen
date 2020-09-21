@@ -1,4 +1,4 @@
-# Swagger\Client\BatchesApi
+# Together\Taxes\BatchesApi
 
 All URIs are relative to *https://localhost*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **cancelBatch**
-> \Swagger\Client\Model\BatchModel cancelBatch($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\BatchModel cancelBatch($company_id, $id, $x_avalara_client)
 
 Cancel an in progress batch
 
@@ -27,14 +27,14 @@ Marks the in progress batch identified by this URL as cancelled.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\BatchesApi(
+$apiInstance = new Together\Taxes\Api\BatchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BatchModel**](../Model/BatchModel.md)
+[**\Together\Taxes\Model\BatchModel**](../Model/BatchModel.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createBatches**
-> \Swagger\Client\Model\BatchModel[] createBatches($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\BatchModel[] createBatches($company_id, $x_avalara_client, $body)
 
 Create a new batch
 
@@ -89,14 +89,14 @@ Create one or more new batch objects attached to this company.                Ea
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\BatchesApi(
+$apiInstance = new Together\Taxes\Api\BatchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +104,7 @@ $apiInstance = new Swagger\Client\Api\BatchesApi(
 );
 $company_id = 56; // int | The ID of the company that owns this batch.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\BatchModel()); // \Swagger\Client\Model\BatchModel[] | The batch you wish to create.
+$body = array(new \Together\Taxes\Model\BatchModel()); // \Together\Taxes\Model\BatchModel[] | The batch you wish to create.
 
 try {
     $result = $apiInstance->createBatches($company_id, $x_avalara_client, $body);
@@ -121,11 +121,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this batch. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\BatchModel[]**](../Model/BatchModel.md)| The batch you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\BatchModel[]**](../Model/BatchModel.md)| The batch you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\BatchModel[]**](../Model/BatchModel.md)
+[**\Together\Taxes\Model\BatchModel[]**](../Model/BatchModel.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createTransactionBatch**
-> \Swagger\Client\Model\CreateTransactionBatchResponseModel createTransactionBatch($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CreateTransactionBatchResponseModel createTransactionBatch($company_id, $x_avalara_client, $body)
 
 Create a new transaction batch
 
@@ -151,14 +151,14 @@ Create a new transaction batch objects attached to this company.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\BatchesApi(
+$apiInstance = new Together\Taxes\Api\BatchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -166,7 +166,7 @@ $apiInstance = new Swagger\Client\Api\BatchesApi(
 );
 $company_id = 56; // int | The ID of the company that owns this batch.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CreateTransactionBatchRequestModel(); // \Swagger\Client\Model\CreateTransactionBatchRequestModel | The transaction batch you wish to create.
+$body = new \Together\Taxes\Model\CreateTransactionBatchRequestModel(); // \Together\Taxes\Model\CreateTransactionBatchRequestModel | The transaction batch you wish to create.
 
 try {
     $result = $apiInstance->createTransactionBatch($company_id, $x_avalara_client, $body);
@@ -183,11 +183,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this batch. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CreateTransactionBatchRequestModel**](../Model/CreateTransactionBatchRequestModel.md)| The transaction batch you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\CreateTransactionBatchRequestModel**](../Model/CreateTransactionBatchRequestModel.md)| The transaction batch you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CreateTransactionBatchResponseModel**](../Model/CreateTransactionBatchResponseModel.md)
+[**\Together\Taxes\Model\CreateTransactionBatchResponseModel**](../Model/CreateTransactionBatchResponseModel.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteBatch**
-> \Swagger\Client\Model\ErrorDetail[] deleteBatch($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteBatch($company_id, $id, $x_avalara_client)
 
 Delete a single batch
 
@@ -213,14 +213,14 @@ Marks the batch identified by this URL as deleted.                If you attempt
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\BatchesApi(
+$apiInstance = new Together\Taxes\Api\BatchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -275,14 +275,14 @@ Download a single batch file identified by this URL.  ### Security Policies  * T
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\BatchesApi(
+$apiInstance = new Together\Taxes\Api\BatchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBatch**
-> \Swagger\Client\Model\BatchModel getBatch($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\BatchModel getBatch($company_id, $id, $x_avalara_client)
 
 Retrieve a single batch
 
@@ -339,14 +339,14 @@ Get the batch object identified by this URL. A batch object is a large  collecti
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\BatchesApi(
+$apiInstance = new Together\Taxes\Api\BatchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BatchModel**](../Model/BatchModel.md)
+[**\Together\Taxes\Model\BatchModel**](../Model/BatchModel.md)
 
 ### Authorization
 
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listBatchesByCompany**
-> \Swagger\Client\Model\FetchResultBatchModel listBatchesByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultBatchModel listBatchesByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all batches for this company
 
@@ -401,14 +401,14 @@ List all batch objects attached to the specified company.                A batch
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\BatchesApi(
+$apiInstance = new Together\Taxes\Api\BatchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultBatchModel**](../Model/FetchResultBatchModel.md)
+[**\Together\Taxes\Model\FetchResultBatchModel**](../Model/FetchResultBatchModel.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryBatches**
-> \Swagger\Client\Model\FetchResultBatchModel queryBatches($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultBatchModel queryBatches($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all batches
 
@@ -471,14 +471,14 @@ Get multiple batch objects across all companies.                A batch object i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\BatchesApi(
+$apiInstance = new Together\Taxes\Api\BatchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultBatchModel**](../Model/FetchResultBatchModel.md)
+[**\Together\Taxes\Model\FetchResultBatchModel**](../Model/FetchResultBatchModel.md)
 
 ### Authorization
 

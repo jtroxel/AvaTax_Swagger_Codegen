@@ -1,4 +1,4 @@
-# Swagger\Client\ContactsApi
+# Together\Taxes\ContactsApi
 
 All URIs are relative to *https://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createContacts**
-> \Swagger\Client\Model\ContactModel[] createContacts($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ContactModel[] createContacts($company_id, $x_avalara_client, $body)
 
 Create a new contact
 
@@ -25,14 +25,14 @@ Create one or more new contact objects.  A 'contact' is a person associated with
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Together\Taxes\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
 );
 $company_id = 56; // int | The ID of the company that owns this contact.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\ContactModel()); // \Swagger\Client\Model\ContactModel[] | The contacts you wish to create.
+$body = array(new \Together\Taxes\Model\ContactModel()); // \Together\Taxes\Model\ContactModel[] | The contacts you wish to create.
 
 try {
     $result = $apiInstance->createContacts($company_id, $x_avalara_client, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this contact. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ContactModel[]**](../Model/ContactModel.md)| The contacts you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\ContactModel[]**](../Model/ContactModel.md)| The contacts you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ContactModel[]**](../Model/ContactModel.md)
+[**\Together\Taxes\Model\ContactModel[]**](../Model/ContactModel.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteContact**
-> \Swagger\Client\Model\ErrorDetail[] deleteContact($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteContact($company_id, $id, $x_avalara_client)
 
 Delete a single contact
 
@@ -87,14 +87,14 @@ Mark the existing contact object at this URL as deleted.  ### Security Policies 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Together\Taxes\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContact**
-> \Swagger\Client\Model\ContactModel getContact($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ContactModel getContact($company_id, $id, $x_avalara_client)
 
 Retrieve a single contact
 
@@ -149,14 +149,14 @@ Get the contact object identified by this URL.  A 'contact' is a person associat
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Together\Taxes\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ContactModel**](../Model/ContactModel.md)
+[**\Together\Taxes\Model\ContactModel**](../Model/ContactModel.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listContactsByCompany**
-> \Swagger\Client\Model\FetchResultContactModel listContactsByCompany($company_id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultContactModel listContactsByCompany($company_id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve contacts for this company
 
@@ -211,14 +211,14 @@ List all contact objects assigned to this company.                Search for spe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Together\Taxes\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultContactModel**](../Model/FetchResultContactModel.md)
+[**\Together\Taxes\Model\FetchResultContactModel**](../Model/FetchResultContactModel.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryContacts**
-> \Swagger\Client\Model\FetchResultContactModel queryContacts($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultContactModel queryContacts($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all contacts
 
@@ -279,14 +279,14 @@ Get multiple contact objects across all companies.  A 'contact' is a person asso
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Together\Taxes\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultContactModel**](../Model/FetchResultContactModel.md)
+[**\Together\Taxes\Model\FetchResultContactModel**](../Model/FetchResultContactModel.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateContact**
-> \Swagger\Client\Model\ContactModel updateContact($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\ContactModel updateContact($company_id, $id, $x_avalara_client, $body)
 
 Update a single contact
 
@@ -345,14 +345,14 @@ Replace the existing contact object at this URL with an updated object.  A 'cont
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Together\Taxes\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -361,7 +361,7 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
 $company_id = 56; // int | The ID of the company that this contact belongs to.
 $id = 56; // int | The ID of the contact you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\ContactModel(); // \Swagger\Client\Model\ContactModel | The contact you wish to update.
+$body = new \Together\Taxes\Model\ContactModel(); // \Together\Taxes\Model\ContactModel | The contact you wish to update.
 
 try {
     $result = $apiInstance->updateContact($company_id, $id, $x_avalara_client, $body);
@@ -379,11 +379,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that this contact belongs to. |
  **id** | **int**| The ID of the contact you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\ContactModel**](../Model/ContactModel.md)| The contact you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\ContactModel**](../Model/ContactModel.md)| The contact you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ContactModel**](../Model/ContactModel.md)
+[**\Together\Taxes\Model\ContactModel**](../Model/ContactModel.md)
 
 ### Authorization
 

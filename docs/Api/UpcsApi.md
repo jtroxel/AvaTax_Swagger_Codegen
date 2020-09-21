@@ -1,4 +1,4 @@
-# Swagger\Client\UpcsApi
+# Together\Taxes\UpcsApi
 
 All URIs are relative to *https://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createUPCs**
-> \Swagger\Client\Model\UPCModel[] createUPCs($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\UPCModel[] createUPCs($company_id, $x_avalara_client, $body)
 
 Create a new UPC
 
@@ -25,14 +25,14 @@ Create one or more new UPC objects attached to this company.  A UPC represents a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UpcsApi(
+$apiInstance = new Together\Taxes\Api\UpcsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Swagger\Client\Api\UpcsApi(
 );
 $company_id = 56; // int | The ID of the company that owns this UPC.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\UPCModel()); // \Swagger\Client\Model\UPCModel[] | The UPC you wish to create.
+$body = array(new \Together\Taxes\Model\UPCModel()); // \Together\Taxes\Model\UPCModel[] | The UPC you wish to create.
 
 try {
     $result = $apiInstance->createUPCs($company_id, $x_avalara_client, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this UPC. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\UPCModel[]**](../Model/UPCModel.md)| The UPC you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\UPCModel[]**](../Model/UPCModel.md)| The UPC you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\UPCModel[]**](../Model/UPCModel.md)
+[**\Together\Taxes\Model\UPCModel[]**](../Model/UPCModel.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteUPC**
-> \Swagger\Client\Model\ErrorDetail[] deleteUPC($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteUPC($company_id, $id, $x_avalara_client)
 
 Delete a single UPC
 
@@ -87,14 +87,14 @@ Marks the UPC object identified by this URL as deleted.  ### Security Policies  
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UpcsApi(
+$apiInstance = new Together\Taxes\Api\UpcsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUPC**
-> \Swagger\Client\Model\UPCModel getUPC($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\UPCModel getUPC($company_id, $id, $x_avalara_client)
 
 Retrieve a single UPC
 
@@ -149,14 +149,14 @@ Get the UPC object identified by this URL.  A UPC represents a single UPC code i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UpcsApi(
+$apiInstance = new Together\Taxes\Api\UpcsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UPCModel**](../Model/UPCModel.md)
+[**\Together\Taxes\Model\UPCModel**](../Model/UPCModel.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listUPCsByCompany**
-> \Swagger\Client\Model\FetchResultUPCModel listUPCsByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultUPCModel listUPCsByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve UPCs for this company
 
@@ -211,14 +211,14 @@ List all UPC objects attached to this company.  A UPC represents a single UPC co
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UpcsApi(
+$apiInstance = new Together\Taxes\Api\UpcsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultUPCModel**](../Model/FetchResultUPCModel.md)
+[**\Together\Taxes\Model\FetchResultUPCModel**](../Model/FetchResultUPCModel.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryUPCs**
-> \Swagger\Client\Model\FetchResultUPCModel queryUPCs($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultUPCModel queryUPCs($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all UPCs
 
@@ -281,14 +281,14 @@ Get multiple UPC objects across all companies.  A UPC represents a single UPC co
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UpcsApi(
+$apiInstance = new Together\Taxes\Api\UpcsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultUPCModel**](../Model/FetchResultUPCModel.md)
+[**\Together\Taxes\Model\FetchResultUPCModel**](../Model/FetchResultUPCModel.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUPC**
-> \Swagger\Client\Model\UPCModel updateUPC($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\UPCModel updateUPC($company_id, $id, $x_avalara_client, $body)
 
 Update a single UPC
 
@@ -349,14 +349,14 @@ Replace the existing UPC object at this URL with an updated object.  A UPC repre
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\UpcsApi(
+$apiInstance = new Together\Taxes\Api\UpcsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -365,7 +365,7 @@ $apiInstance = new Swagger\Client\Api\UpcsApi(
 $company_id = 56; // int | The ID of the company that this UPC belongs to.
 $id = 56; // int | The ID of the UPC you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\UPCModel(); // \Swagger\Client\Model\UPCModel | The UPC you wish to update.
+$body = new \Together\Taxes\Model\UPCModel(); // \Together\Taxes\Model\UPCModel | The UPC you wish to update.
 
 try {
     $result = $apiInstance->updateUPC($company_id, $id, $x_avalara_client, $body);
@@ -383,11 +383,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that this UPC belongs to. |
  **id** | **int**| The ID of the UPC you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\UPCModel**](../Model/UPCModel.md)| The UPC you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\UPCModel**](../Model/UPCModel.md)| The UPC you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\UPCModel**](../Model/UPCModel.md)
+[**\Together\Taxes\Model\UPCModel**](../Model/UPCModel.md)
 
 ### Authorization
 

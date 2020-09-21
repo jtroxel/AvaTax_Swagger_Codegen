@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * ItemsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,9 +96,9 @@ class ItemsApi
      * @param  int $item_id The ID of the item you wish to delete the classifications. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function batchDeleteItemClassifications($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -115,13 +115,13 @@ class ItemsApi
      * @param  int $item_id The ID of the item you wish to delete the classifications. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function batchDeleteItemClassificationsWithHttpInfo($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->batchDeleteItemClassificationsRequest($company_id, $item_id, $x_avalara_client);
 
         try {
@@ -173,7 +173,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,7 +219,7 @@ class ItemsApi
      */
     public function batchDeleteItemClassificationsAsyncWithHttpInfo($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->batchDeleteItemClassificationsRequest($company_id, $item_id, $x_avalara_client);
 
         return $this->client
@@ -401,9 +401,9 @@ class ItemsApi
      * @param  int $item_id The ID of the item you wish to delete the parameters. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function batchDeleteItemParameters($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -420,13 +420,13 @@ class ItemsApi
      * @param  int $item_id The ID of the item you wish to delete the parameters. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function batchDeleteItemParametersWithHttpInfo($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->batchDeleteItemParametersRequest($company_id, $item_id, $x_avalara_client);
 
         try {
@@ -478,7 +478,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -524,7 +524,7 @@ class ItemsApi
      */
     public function batchDeleteItemParametersAsyncWithHttpInfo($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->batchDeleteItemParametersRequest($company_id, $item_id, $x_avalara_client);
 
         return $this->client
@@ -705,11 +705,11 @@ class ItemsApi
      * @param  int $company_id The company id. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemClassificationOutputModel[]
+     * @return \Together\Taxes\Model\ItemClassificationOutputModel[]
      */
     public function createItemClassifications($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -725,15 +725,15 @@ class ItemsApi
      * @param  int $company_id The company id. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemClassificationOutputModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemClassificationOutputModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createItemClassificationsWithHttpInfo($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemClassificationOutputModel[]';
+        $returnType = '\Together\Taxes\Model\ItemClassificationOutputModel[]';
         $request = $this->createItemClassificationsRequest($company_id, $item_id, $x_avalara_client, $body);
 
         try {
@@ -785,7 +785,7 @@ class ItemsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemClassificationOutputModel[]',
+                        '\Together\Taxes\Model\ItemClassificationOutputModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -803,7 +803,7 @@ class ItemsApi
      * @param  int $company_id The company id. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -826,14 +826,14 @@ class ItemsApi
      * @param  int $company_id The company id. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createItemClassificationsAsyncWithHttpInfo($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemClassificationOutputModel[]';
+        $returnType = '\Together\Taxes\Model\ItemClassificationOutputModel[]';
         $request = $this->createItemClassificationsRequest($company_id, $item_id, $x_avalara_client, $body);
 
         return $this->client
@@ -879,7 +879,7 @@ class ItemsApi
      * @param  int $company_id The company id. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel[] $body The item classifications you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1018,11 +1018,11 @@ class ItemsApi
      * @param  int $company_id The ID of the company that owns this item parameter. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemParameterModel[]
+     * @return \Together\Taxes\Model\ItemParameterModel[]
      */
     public function createItemParameters($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1038,15 +1038,15 @@ class ItemsApi
      * @param  int $company_id The ID of the company that owns this item parameter. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemParameterModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemParameterModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createItemParametersWithHttpInfo($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemParameterModel[]';
+        $returnType = '\Together\Taxes\Model\ItemParameterModel[]';
         $request = $this->createItemParametersRequest($company_id, $item_id, $x_avalara_client, $body);
 
         try {
@@ -1098,7 +1098,7 @@ class ItemsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemParameterModel[]',
+                        '\Together\Taxes\Model\ItemParameterModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1116,7 +1116,7 @@ class ItemsApi
      * @param  int $company_id The ID of the company that owns this item parameter. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1139,14 +1139,14 @@ class ItemsApi
      * @param  int $company_id The ID of the company that owns this item parameter. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createItemParametersAsyncWithHttpInfo($company_id, $item_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemParameterModel[]';
+        $returnType = '\Together\Taxes\Model\ItemParameterModel[]';
         $request = $this->createItemParametersRequest($company_id, $item_id, $x_avalara_client, $body);
 
         return $this->client
@@ -1192,7 +1192,7 @@ class ItemsApi
      * @param  int $company_id The ID of the company that owns this item parameter. (required)
      * @param  int $item_id The item id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel[] $body The item parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1330,11 +1330,11 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel[] $body The item you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemModel[] $body The item you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemModel[]
+     * @return \Together\Taxes\Model\ItemModel[]
      */
     public function createItems($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1349,15 +1349,15 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel[] $body The item you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemModel[] $body The item you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createItemsWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemModel[]';
+        $returnType = '\Together\Taxes\Model\ItemModel[]';
         $request = $this->createItemsRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -1409,7 +1409,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemModel[]',
+                        '\Together\Taxes\Model\ItemModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1426,7 +1426,7 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel[] $body The item you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemModel[] $body The item you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1448,14 +1448,14 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel[] $body The item you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemModel[] $body The item you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createItemsAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemModel[]';
+        $returnType = '\Together\Taxes\Model\ItemModel[]';
         $request = $this->createItemsRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -1500,7 +1500,7 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel[] $body The item you wish to create. (optional)
+     * @param  \Together\Taxes\Model\ItemModel[] $body The item you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1626,9 +1626,9 @@ class ItemsApi
      * @param  int $id The ID of the item you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteItem($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1645,13 +1645,13 @@ class ItemsApi
      * @param  int $id The ID of the item you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteItemWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteItemRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -1703,7 +1703,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1749,7 +1749,7 @@ class ItemsApi
      */
     public function deleteItemAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteItemRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1932,9 +1932,9 @@ class ItemsApi
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteItemClassification($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1952,13 +1952,13 @@ class ItemsApi
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteItemClassificationWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteItemClassificationRequest($company_id, $item_id, $id, $x_avalara_client);
 
         try {
@@ -2010,7 +2010,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2058,7 +2058,7 @@ class ItemsApi
      */
     public function deleteItemClassificationAsyncWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteItemClassificationRequest($company_id, $item_id, $id, $x_avalara_client);
 
         return $this->client
@@ -2256,9 +2256,9 @@ class ItemsApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteItemParameter($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2276,13 +2276,13 @@ class ItemsApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteItemParameterWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteItemParameterRequest($company_id, $item_id, $id, $x_avalara_client);
 
         try {
@@ -2334,7 +2334,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2382,7 +2382,7 @@ class ItemsApi
      */
     public function deleteItemParameterAsyncWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteItemParameterRequest($company_id, $item_id, $id, $x_avalara_client);
 
         return $this->client
@@ -2580,9 +2580,9 @@ class ItemsApi
      * @param  string $include A comma separated list of additional data to retrieve. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemModel
+     * @return \Together\Taxes\Model\ItemModel
      */
     public function getItem($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2600,13 +2600,13 @@ class ItemsApi
      * @param  string $include A comma separated list of additional data to retrieve. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getItemWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ItemModel';
+        $returnType = '\Together\Taxes\Model\ItemModel';
         $request = $this->getItemRequest($company_id, $id, $include, $x_avalara_client);
 
         try {
@@ -2658,7 +2658,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemModel',
+                        '\Together\Taxes\Model\ItemModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2706,7 +2706,7 @@ class ItemsApi
      */
     public function getItemAsyncWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ItemModel';
+        $returnType = '\Together\Taxes\Model\ItemModel';
         $request = $this->getItemRequest($company_id, $id, $include, $x_avalara_client);
 
         return $this->client
@@ -2894,9 +2894,9 @@ class ItemsApi
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemClassificationOutputModel
+     * @return \Together\Taxes\Model\ItemClassificationOutputModel
      */
     public function getItemClassification($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2914,13 +2914,13 @@ class ItemsApi
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemClassificationOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemClassificationOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getItemClassificationWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ItemClassificationOutputModel';
+        $returnType = '\Together\Taxes\Model\ItemClassificationOutputModel';
         $request = $this->getItemClassificationRequest($company_id, $item_id, $id, $x_avalara_client);
 
         try {
@@ -2972,7 +2972,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemClassificationOutputModel',
+                        '\Together\Taxes\Model\ItemClassificationOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3020,7 +3020,7 @@ class ItemsApi
      */
     public function getItemClassificationAsyncWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ItemClassificationOutputModel';
+        $returnType = '\Together\Taxes\Model\ItemClassificationOutputModel';
         $request = $this->getItemClassificationRequest($company_id, $item_id, $id, $x_avalara_client);
 
         return $this->client
@@ -3218,9 +3218,9 @@ class ItemsApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemParameterModel
+     * @return \Together\Taxes\Model\ItemParameterModel
      */
     public function getItemParameter($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3238,13 +3238,13 @@ class ItemsApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemParameterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemParameterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getItemParameterWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ItemParameterModel';
+        $returnType = '\Together\Taxes\Model\ItemParameterModel';
         $request = $this->getItemParameterRequest($company_id, $item_id, $id, $x_avalara_client);
 
         try {
@@ -3296,7 +3296,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemParameterModel',
+                        '\Together\Taxes\Model\ItemParameterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3344,7 +3344,7 @@ class ItemsApi
      */
     public function getItemParameterAsyncWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ItemParameterModel';
+        $returnType = '\Together\Taxes\Model\ItemParameterModel';
         $request = $this->getItemParameterRequest($company_id, $item_id, $id, $x_avalara_client);
 
         return $this->client
@@ -3545,9 +3545,9 @@ class ItemsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultItemClassificationOutputModel
+     * @return \Together\Taxes\Model\FetchResultItemClassificationOutputModel
      */
     public function listItemClassifications($company_id, $item_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3568,13 +3568,13 @@ class ItemsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultItemClassificationOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultItemClassificationOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listItemClassificationsWithHttpInfo($company_id, $item_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultItemClassificationOutputModel';
+        $returnType = '\Together\Taxes\Model\FetchResultItemClassificationOutputModel';
         $request = $this->listItemClassificationsRequest($company_id, $item_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -3626,7 +3626,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultItemClassificationOutputModel',
+                        '\Together\Taxes\Model\FetchResultItemClassificationOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3680,7 +3680,7 @@ class ItemsApi
      */
     public function listItemClassificationsAsyncWithHttpInfo($company_id, $item_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultItemClassificationOutputModel';
+        $returnType = '\Together\Taxes\Model\FetchResultItemClassificationOutputModel';
         $request = $this->listItemClassificationsRequest($company_id, $item_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3886,9 +3886,9 @@ class ItemsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultItemParameterModel
+     * @return \Together\Taxes\Model\FetchResultItemParameterModel
      */
     public function listItemParameters($company_id, $item_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3909,13 +3909,13 @@ class ItemsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultItemParameterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultItemParameterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listItemParametersWithHttpInfo($company_id, $item_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultItemParameterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultItemParameterModel';
         $request = $this->listItemParametersRequest($company_id, $item_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -3967,7 +3967,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultItemParameterModel',
+                        '\Together\Taxes\Model\FetchResultItemParameterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4021,7 +4021,7 @@ class ItemsApi
      */
     public function listItemParametersAsyncWithHttpInfo($company_id, $item_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultItemParameterModel';
+        $returnType = '\Together\Taxes\Model\FetchResultItemParameterModel';
         $request = $this->listItemParametersRequest($company_id, $item_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -4227,9 +4227,9 @@ class ItemsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultItemModel
+     * @return \Together\Taxes\Model\FetchResultItemModel
      */
     public function listItemsByCompany($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4250,13 +4250,13 @@ class ItemsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultItemModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultItemModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listItemsByCompanyWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultItemModel';
+        $returnType = '\Together\Taxes\Model\FetchResultItemModel';
         $request = $this->listItemsByCompanyRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -4308,7 +4308,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultItemModel',
+                        '\Together\Taxes\Model\FetchResultItemModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4362,7 +4362,7 @@ class ItemsApi
      */
     public function listItemsByCompanyAsyncWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultItemModel';
+        $returnType = '\Together\Taxes\Model\FetchResultItemModel';
         $request = $this->listItemsByCompanyRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -4557,9 +4557,9 @@ class ItemsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultItemModel
+     * @return \Together\Taxes\Model\FetchResultItemModel
      */
     public function queryItems($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -4579,13 +4579,13 @@ class ItemsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultItemModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultItemModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryItemsWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultItemModel';
+        $returnType = '\Together\Taxes\Model\FetchResultItemModel';
         $request = $this->queryItemsRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -4637,7 +4637,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultItemModel',
+                        '\Together\Taxes\Model\FetchResultItemModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4689,7 +4689,7 @@ class ItemsApi
      */
     public function queryItemsAsyncWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultItemModel';
+        $returnType = '\Together\Taxes\Model\FetchResultItemModel';
         $request = $this->queryItemsRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -4864,11 +4864,11 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SyncItemsRequestModel $body The request object. (optional)
+     * @param  \Together\Taxes\Model\SyncItemsRequestModel $body The request object. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SyncItemsResponseModel
+     * @return \Together\Taxes\Model\SyncItemsResponseModel
      */
     public function syncItems($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -4883,15 +4883,15 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SyncItemsRequestModel $body The request object. (optional)
+     * @param  \Together\Taxes\Model\SyncItemsRequestModel $body The request object. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SyncItemsResponseModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\SyncItemsResponseModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function syncItemsWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SyncItemsResponseModel';
+        $returnType = '\Together\Taxes\Model\SyncItemsResponseModel';
         $request = $this->syncItemsRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -4943,7 +4943,7 @@ class ItemsApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SyncItemsResponseModel',
+                        '\Together\Taxes\Model\SyncItemsResponseModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4960,7 +4960,7 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SyncItemsRequestModel $body The request object. (optional)
+     * @param  \Together\Taxes\Model\SyncItemsRequestModel $body The request object. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4982,14 +4982,14 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SyncItemsRequestModel $body The request object. (optional)
+     * @param  \Together\Taxes\Model\SyncItemsRequestModel $body The request object. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function syncItemsAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SyncItemsResponseModel';
+        $returnType = '\Together\Taxes\Model\SyncItemsResponseModel';
         $request = $this->syncItemsRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -5034,7 +5034,7 @@ class ItemsApi
      *
      * @param  int $company_id The ID of the company that owns this item. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SyncItemsRequestModel $body The request object. (optional)
+     * @param  \Together\Taxes\Model\SyncItemsRequestModel $body The request object. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5159,11 +5159,11 @@ class ItemsApi
      * @param  int $company_id The ID of the company that this item belongs to. (required)
      * @param  int $id The ID of the item you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemModel $body The item object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemModel
+     * @return \Together\Taxes\Model\ItemModel
      */
     public function updateItem($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -5179,15 +5179,15 @@ class ItemsApi
      * @param  int $company_id The ID of the company that this item belongs to. (required)
      * @param  int $id The ID of the item you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemModel $body The item object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateItemWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemModel';
+        $returnType = '\Together\Taxes\Model\ItemModel';
         $request = $this->updateItemRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -5239,7 +5239,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemModel',
+                        '\Together\Taxes\Model\ItemModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5257,7 +5257,7 @@ class ItemsApi
      * @param  int $company_id The ID of the company that this item belongs to. (required)
      * @param  int $id The ID of the item you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5280,14 +5280,14 @@ class ItemsApi
      * @param  int $company_id The ID of the company that this item belongs to. (required)
      * @param  int $id The ID of the item you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateItemAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemModel';
+        $returnType = '\Together\Taxes\Model\ItemModel';
         $request = $this->updateItemRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -5333,7 +5333,7 @@ class ItemsApi
      * @param  int $company_id The ID of the company that this item belongs to. (required)
      * @param  int $id The ID of the item you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5473,11 +5473,11 @@ class ItemsApi
      * @param  int $item_id The item id. (required)
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemClassificationOutputModel
+     * @return \Together\Taxes\Model\ItemClassificationOutputModel
      */
     public function updateItemClassification($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -5494,15 +5494,15 @@ class ItemsApi
      * @param  int $item_id The item id. (required)
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemClassificationOutputModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemClassificationOutputModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateItemClassificationWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemClassificationOutputModel';
+        $returnType = '\Together\Taxes\Model\ItemClassificationOutputModel';
         $request = $this->updateItemClassificationRequest($company_id, $item_id, $id, $x_avalara_client, $body);
 
         try {
@@ -5554,7 +5554,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemClassificationOutputModel',
+                        '\Together\Taxes\Model\ItemClassificationOutputModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5573,7 +5573,7 @@ class ItemsApi
      * @param  int $item_id The item id. (required)
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5597,14 +5597,14 @@ class ItemsApi
      * @param  int $item_id The item id. (required)
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateItemClassificationAsyncWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemClassificationOutputModel';
+        $returnType = '\Together\Taxes\Model\ItemClassificationOutputModel';
         $request = $this->updateItemClassificationRequest($company_id, $item_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -5651,7 +5651,7 @@ class ItemsApi
      * @param  int $item_id The item id. (required)
      * @param  int $id The item classification id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemClassificationInputModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5805,11 +5805,11 @@ class ItemsApi
      * @param  int $item_id The item id (required)
      * @param  int $id The item parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel $body The item object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ItemParameterModel
+     * @return \Together\Taxes\Model\ItemParameterModel
      */
     public function updateItemParameter($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -5826,15 +5826,15 @@ class ItemsApi
      * @param  int $item_id The item id (required)
      * @param  int $id The item parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel $body The item object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ItemParameterModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ItemParameterModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateItemParameterWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemParameterModel';
+        $returnType = '\Together\Taxes\Model\ItemParameterModel';
         $request = $this->updateItemParameterRequest($company_id, $item_id, $id, $x_avalara_client, $body);
 
         try {
@@ -5886,7 +5886,7 @@ class ItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ItemParameterModel',
+                        '\Together\Taxes\Model\ItemParameterModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5905,7 +5905,7 @@ class ItemsApi
      * @param  int $item_id The item id (required)
      * @param  int $id The item parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5929,14 +5929,14 @@ class ItemsApi
      * @param  int $item_id The item id (required)
      * @param  int $id The item parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateItemParameterAsyncWithHttpInfo($company_id, $item_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ItemParameterModel';
+        $returnType = '\Together\Taxes\Model\ItemParameterModel';
         $request = $this->updateItemParameterRequest($company_id, $item_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -5983,7 +5983,7 @@ class ItemsApi
      * @param  int $item_id The item id (required)
      * @param  int $id The item parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ItemParameterModel $body The item object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\ItemParameterModel $body The item object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AuditTransactionModel Class Doc Comment
  *
  * @category Class
  * @description Information about a previously created transaction
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,11 +59,11 @@ class AuditTransactionModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'company_id' => 'int',
-        'reconstructed' => '\Swagger\Client\Model\ReconstructedApiRequestResponseModel',
+        'reconstructed' => '\Together\Taxes\Model\ReconstructedApiRequestResponseModel',
         'server_timestamp' => '\DateTime',
         'server_duration' => '\DateTime',
         'api_call_status' => 'string',
-        'original' => '\Swagger\Client\Model\OriginalApiRequestResponseModel'
+        'original' => '\Together\Taxes\Model\OriginalApiRequestResponseModel'
     ];
 
     /**
@@ -287,7 +287,7 @@ class AuditTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets reconstructed
      *
-     * @return \Swagger\Client\Model\ReconstructedApiRequestResponseModel
+     * @return \Together\Taxes\Model\ReconstructedApiRequestResponseModel
      */
     public function getReconstructed()
     {
@@ -297,7 +297,7 @@ class AuditTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets reconstructed
      *
-     * @param \Swagger\Client\Model\ReconstructedApiRequestResponseModel $reconstructed Reconstructed API request/response
+     * @param \Together\Taxes\Model\ReconstructedApiRequestResponseModel $reconstructed Reconstructed API request/response
      *
      * @return $this
      */
@@ -392,7 +392,7 @@ class AuditTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Gets original
      *
-     * @return \Swagger\Client\Model\OriginalApiRequestResponseModel
+     * @return \Together\Taxes\Model\OriginalApiRequestResponseModel
      */
     public function getOriginal()
     {
@@ -402,7 +402,7 @@ class AuditTransactionModel implements ModelInterface, ArrayAccess
     /**
      * Sets original
      *
-     * @param \Swagger\Client\Model\OriginalApiRequestResponseModel $original Original API request/response
+     * @param \Together\Taxes\Model\OriginalApiRequestResponseModel $original Original API request/response
      *
      * @return $this
      */

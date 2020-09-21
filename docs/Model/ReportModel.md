@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **account_id** | **int** | The ID of the account the reported transactions are from | [optional] 
 **company_id** | **int** | The ID of the company the reported transactions are from | [optional] 
 **report_type** | **string** | The type of the report: ExportDocumentLine, etc. | [optional] 
-**parameters** | [**\Swagger\Client\Model\ReportParametersModel**](ReportParametersModel.md) | The parametes used to build the report | [optional] 
+**parameters** | [**\Together\Taxes\Model\ReportParametersModel**](ReportParametersModel.md) | The parametes used to build the report | [optional] 
 **status** | **string** | The current status of the report building task | [optional] 
 **size** | **int** | The size of the report file, if available | [optional] 
 **format** | **string** | The format of the report file | [optional] 

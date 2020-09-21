@@ -1,4 +1,4 @@
-# Swagger\Client\LocationsApi
+# Together\Taxes\LocationsApi
 
 All URIs are relative to *https://localhost*
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **createLocationParameters**
-> \Swagger\Client\Model\LocationParameterModel[] createLocationParameters($company_id, $location_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\LocationParameterModel[] createLocationParameters($company_id, $location_id, $x_avalara_client, $body)
 
 Add parameters to a location.
 
@@ -31,14 +31,14 @@ Add parameters to a location.                Some locations can be taxed differe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ $apiInstance = new Swagger\Client\Api\LocationsApi(
 $company_id = 56; // int | The ID of the company that owns this location parameter.
 $location_id = 56; // int | The location id.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\LocationParameterModel()); // \Swagger\Client\Model\LocationParameterModel[] | The location parameters you wish to create.
+$body = array(new \Together\Taxes\Model\LocationParameterModel()); // \Together\Taxes\Model\LocationParameterModel[] | The location parameters you wish to create.
 
 try {
     $result = $apiInstance->createLocationParameters($company_id, $location_id, $x_avalara_client, $body);
@@ -65,11 +65,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that owns this location parameter. |
  **location_id** | **int**| The location id. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LocationParameterModel[]**](../Model/LocationParameterModel.md)| The location parameters you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\LocationParameterModel[]**](../Model/LocationParameterModel.md)| The location parameters you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\LocationParameterModel[]**](../Model/LocationParameterModel.md)
+[**\Together\Taxes\Model\LocationParameterModel[]**](../Model/LocationParameterModel.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createLocations**
-> \Swagger\Client\Model\LocationModel[] createLocations($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\LocationModel[] createLocations($company_id, $x_avalara_client, $body)
 
 Create a new location
 
@@ -95,14 +95,14 @@ Create one or more new location objects attached to this company.  ### Security 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -110,7 +110,7 @@ $apiInstance = new Swagger\Client\Api\LocationsApi(
 );
 $company_id = 56; // int | The ID of the company that owns this location.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\LocationModel()); // \Swagger\Client\Model\LocationModel[] | The location you wish to create.
+$body = array(new \Together\Taxes\Model\LocationModel()); // \Together\Taxes\Model\LocationModel[] | The location you wish to create.
 
 try {
     $result = $apiInstance->createLocations($company_id, $x_avalara_client, $body);
@@ -127,11 +127,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The ID of the company that owns this location. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LocationModel[]**](../Model/LocationModel.md)| The location you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\LocationModel[]**](../Model/LocationModel.md)| The location you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\LocationModel[]**](../Model/LocationModel.md)
+[**\Together\Taxes\Model\LocationModel[]**](../Model/LocationModel.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteLocation**
-> \Swagger\Client\Model\ErrorDetail[] deleteLocation($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteLocation($company_id, $id, $x_avalara_client)
 
 Delete a single location
 
@@ -157,14 +157,14 @@ Mark the location object at this URL as deleted.  ### Security Policies  * This 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteLocationParameter**
-> \Swagger\Client\Model\ErrorDetail[] deleteLocationParameter($company_id, $location_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteLocationParameter($company_id, $location_id, $id, $x_avalara_client)
 
 Delete a single location parameter
 
@@ -219,14 +219,14 @@ Delete a single location parameter.                Some locations can be taxed d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLocation**
-> \Swagger\Client\Model\LocationModel getLocation($company_id, $id, $include, $x_avalara_client)
+> \Together\Taxes\Model\LocationModel getLocation($company_id, $id, $include, $x_avalara_client)
 
 Retrieve a single location
 
@@ -283,14 +283,14 @@ Get the location object identified by this URL.  An 'Location' represents a phys
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LocationModel**](../Model/LocationModel.md)
+[**\Together\Taxes\Model\LocationModel**](../Model/LocationModel.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLocationParameter**
-> \Swagger\Client\Model\LocationParameterModel getLocationParameter($company_id, $location_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\LocationParameterModel getLocationParameter($company_id, $location_id, $id, $x_avalara_client)
 
 Retrieve a single company location parameter
 
@@ -347,14 +347,14 @@ Retrieve a single location parameter.                Some locations can be taxed
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LocationParameterModel**](../Model/LocationParameterModel.md)
+[**\Together\Taxes\Model\LocationParameterModel**](../Model/LocationParameterModel.md)
 
 ### Authorization
 
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listLocationParameters**
-> \Swagger\Client\Model\FetchResultLocationParameterModel listLocationParameters($company_id, $location_id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultLocationParameterModel listLocationParameters($company_id, $location_id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve parameters for a location
 
@@ -411,14 +411,14 @@ List parameters for a location.                Some locations can be taxed diffe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultLocationParameterModel**](../Model/FetchResultLocationParameterModel.md)
+[**\Together\Taxes\Model\FetchResultLocationParameterModel**](../Model/FetchResultLocationParameterModel.md)
 
 ### Authorization
 
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listLocationsByCompany**
-> \Swagger\Client\Model\FetchResultLocationModel listLocationsByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultLocationModel listLocationsByCompany($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve locations for this company
 
@@ -481,14 +481,14 @@ List all location objects defined for this company.  An 'Location' represents a 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultLocationModel**](../Model/FetchResultLocationModel.md)
+[**\Together\Taxes\Model\FetchResultLocationModel**](../Model/FetchResultLocationModel.md)
 
 ### Authorization
 
@@ -539,7 +539,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryLocations**
-> \Swagger\Client\Model\FetchResultLocationModel queryLocations($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultLocationModel queryLocations($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all locations
 
@@ -551,14 +551,14 @@ Get multiple location objects across all companies.  An 'Location' represents a 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultLocationModel**](../Model/FetchResultLocationModel.md)
+[**\Together\Taxes\Model\FetchResultLocationModel**](../Model/FetchResultLocationModel.md)
 
 ### Authorization
 
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateLocation**
-> \Swagger\Client\Model\LocationModel updateLocation($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\LocationModel updateLocation($company_id, $id, $x_avalara_client, $body)
 
 Update a single location
 
@@ -619,14 +619,14 @@ Replace the existing location object at this URL with an updated object.  All da
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -635,7 +635,7 @@ $apiInstance = new Swagger\Client\Api\LocationsApi(
 $company_id = 56; // int | The ID of the company that this location belongs to.
 $id = 56; // int | The ID of the location you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\LocationModel(); // \Swagger\Client\Model\LocationModel | The location you wish to update.
+$body = new \Together\Taxes\Model\LocationModel(); // \Together\Taxes\Model\LocationModel | The location you wish to update.
 
 try {
     $result = $apiInstance->updateLocation($company_id, $id, $x_avalara_client, $body);
@@ -653,11 +653,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID of the company that this location belongs to. |
  **id** | **int**| The ID of the location you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LocationModel**](../Model/LocationModel.md)| The location you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\LocationModel**](../Model/LocationModel.md)| The location you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\LocationModel**](../Model/LocationModel.md)
+[**\Together\Taxes\Model\LocationModel**](../Model/LocationModel.md)
 
 ### Authorization
 
@@ -671,7 +671,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateLocationParameter**
-> \Swagger\Client\Model\LocationParameterModel updateLocationParameter($company_id, $location_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\LocationParameterModel updateLocationParameter($company_id, $location_id, $id, $x_avalara_client, $body)
 
 Update a location parameter
 
@@ -683,14 +683,14 @@ Update a location parameter.                Some locations can be taxed differen
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -700,7 +700,7 @@ $company_id = 56; // int | The company id.
 $location_id = 56; // int | The location id
 $id = 789; // int | The location parameter id
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\LocationParameterModel(); // \Swagger\Client\Model\LocationParameterModel | The location parameter object you wish to update.
+$body = new \Together\Taxes\Model\LocationParameterModel(); // \Together\Taxes\Model\LocationParameterModel | The location parameter object you wish to update.
 
 try {
     $result = $apiInstance->updateLocationParameter($company_id, $location_id, $id, $x_avalara_client, $body);
@@ -719,11 +719,11 @@ Name | Type | Description  | Notes
  **location_id** | **int**| The location id |
  **id** | **int**| The location parameter id |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LocationParameterModel**](../Model/LocationParameterModel.md)| The location parameter object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\LocationParameterModel**](../Model/LocationParameterModel.md)| The location parameter object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\LocationParameterModel**](../Model/LocationParameterModel.md)
+[**\Together\Taxes\Model\LocationParameterModel**](../Model/LocationParameterModel.md)
 
 ### Authorization
 
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **validateLocation**
-> \Swagger\Client\Model\LocationValidationModel validateLocation($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\LocationValidationModel validateLocation($company_id, $id, $x_avalara_client)
 
 Validate the location against local requirements
 
@@ -749,14 +749,14 @@ Returns validation information for this location.  This API call is intended to 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\LocationsApi(
+$apiInstance = new Together\Taxes\Api\LocationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -785,7 +785,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LocationValidationModel**](../Model/LocationValidationModel.md)
+[**\Together\Taxes\Model\LocationValidationModel**](../Model/LocationValidationModel.md)
 
 ### Authorization
 

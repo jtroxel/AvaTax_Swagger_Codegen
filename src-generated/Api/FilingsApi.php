@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * FilingsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,9 +96,9 @@ class FilingsApi
      * @param  int $filing_return_id The ID of the filing return (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultMultiTaxFilingModel
+     * @return \Together\Taxes\Model\FetchResultMultiTaxFilingModel
      */
     public function getAccrualFilings($company_id, $filing_return_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -115,13 +115,13 @@ class FilingsApi
      * @param  int $filing_return_id The ID of the filing return (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultMultiTaxFilingModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultMultiTaxFilingModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccrualFilingsWithHttpInfo($company_id, $filing_return_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultMultiTaxFilingModel';
+        $returnType = '\Together\Taxes\Model\FetchResultMultiTaxFilingModel';
         $request = $this->getAccrualFilingsRequest($company_id, $filing_return_id, $x_avalara_client);
 
         try {
@@ -173,7 +173,7 @@ class FilingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultMultiTaxFilingModel',
+                        '\Together\Taxes\Model\FetchResultMultiTaxFilingModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,7 +219,7 @@ class FilingsApi
      */
     public function getAccrualFilingsAsyncWithHttpInfo($company_id, $filing_return_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultMultiTaxFilingModel';
+        $returnType = '\Together\Taxes\Model\FetchResultMultiTaxFilingModel';
         $request = $this->getAccrualFilingsRequest($company_id, $filing_return_id, $x_avalara_client);
 
         return $this->client
@@ -408,9 +408,9 @@ class FilingsApi
      * @param  string $taxform_code The unique tax form code of the form. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultFiledReturnModel
+     * @return \Together\Taxes\Model\FetchResultFiledReturnModel
      */
     public function getFiledReturns($company_id, $end_period_month = null, $end_period_year = null, $frequency = null, $status = null, $country = null, $region = null, $filing_calendar_id = null, $taxform_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -434,13 +434,13 @@ class FilingsApi
      * @param  string $taxform_code The unique tax form code of the form. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultFiledReturnModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultFiledReturnModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFiledReturnsWithHttpInfo($company_id, $end_period_month = null, $end_period_year = null, $frequency = null, $status = null, $country = null, $region = null, $filing_calendar_id = null, $taxform_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultFiledReturnModel';
+        $returnType = '\Together\Taxes\Model\FetchResultFiledReturnModel';
         $request = $this->getFiledReturnsRequest($company_id, $end_period_month, $end_period_year, $frequency, $status, $country, $region, $filing_calendar_id, $taxform_code, $x_avalara_client);
 
         try {
@@ -492,7 +492,7 @@ class FilingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultFiledReturnModel',
+                        '\Together\Taxes\Model\FetchResultFiledReturnModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -552,7 +552,7 @@ class FilingsApi
      */
     public function getFiledReturnsAsyncWithHttpInfo($company_id, $end_period_month = null, $end_period_year = null, $frequency = null, $status = null, $country = null, $region = null, $filing_calendar_id = null, $taxform_code = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultFiledReturnModel';
+        $returnType = '\Together\Taxes\Model\FetchResultFiledReturnModel';
         $request = $this->getFiledReturnsRequest($company_id, $end_period_month, $end_period_year, $frequency, $status, $country, $region, $filing_calendar_id, $taxform_code, $x_avalara_client);
 
         return $this->client

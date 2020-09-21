@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * EcmsDetailModel Class Doc Comment
  *
  * @category Class
  * @description Represents an ECMS record, used internally by AvaTax to track information about exemptions.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,7 +67,7 @@ class EcmsDetailModel implements ModelInterface, ArrayAccess
         'end_date' => '\DateTime',
         'id_type' => 'string',
         'is_tax_code_list_exclusion_list' => 'int',
-        'tax_codes' => '\Swagger\Client\Model\EcmsDetailTaxCodeModel[]'
+        'tax_codes' => '\Together\Taxes\Model\EcmsDetailTaxCodeModel[]'
     ];
 
     /**
@@ -538,7 +538,7 @@ class EcmsDetailModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_codes
      *
-     * @return \Swagger\Client\Model\EcmsDetailTaxCodeModel[]
+     * @return \Together\Taxes\Model\EcmsDetailTaxCodeModel[]
      */
     public function getTaxCodes()
     {
@@ -548,7 +548,7 @@ class EcmsDetailModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_codes
      *
-     * @param \Swagger\Client\Model\EcmsDetailTaxCodeModel[] $tax_codes optional: list of tax code associated with this exempt certificate detail
+     * @param \Together\Taxes\Model\EcmsDetailTaxCodeModel[] $tax_codes optional: list of tax code associated with this exempt certificate detail
      *
      * @return $this
      */

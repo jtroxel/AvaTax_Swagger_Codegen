@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingRequestDataModel Class Doc Comment
  *
  * @category Class
  * @description Represents a commitment to file a tax return on a recurring basis.  Only used if you subscribe to Avalara Returns.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -74,7 +74,7 @@ class FilingRequestDataModel implements ModelInterface, ArrayAccess
         'region' => 'string',
         'tax_authority_id' => 'int',
         'tax_authority_name' => 'string',
-        'answers' => '\Swagger\Client\Model\FilingAnswerModel[]'
+        'answers' => '\Together\Taxes\Model\FilingAnswerModel[]'
     ];
 
     /**
@@ -809,7 +809,7 @@ class FilingRequestDataModel implements ModelInterface, ArrayAccess
     /**
      * Gets answers
      *
-     * @return \Swagger\Client\Model\FilingAnswerModel[]
+     * @return \Together\Taxes\Model\FilingAnswerModel[]
      */
     public function getAnswers()
     {
@@ -819,7 +819,7 @@ class FilingRequestDataModel implements ModelInterface, ArrayAccess
     /**
      * Sets answers
      *
-     * @param \Swagger\Client\Model\FilingAnswerModel[] $answers Filing question answers
+     * @param \Together\Taxes\Model\FilingAnswerModel[] $answers Filing question answers
      *
      * @return $this
      */

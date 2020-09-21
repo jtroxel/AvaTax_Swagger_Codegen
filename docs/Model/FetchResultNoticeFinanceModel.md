@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recordset_count** | **int** |  | [optional] 
-**value** | [**\Swagger\Client\Model\NoticeFinanceModel[]**](NoticeFinanceModel.md) |  | [optional] 
+**value** | [**\Together\Taxes\Model\NoticeFinanceModel[]**](NoticeFinanceModel.md) |  | [optional] 
 **next_link** | **string** |  | [optional] 
 **page_key** | **string** |  | [optional] 
 

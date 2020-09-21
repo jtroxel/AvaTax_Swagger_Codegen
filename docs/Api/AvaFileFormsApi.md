@@ -1,4 +1,4 @@
-# Swagger\Client\AvaFileFormsApi
+# Together\Taxes\AvaFileFormsApi
 
 All URIs are relative to *https://localhost*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createAvaFileForms**
-> \Swagger\Client\Model\AvaFileFormModel[] createAvaFileForms($x_avalara_client, $body)
+> \Together\Taxes\Model\AvaFileFormModel[] createAvaFileForms($x_avalara_client, $body)
 
 Create a new AvaFileForm
 
@@ -24,21 +24,21 @@ Create one or more AvaFileForms  A 'AvaFileForm' represents a form supported by 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AvaFileFormsApi(
+$apiInstance = new Together\Taxes\Api\AvaFileFormsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\AvaFileFormModel()); // \Swagger\Client\Model\AvaFileFormModel[] | The AvaFileForm you wish to create.
+$body = array(new \Together\Taxes\Model\AvaFileFormModel()); // \Together\Taxes\Model\AvaFileFormModel[] | The AvaFileForm you wish to create.
 
 try {
     $result = $apiInstance->createAvaFileForms($x_avalara_client, $body);
@@ -54,11 +54,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AvaFileFormModel[]**](../Model/AvaFileFormModel.md)| The AvaFileForm you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\AvaFileFormModel[]**](../Model/AvaFileFormModel.md)| The AvaFileForm you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AvaFileFormModel[]**](../Model/AvaFileFormModel.md)
+[**\Together\Taxes\Model\AvaFileFormModel[]**](../Model/AvaFileFormModel.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAvaFileForm**
-> \Swagger\Client\Model\ErrorDetail[] deleteAvaFileForm($id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteAvaFileForm($id, $x_avalara_client)
 
 Delete a single AvaFileForm
 
@@ -84,14 +84,14 @@ Marks the existing AvaFileForm object at this URL as deleted.  ### Security Poli
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AvaFileFormsApi(
+$apiInstance = new Together\Taxes\Api\AvaFileFormsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAvaFileForm**
-> \Swagger\Client\Model\AvaFileFormModel getAvaFileForm($id, $x_avalara_client)
+> \Together\Taxes\Model\AvaFileFormModel getAvaFileForm($id, $x_avalara_client)
 
 Retrieve a single AvaFileForm
 
@@ -144,14 +144,14 @@ Get the AvaFileForm object identified by this URL.  ### Security Policies  * Thi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AvaFileFormsApi(
+$apiInstance = new Together\Taxes\Api\AvaFileFormsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AvaFileFormModel**](../Model/AvaFileFormModel.md)
+[**\Together\Taxes\Model\AvaFileFormModel**](../Model/AvaFileFormModel.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryAvaFileForms**
-> \Swagger\Client\Model\FetchResultAvaFileFormModel queryAvaFileForms($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultAvaFileFormModel queryAvaFileForms($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all AvaFileForms
 
@@ -204,14 +204,14 @@ Search for specific objects using the criteria in the `$filter` parameter; full 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AvaFileFormsApi(
+$apiInstance = new Together\Taxes\Api\AvaFileFormsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultAvaFileFormModel**](../Model/FetchResultAvaFileFormModel.md)
+[**\Together\Taxes\Model\FetchResultAvaFileFormModel**](../Model/FetchResultAvaFileFormModel.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAvaFileForm**
-> \Swagger\Client\Model\AvaFileFormModel updateAvaFileForm($id, $x_avalara_client, $body)
+> \Together\Taxes\Model\AvaFileFormModel updateAvaFileForm($id, $x_avalara_client, $body)
 
 Update a AvaFileForm
 
@@ -270,14 +270,14 @@ All data from the existing object will be replaced with data in the object you P
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AvaFileFormsApi(
+$apiInstance = new Together\Taxes\Api\AvaFileFormsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -285,7 +285,7 @@ $apiInstance = new Swagger\Client\Api\AvaFileFormsApi(
 );
 $id = 56; // int | The ID of the AvaFileForm you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AvaFileFormModel(); // \Swagger\Client\Model\AvaFileFormModel | The AvaFileForm model you wish to update.
+$body = new \Together\Taxes\Model\AvaFileFormModel(); // \Together\Taxes\Model\AvaFileFormModel | The AvaFileForm model you wish to update.
 
 try {
     $result = $apiInstance->updateAvaFileForm($id, $x_avalara_client, $body);
@@ -302,11 +302,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The ID of the AvaFileForm you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AvaFileFormModel**](../Model/AvaFileFormModel.md)| The AvaFileForm model you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\AvaFileFormModel**](../Model/AvaFileFormModel.md)| The AvaFileForm model you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AvaFileFormModel**](../Model/AvaFileFormModel.md)
+[**\Together\Taxes\Model\AvaFileFormModel**](../Model/AvaFileFormModel.md)
 
 ### Authorization
 

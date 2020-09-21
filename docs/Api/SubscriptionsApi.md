@@ -1,4 +1,4 @@
-# Swagger\Client\SubscriptionsApi
+# Together\Taxes\SubscriptionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getSubscription**
-> \Swagger\Client\Model\SubscriptionModel getSubscription($account_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\SubscriptionModel getSubscription($account_id, $id, $x_avalara_client)
 
 Retrieve a single subscription
 
@@ -22,14 +22,14 @@ Get the subscription object identified by this URL.  A 'subscription' indicates 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\SubscriptionsApi(
+$apiInstance = new Together\Taxes\Api\SubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionModel**](../Model/SubscriptionModel.md)
+[**\Together\Taxes\Model\SubscriptionModel**](../Model/SubscriptionModel.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listSubscriptionsByAccount**
-> \Swagger\Client\Model\FetchResultSubscriptionModel listSubscriptionsByAccount($account_id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultSubscriptionModel listSubscriptionsByAccount($account_id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve subscriptions for this account
 
@@ -84,14 +84,14 @@ List all subscription objects attached to this account.  A 'subscription' indica
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\SubscriptionsApi(
+$apiInstance = new Together\Taxes\Api\SubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultSubscriptionModel**](../Model/FetchResultSubscriptionModel.md)
+[**\Together\Taxes\Model\FetchResultSubscriptionModel**](../Model/FetchResultSubscriptionModel.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **querySubscriptions**
-> \Swagger\Client\Model\FetchResultSubscriptionModel querySubscriptions($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultSubscriptionModel querySubscriptions($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all subscriptions
 
@@ -152,14 +152,14 @@ Get multiple subscription objects across all accounts.  A 'subscription' indicat
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\SubscriptionsApi(
+$apiInstance = new Together\Taxes\Api\SubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultSubscriptionModel**](../Model/FetchResultSubscriptionModel.md)
+[**\Together\Taxes\Model\FetchResultSubscriptionModel**](../Model/FetchResultSubscriptionModel.md)
 
 ### Authorization
 

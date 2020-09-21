@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * WorksheetDocumentLine Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class WorksheetDocumentLine implements ModelInterface, ArrayAccess
         'exempt_amount' => 'double',
         'taxable_amount' => 'double',
         'tax_amount' => 'double',
-        'messages' => '\Swagger\Client\Model\Message[]',
+        'messages' => '\Together\Taxes\Model\Message[]',
         'result_code' => 'string',
         'transaction_id' => 'string'
     ];
@@ -426,7 +426,7 @@ class WorksheetDocumentLine implements ModelInterface, ArrayAccess
     /**
      * Gets messages
      *
-     * @return \Swagger\Client\Model\Message[]
+     * @return \Together\Taxes\Model\Message[]
      */
     public function getMessages()
     {
@@ -436,7 +436,7 @@ class WorksheetDocumentLine implements ModelInterface, ArrayAccess
     /**
      * Sets messages
      *
-     * @param \Swagger\Client\Model\Message[] $messages messages
+     * @param \Together\Taxes\Model\Message[] $messages messages
      *
      * @return $this
      */

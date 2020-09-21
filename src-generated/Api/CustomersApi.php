@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * CustomersApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class CustomersApi
      *
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel[] $body The list of customer objects to be created (optional)
+     * @param  \Together\Taxes\Model\CustomerModel[] $body The list of customer objects to be created (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomerModel[]
+     * @return \Together\Taxes\Model\CustomerModel[]
      */
     public function createCustomers($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class CustomersApi
      *
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel[] $body The list of customer objects to be created (optional)
+     * @param  \Together\Taxes\Model\CustomerModel[] $body The list of customer objects to be created (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomerModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CustomerModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomersWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel[]';
+        $returnType = '\Together\Taxes\Model\CustomerModel[]';
         $request = $this->createCustomersRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomerModel[]',
+                        '\Together\Taxes\Model\CustomerModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class CustomersApi
      *
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel[] $body The list of customer objects to be created (optional)
+     * @param  \Together\Taxes\Model\CustomerModel[] $body The list of customer objects to be created (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class CustomersApi
      *
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel[] $body The list of customer objects to be created (optional)
+     * @param  \Together\Taxes\Model\CustomerModel[] $body The list of customer objects to be created (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCustomersAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel[]';
+        $returnType = '\Together\Taxes\Model\CustomerModel[]';
         $request = $this->createCustomersRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class CustomersApi
      *
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel[] $body The list of customer objects to be created (optional)
+     * @param  \Together\Taxes\Model\CustomerModel[] $body The list of customer objects to be created (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -390,9 +390,9 @@ class CustomersApi
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomerModel
+     * @return \Together\Taxes\Model\CustomerModel
      */
     public function deleteCustomer($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -409,13 +409,13 @@ class CustomersApi
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CustomerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCustomerWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel';
+        $returnType = '\Together\Taxes\Model\CustomerModel';
         $request = $this->deleteCustomerRequest($company_id, $customer_code, $x_avalara_client);
 
         try {
@@ -467,7 +467,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomerModel',
+                        '\Together\Taxes\Model\CustomerModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class CustomersApi
      */
     public function deleteCustomerAsyncWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel';
+        $returnType = '\Together\Taxes\Model\CustomerModel';
         $request = $this->deleteCustomerRequest($company_id, $customer_code, $x_avalara_client);
 
         return $this->client
@@ -696,9 +696,9 @@ class CustomersApi
      * @param  string $include Specify optional additional objects to include in this fetch request (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomerModel
+     * @return \Together\Taxes\Model\CustomerModel
      */
     public function getCustomer($company_id, $customer_code, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -716,13 +716,13 @@ class CustomersApi
      * @param  string $include Specify optional additional objects to include in this fetch request (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CustomerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerWithHttpInfo($company_id, $customer_code, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel';
+        $returnType = '\Together\Taxes\Model\CustomerModel';
         $request = $this->getCustomerRequest($company_id, $customer_code, $include, $x_avalara_client);
 
         try {
@@ -774,7 +774,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomerModel',
+                        '\Together\Taxes\Model\CustomerModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -822,7 +822,7 @@ class CustomersApi
      */
     public function getCustomerAsyncWithHttpInfo($company_id, $customer_code, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel';
+        $returnType = '\Together\Taxes\Model\CustomerModel';
         $request = $this->getCustomerRequest($company_id, $customer_code, $include, $x_avalara_client);
 
         return $this->client
@@ -1008,11 +1008,11 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the provided customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCustomerAttributeModel
+     * @return \Together\Taxes\Model\FetchResultCustomerAttributeModel
      */
     public function linkAttributesToCustomer($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1028,15 +1028,15 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the provided customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCustomerAttributeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCustomerAttributeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function linkAttributesToCustomerWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerAttributeModel';
         $request = $this->linkAttributesToCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         try {
@@ -1088,7 +1088,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCustomerAttributeModel',
+                        '\Together\Taxes\Model\FetchResultCustomerAttributeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1106,7 +1106,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the provided customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1129,14 +1129,14 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the provided customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function linkAttributesToCustomerAsyncWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerAttributeModel';
         $request = $this->linkAttributesToCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         return $this->client
@@ -1182,7 +1182,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the provided customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to link to the customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1321,11 +1321,11 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertificateModel
+     * @return \Together\Taxes\Model\FetchResultCertificateModel
      */
     public function linkCertificatesToCustomer($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1341,15 +1341,15 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertificateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertificateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function linkCertificatesToCustomerWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateModel';
         $request = $this->linkCertificatesToCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         try {
@@ -1401,7 +1401,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertificateModel',
+                        '\Together\Taxes\Model\FetchResultCertificateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1419,7 +1419,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1442,14 +1442,14 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function linkCertificatesToCustomerAsyncWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateModel';
         $request = $this->linkCertificatesToCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         return $this->client
@@ -1495,7 +1495,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1634,11 +1634,11 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company defining customers. (required)
      * @param  string $code The code of the bill-to customer to link. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomerModel
+     * @return \Together\Taxes\Model\CustomerModel
      */
     public function linkShipToCustomersToBillCustomer($company_id, $code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1654,15 +1654,15 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company defining customers. (required)
      * @param  string $code The code of the bill-to customer to link. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CustomerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function linkShipToCustomersToBillCustomerWithHttpInfo($company_id, $code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel';
+        $returnType = '\Together\Taxes\Model\CustomerModel';
         $request = $this->linkShipToCustomersToBillCustomerRequest($company_id, $code, $x_avalara_client, $body);
 
         try {
@@ -1714,7 +1714,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomerModel',
+                        '\Together\Taxes\Model\CustomerModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1732,7 +1732,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company defining customers. (required)
      * @param  string $code The code of the bill-to customer to link. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1755,14 +1755,14 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company defining customers. (required)
      * @param  string $code The code of the bill-to customer to link. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function linkShipToCustomersToBillCustomerAsyncWithHttpInfo($company_id, $code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel';
+        $returnType = '\Together\Taxes\Model\CustomerModel';
         $request = $this->linkShipToCustomersToBillCustomerRequest($company_id, $code, $x_avalara_client, $body);
 
         return $this->client
@@ -1808,7 +1808,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company defining customers. (required)
      * @param  string $code The code of the bill-to customer to link. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
+     * @param  \Together\Taxes\Model\LinkCustomersModel $body A list of information about ship-to customers to link to this bill-to customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1948,9 +1948,9 @@ class CustomersApi
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCustomerAttributeModel
+     * @return \Together\Taxes\Model\FetchResultCustomerAttributeModel
      */
     public function listAttributesForCustomer($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1967,13 +1967,13 @@ class CustomersApi
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCustomerAttributeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCustomerAttributeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAttributesForCustomerWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerAttributeModel';
         $request = $this->listAttributesForCustomerRequest($company_id, $customer_code, $x_avalara_client);
 
         try {
@@ -2025,7 +2025,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCustomerAttributeModel',
+                        '\Together\Taxes\Model\FetchResultCustomerAttributeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2071,7 +2071,7 @@ class CustomersApi
      */
     public function listAttributesForCustomerAsyncWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerAttributeModel';
         $request = $this->listAttributesForCustomerRequest($company_id, $customer_code, $x_avalara_client);
 
         return $this->client
@@ -2258,9 +2258,9 @@ class CustomersApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertificateModel
+     * @return \Together\Taxes\Model\FetchResultCertificateModel
      */
     public function listCertificatesForCustomer($company_id, $customer_code, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2282,13 +2282,13 @@ class CustomersApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertificateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertificateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCertificatesForCustomerWithHttpInfo($company_id, $customer_code, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateModel';
         $request = $this->listCertificatesForCustomerRequest($company_id, $customer_code, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2340,7 +2340,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertificateModel',
+                        '\Together\Taxes\Model\FetchResultCertificateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2396,7 +2396,7 @@ class CustomersApi
      */
     public function listCertificatesForCustomerAsyncWithHttpInfo($company_id, $customer_code, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateModel';
         $request = $this->listCertificatesForCustomerRequest($company_id, $customer_code, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2605,9 +2605,9 @@ class CustomersApi
      * @param  string $region Search for certificates matching this region.  Uses the ISO 3166 two or three character state, region, or province code. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ExemptionStatusModel
+     * @return \Together\Taxes\Model\ExemptionStatusModel
      */
     public function listValidCertificatesForCustomer($company_id, $customer_code, $country, $region, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2626,13 +2626,13 @@ class CustomersApi
      * @param  string $region Search for certificates matching this region.  Uses the ISO 3166 two or three character state, region, or province code. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ExemptionStatusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ExemptionStatusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listValidCertificatesForCustomerWithHttpInfo($company_id, $customer_code, $country, $region, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ExemptionStatusModel';
+        $returnType = '\Together\Taxes\Model\ExemptionStatusModel';
         $request = $this->listValidCertificatesForCustomerRequest($company_id, $customer_code, $country, $region, $x_avalara_client);
 
         try {
@@ -2684,7 +2684,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ExemptionStatusModel',
+                        '\Together\Taxes\Model\ExemptionStatusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2734,7 +2734,7 @@ class CustomersApi
      */
     public function listValidCertificatesForCustomerAsyncWithHttpInfo($company_id, $customer_code, $country, $region, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ExemptionStatusModel';
+        $returnType = '\Together\Taxes\Model\ExemptionStatusModel';
         $request = $this->listValidCertificatesForCustomerRequest($company_id, $customer_code, $country, $region, $x_avalara_client);
 
         return $this->client
@@ -2950,9 +2950,9 @@ class CustomersApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCustomerModel
+     * @return \Together\Taxes\Model\FetchResultCustomerModel
      */
     public function queryCustomers($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2973,13 +2973,13 @@ class CustomersApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCustomerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCustomerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryCustomersWithHttpInfo($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerModel';
         $request = $this->queryCustomersRequest($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -3031,7 +3031,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCustomerModel',
+                        '\Together\Taxes\Model\FetchResultCustomerModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3085,7 +3085,7 @@ class CustomersApi
      */
     public function queryCustomersAsyncWithHttpInfo($company_id, $include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerModel';
         $request = $this->queryCustomersRequest($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3276,11 +3276,11 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCustomerAttributeModel
+     * @return \Together\Taxes\Model\FetchResultCustomerAttributeModel
      */
     public function unlinkAttributesFromCustomer($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -3296,15 +3296,15 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCustomerAttributeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCustomerAttributeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function unlinkAttributesFromCustomerWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerAttributeModel';
         $request = $this->unlinkAttributesFromCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         try {
@@ -3356,7 +3356,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCustomerAttributeModel',
+                        '\Together\Taxes\Model\FetchResultCustomerAttributeModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3374,7 +3374,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3397,14 +3397,14 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function unlinkAttributesFromCustomerAsyncWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCustomerAttributeModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCustomerAttributeModel';
         $request = $this->unlinkAttributesFromCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         return $this->client
@@ -3450,7 +3450,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded the customer (required)
      * @param  string $customer_code The unique code representing the current customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
+     * @param  \Together\Taxes\Model\CustomerAttributeModel[] $body The list of attributes to unlink from the customer. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3589,11 +3589,11 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultCertificateModel
+     * @return \Together\Taxes\Model\FetchResultCertificateModel
      */
     public function unlinkCertificatesFromCustomer($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -3609,15 +3609,15 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultCertificateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultCertificateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function unlinkCertificatesFromCustomerWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateModel';
         $request = $this->unlinkCertificatesFromCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         try {
@@ -3669,7 +3669,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultCertificateModel',
+                        '\Together\Taxes\Model\FetchResultCertificateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3687,7 +3687,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3710,14 +3710,14 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function unlinkCertificatesFromCustomerAsyncWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\FetchResultCertificateModel';
+        $returnType = '\Together\Taxes\Model\FetchResultCertificateModel';
         $request = $this->unlinkCertificatesFromCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         return $this->client
@@ -3763,7 +3763,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
+     * @param  \Together\Taxes\Model\LinkCertificatesModel $body The list of certificates to link to this customer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3902,11 +3902,11 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
+     * @param  \Together\Taxes\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomerModel
+     * @return \Together\Taxes\Model\CustomerModel
      */
     public function updateCustomer($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -3922,15 +3922,15 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
+     * @param  \Together\Taxes\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CustomerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomerWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel';
+        $returnType = '\Together\Taxes\Model\CustomerModel';
         $request = $this->updateCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         try {
@@ -3982,7 +3982,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomerModel',
+                        '\Together\Taxes\Model\CustomerModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4000,7 +4000,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
+     * @param  \Together\Taxes\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4023,14 +4023,14 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
+     * @param  \Together\Taxes\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateCustomerAsyncWithHttpInfo($company_id, $customer_code, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomerModel';
+        $returnType = '\Together\Taxes\Model\CustomerModel';
         $request = $this->updateCustomerRequest($company_id, $customer_code, $x_avalara_client, $body);
 
         return $this->client
@@ -4076,7 +4076,7 @@ class CustomersApi
      * @param  int $company_id The unique ID number of the company that recorded this customer (required)
      * @param  string $customer_code The unique code representing this customer (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
+     * @param  \Together\Taxes\Model\CustomerModel $body The new customer model that will replace the existing record at this URL (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

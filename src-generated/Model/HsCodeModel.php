@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * HsCodeModel Class Doc Comment
  *
  * @category Class
  * @description Describes an element in the harmonized tariff system.                According to the [United States International Trade Commission](https://www.usitc.gov), the harmonized tariff schedule is defined as follows:                The HTS is a U.S. nomenclature system used to classify traded goods based on their material composition, product name, and/or intended  function. The HTS is designed so that each article falls into only one category. It is divided into chapters, each of which has a 2-digit  number. Each product category within the various chapters is designated by 4, 6, 8, or 10 digits. The 4-digit categories are called  \&quot;headings.\&quot; The 6-, 8- and 10-digit classifications are called \&quot;subheadings.\&quot;                Within AvaTax, the &#x60;HsCodeModel&#x60; object can refer to sections, chapters, headings, subheadings, or articles.  Each object represents one  classification.  Many of these objects have child objects underneath them; these child objects are more specific than their parent objects.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

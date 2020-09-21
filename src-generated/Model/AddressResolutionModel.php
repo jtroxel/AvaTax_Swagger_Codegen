@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AddressResolutionModel Class Doc Comment
  *
  * @category Class
  * @description Address Resolution Model
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,12 +58,12 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => '\Swagger\Client\Model\AddressInfo',
-        'validated_addresses' => '\Swagger\Client\Model\ValidatedAddressInfo[]',
-        'coordinates' => '\Swagger\Client\Model\CoordinateInfo',
+        'address' => '\Together\Taxes\Model\AddressInfo',
+        'validated_addresses' => '\Together\Taxes\Model\ValidatedAddressInfo[]',
+        'coordinates' => '\Together\Taxes\Model\CoordinateInfo',
         'resolution_quality' => 'string',
-        'tax_authorities' => '\Swagger\Client\Model\TaxAuthorityInfo[]',
-        'messages' => '\Swagger\Client\Model\AvaTaxMessage[]'
+        'tax_authorities' => '\Together\Taxes\Model\TaxAuthorityInfo[]',
+        'messages' => '\Together\Taxes\Model\AvaTaxMessage[]'
     ];
 
     /**
@@ -281,7 +281,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \Swagger\Client\Model\AddressInfo
+     * @return \Together\Taxes\Model\AddressInfo
      */
     public function getAddress()
     {
@@ -291,7 +291,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \Swagger\Client\Model\AddressInfo $address The original address
+     * @param \Together\Taxes\Model\AddressInfo $address The original address
      *
      * @return $this
      */
@@ -305,7 +305,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Gets validated_addresses
      *
-     * @return \Swagger\Client\Model\ValidatedAddressInfo[]
+     * @return \Together\Taxes\Model\ValidatedAddressInfo[]
      */
     public function getValidatedAddresses()
     {
@@ -315,7 +315,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Sets validated_addresses
      *
-     * @param \Swagger\Client\Model\ValidatedAddressInfo[] $validated_addresses The validated address or addresses
+     * @param \Together\Taxes\Model\ValidatedAddressInfo[] $validated_addresses The validated address or addresses
      *
      * @return $this
      */
@@ -329,7 +329,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Gets coordinates
      *
-     * @return \Swagger\Client\Model\CoordinateInfo
+     * @return \Together\Taxes\Model\CoordinateInfo
      */
     public function getCoordinates()
     {
@@ -339,7 +339,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Sets coordinates
      *
-     * @param \Swagger\Client\Model\CoordinateInfo $coordinates The geospatial coordinates of this address
+     * @param \Together\Taxes\Model\CoordinateInfo $coordinates The geospatial coordinates of this address
      *
      * @return $this
      */
@@ -386,7 +386,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Gets tax_authorities
      *
-     * @return \Swagger\Client\Model\TaxAuthorityInfo[]
+     * @return \Together\Taxes\Model\TaxAuthorityInfo[]
      */
     public function getTaxAuthorities()
     {
@@ -396,7 +396,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Sets tax_authorities
      *
-     * @param \Swagger\Client\Model\TaxAuthorityInfo[] $tax_authorities List of informational and warning messages regarding this address
+     * @param \Together\Taxes\Model\TaxAuthorityInfo[] $tax_authorities List of informational and warning messages regarding this address
      *
      * @return $this
      */
@@ -410,7 +410,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Gets messages
      *
-     * @return \Swagger\Client\Model\AvaTaxMessage[]
+     * @return \Together\Taxes\Model\AvaTaxMessage[]
      */
     public function getMessages()
     {
@@ -420,7 +420,7 @@ class AddressResolutionModel implements ModelInterface, ArrayAccess
     /**
      * Sets messages
      *
-     * @param \Swagger\Client\Model\AvaTaxMessage[] $messages List of informational and warning messages regarding this address
+     * @param \Together\Taxes\Model\AvaTaxMessage[] $messages List of informational and warning messages regarding this address
      *
      * @return $this
      */

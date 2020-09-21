@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * AccountsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
+     * @param  \Together\Taxes\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LicenseKeyModel
+     * @return \Together\Taxes\Model\LicenseKeyModel
      */
     public function accountResetLicenseKey($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
+     * @param  \Together\Taxes\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LicenseKeyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LicenseKeyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountResetLicenseKeyWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LicenseKeyModel';
+        $returnType = '\Together\Taxes\Model\LicenseKeyModel';
         $request = $this->accountResetLicenseKeyRequest($id, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LicenseKeyModel',
+                        '\Together\Taxes\Model\LicenseKeyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
+     * @param  \Together\Taxes\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
+     * @param  \Together\Taxes\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function accountResetLicenseKeyAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LicenseKeyModel';
+        $returnType = '\Together\Taxes\Model\LicenseKeyModel';
         $request = $this->accountResetLicenseKeyRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
+     * @param  \Together\Taxes\Model\ResetLicenseKeyModel $body A request confirming that you wish to reset the license key of this account. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -388,11 +388,11 @@ class AccountsApi
      *
      * @param  int $id The ID of the account to activate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ActivateAccountModel $body The activation request (optional)
+     * @param  \Together\Taxes\Model\ActivateAccountModel $body The activation request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountModel
+     * @return \Together\Taxes\Model\AccountModel
      */
     public function activateAccount($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -407,15 +407,15 @@ class AccountsApi
      *
      * @param  int $id The ID of the account to activate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ActivateAccountModel $body The activation request (optional)
+     * @param  \Together\Taxes\Model\ActivateAccountModel $body The activation request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AccountModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function activateAccountWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountModel';
+        $returnType = '\Together\Taxes\Model\AccountModel';
         $request = $this->activateAccountRequest($id, $x_avalara_client, $body);
 
         try {
@@ -467,7 +467,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountModel',
+                        '\Together\Taxes\Model\AccountModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -484,7 +484,7 @@ class AccountsApi
      *
      * @param  int $id The ID of the account to activate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ActivateAccountModel $body The activation request (optional)
+     * @param  \Together\Taxes\Model\ActivateAccountModel $body The activation request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -506,14 +506,14 @@ class AccountsApi
      *
      * @param  int $id The ID of the account to activate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ActivateAccountModel $body The activation request (optional)
+     * @param  \Together\Taxes\Model\ActivateAccountModel $body The activation request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function activateAccountAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountModel';
+        $returnType = '\Together\Taxes\Model\AccountModel';
         $request = $this->activateAccountRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -558,7 +558,7 @@ class AccountsApi
      *
      * @param  int $id The ID of the account to activate (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ActivateAccountModel $body The activation request (optional)
+     * @param  \Together\Taxes\Model\ActivateAccountModel $body The activation request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -687,9 +687,9 @@ class AccountsApi
      * @param  int $skip If nonzero, skip this number of results before returning data.  Used with &#x60;$top&#x60; to provide pagination for large datasets. (optional, default to 0)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultAuditModel
+     * @return \Together\Taxes\Model\FetchResultAuditModel
      */
     public function auditAccount($id, $start = null, $end = null, $top = '10', $skip = '0', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -709,13 +709,13 @@ class AccountsApi
      * @param  int $skip If nonzero, skip this number of results before returning data.  Used with &#x60;$top&#x60; to provide pagination for large datasets. (optional, default to 0)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultAuditModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultAuditModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function auditAccountWithHttpInfo($id, $start = null, $end = null, $top = '10', $skip = '0', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAuditModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAuditModel';
         $request = $this->auditAccountRequest($id, $start, $end, $top, $skip, $x_avalara_client);
 
         try {
@@ -767,7 +767,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultAuditModel',
+                        '\Together\Taxes\Model\FetchResultAuditModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -819,7 +819,7 @@ class AccountsApi
      */
     public function auditAccountAsyncWithHttpInfo($id, $start = null, $end = null, $top = '10', $skip = '0', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAuditModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAuditModel';
         $request = $this->auditAccountRequest($id, $start, $end, $top, $skip, $x_avalara_client);
 
         return $this->client
@@ -1004,11 +1004,11 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountLicenseKeyModel $body  (optional)
+     * @param  \Together\Taxes\Model\AccountLicenseKeyModel $body  (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LicenseKeyModel
+     * @return \Together\Taxes\Model\LicenseKeyModel
      */
     public function createLicenseKey($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1023,15 +1023,15 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountLicenseKeyModel $body  (optional)
+     * @param  \Together\Taxes\Model\AccountLicenseKeyModel $body  (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LicenseKeyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\LicenseKeyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createLicenseKeyWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LicenseKeyModel';
+        $returnType = '\Together\Taxes\Model\LicenseKeyModel';
         $request = $this->createLicenseKeyRequest($id, $x_avalara_client, $body);
 
         try {
@@ -1083,7 +1083,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LicenseKeyModel',
+                        '\Together\Taxes\Model\LicenseKeyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1100,7 +1100,7 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountLicenseKeyModel $body  (optional)
+     * @param  \Together\Taxes\Model\AccountLicenseKeyModel $body  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1122,14 +1122,14 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountLicenseKeyModel $body  (optional)
+     * @param  \Together\Taxes\Model\AccountLicenseKeyModel $body  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createLicenseKeyAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\LicenseKeyModel';
+        $returnType = '\Together\Taxes\Model\LicenseKeyModel';
         $request = $this->createLicenseKeyRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -1174,7 +1174,7 @@ class AccountsApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountLicenseKeyModel $body  (optional)
+     * @param  \Together\Taxes\Model\AccountLicenseKeyModel $body  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1300,9 +1300,9 @@ class AccountsApi
      * @param  string $licensekeyname The license key name you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteLicenseKey($id, $licensekeyname, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1319,13 +1319,13 @@ class AccountsApi
      * @param  string $licensekeyname The license key name you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteLicenseKeyWithHttpInfo($id, $licensekeyname, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteLicenseKeyRequest($id, $licensekeyname, $x_avalara_client);
 
         try {
@@ -1377,7 +1377,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1423,7 +1423,7 @@ class AccountsApi
      */
     public function deleteLicenseKeyAsyncWithHttpInfo($id, $licensekeyname, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteLicenseKeyRequest($id, $licensekeyname, $x_avalara_client);
 
         return $this->client
@@ -1605,9 +1605,9 @@ class AccountsApi
      * @param  string $include A comma separated list of special fetch options (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountModel
+     * @return \Together\Taxes\Model\AccountModel
      */
     public function getAccount($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1624,13 +1624,13 @@ class AccountsApi
      * @param  string $include A comma separated list of special fetch options (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AccountModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountWithHttpInfo($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AccountModel';
+        $returnType = '\Together\Taxes\Model\AccountModel';
         $request = $this->getAccountRequest($id, $include, $x_avalara_client);
 
         try {
@@ -1682,7 +1682,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountModel',
+                        '\Together\Taxes\Model\AccountModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1728,7 +1728,7 @@ class AccountsApi
      */
     public function getAccountAsyncWithHttpInfo($id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AccountModel';
+        $returnType = '\Together\Taxes\Model\AccountModel';
         $request = $this->getAccountRequest($id, $include, $x_avalara_client);
 
         return $this->client
@@ -1899,9 +1899,9 @@ class AccountsApi
      * @param  int $id id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountConfigurationModel[]
+     * @return \Together\Taxes\Model\AccountConfigurationModel[]
      */
     public function getAccountConfiguration($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1917,13 +1917,13 @@ class AccountsApi
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AccountConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountConfigurationWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AccountConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\AccountConfigurationModel[]';
         $request = $this->getAccountConfigurationRequest($id, $x_avalara_client);
 
         try {
@@ -1975,7 +1975,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountConfigurationModel[]',
+                        '\Together\Taxes\Model\AccountConfigurationModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2019,7 +2019,7 @@ class AccountsApi
      */
     public function getAccountConfigurationAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AccountConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\AccountConfigurationModel[]';
         $request = $this->getAccountConfigurationRequest($id, $x_avalara_client);
 
         return $this->client
@@ -2186,9 +2186,9 @@ class AccountsApi
      * @param  string $licensekeyname The ID of the account to retrieve (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountLicenseKeyModel
+     * @return \Together\Taxes\Model\AccountLicenseKeyModel
      */
     public function getLicenseKey($id, $licensekeyname, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2205,13 +2205,13 @@ class AccountsApi
      * @param  string $licensekeyname The ID of the account to retrieve (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountLicenseKeyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AccountLicenseKeyModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLicenseKeyWithHttpInfo($id, $licensekeyname, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AccountLicenseKeyModel';
+        $returnType = '\Together\Taxes\Model\AccountLicenseKeyModel';
         $request = $this->getLicenseKeyRequest($id, $licensekeyname, $x_avalara_client);
 
         try {
@@ -2263,7 +2263,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountLicenseKeyModel',
+                        '\Together\Taxes\Model\AccountLicenseKeyModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2309,7 +2309,7 @@ class AccountsApi
      */
     public function getLicenseKeyAsyncWithHttpInfo($id, $licensekeyname, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AccountLicenseKeyModel';
+        $returnType = '\Together\Taxes\Model\AccountLicenseKeyModel';
         $request = $this->getLicenseKeyRequest($id, $licensekeyname, $x_avalara_client);
 
         return $this->client
@@ -2490,9 +2490,9 @@ class AccountsApi
      * @param  int $id The ID of the account to retrieve (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountLicenseKeyModel[]
+     * @return \Together\Taxes\Model\AccountLicenseKeyModel[]
      */
     public function getLicenseKeys($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2508,13 +2508,13 @@ class AccountsApi
      * @param  int $id The ID of the account to retrieve (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountLicenseKeyModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AccountLicenseKeyModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getLicenseKeysWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AccountLicenseKeyModel[]';
+        $returnType = '\Together\Taxes\Model\AccountLicenseKeyModel[]';
         $request = $this->getLicenseKeysRequest($id, $x_avalara_client);
 
         try {
@@ -2566,7 +2566,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountLicenseKeyModel[]',
+                        '\Together\Taxes\Model\AccountLicenseKeyModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2610,7 +2610,7 @@ class AccountsApi
      */
     public function getLicenseKeysAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AccountLicenseKeyModel[]';
+        $returnType = '\Together\Taxes\Model\AccountLicenseKeyModel[]';
         $request = $this->getLicenseKeysRequest($id, $x_avalara_client);
 
         return $this->client
@@ -2780,9 +2780,9 @@ class AccountsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultAccountModel
+     * @return \Together\Taxes\Model\FetchResultAccountModel
      */
     public function queryAccounts($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2802,13 +2802,13 @@ class AccountsApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultAccountModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultAccountModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryAccountsWithHttpInfo($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAccountModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAccountModel';
         $request = $this->queryAccountsRequest($include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2860,7 +2860,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultAccountModel',
+                        '\Together\Taxes\Model\FetchResultAccountModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2912,7 +2912,7 @@ class AccountsApi
      */
     public function queryAccountsAsyncWithHttpInfo($include = null, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAccountModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAccountModel';
         $request = $this->queryAccountsRequest($include, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3087,11 +3087,11 @@ class AccountsApi
      *
      * @param  int $id id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountConfigurationModel[] $body body (optional)
+     * @param  \Together\Taxes\Model\AccountConfigurationModel[] $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountConfigurationModel[]
+     * @return \Together\Taxes\Model\AccountConfigurationModel[]
      */
     public function setAccountConfiguration($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -3106,15 +3106,15 @@ class AccountsApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountConfigurationModel[] $body (optional)
+     * @param  \Together\Taxes\Model\AccountConfigurationModel[] $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AccountConfigurationModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function setAccountConfigurationWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\AccountConfigurationModel[]';
         $request = $this->setAccountConfigurationRequest($id, $x_avalara_client, $body);
 
         try {
@@ -3166,7 +3166,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountConfigurationModel[]',
+                        '\Together\Taxes\Model\AccountConfigurationModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3183,7 +3183,7 @@ class AccountsApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountConfigurationModel[] $body (optional)
+     * @param  \Together\Taxes\Model\AccountConfigurationModel[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3205,14 +3205,14 @@ class AccountsApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountConfigurationModel[] $body (optional)
+     * @param  \Together\Taxes\Model\AccountConfigurationModel[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function setAccountConfigurationAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountConfigurationModel[]';
+        $returnType = '\Together\Taxes\Model\AccountConfigurationModel[]';
         $request = $this->setAccountConfigurationRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -3257,7 +3257,7 @@ class AccountsApi
      *
      * @param  int $id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountConfigurationModel[] $body (optional)
+     * @param  \Together\Taxes\Model\AccountConfigurationModel[] $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

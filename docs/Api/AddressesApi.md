@@ -1,4 +1,4 @@
-# Swagger\Client\AddressesApi
+# Together\Taxes\AddressesApi
 
 All URIs are relative to *https://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **resolveAddress**
-> \Swagger\Client\Model\AddressResolutionModel resolveAddress($line1, $line2, $line3, $city, $region, $postal_code, $country, $text_case, $x_avalara_client)
+> \Together\Taxes\Model\AddressResolutionModel resolveAddress($line1, $line2, $line3, $city, $region, $postal_code, $country, $text_case, $x_avalara_client)
 
 Retrieve geolocation information for a specified address
 
@@ -21,14 +21,14 @@ Resolve an address against Avalara's address-validation system.  If the address 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AddressesApi(
+$apiInstance = new Together\Taxes\Api\AddressesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AddressResolutionModel**](../Model/AddressResolutionModel.md)
+[**\Together\Taxes\Model\AddressResolutionModel**](../Model/AddressResolutionModel.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resolveAddressPost**
-> \Swagger\Client\Model\AddressResolutionModel resolveAddressPost($x_avalara_client, $body)
+> \Together\Taxes\Model\AddressResolutionModel resolveAddressPost($x_avalara_client, $body)
 
 Retrieve geolocation information for a specified address
 
@@ -95,21 +95,21 @@ Resolve an address against Avalara's address-validation system.  If the address 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AddressesApi(
+$apiInstance = new Together\Taxes\Api\AddressesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AddressValidationInfo(); // \Swagger\Client\Model\AddressValidationInfo | The address to resolve
+$body = new \Together\Taxes\Model\AddressValidationInfo(); // \Together\Taxes\Model\AddressValidationInfo | The address to resolve
 
 try {
     $result = $apiInstance->resolveAddressPost($x_avalara_client, $body);
@@ -125,11 +125,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AddressValidationInfo**](../Model/AddressValidationInfo.md)| The address to resolve | [optional]
+ **body** | [**\Together\Taxes\Model\AddressValidationInfo**](../Model/AddressValidationInfo.md)| The address to resolve | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AddressResolutionModel**](../Model/AddressResolutionModel.md)
+[**\Together\Taxes\Model\AddressResolutionModel**](../Model/AddressResolutionModel.md)
 
 ### Authorization
 

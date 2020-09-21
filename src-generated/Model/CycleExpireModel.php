@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * CycleExpireModel Class Doc Comment
  *
  * @category Class
  * @description Cycle Safe Expiration results.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class CycleExpireModel implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'success' => 'bool',
         'message' => 'string',
-        'cycle_expiration_options' => '\Swagger\Client\Model\CycleExpireOptionModel[]'
+        'cycle_expiration_options' => '\Together\Taxes\Model\CycleExpireOptionModel[]'
     ];
 
     /**
@@ -268,7 +268,7 @@ class CycleExpireModel implements ModelInterface, ArrayAccess
     /**
      * Gets cycle_expiration_options
      *
-     * @return \Swagger\Client\Model\CycleExpireOptionModel[]
+     * @return \Together\Taxes\Model\CycleExpireOptionModel[]
      */
     public function getCycleExpirationOptions()
     {
@@ -278,7 +278,7 @@ class CycleExpireModel implements ModelInterface, ArrayAccess
     /**
      * Sets cycle_expiration_options
      *
-     * @param \Swagger\Client\Model\CycleExpireOptionModel[] $cycle_expiration_options A list of options for expiring the filing calendar.
+     * @param \Together\Taxes\Model\CycleExpireOptionModel[] $cycle_expiration_options A list of options for expiring the filing calendar.
      *
      * @return $this
      */

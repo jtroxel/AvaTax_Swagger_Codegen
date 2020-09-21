@@ -1,4 +1,4 @@
-# Swagger\Client\DataSourcesApi
+# Together\Taxes\DataSourcesApi
 
 All URIs are relative to *https://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createDataSources**
-> \Swagger\Client\Model\DataSourceModel[] createDataSources($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\DataSourceModel[] createDataSources($company_id, $x_avalara_client, $body)
 
 Create and store new datasources for the respective companies.
 
@@ -25,14 +25,14 @@ Create one or more datasource objects.  ### Security Policies  * This API requir
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DataSourcesApi(
+$apiInstance = new Together\Taxes\Api\DataSourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Swagger\Client\Api\DataSourcesApi(
 );
 $company_id = 56; // int | The id of the company you which to create the datasources
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\DataSourceModel()); // \Swagger\Client\Model\DataSourceModel[] | 
+$body = array(new \Together\Taxes\Model\DataSourceModel()); // \Together\Taxes\Model\DataSourceModel[] | 
 
 try {
     $result = $apiInstance->createDataSources($company_id, $x_avalara_client, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The id of the company you which to create the datasources |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\DataSourceModel[]**](../Model/DataSourceModel.md)|  | [optional]
+ **body** | [**\Together\Taxes\Model\DataSourceModel[]**](../Model/DataSourceModel.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSourceModel[]**](../Model/DataSourceModel.md)
+[**\Together\Taxes\Model\DataSourceModel[]**](../Model/DataSourceModel.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteDataSource**
-> \Swagger\Client\Model\ErrorDetail[] deleteDataSource($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteDataSource($company_id, $id, $x_avalara_client)
 
 Delete a datasource by datasource id for a company.
 
@@ -87,14 +87,14 @@ Marks the existing datasource for a company as deleted.  ### Security Policies  
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DataSourcesApi(
+$apiInstance = new Together\Taxes\Api\DataSourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDataSourceById**
-> \Swagger\Client\Model\DataSourceModel getDataSourceById($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\DataSourceModel getDataSourceById($company_id, $id, $x_avalara_client)
 
 Get data source by data source id
 
@@ -149,14 +149,14 @@ Retrieve the data source by its unique ID number.  ### Security Policies  * This
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DataSourcesApi(
+$apiInstance = new Together\Taxes\Api\DataSourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSourceModel**](../Model/DataSourceModel.md)
+[**\Together\Taxes\Model\DataSourceModel**](../Model/DataSourceModel.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listDataSources**
-> \Swagger\Client\Model\FetchResultDataSourceModel listDataSources($company_id, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultDataSourceModel listDataSources($company_id, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all datasources for this company
 
@@ -211,14 +211,14 @@ Gets multiple datasource objects for a given company.  ### Security Policies  * 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DataSourcesApi(
+$apiInstance = new Together\Taxes\Api\DataSourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultDataSourceModel**](../Model/FetchResultDataSourceModel.md)
+[**\Together\Taxes\Model\FetchResultDataSourceModel**](../Model/FetchResultDataSourceModel.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryDataSources**
-> \Swagger\Client\Model\FetchResultDataSourceModel queryDataSources($filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultDataSourceModel queryDataSources($filter, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all datasources
 
@@ -279,14 +279,14 @@ Get multiple datasource objects across all companies.                Search for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DataSourcesApi(
+$apiInstance = new Together\Taxes\Api\DataSourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultDataSourceModel**](../Model/FetchResultDataSourceModel.md)
+[**\Together\Taxes\Model\FetchResultDataSourceModel**](../Model/FetchResultDataSourceModel.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDataSource**
-> \Swagger\Client\Model\DataSourceModel updateDataSource($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\DataSourceModel updateDataSource($company_id, $id, $x_avalara_client, $body)
 
 Update a datasource identified by id for a company
 
@@ -345,14 +345,14 @@ Updates a datasource for a company.  ### Security Policies  * This API requires 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DataSourcesApi(
+$apiInstance = new Together\Taxes\Api\DataSourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -361,7 +361,7 @@ $apiInstance = new Swagger\Client\Api\DataSourcesApi(
 $company_id = 56; // int | The id of the company the datasource belongs to.
 $id = 56; // int | The id of the datasource you wish to delete.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\DataSourceModel(); // \Swagger\Client\Model\DataSourceModel | 
+$body = new \Together\Taxes\Model\DataSourceModel(); // \Together\Taxes\Model\DataSourceModel | 
 
 try {
     $result = $apiInstance->updateDataSource($company_id, $id, $x_avalara_client, $body);
@@ -379,11 +379,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The id of the company the datasource belongs to. |
  **id** | **int**| The id of the datasource you wish to delete. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\DataSourceModel**](../Model/DataSourceModel.md)|  | [optional]
+ **body** | [**\Together\Taxes\Model\DataSourceModel**](../Model/DataSourceModel.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\DataSourceModel**](../Model/DataSourceModel.md)
+[**\Together\Taxes\Model\DataSourceModel**](../Model/DataSourceModel.md)
 
 ### Authorization
 

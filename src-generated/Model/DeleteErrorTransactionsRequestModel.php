@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * DeleteErrorTransactionsRequestModel Class Doc Comment
  *
  * @category Class
  * @description Request model for when a user is deleting multiple error transaction
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class DeleteErrorTransactionsRequestModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'models' => '\Swagger\Client\Model\ErrorTransactionModelBase[]'
+        'models' => '\Together\Taxes\Model\ErrorTransactionModelBase[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class DeleteErrorTransactionsRequestModel implements ModelInterface, ArrayAccess
     /**
      * Gets models
      *
-     * @return \Swagger\Client\Model\ErrorTransactionModelBase[]
+     * @return \Together\Taxes\Model\ErrorTransactionModelBase[]
      */
     public function getModels()
     {
@@ -221,7 +221,7 @@ class DeleteErrorTransactionsRequestModel implements ModelInterface, ArrayAccess
     /**
      * Sets models
      *
-     * @param \Swagger\Client\Model\ErrorTransactionModelBase[] $models List of error transactions to be deleted
+     * @param \Together\Taxes\Model\ErrorTransactionModelBase[] $models List of error transactions to be deleted
      *
      * @return $this
      */

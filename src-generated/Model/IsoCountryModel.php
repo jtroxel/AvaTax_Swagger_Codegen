@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * IsoCountryModel Class Doc Comment
  *
  * @category Class
  * @description Represents an ISO 3166 recognized country
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class IsoCountryModel implements ModelInterface, ArrayAccess
         'alpha3_code' => 'string',
         'name' => 'string',
         'is_european_union' => 'bool',
-        'localized_names' => '\Swagger\Client\Model\IsoLocalizedName[]',
+        'localized_names' => '\Together\Taxes\Model\IsoLocalizedName[]',
         'addresses_require_region' => 'bool'
     ];
 
@@ -334,7 +334,7 @@ class IsoCountryModel implements ModelInterface, ArrayAccess
     /**
      * Gets localized_names
      *
-     * @return \Swagger\Client\Model\IsoLocalizedName[]
+     * @return \Together\Taxes\Model\IsoLocalizedName[]
      */
     public function getLocalizedNames()
     {
@@ -344,7 +344,7 @@ class IsoCountryModel implements ModelInterface, ArrayAccess
     /**
      * Sets localized_names
      *
-     * @param \Swagger\Client\Model\IsoLocalizedName[] $localized_names A list of localized names in a variety of languages.                This list is maintained by the International Standards Organization.
+     * @param \Together\Taxes\Model\IsoLocalizedName[] $localized_names A list of localized names in a variety of languages.                This list is maintained by the International Standards Organization.
      *
      * @return $this
      */

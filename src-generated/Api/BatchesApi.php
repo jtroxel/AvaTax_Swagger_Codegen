@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * BatchesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,9 +96,9 @@ class BatchesApi
      * @param  int $id The ID of the batch to cancel. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\BatchModel
+     * @return \Together\Taxes\Model\BatchModel
      */
     public function cancelBatch($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -115,13 +115,13 @@ class BatchesApi
      * @param  int $id The ID of the batch to cancel. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\BatchModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\BatchModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelBatchWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\BatchModel';
+        $returnType = '\Together\Taxes\Model\BatchModel';
         $request = $this->cancelBatchRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -173,7 +173,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\BatchModel',
+                        '\Together\Taxes\Model\BatchModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,7 +219,7 @@ class BatchesApi
      */
     public function cancelBatchAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\BatchModel';
+        $returnType = '\Together\Taxes\Model\BatchModel';
         $request = $this->cancelBatchRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -399,11 +399,11 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BatchModel[] $body The batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\BatchModel[] $body The batch you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\BatchModel[]
+     * @return \Together\Taxes\Model\BatchModel[]
      */
     public function createBatches($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -418,15 +418,15 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BatchModel[] $body The batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\BatchModel[] $body The batch you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\BatchModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\BatchModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createBatchesWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\BatchModel[]';
+        $returnType = '\Together\Taxes\Model\BatchModel[]';
         $request = $this->createBatchesRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -478,7 +478,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\BatchModel[]',
+                        '\Together\Taxes\Model\BatchModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -495,7 +495,7 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BatchModel[] $body The batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\BatchModel[] $body The batch you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -517,14 +517,14 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BatchModel[] $body The batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\BatchModel[] $body The batch you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createBatchesAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\BatchModel[]';
+        $returnType = '\Together\Taxes\Model\BatchModel[]';
         $request = $this->createBatchesRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -569,7 +569,7 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\BatchModel[] $body The batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\BatchModel[] $body The batch you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -693,11 +693,11 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CreateTransactionBatchResponseModel
+     * @return \Together\Taxes\Model\CreateTransactionBatchResponseModel
      */
     public function createTransactionBatch($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -712,15 +712,15 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CreateTransactionBatchResponseModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\CreateTransactionBatchResponseModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTransactionBatchWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CreateTransactionBatchResponseModel';
+        $returnType = '\Together\Taxes\Model\CreateTransactionBatchResponseModel';
         $request = $this->createTransactionBatchRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -772,7 +772,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CreateTransactionBatchResponseModel',
+                        '\Together\Taxes\Model\CreateTransactionBatchResponseModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -789,7 +789,7 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -811,14 +811,14 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createTransactionBatchAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\CreateTransactionBatchResponseModel';
+        $returnType = '\Together\Taxes\Model\CreateTransactionBatchResponseModel';
         $request = $this->createTransactionBatchRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -863,7 +863,7 @@ class BatchesApi
      *
      * @param  int $company_id The ID of the company that owns this batch. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
+     * @param  \Together\Taxes\Model\CreateTransactionBatchRequestModel $body The transaction batch you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -989,9 +989,9 @@ class BatchesApi
      * @param  int $id The ID of the batch to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteBatch($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1008,13 +1008,13 @@ class BatchesApi
      * @param  int $id The ID of the batch to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteBatchWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteBatchRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -1066,7 +1066,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1112,7 +1112,7 @@ class BatchesApi
      */
     public function deleteBatchAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteBatchRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1295,7 +1295,7 @@ class BatchesApi
      * @param  int $id The primary key of this batch file object (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
@@ -1315,7 +1315,7 @@ class BatchesApi
      * @param  int $id The primary key of this batch file object (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1618,9 +1618,9 @@ class BatchesApi
      * @param  int $id The primary key of this batch (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\BatchModel
+     * @return \Together\Taxes\Model\BatchModel
      */
     public function getBatch($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1637,13 +1637,13 @@ class BatchesApi
      * @param  int $id The primary key of this batch (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\BatchModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\BatchModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBatchWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\BatchModel';
+        $returnType = '\Together\Taxes\Model\BatchModel';
         $request = $this->getBatchRequest($company_id, $id, $x_avalara_client);
 
         try {
@@ -1695,7 +1695,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\BatchModel',
+                        '\Together\Taxes\Model\BatchModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1741,7 +1741,7 @@ class BatchesApi
      */
     public function getBatchAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\BatchModel';
+        $returnType = '\Together\Taxes\Model\BatchModel';
         $request = $this->getBatchRequest($company_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1927,9 +1927,9 @@ class BatchesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultBatchModel
+     * @return \Together\Taxes\Model\FetchResultBatchModel
      */
     public function listBatchesByCompany($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1950,13 +1950,13 @@ class BatchesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultBatchModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultBatchModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listBatchesByCompanyWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultBatchModel';
+        $returnType = '\Together\Taxes\Model\FetchResultBatchModel';
         $request = $this->listBatchesByCompanyRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2008,7 +2008,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultBatchModel',
+                        '\Together\Taxes\Model\FetchResultBatchModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2062,7 +2062,7 @@ class BatchesApi
      */
     public function listBatchesByCompanyAsyncWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultBatchModel';
+        $returnType = '\Together\Taxes\Model\FetchResultBatchModel';
         $request = $this->listBatchesByCompanyRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -2257,9 +2257,9 @@ class BatchesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultBatchModel
+     * @return \Together\Taxes\Model\FetchResultBatchModel
      */
     public function queryBatches($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2279,13 +2279,13 @@ class BatchesApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultBatchModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultBatchModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryBatchesWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultBatchModel';
+        $returnType = '\Together\Taxes\Model\FetchResultBatchModel';
         $request = $this->queryBatchesRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2337,7 +2337,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultBatchModel',
+                        '\Together\Taxes\Model\FetchResultBatchModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2389,7 +2389,7 @@ class BatchesApi
      */
     public function queryBatchesAsyncWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultBatchModel';
+        $returnType = '\Together\Taxes\Model\FetchResultBatchModel';
         $request = $this->queryBatchesRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client

@@ -1,4 +1,4 @@
-# Swagger\Client\CertificatesApi
+# Together\Taxes\CertificatesApi
 
 All URIs are relative to *https://localhost*
 
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 
 # **createCertificates**
-> \Swagger\Client\Model\CertificateModel[] createCertificates($company_id, $pre_validated_exemption_reason, $x_avalara_client, $body)
+> \Together\Taxes\Model\CertificateModel[] createCertificates($company_id, $pre_validated_exemption_reason, $x_avalara_client, $body)
 
 Create certificates for this company
 
@@ -34,14 +34,14 @@ Record one or more certificates document for this company.                A cert
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -50,7 +50,7 @@ $apiInstance = new Swagger\Client\Api\CertificatesApi(
 $company_id = 56; // int | The ID number of the company recording this certificate
 $pre_validated_exemption_reason = true; // bool | If set to true, the certificate will bypass the human verification process.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CertificateModel()); // \Swagger\Client\Model\CertificateModel[] | Certificates to be created
+$body = array(new \Together\Taxes\Model\CertificateModel()); // \Together\Taxes\Model\CertificateModel[] | Certificates to be created
 
 try {
     $result = $apiInstance->createCertificates($company_id, $pre_validated_exemption_reason, $x_avalara_client, $body);
@@ -68,11 +68,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID number of the company recording this certificate |
  **pre_validated_exemption_reason** | **bool**| If set to true, the certificate will bypass the human verification process. | [optional]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CertificateModel[]**](../Model/CertificateModel.md)| Certificates to be created | [optional]
+ **body** | [**\Together\Taxes\Model\CertificateModel[]**](../Model/CertificateModel.md)| Certificates to be created | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CertificateModel[]**](../Model/CertificateModel.md)
+[**\Together\Taxes\Model\CertificateModel[]**](../Model/CertificateModel.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteCertificate**
-> \Swagger\Client\Model\ErrorDetail[] deleteCertificate($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteCertificate($company_id, $id, $x_avalara_client)
 
 Revoke and delete a certificate
 
@@ -98,14 +98,14 @@ Revoke the certificate identified by this URL, then delete it.                A 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -160,14 +160,14 @@ Download an image or PDF file for this certificate.                This API can 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCertificate**
-> \Swagger\Client\Model\CertificateModel getCertificate($company_id, $id, $include, $x_avalara_client)
+> \Together\Taxes\Model\CertificateModel getCertificate($company_id, $id, $include, $x_avalara_client)
 
 Retrieve a single certificate
 
@@ -226,14 +226,14 @@ Get the current certificate identified by this URL.                A certificate
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CertificateModel**](../Model/CertificateModel.md)
+[**\Together\Taxes\Model\CertificateModel**](../Model/CertificateModel.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCertificateSetup**
-> \Swagger\Client\Model\ProvisionStatusModel getCertificateSetup($company_id, $x_avalara_client)
+> \Together\Taxes\Model\ProvisionStatusModel getCertificateSetup($company_id, $x_avalara_client)
 
 Check a company's exemption certificate status.
 
@@ -290,14 +290,14 @@ Checks whether this company is configured to use exemption certificates in AvaTa
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProvisionStatusModel**](../Model/ProvisionStatusModel.md)
+[**\Together\Taxes\Model\ProvisionStatusModel**](../Model/ProvisionStatusModel.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **linkAttributesToCertificate**
-> \Swagger\Client\Model\FetchResultCertificateAttributeModel linkAttributesToCertificate($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultCertificateAttributeModel linkAttributesToCertificate($company_id, $id, $x_avalara_client, $body)
 
 Link attributes to a certificate
 
@@ -350,14 +350,14 @@ Link one or many attributes to a certificate.                A certificate may h
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -366,7 +366,7 @@ $apiInstance = new Swagger\Client\Api\CertificatesApi(
 $company_id = 56; // int | The unique ID number of the company that recorded this certificate
 $id = 56; // int | The unique ID number of this certificate
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CertificateAttributeModel()); // \Swagger\Client\Model\CertificateAttributeModel[] | The list of attributes to link to this certificate.
+$body = array(new \Together\Taxes\Model\CertificateAttributeModel()); // \Together\Taxes\Model\CertificateAttributeModel[] | The list of attributes to link to this certificate.
 
 try {
     $result = $apiInstance->linkAttributesToCertificate($company_id, $id, $x_avalara_client, $body);
@@ -384,11 +384,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded this certificate |
  **id** | **int**| The unique ID number of this certificate |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CertificateAttributeModel[]**](../Model/CertificateAttributeModel.md)| The list of attributes to link to this certificate. | [optional]
+ **body** | [**\Together\Taxes\Model\CertificateAttributeModel[]**](../Model/CertificateAttributeModel.md)| The list of attributes to link to this certificate. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertificateAttributeModel**](../Model/FetchResultCertificateAttributeModel.md)
+[**\Together\Taxes\Model\FetchResultCertificateAttributeModel**](../Model/FetchResultCertificateAttributeModel.md)
 
 ### Authorization
 
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **linkCustomersToCertificate**
-> \Swagger\Client\Model\FetchResultCustomerModel linkCustomersToCertificate($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultCustomerModel linkCustomersToCertificate($company_id, $id, $x_avalara_client, $body)
 
 Link customers to a certificate
 
@@ -414,14 +414,14 @@ Link one or more customers to an existing certificate.                Customers 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -430,7 +430,7 @@ $apiInstance = new Swagger\Client\Api\CertificatesApi(
 $company_id = 56; // int | The unique ID number of the company that recorded this certificate
 $id = 56; // int | The unique ID number of this certificate
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\LinkCustomersModel(); // \Swagger\Client\Model\LinkCustomersModel | The list of customers needed be added to the Certificate for exemption
+$body = new \Together\Taxes\Model\LinkCustomersModel(); // \Together\Taxes\Model\LinkCustomersModel | The list of customers needed be added to the Certificate for exemption
 
 try {
     $result = $apiInstance->linkCustomersToCertificate($company_id, $id, $x_avalara_client, $body);
@@ -448,11 +448,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded this certificate |
  **id** | **int**| The unique ID number of this certificate |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LinkCustomersModel**](../Model/LinkCustomersModel.md)| The list of customers needed be added to the Certificate for exemption | [optional]
+ **body** | [**\Together\Taxes\Model\LinkCustomersModel**](../Model/LinkCustomersModel.md)| The list of customers needed be added to the Certificate for exemption | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCustomerModel**](../Model/FetchResultCustomerModel.md)
+[**\Together\Taxes\Model\FetchResultCustomerModel**](../Model/FetchResultCustomerModel.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listAttributesForCertificate**
-> \Swagger\Client\Model\FetchResultCertificateAttributeModel listAttributesForCertificate($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCertificateAttributeModel listAttributesForCertificate($company_id, $id, $x_avalara_client)
 
 List all attributes applied to this certificate
 
@@ -478,14 +478,14 @@ Retrieve the list of attributes that are linked to this certificate.            
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -514,7 +514,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertificateAttributeModel**](../Model/FetchResultCertificateAttributeModel.md)
+[**\Together\Taxes\Model\FetchResultCertificateAttributeModel**](../Model/FetchResultCertificateAttributeModel.md)
 
 ### Authorization
 
@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCustomersForCertificate**
-> \Swagger\Client\Model\FetchResultCustomerModel listCustomersForCertificate($company_id, $id, $include, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCustomerModel listCustomersForCertificate($company_id, $id, $include, $x_avalara_client)
 
 List customers linked to this certificate
 
@@ -540,14 +540,14 @@ List all customers linked to this certificate.                Customers must be 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCustomerModel**](../Model/FetchResultCustomerModel.md)
+[**\Together\Taxes\Model\FetchResultCustomerModel**](../Model/FetchResultCustomerModel.md)
 
 ### Authorization
 
@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryCertificates**
-> \Swagger\Client\Model\FetchResultCertificateModel queryCertificates($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCertificateModel queryCertificates($company_id, $include, $filter, $top, $skip, $order_by, $x_avalara_client)
 
 List all certificates for a company
 
@@ -604,14 +604,14 @@ List all certificates recorded by a company                A certificate is a do
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -648,7 +648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertificateModel**](../Model/FetchResultCertificateModel.md)
+[**\Together\Taxes\Model\FetchResultCertificateModel**](../Model/FetchResultCertificateModel.md)
 
 ### Authorization
 
@@ -662,7 +662,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **requestCertificateSetup**
-> \Swagger\Client\Model\ProvisionStatusModel requestCertificateSetup($company_id, $x_avalara_client)
+> \Together\Taxes\Model\ProvisionStatusModel requestCertificateSetup($company_id, $x_avalara_client)
 
 Request setup of exemption certificates for this company.
 
@@ -674,14 +674,14 @@ Requests the setup of exemption certificates for this company.                Ex
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -708,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProvisionStatusModel**](../Model/ProvisionStatusModel.md)
+[**\Together\Taxes\Model\ProvisionStatusModel**](../Model/ProvisionStatusModel.md)
 
 ### Authorization
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **unlinkAttributesFromCertificate**
-> \Swagger\Client\Model\FetchResultCertificateAttributeModel unlinkAttributesFromCertificate($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultCertificateAttributeModel unlinkAttributesFromCertificate($company_id, $id, $x_avalara_client, $body)
 
 Unlink attributes from a certificate
 
@@ -734,14 +734,14 @@ Unlink one or many attributes from a certificate.                A certificate m
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -750,7 +750,7 @@ $apiInstance = new Swagger\Client\Api\CertificatesApi(
 $company_id = 56; // int | The unique ID number of the company that recorded this certificate
 $id = 56; // int | The unique ID number of this certificate
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CertificateAttributeModel()); // \Swagger\Client\Model\CertificateAttributeModel[] | The list of attributes to unlink from this certificate.
+$body = array(new \Together\Taxes\Model\CertificateAttributeModel()); // \Together\Taxes\Model\CertificateAttributeModel[] | The list of attributes to unlink from this certificate.
 
 try {
     $result = $apiInstance->unlinkAttributesFromCertificate($company_id, $id, $x_avalara_client, $body);
@@ -768,11 +768,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded this certificate |
  **id** | **int**| The unique ID number of this certificate |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CertificateAttributeModel[]**](../Model/CertificateAttributeModel.md)| The list of attributes to unlink from this certificate. | [optional]
+ **body** | [**\Together\Taxes\Model\CertificateAttributeModel[]**](../Model/CertificateAttributeModel.md)| The list of attributes to unlink from this certificate. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCertificateAttributeModel**](../Model/FetchResultCertificateAttributeModel.md)
+[**\Together\Taxes\Model\FetchResultCertificateAttributeModel**](../Model/FetchResultCertificateAttributeModel.md)
 
 ### Authorization
 
@@ -786,7 +786,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **unlinkCustomersFromCertificate**
-> \Swagger\Client\Model\FetchResultCustomerModel unlinkCustomersFromCertificate($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\FetchResultCustomerModel unlinkCustomersFromCertificate($company_id, $id, $x_avalara_client, $body)
 
 Unlink customers from a certificate
 
@@ -798,14 +798,14 @@ Unlinks one or more customers from a certificate.                Unlinking a cer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -814,7 +814,7 @@ $apiInstance = new Swagger\Client\Api\CertificatesApi(
 $company_id = 56; // int | The unique ID number of the company that recorded this certificate
 $id = 56; // int | The unique ID number of this certificate
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\LinkCustomersModel(); // \Swagger\Client\Model\LinkCustomersModel | The list of customers to unlink from this certificate
+$body = new \Together\Taxes\Model\LinkCustomersModel(); // \Together\Taxes\Model\LinkCustomersModel | The list of customers to unlink from this certificate
 
 try {
     $result = $apiInstance->unlinkCustomersFromCertificate($company_id, $id, $x_avalara_client, $body);
@@ -832,11 +832,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that recorded this certificate |
  **id** | **int**| The unique ID number of this certificate |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\LinkCustomersModel**](../Model/LinkCustomersModel.md)| The list of customers to unlink from this certificate | [optional]
+ **body** | [**\Together\Taxes\Model\LinkCustomersModel**](../Model/LinkCustomersModel.md)| The list of customers to unlink from this certificate | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCustomerModel**](../Model/FetchResultCustomerModel.md)
+[**\Together\Taxes\Model\FetchResultCustomerModel**](../Model/FetchResultCustomerModel.md)
 
 ### Authorization
 
@@ -850,7 +850,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCertificate**
-> \Swagger\Client\Model\CertificateModel updateCertificate($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CertificateModel updateCertificate($company_id, $id, $x_avalara_client, $body)
 
 Update a single certificate
 
@@ -862,14 +862,14 @@ Replace the certificate identified by this URL with a new one.                A 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -878,7 +878,7 @@ $apiInstance = new Swagger\Client\Api\CertificatesApi(
 $company_id = 56; // int | The ID number of the company that recorded this certificate
 $id = 56; // int | The unique ID number of this certificate
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CertificateModel(); // \Swagger\Client\Model\CertificateModel | The new certificate object that will replace the existing one
+$body = new \Together\Taxes\Model\CertificateModel(); // \Together\Taxes\Model\CertificateModel | The new certificate object that will replace the existing one
 
 try {
     $result = $apiInstance->updateCertificate($company_id, $id, $x_avalara_client, $body);
@@ -896,11 +896,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The ID number of the company that recorded this certificate |
  **id** | **int**| The unique ID number of this certificate |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CertificateModel**](../Model/CertificateModel.md)| The new certificate object that will replace the existing one | [optional]
+ **body** | [**\Together\Taxes\Model\CertificateModel**](../Model/CertificateModel.md)| The new certificate object that will replace the existing one | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CertificateModel**](../Model/CertificateModel.md)
+[**\Together\Taxes\Model\CertificateModel**](../Model/CertificateModel.md)
 
 ### Authorization
 
@@ -926,14 +926,14 @@ Upload an image or PDF attachment for this certificate.                Image att
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\CertificatesApi(
+$apiInstance = new Together\Taxes\Api\CertificatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

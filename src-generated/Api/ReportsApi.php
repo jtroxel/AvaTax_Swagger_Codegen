@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * ReportsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,7 +95,7 @@ class ReportsApi
      * @param  int $id The unique ID number of this report (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
@@ -113,7 +113,7 @@ class ReportsApi
      * @param  int $id The unique ID number of this report (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -381,9 +381,9 @@ class ReportsApi
      * @param  int $id The unique ID number of the report to retrieve (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ReportModel
+     * @return \Together\Taxes\Model\ReportModel
      */
     public function getReport($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -399,13 +399,13 @@ class ReportsApi
      * @param  int $id The unique ID number of the report to retrieve (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ReportModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ReportModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReportWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ReportModel';
+        $returnType = '\Together\Taxes\Model\ReportModel';
         $request = $this->getReportRequest($id, $x_avalara_client);
 
         try {
@@ -457,7 +457,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ReportModel',
+                        '\Together\Taxes\Model\ReportModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class ReportsApi
      */
     public function getReportAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ReportModel';
+        $returnType = '\Together\Taxes\Model\ReportModel';
         $request = $this->getReportRequest($id, $x_avalara_client);
 
         return $this->client
@@ -666,11 +666,11 @@ class ReportsApi
      *
      * @param  int $company_id The unique ID number of the company to report on. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
+     * @param  \Together\Taxes\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ReportModel[]
+     * @return \Together\Taxes\Model\ReportModel[]
      */
     public function initiateExportDocumentLineReport($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -685,15 +685,15 @@ class ReportsApi
      *
      * @param  int $company_id The unique ID number of the company to report on. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
+     * @param  \Together\Taxes\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ReportModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ReportModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function initiateExportDocumentLineReportWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ReportModel[]';
+        $returnType = '\Together\Taxes\Model\ReportModel[]';
         $request = $this->initiateExportDocumentLineReportRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -745,7 +745,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ReportModel[]',
+                        '\Together\Taxes\Model\ReportModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -762,7 +762,7 @@ class ReportsApi
      *
      * @param  int $company_id The unique ID number of the company to report on. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
+     * @param  \Together\Taxes\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -784,14 +784,14 @@ class ReportsApi
      *
      * @param  int $company_id The unique ID number of the company to report on. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
+     * @param  \Together\Taxes\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function initiateExportDocumentLineReportAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ReportModel[]';
+        $returnType = '\Together\Taxes\Model\ReportModel[]';
         $request = $this->initiateExportDocumentLineReportRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -836,7 +836,7 @@ class ReportsApi
      *
      * @param  int $company_id The unique ID number of the company to report on. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
+     * @param  \Together\Taxes\Model\ExportDocumentLineModel $body Options that may be configured to customize the report. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -964,9 +964,9 @@ class ReportsApi
      * @param  int $top If nonzero, return no more than this number of results.  Used with &#x60;$skip&#x60; to provide pagination for large datasets.  Unless otherwise specified, the maximum number of records that can be returned from an API call is 1,000 records. (optional, default to 25)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultReportModel
+     * @return \Together\Taxes\Model\FetchResultReportModel
      */
     public function listReports($company_id = null, $page_key = null, $skip = null, $top = '25', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -985,13 +985,13 @@ class ReportsApi
      * @param  int $top If nonzero, return no more than this number of results.  Used with &#x60;$skip&#x60; to provide pagination for large datasets.  Unless otherwise specified, the maximum number of records that can be returned from an API call is 1,000 records. (optional, default to 25)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultReportModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultReportModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listReportsWithHttpInfo($company_id = null, $page_key = null, $skip = null, $top = '25', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultReportModel';
+        $returnType = '\Together\Taxes\Model\FetchResultReportModel';
         $request = $this->listReportsRequest($company_id, $page_key, $skip, $top, $x_avalara_client);
 
         try {
@@ -1043,7 +1043,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultReportModel',
+                        '\Together\Taxes\Model\FetchResultReportModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1093,7 +1093,7 @@ class ReportsApi
      */
     public function listReportsAsyncWithHttpInfo($company_id = null, $page_key = null, $skip = null, $top = '25', $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultReportModel';
+        $returnType = '\Together\Taxes\Model\FetchResultReportModel';
         $request = $this->listReportsRequest($company_id, $page_key, $skip, $top, $x_avalara_client);
 
         return $this->client

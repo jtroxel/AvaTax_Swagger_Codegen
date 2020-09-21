@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recordset_count** | **int** |  | [optional] 
-**value** | [**\Swagger\Client\Model\CertificateAttributeModel[]**](CertificateAttributeModel.md) |  | [optional] 
+**value** | [**\Together\Taxes\Model\CertificateAttributeModel[]**](CertificateAttributeModel.md) |  | [optional] 
 **next_link** | **string** |  | [optional] 
 **page_key** | **string** |  | [optional] 
 

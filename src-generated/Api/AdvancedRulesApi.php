@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * AdvancedRulesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,11 +95,11 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company (required)
      * @param  int $company_id The ID of the company for which the lookup file is to be created (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AdvancedRuleLookupFileModel
+     * @return \Together\Taxes\Model\AdvancedRuleLookupFileModel
      */
     public function createCompanyLookupFile($account_id, $company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -115,15 +115,15 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company (required)
      * @param  int $company_id The ID of the company for which the lookup file is to be created (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCompanyLookupFileWithHttpInfo($account_id, $company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\AdvancedRuleLookupFileModel';
         $request = $this->createCompanyLookupFileRequest($account_id, $company_id, $x_avalara_client, $body);
 
         try {
@@ -175,7 +175,7 @@ class AdvancedRulesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AdvancedRuleLookupFileModel',
+                        '\Together\Taxes\Model\AdvancedRuleLookupFileModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -193,7 +193,7 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company (required)
      * @param  int $company_id The ID of the company for which the lookup file is to be created (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -216,14 +216,14 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company (required)
      * @param  int $company_id The ID of the company for which the lookup file is to be created (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCompanyLookupFileAsyncWithHttpInfo($account_id, $company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\AdvancedRuleLookupFileModel';
         $request = $this->createCompanyLookupFileRequest($account_id, $company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -269,7 +269,7 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company (required)
      * @param  int $company_id The ID of the company for which the lookup file is to be created (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The lookup file you wish to create (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -409,9 +409,9 @@ class AdvancedRulesApi
      * @param  string $id The unique ID/GUID for the company lookup file to be deleted (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteLookupFile($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -428,13 +428,13 @@ class AdvancedRulesApi
      * @param  string $id The unique ID/GUID for the company lookup file to be deleted (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteLookupFileWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteLookupFileRequest($account_id, $id, $x_avalara_client);
 
         try {
@@ -486,7 +486,7 @@ class AdvancedRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -532,7 +532,7 @@ class AdvancedRulesApi
      */
     public function deleteLookupFileAsyncWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteLookupFileRequest($account_id, $id, $x_avalara_client);
 
         return $this->client
@@ -715,9 +715,9 @@ class AdvancedRulesApi
      * @param  string $to_date Date (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AdvancedRuleLookupFileModel
+     * @return \Together\Taxes\Model\AdvancedRuleLookupFileModel
      */
     public function getAuditRecords($account_id, $from_date, $to_date, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -735,13 +735,13 @@ class AdvancedRulesApi
      * @param  string $to_date Date (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuditRecordsWithHttpInfo($account_id, $from_date, $to_date, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\AdvancedRuleLookupFileModel';
         $request = $this->getAuditRecordsRequest($account_id, $from_date, $to_date, $x_avalara_client);
 
         try {
@@ -793,7 +793,7 @@ class AdvancedRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AdvancedRuleLookupFileModel',
+                        '\Together\Taxes\Model\AdvancedRuleLookupFileModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -841,7 +841,7 @@ class AdvancedRulesApi
      */
     public function getAuditRecordsAsyncWithHttpInfo($account_id, $from_date, $to_date, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\AdvancedRuleLookupFileModel';
         $request = $this->getAuditRecordsRequest($account_id, $from_date, $to_date, $x_avalara_client);
 
         return $this->client
@@ -1038,9 +1038,9 @@ class AdvancedRulesApi
      * @param  int $company_id The ID of the company for which to retrieve lookup files (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultAdvancedRuleLookupFileModel
+     * @return \Together\Taxes\Model\FetchResultAdvancedRuleLookupFileModel
      */
     public function getCompanyLookupFiles($account_id, $company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1057,13 +1057,13 @@ class AdvancedRulesApi
      * @param  int $company_id The ID of the company for which to retrieve lookup files (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultAdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultAdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompanyLookupFilesWithHttpInfo($account_id, $company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAdvancedRuleLookupFileModel';
         $request = $this->getCompanyLookupFilesRequest($account_id, $company_id, $x_avalara_client);
 
         try {
@@ -1115,7 +1115,7 @@ class AdvancedRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultAdvancedRuleLookupFileModel',
+                        '\Together\Taxes\Model\FetchResultAdvancedRuleLookupFileModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1161,7 +1161,7 @@ class AdvancedRulesApi
      */
     public function getCompanyLookupFilesAsyncWithHttpInfo($account_id, $company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultAdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\FetchResultAdvancedRuleLookupFileModel';
         $request = $this->getCompanyLookupFilesRequest($account_id, $company_id, $x_avalara_client);
 
         return $this->client
@@ -1343,9 +1343,9 @@ class AdvancedRulesApi
      * @param  string $id The unique ID/GUID of the company lookup file to return (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AdvancedRuleLookupFileModel
+     * @return \Together\Taxes\Model\AdvancedRuleLookupFileModel
      */
     public function getLookupFile($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1362,13 +1362,13 @@ class AdvancedRulesApi
      * @param  string $id The unique ID/GUID of the company lookup file to return (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLookupFileWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\AdvancedRuleLookupFileModel';
         $request = $this->getLookupFileRequest($account_id, $id, $x_avalara_client);
 
         try {
@@ -1420,7 +1420,7 @@ class AdvancedRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AdvancedRuleLookupFileModel',
+                        '\Together\Taxes\Model\AdvancedRuleLookupFileModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1466,7 +1466,7 @@ class AdvancedRulesApi
      */
     public function getLookupFileAsyncWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\AdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\AdvancedRuleLookupFileModel';
         $request = $this->getLookupFileRequest($account_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1647,11 +1647,11 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company the lookup file is for (required)
      * @param  string $id The unique ID/GUID of the company lookup file to be updated (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AdvancedRuleLookupFileModel
+     * @return \Together\Taxes\Model\AdvancedRuleLookupFileModel
      */
     public function updateLookupFile($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -1667,15 +1667,15 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company the lookup file is for (required)
      * @param  string $id The unique ID/GUID of the company lookup file to be updated (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AdvancedRuleLookupFileModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateLookupFileWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\AdvancedRuleLookupFileModel';
         $request = $this->updateLookupFileRequest($account_id, $id, $x_avalara_client, $body);
 
         try {
@@ -1727,7 +1727,7 @@ class AdvancedRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AdvancedRuleLookupFileModel',
+                        '\Together\Taxes\Model\AdvancedRuleLookupFileModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1745,7 +1745,7 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company the lookup file is for (required)
      * @param  string $id The unique ID/GUID of the company lookup file to be updated (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1768,14 +1768,14 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company the lookup file is for (required)
      * @param  string $id The unique ID/GUID of the company lookup file to be updated (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateLookupFileAsyncWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AdvancedRuleLookupFileModel';
+        $returnType = '\Together\Taxes\Model\AdvancedRuleLookupFileModel';
         $request = $this->updateLookupFileRequest($account_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -1821,7 +1821,7 @@ class AdvancedRulesApi
      * @param  int $account_id The ID of the account for the company the lookup file is for (required)
      * @param  string $id The unique ID/GUID of the company lookup file to be updated (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
+     * @param  \Together\Taxes\Model\AdvancedRuleLookupFileModel $body The new values to update the lookup file (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

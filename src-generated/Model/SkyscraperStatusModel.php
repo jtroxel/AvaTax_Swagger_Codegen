@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * SkyscraperStatusModel Class Doc Comment
  *
  * @category Class
  * @description Represents a list of statuses of returns available in skyscraper
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class SkyscraperStatusModel implements ModelInterface, ArrayAccess
         'is_available' => 'bool',
         'expected_response_time' => 'string',
         'message' => 'string',
-        'required_filing_calendar_data_fields' => '\Swagger\Client\Model\RequiredFilingCalendarDataFieldModel[]'
+        'required_filing_calendar_data_fields' => '\Together\Taxes\Model\RequiredFilingCalendarDataFieldModel[]'
     ];
 
     /**
@@ -450,7 +450,7 @@ class SkyscraperStatusModel implements ModelInterface, ArrayAccess
     /**
      * Gets required_filing_calendar_data_fields
      *
-     * @return \Swagger\Client\Model\RequiredFilingCalendarDataFieldModel[]
+     * @return \Together\Taxes\Model\RequiredFilingCalendarDataFieldModel[]
      */
     public function getRequiredFilingCalendarDataFields()
     {
@@ -460,7 +460,7 @@ class SkyscraperStatusModel implements ModelInterface, ArrayAccess
     /**
      * Sets required_filing_calendar_data_fields
      *
-     * @param \Swagger\Client\Model\RequiredFilingCalendarDataFieldModel[] $required_filing_calendar_data_fields A list of required fields to file
+     * @param \Together\Taxes\Model\RequiredFilingCalendarDataFieldModel[] $required_filing_calendar_data_fields A list of required fields to file
      *
      * @return $this
      */

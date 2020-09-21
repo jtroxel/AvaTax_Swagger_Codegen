@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **end_date** | [**\DateTime**](\DateTime.md) | End date of this exempt certificate | [optional] 
 **id_type** | **string** | The type of idNo (tax_number) associated with a certificate.  Example: Driver&#39;s Licence Number, Permit Number. | [optional] 
 **is_tax_code_list_exclusion_list** | **int** | Is the tax code list an exculsion list? | [optional] 
-**tax_codes** | [**\Swagger\Client\Model\EcmsDetailTaxCodeModel[]**](EcmsDetailTaxCodeModel.md) | optional: list of tax code associated with this exempt certificate detail | [optional] 
+**tax_codes** | [**\Together\Taxes\Model\EcmsDetailTaxCodeModel[]**](EcmsDetailTaxCodeModel.md) | optional: list of tax code associated with this exempt certificate detail | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

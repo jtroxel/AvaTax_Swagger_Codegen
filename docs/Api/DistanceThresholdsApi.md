@@ -1,4 +1,4 @@
-# Swagger\Client\DistanceThresholdsApi
+# Together\Taxes\DistanceThresholdsApi
 
 All URIs are relative to *https://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createDistanceThreshold**
-> \Swagger\Client\Model\CompanyDistanceThresholdModel[] createDistanceThreshold($company_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CompanyDistanceThresholdModel[] createDistanceThreshold($company_id, $x_avalara_client, $body)
 
 Create one or more DistanceThreshold objects
 
@@ -25,14 +25,14 @@ Create one or more DistanceThreshold objects for this company.                A 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DistanceThresholdsApi(
+$apiInstance = new Together\Taxes\Api\DistanceThresholdsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new Swagger\Client\Api\DistanceThresholdsApi(
 );
 $company_id = 56; // int | The unique ID number of the company that owns this DistanceThreshold
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\CompanyDistanceThresholdModel()); // \Swagger\Client\Model\CompanyDistanceThresholdModel[] | The DistanceThreshold object or objects you wish to create.
+$body = array(new \Together\Taxes\Model\CompanyDistanceThresholdModel()); // \Together\Taxes\Model\CompanyDistanceThresholdModel[] | The DistanceThreshold object or objects you wish to create.
 
 try {
     $result = $apiInstance->createDistanceThreshold($company_id, $x_avalara_client, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **int**| The unique ID number of the company that owns this DistanceThreshold |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CompanyDistanceThresholdModel[]**](../Model/CompanyDistanceThresholdModel.md)| The DistanceThreshold object or objects you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\CompanyDistanceThresholdModel[]**](../Model/CompanyDistanceThresholdModel.md)| The DistanceThreshold object or objects you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyDistanceThresholdModel[]**](../Model/CompanyDistanceThresholdModel.md)
+[**\Together\Taxes\Model\CompanyDistanceThresholdModel[]**](../Model/CompanyDistanceThresholdModel.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteDistanceThreshold**
-> \Swagger\Client\Model\ErrorDetail[] deleteDistanceThreshold($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteDistanceThreshold($company_id, $id, $x_avalara_client)
 
 Delete a single DistanceThreshold object
 
@@ -87,14 +87,14 @@ Marks the DistanceThreshold object identified by this URL as deleted.           
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DistanceThresholdsApi(
+$apiInstance = new Together\Taxes\Api\DistanceThresholdsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistanceThreshold**
-> \Swagger\Client\Model\CompanyDistanceThresholdModel getDistanceThreshold($company_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\CompanyDistanceThresholdModel getDistanceThreshold($company_id, $id, $x_avalara_client)
 
 Retrieve a single DistanceThreshold
 
@@ -149,14 +149,14 @@ Retrieves a single DistanceThreshold object defined by this URL.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DistanceThresholdsApi(
+$apiInstance = new Together\Taxes\Api\DistanceThresholdsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyDistanceThresholdModel**](../Model/CompanyDistanceThresholdModel.md)
+[**\Together\Taxes\Model\CompanyDistanceThresholdModel**](../Model/CompanyDistanceThresholdModel.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listDistanceThresholds**
-> \Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel listDistanceThresholds($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel listDistanceThresholds($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all DistanceThresholds for this company.
 
@@ -211,14 +211,14 @@ Lists all DistanceThreshold objects that belong to this company.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DistanceThresholdsApi(
+$apiInstance = new Together\Taxes\Api\DistanceThresholdsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel**](../Model/FetchResultCompanyDistanceThresholdModel.md)
+[**\Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel**](../Model/FetchResultCompanyDistanceThresholdModel.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **queryDistanceThresholds**
-> \Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel queryDistanceThresholds($filter, $include, $top, $skip, $order_by, $x_avalara_client)
+> \Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel queryDistanceThresholds($filter, $include, $top, $skip, $order_by, $x_avalara_client)
 
 Retrieve all DistanceThreshold objects
 
@@ -281,14 +281,14 @@ Lists all DistanceThreshold objects that belong to this account.                
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DistanceThresholdsApi(
+$apiInstance = new Together\Taxes\Api\DistanceThresholdsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FetchResultCompanyDistanceThresholdModel**](../Model/FetchResultCompanyDistanceThresholdModel.md)
+[**\Together\Taxes\Model\FetchResultCompanyDistanceThresholdModel**](../Model/FetchResultCompanyDistanceThresholdModel.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDistanceThreshold**
-> \Swagger\Client\Model\CompanyDistanceThresholdModel updateDistanceThreshold($company_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\CompanyDistanceThresholdModel updateDistanceThreshold($company_id, $id, $x_avalara_client, $body)
 
 Update a DistanceThreshold object
 
@@ -349,14 +349,14 @@ Replace the existing DistanceThreshold object at this URL with an updated object
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DistanceThresholdsApi(
+$apiInstance = new Together\Taxes\Api\DistanceThresholdsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -365,7 +365,7 @@ $apiInstance = new Swagger\Client\Api\DistanceThresholdsApi(
 $company_id = 56; // int | The unique ID number of the company that owns this DistanceThreshold object.
 $id = 789; // int | The unique ID number of the DistanceThreshold object to replace.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\CompanyDistanceThresholdModel(); // \Swagger\Client\Model\CompanyDistanceThresholdModel | The new DistanceThreshold object to store.
+$body = new \Together\Taxes\Model\CompanyDistanceThresholdModel(); // \Together\Taxes\Model\CompanyDistanceThresholdModel | The new DistanceThreshold object to store.
 
 try {
     $result = $apiInstance->updateDistanceThreshold($company_id, $id, $x_avalara_client, $body);
@@ -383,11 +383,11 @@ Name | Type | Description  | Notes
  **company_id** | **int**| The unique ID number of the company that owns this DistanceThreshold object. |
  **id** | **int**| The unique ID number of the DistanceThreshold object to replace. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\CompanyDistanceThresholdModel**](../Model/CompanyDistanceThresholdModel.md)| The new DistanceThreshold object to store. | [optional]
+ **body** | [**\Together\Taxes\Model\CompanyDistanceThresholdModel**](../Model/CompanyDistanceThresholdModel.md)| The new DistanceThreshold object to store. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CompanyDistanceThresholdModel**](../Model/CompanyDistanceThresholdModel.md)
+[**\Together\Taxes\Model\CompanyDistanceThresholdModel**](../Model/CompanyDistanceThresholdModel.md)
 
 ### Authorization
 

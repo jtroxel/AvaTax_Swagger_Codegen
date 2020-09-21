@@ -1,4 +1,4 @@
-# Swagger\Client\FreeApi
+# Together\Taxes\FreeApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **requestFreeTrial**
-> \Swagger\Client\Model\NewAccountModel requestFreeTrial($body)
+> \Together\Taxes\Model\NewAccountModel requestFreeTrial($body)
 
 FREE API - Request a free trial of AvaTax
 
@@ -21,12 +21,12 @@ Call this API to obtain a free AvaTax account.                This API is free t
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FreeApi(
+$apiInstance = new Together\Taxes\Api\FreeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\FreeTrialRequestModel(); // \Swagger\Client\Model\FreeTrialRequestModel | Required information to provision a free trial account.
+$body = new \Together\Taxes\Model\FreeTrialRequestModel(); // \Together\Taxes\Model\FreeTrialRequestModel | Required information to provision a free trial account.
 
 try {
     $result = $apiInstance->requestFreeTrial($body);
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\FreeTrialRequestModel**](../Model/FreeTrialRequestModel.md)| Required information to provision a free trial account. | [optional]
+ **body** | [**\Together\Taxes\Model\FreeTrialRequestModel**](../Model/FreeTrialRequestModel.md)| Required information to provision a free trial account. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NewAccountModel**](../Model/NewAccountModel.md)
+[**\Together\Taxes\Model\NewAccountModel**](../Model/NewAccountModel.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **taxRatesByAddress**
-> \Swagger\Client\Model\TaxRateModel taxRatesByAddress($line1, $region, $postal_code, $country, $line2, $line3, $city, $x_avalara_client)
+> \Together\Taxes\Model\TaxRateModel taxRatesByAddress($line1, $region, $postal_code, $country, $line2, $line3, $city, $x_avalara_client)
 
 FREE API - Sales tax rates for a specified address
 
@@ -71,14 +71,14 @@ FREE API - Sales tax rates for a specified address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\FreeApi(
+$apiInstance = new Together\Taxes\Api\FreeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxRateModel**](../Model/TaxRateModel.md)
+[**\Together\Taxes\Model\TaxRateModel**](../Model/TaxRateModel.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **taxRatesByPostalCode**
-> \Swagger\Client\Model\TaxRateModel taxRatesByPostalCode($country, $postal_code, $x_avalara_client)
+> \Together\Taxes\Model\TaxRateModel taxRatesByPostalCode($country, $postal_code, $x_avalara_client)
 
 FREE API - Sales tax rates for a specified country and postal code. This API is only available for US postal codes.
 
@@ -143,14 +143,14 @@ FREE API - Sales tax rates for a specified country and postal code. This API is 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\FreeApi(
+$apiInstance = new Together\Taxes\Api\FreeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaxRateModel**](../Model/TaxRateModel.md)
+[**\Together\Taxes\Model\TaxRateModel**](../Model/TaxRateModel.md)
 
 ### Authorization
 

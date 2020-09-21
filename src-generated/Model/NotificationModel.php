@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * NotificationModel Class Doc Comment
  *
  * @category Class
  * @description Represents a single notification.                A notification is a message from Avalara that may have relevance to your business.  You may want  to regularly review notifications and then dismiss them when you are certain that you have addressed  any relevant concerns raised by this notification.                An example of a notification would be a message about new software, or a change to AvaTax that may  affect you, or a potential issue with your company&#39;s tax profile.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

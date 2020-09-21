@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * RegistrarApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class RegistrarApi
      * Create a new account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountModel[]
+     * @return \Together\Taxes\Model\AccountModel[]
      */
     public function createAccount($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -111,15 +111,15 @@ class RegistrarApi
      * Create a new account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AccountModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createAccountWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountModel[]';
+        $returnType = '\Together\Taxes\Model\AccountModel[]';
         $request = $this->createAccountRequest($x_avalara_client, $body);
 
         try {
@@ -171,7 +171,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountModel[]',
+                        '\Together\Taxes\Model\AccountModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class RegistrarApi
      * Create a new account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class RegistrarApi
      * Create a new account
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createAccountAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountModel[]';
+        $returnType = '\Together\Taxes\Model\AccountModel[]';
         $request = $this->createAccountRequest($x_avalara_client, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class RegistrarApi
      * Create request for operation 'createAccount'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account you wish to create. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -368,11 +368,11 @@ class RegistrarApi
      * Create new notifications.
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel[] $body The notifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel[] $body The notifications you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NotificationModel[]
+     * @return \Together\Taxes\Model\NotificationModel[]
      */
     public function createNotifications($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -386,15 +386,15 @@ class RegistrarApi
      * Create new notifications.
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel[] $body The notifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel[] $body The notifications you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NotificationModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NotificationModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createNotificationsWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NotificationModel[]';
+        $returnType = '\Together\Taxes\Model\NotificationModel[]';
         $request = $this->createNotificationsRequest($x_avalara_client, $body);
 
         try {
@@ -446,7 +446,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NotificationModel[]',
+                        '\Together\Taxes\Model\NotificationModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -462,7 +462,7 @@ class RegistrarApi
      * Create new notifications.
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel[] $body The notifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel[] $body The notifications you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -483,14 +483,14 @@ class RegistrarApi
      * Create new notifications.
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel[] $body The notifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel[] $body The notifications you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createNotificationsAsyncWithHttpInfo($x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NotificationModel[]';
+        $returnType = '\Together\Taxes\Model\NotificationModel[]';
         $request = $this->createNotificationsRequest($x_avalara_client, $body);
 
         return $this->client
@@ -534,7 +534,7 @@ class RegistrarApi
      * Create request for operation 'createNotifications'
      *
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel[] $body The notifications you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel[] $body The notifications you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -644,11 +644,11 @@ class RegistrarApi
      *
      * @param  int $account_id The ID of the account that owns this subscription. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SubscriptionModel[]
+     * @return \Together\Taxes\Model\SubscriptionModel[]
      */
     public function createSubscriptions($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -663,15 +663,15 @@ class RegistrarApi
      *
      * @param  int $account_id The ID of the account that owns this subscription. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SubscriptionModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\SubscriptionModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubscriptionsWithHttpInfo($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionModel[]';
+        $returnType = '\Together\Taxes\Model\SubscriptionModel[]';
         $request = $this->createSubscriptionsRequest($account_id, $x_avalara_client, $body);
 
         try {
@@ -723,7 +723,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SubscriptionModel[]',
+                        '\Together\Taxes\Model\SubscriptionModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -740,7 +740,7 @@ class RegistrarApi
      *
      * @param  int $account_id The ID of the account that owns this subscription. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -762,14 +762,14 @@ class RegistrarApi
      *
      * @param  int $account_id The ID of the account that owns this subscription. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createSubscriptionsAsyncWithHttpInfo($account_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionModel[]';
+        $returnType = '\Together\Taxes\Model\SubscriptionModel[]';
         $request = $this->createSubscriptionsRequest($account_id, $x_avalara_client, $body);
 
         return $this->client
@@ -814,7 +814,7 @@ class RegistrarApi
      *
      * @param  int $account_id The ID of the account that owns this subscription. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel[] $body The subscription you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -939,9 +939,9 @@ class RegistrarApi
      * @param  int $id The ID of the account you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteAccount($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -957,13 +957,13 @@ class RegistrarApi
      * @param  int $id The ID of the account you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAccountWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteAccountRequest($id, $x_avalara_client);
 
         try {
@@ -1015,7 +1015,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1059,7 +1059,7 @@ class RegistrarApi
      */
     public function deleteAccountAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteAccountRequest($id, $x_avalara_client);
 
         return $this->client
@@ -1225,9 +1225,9 @@ class RegistrarApi
      * @param  int $id The id of the notification you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteNotification($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1243,13 +1243,13 @@ class RegistrarApi
      * @param  int $id The id of the notification you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteNotificationWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteNotificationRequest($id, $x_avalara_client);
 
         try {
@@ -1301,7 +1301,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1345,7 +1345,7 @@ class RegistrarApi
      */
     public function deleteNotificationAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteNotificationRequest($id, $x_avalara_client);
 
         return $this->client
@@ -1512,9 +1512,9 @@ class RegistrarApi
      * @param  int $id The ID of the subscription you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteSubscription($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1531,13 +1531,13 @@ class RegistrarApi
      * @param  int $id The ID of the subscription you wish to delete. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteSubscriptionWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteSubscriptionRequest($account_id, $id, $x_avalara_client);
 
         try {
@@ -1589,7 +1589,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1635,7 +1635,7 @@ class RegistrarApi
      */
     public function deleteSubscriptionAsyncWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteSubscriptionRequest($account_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1816,9 +1816,9 @@ class RegistrarApi
      * @param  int $user_id The unique ID of the user whose password will be changed (required)
      * @param  bool $unmigrate_from_ai If user&#39;s password was migrated to AI, undo this. (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SetPasswordModel $body The new password for this user (optional)
+     * @param  \Together\Taxes\Model\SetPasswordModel $body The new password for this user (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1836,9 +1836,9 @@ class RegistrarApi
      * @param  int $user_id The unique ID of the user whose password will be changed (required)
      * @param  bool $unmigrate_from_ai If user&#39;s password was migrated to AI, undo this. (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SetPasswordModel $body The new password for this user (optional)
+     * @param  \Together\Taxes\Model\SetPasswordModel $body The new password for this user (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1914,7 +1914,7 @@ class RegistrarApi
      * @param  int $user_id The unique ID of the user whose password will be changed (required)
      * @param  bool $unmigrate_from_ai If user&#39;s password was migrated to AI, undo this. (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SetPasswordModel $body The new password for this user (optional)
+     * @param  \Together\Taxes\Model\SetPasswordModel $body The new password for this user (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1937,7 +1937,7 @@ class RegistrarApi
      * @param  int $user_id The unique ID of the user whose password will be changed (required)
      * @param  bool $unmigrate_from_ai If user&#39;s password was migrated to AI, undo this. (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SetPasswordModel $body The new password for this user (optional)
+     * @param  \Together\Taxes\Model\SetPasswordModel $body The new password for this user (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1990,7 +1990,7 @@ class RegistrarApi
      * @param  int $user_id The unique ID of the user whose password will be changed (required)
      * @param  bool $unmigrate_from_ai If user&#39;s password was migrated to AI, undo this. (optional, default to false)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SetPasswordModel $body The new password for this user (optional)
+     * @param  \Together\Taxes\Model\SetPasswordModel $body The new password for this user (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2118,11 +2118,11 @@ class RegistrarApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountModel
+     * @return \Together\Taxes\Model\AccountModel
      */
     public function updateAccount($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2137,15 +2137,15 @@ class RegistrarApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\AccountModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccountWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountModel';
+        $returnType = '\Together\Taxes\Model\AccountModel';
         $request = $this->updateAccountRequest($id, $x_avalara_client, $body);
 
         try {
@@ -2197,7 +2197,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountModel',
+                        '\Together\Taxes\Model\AccountModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2214,7 +2214,7 @@ class RegistrarApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2236,14 +2236,14 @@ class RegistrarApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateAccountAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountModel';
+        $returnType = '\Together\Taxes\Model\AccountModel';
         $request = $this->updateAccountRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -2288,7 +2288,7 @@ class RegistrarApi
      *
      * @param  int $id The ID of the account you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\AccountModel $body The account object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\AccountModel $body The account object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2412,11 +2412,11 @@ class RegistrarApi
      *
      * @param  int $id The id of the notification you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel $body The notification object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel $body The notification object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NotificationModel
+     * @return \Together\Taxes\Model\NotificationModel
      */
     public function updateNotification($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2431,15 +2431,15 @@ class RegistrarApi
      *
      * @param  int $id The id of the notification you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel $body The notification object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel $body The notification object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NotificationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NotificationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateNotificationWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NotificationModel';
+        $returnType = '\Together\Taxes\Model\NotificationModel';
         $request = $this->updateNotificationRequest($id, $x_avalara_client, $body);
 
         try {
@@ -2491,7 +2491,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NotificationModel',
+                        '\Together\Taxes\Model\NotificationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2508,7 +2508,7 @@ class RegistrarApi
      *
      * @param  int $id The id of the notification you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel $body The notification object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel $body The notification object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2530,14 +2530,14 @@ class RegistrarApi
      *
      * @param  int $id The id of the notification you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel $body The notification object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel $body The notification object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateNotificationAsyncWithHttpInfo($id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NotificationModel';
+        $returnType = '\Together\Taxes\Model\NotificationModel';
         $request = $this->updateNotificationRequest($id, $x_avalara_client, $body);
 
         return $this->client
@@ -2582,7 +2582,7 @@ class RegistrarApi
      *
      * @param  int $id The id of the notification you wish to update. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NotificationModel $body The notification object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NotificationModel $body The notification object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2707,11 +2707,11 @@ class RegistrarApi
      * @param  int $account_id The ID of the account that this subscription belongs to. (required)
      * @param  int $id The ID of the subscription you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel $body The subscription you wish to update. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel $body The subscription you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SubscriptionModel
+     * @return \Together\Taxes\Model\SubscriptionModel
      */
     public function updateSubscription($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -2727,15 +2727,15 @@ class RegistrarApi
      * @param  int $account_id The ID of the account that this subscription belongs to. (required)
      * @param  int $id The ID of the subscription you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel $body The subscription you wish to update. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel $body The subscription you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SubscriptionModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\SubscriptionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSubscriptionWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionModel';
+        $returnType = '\Together\Taxes\Model\SubscriptionModel';
         $request = $this->updateSubscriptionRequest($account_id, $id, $x_avalara_client, $body);
 
         try {
@@ -2787,7 +2787,7 @@ class RegistrarApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SubscriptionModel',
+                        '\Together\Taxes\Model\SubscriptionModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2805,7 +2805,7 @@ class RegistrarApi
      * @param  int $account_id The ID of the account that this subscription belongs to. (required)
      * @param  int $id The ID of the subscription you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel $body The subscription you wish to update. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel $body The subscription you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2828,14 +2828,14 @@ class RegistrarApi
      * @param  int $account_id The ID of the account that this subscription belongs to. (required)
      * @param  int $id The ID of the subscription you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel $body The subscription you wish to update. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel $body The subscription you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateSubscriptionAsyncWithHttpInfo($account_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionModel';
+        $returnType = '\Together\Taxes\Model\SubscriptionModel';
         $request = $this->updateSubscriptionRequest($account_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -2881,7 +2881,7 @@ class RegistrarApi
      * @param  int $account_id The ID of the account that this subscription belongs to. (required)
      * @param  int $id The ID of the subscription you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\SubscriptionModel $body The subscription you wish to update. (optional)
+     * @param  \Together\Taxes\Model\SubscriptionModel $body The subscription you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

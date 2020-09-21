@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **enabled** | **bool** | Is rule execution enabled | [optional] 
 **continue_on_error** | **bool** | Should we keep running if we hit an exception | [optional] 
 **rule_id** | **string** | Unique identifier of rule to execute | 
-**rule** | [**\Swagger\Client\Model\AdvancedRuleModel**](AdvancedRuleModel.md) | Advanced rule to execute | [optional] 
+**rule** | [**\Together\Taxes\Model\AdvancedRuleModel**](AdvancedRuleModel.md) | Advanced rule to execute | [optional] 
 **customer_data** | **string** | Json data used for rule execution | [optional] 
 **customer_data_id** | **string** | Unique identifier of customer data used in rule execution | [optional] 
 

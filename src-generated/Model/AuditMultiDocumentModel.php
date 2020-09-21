@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * AuditMultiDocumentModel Class Doc Comment
  *
  * @category Class
  * @description Information about a previously created MultiDocument transaction
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,13 +58,13 @@ class AuditMultiDocumentModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reconstructed' => '\Swagger\Client\Model\ReconstructedMultiDocumentModel',
+        'reconstructed' => '\Together\Taxes\Model\ReconstructedMultiDocumentModel',
         'code' => 'string',
         'type' => 'string',
         'server_timestamp' => '\DateTime',
         'server_duration' => '\DateTime',
         'api_call_status' => 'string',
-        'original' => '\Swagger\Client\Model\OriginalApiRequestResponseModel'
+        'original' => '\Together\Taxes\Model\OriginalApiRequestResponseModel'
     ];
 
     /**
@@ -314,7 +314,7 @@ class AuditMultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Gets reconstructed
      *
-     * @return \Swagger\Client\Model\ReconstructedMultiDocumentModel
+     * @return \Together\Taxes\Model\ReconstructedMultiDocumentModel
      */
     public function getReconstructed()
     {
@@ -324,7 +324,7 @@ class AuditMultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Sets reconstructed
      *
-     * @param \Swagger\Client\Model\ReconstructedMultiDocumentModel $reconstructed Reconstructed API request/response pair that can be used to adjust or re-create this MultiDocument transaction.
+     * @param \Together\Taxes\Model\ReconstructedMultiDocumentModel $reconstructed Reconstructed API request/response pair that can be used to adjust or re-create this MultiDocument transaction.
      *
      * @return $this
      */
@@ -476,7 +476,7 @@ class AuditMultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Gets original
      *
-     * @return \Swagger\Client\Model\OriginalApiRequestResponseModel
+     * @return \Together\Taxes\Model\OriginalApiRequestResponseModel
      */
     public function getOriginal()
     {
@@ -486,7 +486,7 @@ class AuditMultiDocumentModel implements ModelInterface, ArrayAccess
     /**
      * Sets original
      *
-     * @param \Swagger\Client\Model\OriginalApiRequestResponseModel $original Original API request/response
+     * @param \Together\Taxes\Model\OriginalApiRequestResponseModel $original Original API request/response
      *
      * @return $this
      */

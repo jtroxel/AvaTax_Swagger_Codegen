@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingReturnModelBasic Class Doc Comment
  *
  * @category Class
  * @description Filing Returns Model
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,7 +90,7 @@ class FilingReturnModelBasic implements ModelInterface, ArrayAccess
         'excluded_non_taxable_amount' => 'double',
         'excluded_tax_amount' => 'double',
         'accrual_type' => 'string',
-        'attachments' => '\Swagger\Client\Model\FilingAttachmentModel[]',
+        'attachments' => '\Together\Taxes\Model\FilingAttachmentModel[]',
         'created_date' => '\DateTime',
         'created_user_id' => 'int',
         'modified_date' => '\DateTime'
@@ -1366,7 +1366,7 @@ class FilingReturnModelBasic implements ModelInterface, ArrayAccess
     /**
      * Gets attachments
      *
-     * @return \Swagger\Client\Model\FilingAttachmentModel[]
+     * @return \Together\Taxes\Model\FilingAttachmentModel[]
      */
     public function getAttachments()
     {
@@ -1376,7 +1376,7 @@ class FilingReturnModelBasic implements ModelInterface, ArrayAccess
     /**
      * Sets attachments
      *
-     * @param \Swagger\Client\Model\FilingAttachmentModel[] $attachments The attachments for this return.
+     * @param \Together\Taxes\Model\FilingAttachmentModel[] $attachments The attachments for this return.
      *
      * @return $this
      */

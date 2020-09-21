@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * JurisdictionOverrideModel Class Doc Comment
  *
  * @category Class
  * @description Represents an override of tax jurisdictions for a specific address.                During the time period represented by EffDate through EndDate, all tax decisions for addresses matching  this override object will be assigned to the list of jurisdictions designated in this object.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -72,7 +72,7 @@ class JurisdictionOverrideModel implements ModelInterface, ArrayAccess
         'created_user_id' => 'int',
         'modified_date' => '\DateTime',
         'modified_user_id' => 'int',
-        'jurisdictions' => '\Swagger\Client\Model\JurisdictionModel[]',
+        'jurisdictions' => '\Together\Taxes\Model\JurisdictionModel[]',
         'tax_region_id' => 'int',
         'boundary_level' => 'string',
         'is_default' => 'bool'
@@ -746,7 +746,7 @@ class JurisdictionOverrideModel implements ModelInterface, ArrayAccess
     /**
      * Gets jurisdictions
      *
-     * @return \Swagger\Client\Model\JurisdictionModel[]
+     * @return \Together\Taxes\Model\JurisdictionModel[]
      */
     public function getJurisdictions()
     {
@@ -756,7 +756,7 @@ class JurisdictionOverrideModel implements ModelInterface, ArrayAccess
     /**
      * Sets jurisdictions
      *
-     * @param \Swagger\Client\Model\JurisdictionModel[] $jurisdictions A list of the tax jurisdictions that will be assigned to this overridden address.
+     * @param \Together\Taxes\Model\JurisdictionModel[] $jurisdictions A list of the tax jurisdictions that will be assigned to this overridden address.
      *
      * @return $this
      */

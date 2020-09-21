@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * NewAccountRequestModel Class Doc Comment
  *
  * @category Class
  * @description Represents a request for a new account with Avalara for a new subscriber.  Contains information about the account requested and the rate plan selected.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -74,7 +74,7 @@ class NewAccountRequestModel implements ModelInterface, ArrayAccess
         'email' => 'string',
         'user_password' => 'string',
         'welcome_email' => 'string',
-        'company_address' => '\Swagger\Client\Model\CompanyAddress',
+        'company_address' => '\Together\Taxes\Model\CompanyAddress',
         'company_code' => 'string',
         'properties' => 'string[]',
         'accept_avalara_terms_and_conditions' => 'bool',
@@ -894,7 +894,7 @@ class NewAccountRequestModel implements ModelInterface, ArrayAccess
     /**
      * Gets company_address
      *
-     * @return \Swagger\Client\Model\CompanyAddress
+     * @return \Together\Taxes\Model\CompanyAddress
      */
     public function getCompanyAddress()
     {
@@ -904,7 +904,7 @@ class NewAccountRequestModel implements ModelInterface, ArrayAccess
     /**
      * Sets company_address
      *
-     * @param \Swagger\Client\Model\CompanyAddress $company_address Address information of the account being created.
+     * @param \Together\Taxes\Model\CompanyAddress $company_address Address information of the account being created.
      *
      * @return $this
      */

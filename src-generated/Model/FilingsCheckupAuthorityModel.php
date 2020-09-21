@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * FilingsCheckupAuthorityModel Class Doc Comment
  *
  * @category Class
  * @description Cycle Safe Expiration results.
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class FilingsCheckupAuthorityModel implements ModelInterface, ArrayAccess
         'jurisdiction_id' => 'int',
         'tax' => 'double',
         'tax_type_id' => 'string',
-        'suggested_forms' => '\Swagger\Client\Model\FilingsCheckupSuggestedFormModel[]'
+        'suggested_forms' => '\Together\Taxes\Model\FilingsCheckupSuggestedFormModel[]'
     ];
 
     /**
@@ -418,7 +418,7 @@ class FilingsCheckupAuthorityModel implements ModelInterface, ArrayAccess
     /**
      * Gets suggested_forms
      *
-     * @return \Swagger\Client\Model\FilingsCheckupSuggestedFormModel[]
+     * @return \Together\Taxes\Model\FilingsCheckupSuggestedFormModel[]
      */
     public function getSuggestedForms()
     {
@@ -428,7 +428,7 @@ class FilingsCheckupAuthorityModel implements ModelInterface, ArrayAccess
     /**
      * Sets suggested_forms
      *
-     * @param \Swagger\Client\Model\FilingsCheckupSuggestedFormModel[] $suggested_forms Suggested forms to file due to tax collected
+     * @param \Together\Taxes\Model\FilingsCheckupSuggestedFormModel[] $suggested_forms Suggested forms to file due to tax collected
      *
      * @return $this
      */

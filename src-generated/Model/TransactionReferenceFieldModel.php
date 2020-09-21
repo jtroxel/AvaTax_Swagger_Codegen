@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Together\Taxes\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Together\Taxes\ObjectSerializer;
 
 /**
  * TransactionReferenceFieldModel Class Doc Comment
  *
  * @category Class
  * @description Represents a fixup change
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class TransactionReferenceFieldModel implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'document_id' => 'int',
         'reporting_location_code' => 'string',
-        'line_detail_ser_codes' => '\Swagger\Client\Model\LineDetailSERCodeModel[]'
+        'line_detail_ser_codes' => '\Together\Taxes\Model\LineDetailSERCodeModel[]'
     ];
 
     /**
@@ -286,7 +286,7 @@ class TransactionReferenceFieldModel implements ModelInterface, ArrayAccess
     /**
      * Gets line_detail_ser_codes
      *
-     * @return \Swagger\Client\Model\LineDetailSERCodeModel[]
+     * @return \Together\Taxes\Model\LineDetailSERCodeModel[]
      */
     public function getLineDetailSerCodes()
     {
@@ -296,7 +296,7 @@ class TransactionReferenceFieldModel implements ModelInterface, ArrayAccess
     /**
      * Sets line_detail_ser_codes
      *
-     * @param \Swagger\Client\Model\LineDetailSERCodeModel[] $line_detail_ser_codes Reference field of the line details
+     * @param \Together\Taxes\Model\LineDetailSERCodeModel[] $line_detail_ser_codes Reference field of the line details
      *
      * @return $this
      */

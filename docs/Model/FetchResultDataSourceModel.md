@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recordset_count** | **int** |  | [optional] 
-**value** | [**\Swagger\Client\Model\DataSourceModel[]**](DataSourceModel.md) |  | [optional] 
+**value** | [**\Together\Taxes\Model\DataSourceModel[]**](DataSourceModel.md) |  | [optional] 
 **next_link** | **string** |  | [optional] 
 **page_key** | **string** |  | [optional] 
 

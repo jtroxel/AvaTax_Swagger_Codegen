@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Together\Taxes\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Together\Taxes\ApiException;
+use Together\Taxes\Configuration;
+use Together\Taxes\HeaderSelector;
+use Together\Taxes\ObjectSerializer;
 
 /**
  * NexusApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Together\Taxes
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that owns this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusModel[] $body The nexus you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusModel[]
+     * @return \Together\Taxes\Model\NexusModel[]
      */
     public function createNexus($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -113,15 +113,15 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that owns this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusModel[] $body The nexus you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createNexusWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusModel[]';
+        $returnType = '\Together\Taxes\Model\NexusModel[]';
         $request = $this->createNexusRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -173,7 +173,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusModel[]',
+                        '\Together\Taxes\Model\NexusModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that owns this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusModel[] $body The nexus you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,14 +212,14 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that owns this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusModel[] $body The nexus you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createNexusAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusModel[]';
+        $returnType = '\Together\Taxes\Model\NexusModel[]';
         $request = $this->createNexusRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -264,7 +264,7 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that owns this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusModel[] $body The nexus you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -389,11 +389,11 @@ class NexusApi
      * @param  int $company_id The ID of the company that owns this nexus parameter. (required)
      * @param  int $nexus_id The nexus id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusParameterDetailModel[]
+     * @return \Together\Taxes\Model\NexusParameterDetailModel[]
      */
     public function createNexusParameters($company_id, $nexus_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -409,15 +409,15 @@ class NexusApi
      * @param  int $company_id The ID of the company that owns this nexus parameter. (required)
      * @param  int $nexus_id The nexus id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusParameterDetailModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusParameterDetailModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createNexusParametersWithHttpInfo($company_id, $nexus_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusParameterDetailModel[]';
+        $returnType = '\Together\Taxes\Model\NexusParameterDetailModel[]';
         $request = $this->createNexusParametersRequest($company_id, $nexus_id, $x_avalara_client, $body);
 
         try {
@@ -469,7 +469,7 @@ class NexusApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusParameterDetailModel[]',
+                        '\Together\Taxes\Model\NexusParameterDetailModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -487,7 +487,7 @@ class NexusApi
      * @param  int $company_id The ID of the company that owns this nexus parameter. (required)
      * @param  int $nexus_id The nexus id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -510,14 +510,14 @@ class NexusApi
      * @param  int $company_id The ID of the company that owns this nexus parameter. (required)
      * @param  int $nexus_id The nexus id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createNexusParametersAsyncWithHttpInfo($company_id, $nexus_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusParameterDetailModel[]';
+        $returnType = '\Together\Taxes\Model\NexusParameterDetailModel[]';
         $request = $this->createNexusParametersRequest($company_id, $nexus_id, $x_avalara_client, $body);
 
         return $this->client
@@ -563,7 +563,7 @@ class NexusApi
      * @param  int $company_id The ID of the company that owns this nexus parameter. (required)
      * @param  int $nexus_id The nexus id. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel[] $body The nexus parameters you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -701,11 +701,11 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that will own this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusByAddressModel[]
+     * @return \Together\Taxes\Model\NexusByAddressModel[]
      */
     public function declareNexusByAddress($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -720,15 +720,15 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that will own this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusByAddressModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusByAddressModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function declareNexusByAddressWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusByAddressModel[]';
+        $returnType = '\Together\Taxes\Model\NexusByAddressModel[]';
         $request = $this->declareNexusByAddressRequest($company_id, $x_avalara_client, $body);
 
         try {
@@ -780,7 +780,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusByAddressModel[]',
+                        '\Together\Taxes\Model\NexusByAddressModel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -797,7 +797,7 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that will own this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -819,14 +819,14 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that will own this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function declareNexusByAddressAsyncWithHttpInfo($company_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusByAddressModel[]';
+        $returnType = '\Together\Taxes\Model\NexusByAddressModel[]';
         $request = $this->declareNexusByAddressRequest($company_id, $x_avalara_client, $body);
 
         return $this->client
@@ -871,7 +871,7 @@ class NexusApi
      *
      * @param  int $company_id The ID of the company that will own this nexus. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
+     * @param  \Together\Taxes\Model\DeclareNexusByAddressModel[] $body The nexus you wish to create. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -998,9 +998,9 @@ class NexusApi
      * @param  bool $cascade_delete If true, deletes all the child nexus if they exist along with parent nexus (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteNexus($company_id, $id, $cascade_delete = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1018,13 +1018,13 @@ class NexusApi
      * @param  bool $cascade_delete If true, deletes all the child nexus if they exist along with parent nexus (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteNexusWithHttpInfo($company_id, $id, $cascade_delete = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteNexusRequest($company_id, $id, $cascade_delete, $x_avalara_client);
 
         try {
@@ -1076,7 +1076,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1124,7 +1124,7 @@ class NexusApi
      */
     public function deleteNexusAsyncWithHttpInfo($company_id, $id, $cascade_delete = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteNexusRequest($company_id, $id, $cascade_delete, $x_avalara_client);
 
         return $this->client
@@ -1312,9 +1312,9 @@ class NexusApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteNexusParameter($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1332,13 +1332,13 @@ class NexusApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteNexusParameterWithHttpInfo($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteNexusParameterRequest($company_id, $nexus_id, $id, $x_avalara_client);
 
         try {
@@ -1390,7 +1390,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1438,7 +1438,7 @@ class NexusApi
      */
     public function deleteNexusParameterAsyncWithHttpInfo($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteNexusParameterRequest($company_id, $nexus_id, $id, $x_avalara_client);
 
         return $this->client
@@ -1635,9 +1635,9 @@ class NexusApi
      * @param  int $nexus_id The ID of the nexus you wish to delete the parameters. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Together\Taxes\Model\ErrorDetail[]
      */
     public function deleteNexusParameters($company_id, $nexus_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1654,13 +1654,13 @@ class NexusApi
      * @param  int $nexus_id The ID of the nexus you wish to delete the parameters. (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\ErrorDetail[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteNexusParametersWithHttpInfo($company_id, $nexus_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteNexusParametersRequest($company_id, $nexus_id, $x_avalara_client);
 
         try {
@@ -1712,7 +1712,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErrorDetail[]',
+                        '\Together\Taxes\Model\ErrorDetail[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1758,7 +1758,7 @@ class NexusApi
      */
     public function deleteNexusParametersAsyncWithHttpInfo($company_id, $nexus_id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\ErrorDetail[]';
+        $returnType = '\Together\Taxes\Model\ErrorDetail[]';
         $request = $this->deleteNexusParametersRequest($company_id, $nexus_id, $x_avalara_client);
 
         return $this->client
@@ -1941,9 +1941,9 @@ class NexusApi
      * @param  string $include  (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusModel
+     * @return \Together\Taxes\Model\NexusModel
      */
     public function getNexus($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -1961,13 +1961,13 @@ class NexusApi
      * @param  string $include  (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNexusWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\NexusModel';
+        $returnType = '\Together\Taxes\Model\NexusModel';
         $request = $this->getNexusRequest($company_id, $id, $include, $x_avalara_client);
 
         try {
@@ -2019,7 +2019,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusModel',
+                        '\Together\Taxes\Model\NexusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2067,7 +2067,7 @@ class NexusApi
      */
     public function getNexusAsyncWithHttpInfo($company_id, $id, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\NexusModel';
+        $returnType = '\Together\Taxes\Model\NexusModel';
         $request = $this->getNexusRequest($company_id, $id, $include, $x_avalara_client);
 
         return $this->client
@@ -2255,9 +2255,9 @@ class NexusApi
      * @param  string $include  (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusByTaxFormModel
+     * @return \Together\Taxes\Model\NexusByTaxFormModel
      */
     public function getNexusByFormCode($company_id, $form_code, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2275,13 +2275,13 @@ class NexusApi
      * @param  string $include  (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusByTaxFormModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusByTaxFormModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNexusByFormCodeWithHttpInfo($company_id, $form_code, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\NexusByTaxFormModel';
+        $returnType = '\Together\Taxes\Model\NexusByTaxFormModel';
         $request = $this->getNexusByFormCodeRequest($company_id, $form_code, $include, $x_avalara_client);
 
         try {
@@ -2333,7 +2333,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusByTaxFormModel',
+                        '\Together\Taxes\Model\NexusByTaxFormModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2381,7 +2381,7 @@ class NexusApi
      */
     public function getNexusByFormCodeAsyncWithHttpInfo($company_id, $form_code, $include = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\NexusByTaxFormModel';
+        $returnType = '\Together\Taxes\Model\NexusByTaxFormModel';
         $request = $this->getNexusByFormCodeRequest($company_id, $form_code, $include, $x_avalara_client);
 
         return $this->client
@@ -2569,9 +2569,9 @@ class NexusApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusParameterDetailModel
+     * @return \Together\Taxes\Model\NexusParameterDetailModel
      */
     public function getNexusParameter($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2589,13 +2589,13 @@ class NexusApi
      * @param  int $id The parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNexusParameterWithHttpInfo($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\NexusParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\NexusParameterDetailModel';
         $request = $this->getNexusParameterRequest($company_id, $nexus_id, $id, $x_avalara_client);
 
         try {
@@ -2647,7 +2647,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusParameterDetailModel',
+                        '\Together\Taxes\Model\NexusParameterDetailModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2695,7 +2695,7 @@ class NexusApi
      */
     public function getNexusParameterAsyncWithHttpInfo($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\NexusParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\NexusParameterDetailModel';
         $request = $this->getNexusParameterRequest($company_id, $nexus_id, $id, $x_avalara_client);
 
         return $this->client
@@ -2896,9 +2896,9 @@ class NexusApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNexusModel
+     * @return \Together\Taxes\Model\FetchResultNexusModel
      */
     public function listNexusByCompany($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -2919,13 +2919,13 @@ class NexusApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNexusByCompanyWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusByCompanyRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -2977,7 +2977,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNexusModel',
+                        '\Together\Taxes\Model\FetchResultNexusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3031,7 +3031,7 @@ class NexusApi
      */
     public function listNexusByCompanyAsyncWithHttpInfo($company_id, $filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->listNexusByCompanyRequest($company_id, $filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3227,9 +3227,9 @@ class NexusApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNexusParameterDetailModel
+     * @return \Together\Taxes\Model\FetchResultNexusParameterDetailModel
      */
     public function listNexusParameters($company_id, $nexus_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3250,13 +3250,13 @@ class NexusApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNexusParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNexusParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNexusParametersWithHttpInfo($company_id, $nexus_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusParameterDetailModel';
         $request = $this->listNexusParametersRequest($company_id, $nexus_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -3308,7 +3308,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNexusParameterDetailModel',
+                        '\Together\Taxes\Model\FetchResultNexusParameterDetailModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3362,7 +3362,7 @@ class NexusApi
      */
     public function listNexusParametersAsyncWithHttpInfo($company_id, $nexus_id, $filter = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusParameterDetailModel';
         $request = $this->listNexusParametersRequest($company_id, $nexus_id, $filter, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3567,9 +3567,9 @@ class NexusApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FetchResultNexusModel
+     * @return \Together\Taxes\Model\FetchResultNexusModel
      */
     public function queryNexus($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
@@ -3589,13 +3589,13 @@ class NexusApi
      * @param  string $order_by A comma separated list of sort statements in the format &#x60;(fieldname) [ASC|DESC]&#x60;, for example &#x60;id ASC&#x60;. (optional)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\FetchResultNexusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function queryNexusWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->queryNexusRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         try {
@@ -3647,7 +3647,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FetchResultNexusModel',
+                        '\Together\Taxes\Model\FetchResultNexusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3699,7 +3699,7 @@ class NexusApi
      */
     public function queryNexusAsyncWithHttpInfo($filter = null, $include = null, $top = null, $skip = null, $order_by = null, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0')
     {
-        $returnType = '\Swagger\Client\Model\FetchResultNexusModel';
+        $returnType = '\Together\Taxes\Model\FetchResultNexusModel';
         $request = $this->queryNexusRequest($filter, $include, $top, $skip, $order_by, $x_avalara_client);
 
         return $this->client
@@ -3875,11 +3875,11 @@ class NexusApi
      * @param  int $company_id The ID of the company that this nexus belongs to. (required)
      * @param  int $id The ID of the nexus you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusModel $body The nexus object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusModel
+     * @return \Together\Taxes\Model\NexusModel
      */
     public function updateNexus($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -3895,15 +3895,15 @@ class NexusApi
      * @param  int $company_id The ID of the company that this nexus belongs to. (required)
      * @param  int $id The ID of the nexus you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusModel $body The nexus object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateNexusWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusModel';
+        $returnType = '\Together\Taxes\Model\NexusModel';
         $request = $this->updateNexusRequest($company_id, $id, $x_avalara_client, $body);
 
         try {
@@ -3955,7 +3955,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusModel',
+                        '\Together\Taxes\Model\NexusModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3973,7 +3973,7 @@ class NexusApi
      * @param  int $company_id The ID of the company that this nexus belongs to. (required)
      * @param  int $id The ID of the nexus you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusModel $body The nexus object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3996,14 +3996,14 @@ class NexusApi
      * @param  int $company_id The ID of the company that this nexus belongs to. (required)
      * @param  int $id The ID of the nexus you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusModel $body The nexus object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateNexusAsyncWithHttpInfo($company_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusModel';
+        $returnType = '\Together\Taxes\Model\NexusModel';
         $request = $this->updateNexusRequest($company_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -4049,7 +4049,7 @@ class NexusApi
      * @param  int $company_id The ID of the company that this nexus belongs to. (required)
      * @param  int $id The ID of the nexus you wish to update (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusModel $body The nexus object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4189,11 +4189,11 @@ class NexusApi
      * @param  int $nexus_id The nexus id (required)
      * @param  int $id The nexus parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\NexusParameterDetailModel
+     * @return \Together\Taxes\Model\NexusParameterDetailModel
      */
     public function updateNexusParameter($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
@@ -4210,15 +4210,15 @@ class NexusApi
      * @param  int $nexus_id The nexus id (required)
      * @param  int $id The nexus parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Together\Taxes\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\NexusParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Together\Taxes\Model\NexusParameterDetailModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateNexusParameterWithHttpInfo($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\NexusParameterDetailModel';
         $request = $this->updateNexusParameterRequest($company_id, $nexus_id, $id, $x_avalara_client, $body);
 
         try {
@@ -4270,7 +4270,7 @@ class NexusApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NexusParameterDetailModel',
+                        '\Together\Taxes\Model\NexusParameterDetailModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4289,7 +4289,7 @@ class NexusApi
      * @param  int $nexus_id The nexus id (required)
      * @param  int $id The nexus parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4313,14 +4313,14 @@ class NexusApi
      * @param  int $nexus_id The nexus id (required)
      * @param  int $id The nexus parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateNexusParameterAsyncWithHttpInfo($company_id, $nexus_id, $id, $x_avalara_client = 'Swagger UI; 20.9.0; Custom; 1.0', $body = null)
     {
-        $returnType = '\Swagger\Client\Model\NexusParameterDetailModel';
+        $returnType = '\Together\Taxes\Model\NexusParameterDetailModel';
         $request = $this->updateNexusParameterRequest($company_id, $nexus_id, $id, $x_avalara_client, $body);
 
         return $this->client
@@ -4367,7 +4367,7 @@ class NexusApi
      * @param  int $nexus_id The nexus id (required)
      * @param  int $id The nexus parameter id (required)
      * @param  string $x_avalara_client Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . (optional, default to Swagger UI; 20.9.0; Custom; 1.0)
-     * @param  \Swagger\Client\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
+     * @param  \Together\Taxes\Model\NexusParameterDetailModel $body The nexus object you wish to update. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

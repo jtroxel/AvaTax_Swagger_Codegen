@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recordset_count** | **int** |  | [optional] 
-**value** | [**\Swagger\Client\Model\TaxAuthorityTypeModel[]**](TaxAuthorityTypeModel.md) |  | [optional] 
+**value** | [**\Together\Taxes\Model\TaxAuthorityTypeModel[]**](TaxAuthorityTypeModel.md) |  | [optional] 
 **next_link** | **string** |  | [optional] 
 **page_key** | **string** |  | [optional] 
 

@@ -1,4 +1,4 @@
-# Swagger\Client\RegistrarApi
+# Together\Taxes\RegistrarApi
 
 All URIs are relative to *https://localhost*
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **createAccount**
-> \Swagger\Client\Model\AccountModel[] createAccount($x_avalara_client, $body)
+> \Together\Taxes\Model\AccountModel[] createAccount($x_avalara_client, $body)
 
 Create a new account
 
@@ -29,21 +29,21 @@ Create a new account
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AccountModel(); // \Swagger\Client\Model\AccountModel | The account you wish to create.
+$body = new \Together\Taxes\Model\AccountModel(); // \Together\Taxes\Model\AccountModel | The account you wish to create.
 
 try {
     $result = $apiInstance->createAccount($x_avalara_client, $body);
@@ -59,11 +59,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AccountModel**](../Model/AccountModel.md)| The account you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\AccountModel**](../Model/AccountModel.md)| The account you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AccountModel[]**](../Model/AccountModel.md)
+[**\Together\Taxes\Model\AccountModel[]**](../Model/AccountModel.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createNotifications**
-> \Swagger\Client\Model\NotificationModel[] createNotifications($x_avalara_client, $body)
+> \Together\Taxes\Model\NotificationModel[] createNotifications($x_avalara_client, $body)
 
 Create new notifications.
 
@@ -89,21 +89,21 @@ This API is available by invitation only.                Create a single notific
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\NotificationModel()); // \Swagger\Client\Model\NotificationModel[] | The notifications you wish to create.
+$body = array(new \Together\Taxes\Model\NotificationModel()); // \Together\Taxes\Model\NotificationModel[] | The notifications you wish to create.
 
 try {
     $result = $apiInstance->createNotifications($x_avalara_client, $body);
@@ -119,11 +119,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\NotificationModel[]**](../Model/NotificationModel.md)| The notifications you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\NotificationModel[]**](../Model/NotificationModel.md)| The notifications you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NotificationModel[]**](../Model/NotificationModel.md)
+[**\Together\Taxes\Model\NotificationModel[]**](../Model/NotificationModel.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createSubscriptions**
-> \Swagger\Client\Model\SubscriptionModel[] createSubscriptions($account_id, $x_avalara_client, $body)
+> \Together\Taxes\Model\SubscriptionModel[] createSubscriptions($account_id, $x_avalara_client, $body)
 
 Create a new subscription
 
@@ -149,14 +149,14 @@ This API is for use by Avalara Registrar administrative users only.             
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -164,7 +164,7 @@ $apiInstance = new Swagger\Client\Api\RegistrarApi(
 );
 $account_id = 56; // int | The ID of the account that owns this subscription.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = array(new \Swagger\Client\Model\SubscriptionModel()); // \Swagger\Client\Model\SubscriptionModel[] | The subscription you wish to create.
+$body = array(new \Together\Taxes\Model\SubscriptionModel()); // \Together\Taxes\Model\SubscriptionModel[] | The subscription you wish to create.
 
 try {
     $result = $apiInstance->createSubscriptions($account_id, $x_avalara_client, $body);
@@ -181,11 +181,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **int**| The ID of the account that owns this subscription. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\SubscriptionModel[]**](../Model/SubscriptionModel.md)| The subscription you wish to create. | [optional]
+ **body** | [**\Together\Taxes\Model\SubscriptionModel[]**](../Model/SubscriptionModel.md)| The subscription you wish to create. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionModel[]**](../Model/SubscriptionModel.md)
+[**\Together\Taxes\Model\SubscriptionModel[]**](../Model/SubscriptionModel.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAccount**
-> \Swagger\Client\Model\ErrorDetail[] deleteAccount($id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteAccount($id, $x_avalara_client)
 
 Delete a single account
 
@@ -211,14 +211,14 @@ Delete a single account
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteNotification**
-> \Swagger\Client\Model\ErrorDetail[] deleteNotification($id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteNotification($id, $x_avalara_client)
 
 Delete a single notification.
 
@@ -271,14 +271,14 @@ This API is available by invitation only.                Delete the existing not
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteSubscription**
-> \Swagger\Client\Model\ErrorDetail[] deleteSubscription($account_id, $id, $x_avalara_client)
+> \Together\Taxes\Model\ErrorDetail[] deleteSubscription($account_id, $id, $x_avalara_client)
 
 Delete a single subscription
 
@@ -331,14 +331,14 @@ Delete a single subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
+[**\Together\Taxes\Model\ErrorDetail[]**](../Model/ErrorDetail.md)
 
 ### Authorization
 
@@ -393,14 +393,14 @@ Reset a user's password programmatically
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -409,7 +409,7 @@ $apiInstance = new Swagger\Client\Api\RegistrarApi(
 $user_id = 56; // int | The unique ID of the user whose password will be changed
 $unmigrate_from_ai = false; // bool | If user's password was migrated to AI, undo this.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\SetPasswordModel(); // \Swagger\Client\Model\SetPasswordModel | The new password for this user
+$body = new \Together\Taxes\Model\SetPasswordModel(); // \Together\Taxes\Model\SetPasswordModel | The new password for this user
 
 try {
     $result = $apiInstance->resetPassword($user_id, $unmigrate_from_ai, $x_avalara_client, $body);
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
  **user_id** | **int**| The unique ID of the user whose password will be changed |
  **unmigrate_from_ai** | **bool**| If user&#39;s password was migrated to AI, undo this. | [optional] [default to false]
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\SetPasswordModel**](../Model/SetPasswordModel.md)| The new password for this user | [optional]
+ **body** | [**\Together\Taxes\Model\SetPasswordModel**](../Model/SetPasswordModel.md)| The new password for this user | [optional]
 
 ### Return type
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAccount**
-> \Swagger\Client\Model\AccountModel updateAccount($id, $x_avalara_client, $body)
+> \Together\Taxes\Model\AccountModel updateAccount($id, $x_avalara_client, $body)
 
 Update a single account
 
@@ -457,14 +457,14 @@ Update a single account
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -472,7 +472,7 @@ $apiInstance = new Swagger\Client\Api\RegistrarApi(
 );
 $id = 56; // int | The ID of the account you wish to update.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\AccountModel(); // \Swagger\Client\Model\AccountModel | The account object you wish to update.
+$body = new \Together\Taxes\Model\AccountModel(); // \Together\Taxes\Model\AccountModel | The account object you wish to update.
 
 try {
     $result = $apiInstance->updateAccount($id, $x_avalara_client, $body);
@@ -489,11 +489,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The ID of the account you wish to update. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\AccountModel**](../Model/AccountModel.md)| The account object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\AccountModel**](../Model/AccountModel.md)| The account object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AccountModel**](../Model/AccountModel.md)
+[**\Together\Taxes\Model\AccountModel**](../Model/AccountModel.md)
 
 ### Authorization
 
@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateNotification**
-> \Swagger\Client\Model\NotificationModel updateNotification($id, $x_avalara_client, $body)
+> \Together\Taxes\Model\NotificationModel updateNotification($id, $x_avalara_client, $body)
 
 Update a single notification.
 
@@ -519,14 +519,14 @@ This API is available by invitation only.                Replaces the notificati
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -534,7 +534,7 @@ $apiInstance = new Swagger\Client\Api\RegistrarApi(
 );
 $id = 789; // int | The id of the notification you wish to update.
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\NotificationModel(); // \Swagger\Client\Model\NotificationModel | The notification object you wish to update.
+$body = new \Together\Taxes\Model\NotificationModel(); // \Together\Taxes\Model\NotificationModel | The notification object you wish to update.
 
 try {
     $result = $apiInstance->updateNotification($id, $x_avalara_client, $body);
@@ -551,11 +551,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the notification you wish to update. |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\NotificationModel**](../Model/NotificationModel.md)| The notification object you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\NotificationModel**](../Model/NotificationModel.md)| The notification object you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\NotificationModel**](../Model/NotificationModel.md)
+[**\Together\Taxes\Model\NotificationModel**](../Model/NotificationModel.md)
 
 ### Authorization
 
@@ -569,7 +569,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSubscription**
-> \Swagger\Client\Model\SubscriptionModel updateSubscription($account_id, $id, $x_avalara_client, $body)
+> \Together\Taxes\Model\SubscriptionModel updateSubscription($account_id, $id, $x_avalara_client, $body)
 
 Update a single subscription
 
@@ -581,14 +581,14 @@ Update a single subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OauthSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Together\Taxes\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure HTTP basic authorization: UserSecurity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Together\Taxes\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\RegistrarApi(
+$apiInstance = new Together\Taxes\Api\RegistrarApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -597,7 +597,7 @@ $apiInstance = new Swagger\Client\Api\RegistrarApi(
 $account_id = 56; // int | The ID of the account that this subscription belongs to.
 $id = 56; // int | The ID of the subscription you wish to update
 $x_avalara_client = "Swagger UI; 20.9.0; Custom; 1.0"; // string | Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) .
-$body = new \Swagger\Client\Model\SubscriptionModel(); // \Swagger\Client\Model\SubscriptionModel | The subscription you wish to update.
+$body = new \Together\Taxes\Model\SubscriptionModel(); // \Together\Taxes\Model\SubscriptionModel | The subscription you wish to update.
 
 try {
     $result = $apiInstance->updateSubscription($account_id, $id, $x_avalara_client, $body);
@@ -615,11 +615,11 @@ Name | Type | Description  | Notes
  **account_id** | **int**| The ID of the account that this subscription belongs to. |
  **id** | **int**| The ID of the subscription you wish to update |
  **x_avalara_client** | **string**| Identifies the software you are using to call this API.  For more information on the client header, see [Client Headers](https://developer.avalara.com/avatax/client-headers/) . | [optional] [default to Swagger UI; 20.9.0; Custom; 1.0]
- **body** | [**\Swagger\Client\Model\SubscriptionModel**](../Model/SubscriptionModel.md)| The subscription you wish to update. | [optional]
+ **body** | [**\Together\Taxes\Model\SubscriptionModel**](../Model/SubscriptionModel.md)| The subscription you wish to update. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionModel**](../Model/SubscriptionModel.md)
+[**\Together\Taxes\Model\SubscriptionModel**](../Model/SubscriptionModel.md)
 
 ### Authorization
 

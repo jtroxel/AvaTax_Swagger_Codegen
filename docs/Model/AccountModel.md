@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **created_user_id** | **int** | The User ID of the user who created this record. | [optional] 
 **modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 
 **modified_user_id** | **int** | The user ID of the user who last modified this record. | [optional] 
-**subscriptions** | [**\Swagger\Client\Model\SubscriptionModel[]**](SubscriptionModel.md) | Optional: A list of subscriptions granted to this account.  To fetch this list, add the query string \&quot;?$include&#x3D;Subscriptions\&quot; to your URL. | [optional] 
-**users** | [**\Swagger\Client\Model\UserModel[]**](UserModel.md) | Optional: A list of all the users belonging to this account.  To fetch this list, add the query string \&quot;?$include&#x3D;Users\&quot; to your URL. | [optional] 
+**subscriptions** | [**\Together\Taxes\Model\SubscriptionModel[]**](SubscriptionModel.md) | Optional: A list of subscriptions granted to this account.  To fetch this list, add the query string \&quot;?$include&#x3D;Subscriptions\&quot; to your URL. | [optional] 
+**users** | [**\Together\Taxes\Model\UserModel[]**](UserModel.md) | Optional: A list of all the users belonging to this account.  To fetch this list, add the query string \&quot;?$include&#x3D;Users\&quot; to your URL. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
