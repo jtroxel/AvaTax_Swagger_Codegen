@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="SmugMug">
+    <description><![CDATA[
+
+        A custom coding standard for BlueHarvest/SmugMug
+
+        Documentation for using this with the SmugMug codebase can be found here:
+
+        https://docs.smugmug.net/coding-standards/php/php-code-sniffer/
+
+        A basic CLI invocation looks like this:
+
+        phpcs --standard=.phpcs.ruleset.xml --extensions=mg,mgi,php Web/docroot/include/classes/SmugMug/REST/Endpoint.php
+
+    ]]></description>
+
+    <rule ref="PSR12">
+        <!-- It would be ideal if we could fix these issues and eliminate these exceptions. -->
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace" />
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
+        <exclude name="PSR1.Classes.ClassDeclaration.MultipleClasses" />
+
+        <!-- Allow short open tag "echo" statements (beginning with '<?=') -->
+        <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound" />
+    </rule>
+
+    <!-- Ignore method names in phpunit test files -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+    </rule>
+</ruleset>
