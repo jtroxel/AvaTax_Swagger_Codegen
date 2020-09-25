@@ -10,6 +10,6 @@
         <ini name="display_startup_errors" value="On" />
     </php>
     <testsuite name="AvaTaxClient Swagger">
-        <directory>./basicWorkflowTest.php</directory>
+        <directory>./AvaTax/AvaTaxClientTest.php</directory>
     </testsuite>
 </phpunit>
