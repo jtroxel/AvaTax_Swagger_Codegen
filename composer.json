@@ -1,5 +1,5 @@
 {
-    "name": "SmugMug/avatax-client-swagger-codegen",
+    "name": "smugmug/avatax-client-swagger-codegen",
     "version": "0.1",
     "description": "",
     "keywords": [
@@ -28,9 +28,14 @@
         "squizlabs/php_codesniffer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "Together\\Taxes\\" : "src-generated/" }
+        "psr-4": {
+          "Together\\": [
+            "src-generated/Together//",
+            "src//Together//"
+          ]
+        }
     },
     "autoload-dev": {
-        "psr-4": { "Together\\Taxes\\" : "test/" }
+        "psr-4": { "AvaTax\\" : "test/" }
     }
 }

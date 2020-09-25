@@ -1,0 +1,71 @@
+# FilingCalendarModel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** | The unique ID number of this filing calendar. | [optional] 
+**company_id** | **int** | The unique ID number of the company to which this filing calendar belongs. | 
+**return_name** | **string** | DEPRECATED - Date: 9/13/2018, Version: 18.10, Message: Please use &#x60;taxFormCode&#x60; instead.  The legacy return name of the tax form to file. | [optional] 
+**form_country** | **string** | Name or ISO 3166 code identifying the country that issued the tax form for this filing calendar.                This field supports many different country identifiers:   * Two character ISO 3166 codes   * Three character ISO 3166 codes   * Fully spelled out names of the country in ISO supported languages   * Common alternative spellings for many countries                For a full list of all supported codes and names, please see the Definitions API &#x60;ListCountries&#x60;. | [optional] 
+**form_region** | **string** | Name or ISO 3166 code identifying the region that issued the tax form for this filing calendar.                This field supports many different region identifiers:   * Two and three character ISO 3166 region codes   * Fully spelled out names of the region in ISO supported languages   * Common alternative spellings for many regions                For a full list of all supported codes and names, please see the Definitions API &#x60;ListRegions&#x60;. | [optional] 
+**tax_form_code** | **string** | The Avalara standard tax form code of the tax form for this filing calendar.  The first two characters of the tax form code  are the ISO 3166 country code of the country that issued this form. | [optional] 
+**fiscal_year_start_month** | **int** | The start period of a fiscal year for this form/company | [optional] 
+**location_code** | **string** | If this calendar is for a location-specific tax return, specify the location code here.  To file for all locations, leave this value NULL. | [optional] 
+**outlet_type_id** | **string** | If this calendar is for a location-specific tax return, specify the location-specific behavior here. | [optional] 
+**payment_currency** | **string** | Specify the ISO 4217 currency code for the currency to remit for this tax return.  For all tax returns in the United States, specify \&quot;USD\&quot;. | [optional] 
+**filing_frequency_id** | **string** | The frequency on which this tax form is filed. | 
+**months** | **int** | A 16-bit bitmap containing a 1 for each month when the return should be filed. | [optional] 
+**state_registration_id** | **string** | Tax Registration ID for this Region - in the U.S., this is for your state. | [optional] 
+**local_registration_id** | **string** | Tax Registration ID for the local jurisdiction, if any. | [optional] 
+**employer_identification_number** | **string** | The Employer Identification Number or Taxpayer Identification Number that is to be used when filing this return. | [optional] 
+**line1** | **string** | DEPRECATED - Date: 9/1/2017, Version: 17.9, Message: Field will be no longer be available after the 17.9 release.  The first line of the mailing address that will be used when filling out this tax return. | [optional] 
+**line2** | **string** | DEPRECATED - Date: 9/1/2017, Version: 17.9, Message: Field will be no longer be available after the 17.9 release.  The second line of the mailing address that will be used when filling out this tax return.  Please note that some tax forms do not support multiple address lines. | [optional] 
+**city** | **string** | DEPRECATED - Date: 9/1/2017, Version: 17.9, Message: Field will be no longer be available after the 17.9 release.  The city name of the mailing address that will be used when filling out this tax return. | [optional] 
+**region** | **string** | DEPRECATED - Date: 9/1/2017, Version: 17.9, Message: Field will be no longer be available after the 17.9 release.  The state, region, or province of the mailing address that will be used when filling out this tax return. | [optional] 
+**postal_code** | **string** | DEPRECATED - Date: 9/1/2017, Version: 17.9, Message: Field will be no longer be available after the 17.9 release.  The postal code or zip code of the mailing address that will be used when filling out this tax return. | [optional] 
+**country** | **string** | DEPRECATED - Date: 9/1/2017, Version: 17.9, Message: Field will be no longer be available after the 17.9 release.  The two character ISO-3166 country code of the mailing address that will be used when filling out this tax return. | [optional] 
+**mailing_address_line1** | **string** | The first line of the mailing address that will be used when filling out this tax return. | [optional] 
+**mailing_address_line2** | **string** | The second line of the mailing address that will be used when filling out this tax return.  Please note that some tax forms do not support multiple address lines. | [optional] 
+**mailing_address_city** | **string** | The city name of the mailing address that will be used when filling out this tax return. | [optional] 
+**mailing_address_region** | **string** | Name or ISO 3166 code identifying the region of the mailing address that will be used when filling out this tax return.                This field supports many different region identifiers:   * Two and three character ISO 3166 region codes   * Fully spelled out names of the region in ISO supported languages   * Common alternative spellings for many regions                For a full list of all supported codes and names, please see the Definitions API &#x60;ListRegions&#x60;. | [optional] 
+**mailing_address_postal_code** | **string** | The postal code or zip code of the mailing address that will be used when filling out this tax return. | [optional] 
+**mailing_address_country** | **string** | Name or ISO 3166 code identifying the country of the mailing address that will be used when filling out this tax return.                This field supports many different country identifiers:   * Two character ISO 3166 codes   * Three character ISO 3166 codes   * Fully spelled out names of the country in ISO supported languages   * Common alternative spellings for many countries                For a full list of all supported codes and names, please see the Definitions API &#x60;ListCountries&#x60;. | [optional] 
+**phone** | **string** | The phone number to be used when filing this return. | [optional] 
+**customer_filing_instructions** | **string** | Special filing instructions to be used when filing this return.  Please note that requesting special filing instructions may incur additional costs. | [optional] 
+**legal_entity_name** | **string** | The legal entity name to be used when filing this return. | [optional] 
+**effective_date** | [**\DateTime**](\DateTime.md) | The earliest date for the tax period when this return should be filed.  This date specifies the earliest date for tax transactions that should be reported on this filing calendar.  Please note that tax is usually filed one month in arrears: for example, tax for January transactions is typically filed during the month of February. | 
+**end_date** | [**\DateTime**](\DateTime.md) | The last date for the tax period when this return should be filed.  This date specifies the last date for tax transactions that should be reported on this filing calendar.  Please note that tax is usually filed one month in arrears: for example, tax for January transactions is typically filed during the month of February. | [optional] 
+**filing_type_id** | **string** | The method to be used when filing this return. | [optional] 
+**e_file_username** | **string** | If you file electronically, this is the username you use to log in to the tax authority&#39;s website. | [optional] 
+**e_file_password** | **string** | If you file electronically, this is the password or pass code you use to log in to the tax authority&#39;s website. | [optional] 
+**prepay_percentage** | **int** | If you are required to prepay a percentage of taxes for future periods, please specify the percentage in whole numbers;  for example, the value 90 would indicate 90%. | [optional] 
+**pre_payment_required** | **bool** | Determines if a prepayment is required for this filing calendar | [optional] 
+**fixed_prepayment_amount** | **double** | If your company is required to make a prepayment that is designated by a fixed amount each period, please specify the amount here. | [optional] 
+**tax_type_id** | **string** | The type of tax to report on this return. | 
+**internal_notes** | **string** | Internal filing notes. | [optional] 
+**al_sign_on** | **string** | Custom filing information field for Alabama. | [optional] 
+**al_access_code** | **string** | Custom filing information field for Alabama. | [optional] 
+**me_business_code** | **string** | Custom filing information field for Maine. | [optional] 
+**ia_ben** | **string** | Custom filing information field for Iowa. | [optional] 
+**ct_reg** | **string** | Custom filing information field for Connecticut. | [optional] 
+**other1_name** | **string** | Custom filing information field.  Leave blank. | [optional] 
+**other1_value** | **string** | Custom filing information field.  Leave blank. | [optional] 
+**other2_name** | **string** | Custom filing information field.  Leave blank. | [optional] 
+**other2_value** | **string** | Custom filing information field.  Leave blank. | [optional] 
+**other3_name** | **string** | Custom filing information field.  Leave blank. | [optional] 
+**other3_value** | **string** | Custom filing information field.  Leave blank. | [optional] 
+**tax_authority_id** | **int** | The unique ID of the tax authority of this return. | [optional] 
+**tax_authority_name** | **string** | The name of the tax authority of this return. | [optional] 
+**tax_authority_type** | **string** | The type description of the tax authority of this return. | [optional] 
+**created_date** | [**\DateTime**](\DateTime.md) | The date when this record was created. | [optional] 
+**created_user_id** | **int** | The User ID of the user who created this record. | [optional] 
+**modified_date** | [**\DateTime**](\DateTime.md) | The date/time when this record was last modified. | [optional] 
+**modified_user_id** | **int** | The user ID of the user who last modified this record. | [optional] 
+**bulk_account_id** | **string** | User name of bulk account. | [optional] 
+**site_code** | **string** | The bulk account site code. | [optional] 
+**bulk_account_validation_status** | **string** | The status of the bulk account&#39;s validation. | [optional] 
+**settings** | [**\Together\Taxes\Provider\AvaTax\Swagger\Model\CompanyReturnSettingModel[]**](CompanyReturnSettingModel.md) | CompanyReturn settings for complext filing calendar | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
