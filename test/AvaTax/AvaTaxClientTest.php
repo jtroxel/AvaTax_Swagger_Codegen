@@ -139,16 +139,19 @@ final class AvaTaxClientTest extends TestCase
         $recorded_transaction = $this->apiInstance->getTransactionById($salesInvoiceModel->getId());
         $this->assertNotNull($recorded_transaction, "Couldn't retrieve transaction we just saved");
         
-        $status = $this->apiInstance->commitTransaction(
+        $commitTransaction = $this->apiInstance->commitTransaction(
             $this->avaTaxClientConfig->getCompanyCode(),
             $recorded_transaction->getCode(),
-            $recorded_transaction->getType(),
-            'Summary'
+            CreateTransactionModel::TYPE_SALES_INVOICE,
+            'Summary',
+            $this->avaTaxClientConfig->getAvaClientHeader(),
+            new CommitTransactionModel(['commit' => true])
         );
-        $this->assertNotNull($status, "No result from commit");
-        $this->assertEquals($status->status, 'Committed');
+        $this->assertNotNull($commitTransaction, "No result from commit");
+        $this->assertEquals($commitTransaction->getStatus(), 'Committed');
         
-        return $trans_id;
+        return $commitTransaction->getId();
+        
     }
     
     
@@ -161,17 +164,21 @@ final class AvaTaxClientTest extends TestCase
         $committed_transaction = $this->apiInstance->getTransactionById($transId);
         $this->assertNotNull($committed_transaction, "Couldn't retrieve transaction we just committed");
         
-        $refundTransactionModel = new RefundTransactionModel();
-        $refundTransactionModel->referenceCode = 'wtf';
-        $refundTransactionModel->refundTransactionCode = $committed_transaction->getCode() . '_refunded';
-        $refundTransactionModel->refundDate = "2020-09-18";
-        $refundTransactionModel->refundType = 'Full';
+        $refundTransactionModel = (new RefundTransactionModel())
+        ->setReferenceCode('wtf')
+        ->setRefundTransactionCode($committed_transaction->getCode() . '_refunded')
+        ->setRefundDate(new \DateTime("2020-09-18"))
+        ->setRefundType(RefundTransactionModel::REFUND_TYPE_FULL);
         
         
         $status = $this->apiInstance->refundTransaction(
+            $this->avaTaxClientConfig->getCompanyCode(),
+            $committed_transaction->getCode(),
             'SummaryOnly',
+            null,
+            'false',
             $this->avaTaxClientConfig->getAvaClientHeader(),
-            new RefundTransactionModel($refundTransactionModel)
+            $refundTransactionModel
         );
         $this->assertNotNull($status, "No result from commit");
     }
