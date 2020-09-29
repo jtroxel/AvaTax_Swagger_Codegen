@@ -11,9 +11,9 @@ use Together\Taxes\Provider\AvaTax\Swagger\Configuration;
  */
 class AvaTaxClientConfig
 {
-    const AVATAX_BASE_URI_LIVE = 'https://rest.avatax.com';
-    const AVATAX_BASE_URI_SANDBOX = 'https://sandbox-rest.avatax.com';
-    const SMUGMUG_AVATAX_CLIENT_SWAGGER_CODEGEN_V_0_1 = "smugmug/avatax-client-swagger-codegen; v0.1";
+    public const AVATAX_BASE_URI_LIVE = 'https://rest.avatax.com';
+    public const AVATAX_BASE_URI_SANDBOX = 'https://sandbox-rest.avatax.com';
+    public const SMUGMUG_AVATAX_CLIENT_SWAGGER_CODEGEN_V_0_1 = "smugmug/avatax-client-swagger-codegen; v0.1";
     
     /**
      * @var Configuration $configuration The Guzzle client to use to connect to AvaTax
@@ -74,8 +74,10 @@ class AvaTaxClientConfig
         $base_uri = self::AVATAX_BASE_URI_LIVE;
         if ($environment == "sandbox") {
             $base_uri = self::AVATAX_BASE_URI_SANDBOX;
-        } elseif ((substr($environment, 0, 8) == 'https://')
-            || (substr($environment, 0, 7) == 'http://')) {
+        } elseif (
+            (substr($environment, 0, 8) == 'https://')
+            || (substr($environment, 0, 7) == 'http://')
+        ) {
             $base_uri = $environment;
         }
         
@@ -171,5 +173,4 @@ class AvaTaxClientConfig
     {
         return $this->configuration;
     }
-    
 }

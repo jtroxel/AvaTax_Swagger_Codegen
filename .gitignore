@@ -1,3 +1,4 @@
 /vendor/
 /AvaTax_Swagger_Codegen_Client.iml
 /test/.phpunit.result.cache
+/test/integration/.phpunit.result.cache

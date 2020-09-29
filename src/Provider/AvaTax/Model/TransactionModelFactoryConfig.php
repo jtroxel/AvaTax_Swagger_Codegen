@@ -12,13 +12,14 @@ use Together\Taxes\Provider\AvaTax\Swagger\Model\LineItemModel;
 /*
  * Simple factory class to create TransactionModels using the AvaTaxClientConfig
  */
+
 class TransactionModelFactoryConfig
 {
     private $avaTaxConfig;
     
     /**
      * TransactionModelFactoryConfig constructor.
-     * @param AvaTaxClientConfig $avaTaxConfig, config object holding account information
+     * @param AvaTaxClientConfig $avaTaxConfig , config object holding account information
      */
     public function __construct(AvaTaxClientConfig $avaTaxConfig)
     {
@@ -45,8 +46,7 @@ class TransactionModelFactoryConfig
         string $description,
         ?string $transCode,
         LineItemModel ...$lineItems
-    ): CreateTransactionModel
-    {
+    ): CreateTransactionModel {
         $body = new CreateTransactionModel();
         $body
             ->setCode($transCode) // Set code if given or use AvaTax-generated guid
@@ -54,7 +54,8 @@ class TransactionModelFactoryConfig
             ->setCustomerCode($customerCode)
             ->setType($transType)
             ->setDate($transDatetime)
-            ->setAddresses((new AddressesModel())
+            ->setAddresses(
+                (new AddressesModel())
                     ->setShipTo(
                         $shipToAddress
                     )
@@ -64,7 +65,7 @@ class TransactionModelFactoryConfig
             )
             ->setDescription($description)
             ->setLines(
-                    $lineItems,
+                $lineItems,
             );
         return $body;
     }
