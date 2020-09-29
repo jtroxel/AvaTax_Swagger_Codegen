@@ -3,12 +3,11 @@
 namespace Together\Taxes\Provider\AvaTax;
 
 use Exception;
-use GuzzleHttp\Client;
 use Together\Taxes\Provider\AvaTax\Swagger\Configuration;
 
 /**
  * Base AvaTaxClientConfig object that holds connectivity data for the AvaTax v2 API server.
- * Note: based off the Client class from the Client SDK
+ * Note: based off the Client class from the Client SDK, but only holds the configuration data
  */
 class AvaTaxClientConfig
 {
@@ -50,25 +49,24 @@ class AvaTaxClientConfig
     /**
      * Construct a new AvaTaxClientConfig
      *
-     * @param string $customerCode
-     * @param string $appVersion Specify the version number of your application here.
+     * @param string $customerCode a string ID for this customer, not the companyCode of the avatax account
+     * @param string|null $appName Specify the name of your application here.  Should not contain any semicolons.
+     * @param string|null $appVersion Specify the version number of your application here.
      *                                Should not contain any semicolons.
-     * @param null $appName Specify the name of your application here.  Should not contain any semicolons.
      * @param string $environment Indicates which server to use; acceptable values are "sandbox" or "production",
      *                                or the full URL of your AvaTax instance.
      * @throws Exception
      */
-    public function __construct(string $customerCode, string $appVersion, ?string $appName = null, $environment = "")
-    {
-        // customerCode and app version are mandatory fields.
-        if ($customerCode == "" || $customerCode == null || $appVersion == "" || $appVersion == null) {
-            throw new Exception('appName and appVersion are mandatory fields!');
-        }
-        
+    public function __construct(
+        string $customerCode,
+        ?string $appName = null,
+        ?string $appVersion = null,
+        $environment = ""
+    ) {
         $this->companyCode = $customerCode;
         $this->configuration = Configuration::getDefaultConfiguration();
-        $this->appVersion = $appVersion;
         $this->appName = $appName ?? $customerCode; // App "name" defaults to customer code
+        $this->appVersion = $appVersion ?? "";
         $this->environment = $environment;
         $this->guzzleParams = [];
         

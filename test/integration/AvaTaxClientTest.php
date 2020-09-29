@@ -2,12 +2,13 @@
 
 namespace AvaTax;
 
+use DateTime;
 use PHPUnit\Framework\TestCase;
 use Together\Taxes\Provider\AvaTax\AvaTaxClientConfig;
+use Together\Taxes\Provider\AvaTax\Model\TransactionModelFactoryConfig;
 use Together\Taxes\Provider\AvaTax\Swagger\Api\AddressesApi;
 use Together\Taxes\Provider\AvaTax\Swagger\Api\TransactionsApi;
 use Together\Taxes\Provider\AvaTax\Swagger\Api\UtilitiesApi;
-use Together\Taxes\Provider\AvaTax\Swagger\Model\AddressesModel;
 use Together\Taxes\Provider\AvaTax\Swagger\Model\AddressLocationInfo;
 use Together\Taxes\Provider\AvaTax\Swagger\Model\AddressResolutionModel;
 use Together\Taxes\Provider\AvaTax\Swagger\Model\AddressValidationInfo;
@@ -18,7 +19,10 @@ use Together\Taxes\Provider\AvaTax\Swagger\Model\RefundTransactionModel;
 use Together\Taxes\Provider\AvaTax\Swagger\Model\TransactionModel;
 
 /**
- * @covers AvaTaxClient
+ * @covers \Together\Taxes\Provider\AvaTax\AvaTaxClientConfig
+ * This is an integration test that accesses the live AvaTax services.  To run you must set the following env variables:
+ *  SANDBOX_COMPANY - your company code set up with Avalara
+ *  SANDBOX_USERNAME/SANDBOX_PASSWORD - your test account username and password
  */
 final class AvaTaxClientTest extends TestCase
 {
@@ -30,6 +34,9 @@ final class AvaTaxClientTest extends TestCase
      * @var TransactionsApi
      */
     private $apiInstance;
+    
+    /** @var TransactionModelFactoryConfig $transFactory */
+    private $transFactory;
     
     public function __construct(?string $name = null, array $data = [], $dataName = '')
     {
@@ -43,12 +50,12 @@ final class AvaTaxClientTest extends TestCase
         if (!$this->avaTaxClientConfig) {
             $this->avaTaxClientConfig =
                 (new AvaTaxClientConfig(
-                    getenv('SANDBOX_COMPANY'), '1.0',
-                    static::class, 'production'
+                    getenv('SANDBOX_COMPANY'), static::class, '1.0', 'production'
                 ))
                     ->withBasicAuth(getenv('SANDBOX_USERNAME'), getenv('SANDBOX_PASSWORD'))
                     ->withMachineName('test-machine');
         }
+        $this->transFactory = new TransactionModelFactoryConfig($this->avaTaxClientConfig);
     }
     
     public function testAuth()
@@ -91,9 +98,9 @@ final class AvaTaxClientTest extends TestCase
     public function testCreateSalesOrderTransaction()
     {
         $this->apiInstance = $this->getTransactionsApi();
-    
+        
         $body = $this->getCreateTransactionModel(CreateTransactionModel::TYPE_SALES_ORDER);
-    
+        
         try {
             $salesOrderTx = $this->apiInstance->createTransaction(
                 'SummaryOnly',
@@ -133,9 +140,8 @@ final class AvaTaxClientTest extends TestCase
      */
     public function testSalesInvoiceCommitTransaction(TransactionModel $salesInvoiceModel)
     {
-        
         $this->apiInstance = $this->getTransactionsApi();
-
+        
         $recorded_transaction = $this->apiInstance->getTransactionById($salesInvoiceModel->getId());
         $this->assertNotNull($recorded_transaction, "Couldn't retrieve transaction we just saved");
         
@@ -151,7 +157,6 @@ final class AvaTaxClientTest extends TestCase
         $this->assertEquals($commitTransaction->getStatus(), 'Committed');
         
         return $commitTransaction->getId();
-        
     }
     
     
@@ -165,10 +170,10 @@ final class AvaTaxClientTest extends TestCase
         $this->assertNotNull($committed_transaction, "Couldn't retrieve transaction we just committed");
         
         $refundTransactionModel = (new RefundTransactionModel())
-        ->setReferenceCode('wtf')
-        ->setRefundTransactionCode($committed_transaction->getCode() . '_refunded')
-        ->setRefundDate(new \DateTime("2020-09-18"))
-        ->setRefundType(RefundTransactionModel::REFUND_TYPE_FULL);
+            ->setReferenceCode('wtf')
+            ->setRefundTransactionCode($committed_transaction->getCode() . '_refunded')
+            ->setRefundDate(new \DateTime("2020-09-18"))
+            ->setRefundType(RefundTransactionModel::REFUND_TYPE_FULL);
         
         
         $status = $this->apiInstance->refundTransaction(
@@ -190,48 +195,35 @@ final class AvaTaxClientTest extends TestCase
      */
     public function getCreateTransactionModel($type): CreateTransactionModel
     {
-        $body = new CreateTransactionModel();
-        $body
-            ->setCompanyCode($this->avaTaxClientConfig->getCompanyCode())
-            ->setCustomerCode('ABC')
-            ->setType($type)
-            ->setDate(new \DateTime())
-            ->setAddresses(
-                (new AddressesModel())
-                    ->setShipTo(
-                        (new AddressLocationInfo())
-                            ->setLine1("2560 Blake")
-                            ->setLine2("")
-                            ->setCity("Denver")
-                            ->setRegion("CO")
-                            ->setPostalCode("80401")
-                            ->setCountry("US")
-                    )
-                    ->setShipFrom(
-                        (new AddressLocationInfo())
-                            ->setLine1("123 Main Street")
-                            ->setLine2("Ste 101")
-                            ->setCity("Mountain View")
-                            ->setRegion("CA")
-                            ->setPostalCode("95401")
-                            ->setCountry("US")
-                    )
-            )
-            ->setDescription("Test transaction fun!")
-            ->setLines(
-                [
-                    (new LineItemModel())
-                        ->setDescription("Base charge")
-                        ->setAmount(49.99)
-                        ->setTaxIncluded(false),
-                    (new LineItemModel())
-                        ->setDescription("Handling")
-                        ->setAmount(7.77)
-                        ->setTaxIncluded(true),
-                
-                ]
-            );
-        return $body;
+        return $this->transFactory->create(
+            $type,
+            'ABC',
+            new DateTime(),
+            (new AddressLocationInfo())
+                ->setLine1("2560 Blake")
+                ->setLine2("")
+                ->setCity("Denver")
+                ->setRegion("CO")
+                ->setPostalCode("80401")
+                ->setCountry("US"),
+            (new AddressLocationInfo())
+                ->setLine1("123 Main Street")
+                ->setLine2("Ste 101")
+                ->setCity("Mountain View")
+                ->setRegion("CA")
+                ->setPostalCode("95401")
+                ->setCountry("US"),
+            "Test transaction fun!",
+            null,
+            (new LineItemModel())
+                ->setDescription("Base charge")
+                ->setAmount(49.99)
+                ->setTaxIncluded(false),
+            (new LineItemModel())
+                ->setDescription("Handling")
+                ->setAmount(7.77)
+                ->setTaxIncluded(true)
+        );
     }
     
     public function getTransactionsApi(): TransactionsApi
@@ -243,6 +235,7 @@ final class AvaTaxClientTest extends TestCase
             $this->avaTaxClientConfig->getConfiguration()
         );
     }
+    
     /**
      * @return AddressesApi
      */
